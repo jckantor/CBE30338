@@ -1,0 +1,321 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Linear Programming: Introductory Examples</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="lp_demo.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Linear Programming: Introductory Examples</h1><!--introduction--><p>This file demonstrates the formulation and solution of simple linear programs in Matlab.  To use this demo you will need --</p><div><ol><li>Optimization Toolbox: This is included in the version of Matlab   distributed to ND students.</li><li>CVX: This is an optimization modeling language. If you haven't already   done so, you'll need to download and install CVX from   <a href="http://www.cvxr.com">&lt;http://cvxr.com</a>&gt; .</li><li><tt>displaytable.m</tt> This is a simple file for formatting data tables. It's   located in the course folder labelled 'Matlab Files'.</li></ol></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Installing <tt>CVX</tt></a></li><li><a href="#3">Giapetto's Workshop (from Winston, Operations Research)</a></li><li><a href="#4">Analysis</a></li><li><a href="#5">Solution using <tt>CVX</tt></a></li><li><a href="#6">Solution using <tt>linprog</tt></a></li><li><a href="#7">CVX Again</a></li><li><a href="#8">Interactive Demo</a></li></ul></div><h2>Installing <tt>CVX</tt><a name="1"></a></h2><p>
+Click here <a HREF="matlab:web -browser 'http://cvxr.com/cvx/download/'"> http://cvxr.com </a>
+</p><p>Initialize the workspace to a known state.</p><pre class="codeinput">close <span class="string">all</span>
+clear <span class="string">all</span>
+clc
+</pre><h2>Giapetto's Workshop (from Winston, Operations Research)<a name="3"></a></h2><p>Giapetto's Workshop produces two types of wooden toys:</p><div><ul><li>Soldiers - Each sells for $27, and requires $10 of raw materials, and   $14 of labor consisting of 2 hours of finishing labor and 1 hour of   carpentry labor.</li></ul></div><div><ul><li>Trains - Each sells for $21, and requires $9 of raw   materials, and $10 of labor consisting of 1 hour of finishing labor,   and 1 hour of carpentry labor</li></ul></div><p>Weekly production is constrainted by the weekly availability of no more than 100 finishing hours and 80 carpentry hours. At most 40 toy soldiers will be sold each week.</p><p>What is the maximum achievable weekly profit?</p><h2>Analysis<a name="4"></a></h2><div><ul><li>The decisions variablse will be the number of soldiers produced,   <tt>x(1)</tt>, and the number of trains produced, <tt>x(2)</tt>.</li><li>Each soldier sells for $27 and costs $24 to produce a $3 profit.   Each train sells for $21 and costs $19 to produce a $2 profit.</li><li>Both <tt>x(1)</tt> and <tt>x(2)</tt> must be non-negative. These form lower bounds on   the decision variables.</li><li>There are three constraints on <tt>x(1)</tt> and <tt>x(2)</tt> based on demand and   the availability of carpentry and finishing labor.</li></ul></div><h2>Solution using <tt>CVX</tt><a name="5"></a></h2><p>CVX is a simple language embedded within Matlab for modeling and solving convex optimization problems. Linear programming is an example of convex optimization.</p><pre class="codeinput">cvx_quiet <span class="string">TRUE</span>                          <span class="comment">% suppresses verbose output</span>
+cvx_begin                               <span class="comment">% model starts with cvx_begin</span>
+    variables <span class="string">x(2)</span> ;                    <span class="comment">% creates 2 decision variables</span>
+    x(1) &gt;= 0;                          <span class="comment">% lower bound on x(1): Soldiers</span>
+    x(2) &gt;= 0;                          <span class="comment">% lower bound on x(2): Trains</span>
+    x(1) &lt;= 40;                         <span class="comment">% demand constraint on Soldiers</span>
+    x(1) + x(2) &lt;= 80                   <span class="comment">% carpentry labor bound</span>
+    2*x(1) + x(2) &lt;= 100;               <span class="comment">% finishing labor bound</span>
+    profit = 3*x(1) + 2*x(2);           <span class="comment">% profit objective</span>
+    maximize <span class="string">profit</span>;                    <span class="comment">% objective</span>
+cvx_end                                 <span class="comment">% cvx_end starts the calculation</span>
+
+disp(<span class="string">'Solution to Giapetto''s Workshop using CVX.'</span>);
+displaytable(x,{<span class="string">'Soldiers'</span>,<span class="string">'Trains'</span>});  <span class="comment">% Display results as a table</span>
+</pre><pre class="codeoutput">Solution to Giapetto's Workshop using CVX.
+</pre><pre class="codeoutput">Undefined function 'displaytable' for input arguments of type 'cell'.
+
+Error in lp_demo (line 75)
+displaytable(x,{'Soldiers','Trains'});  % Display results as a table
+</pre><h2>Solution using <tt>linprog</tt><a name="6"></a></h2><p>The Optimization Toolbox in Matlab provides a linear programming function call <tt>linprog</tt> to <b>minimize</b> linear objectives subject to linear constraints.  Check the documentation ('doc linprog') for usage.  It's quicker and more efficient than CVX, but requires you to create matrices and vectors containing the problem data.</p><p>For the Giapetto's workshop problem, let <tt>x</tt> be a two element column representing Soldiers and Trains. Then</p><pre>            minimize f'*x
+subject to
+                x &gt;= lb
+              A*x &lt;= b</pre><pre class="codeinput">f = [-3 -2];
+lb = [0; 0];
+A = [1 0; 1 1; 2 1];
+b = [40; 80; 100];
+
+x = linprog(f,A,b,[],[],lb,[]);
+
+disp(<span class="string">'Solution to Giapetto''s Workshop using linprog.'</span>);
+displaytable(x,{<span class="string">'Soldiers'</span>,<span class="string">'Trains'</span>});
+</pre><h2>CVX Again<a name="7"></a></h2><p>The matrices and vectors used for <tt>linprog</tt> can also be used in <tt>CVX</tt>. This produces a more succinct code.</p><pre class="codeinput">cvx_quiet <span class="string">TRUE</span>                          <span class="comment">% suppresses verbose output</span>
+cvx_begin                               <span class="comment">% model starts with cvx_begin</span>
+    variables <span class="string">x(2)</span> ;                    <span class="comment">% creates 2 decision variables</span>
+    x &gt;= lb;                            <span class="comment">% lower bounds</span>
+    A*x &lt;= b;                           <span class="comment">% constraints</span>
+    profit = -f*x;                      <span class="comment">% profit objective</span>
+    maximize <span class="string">profit</span>;                    <span class="comment">% objective</span>
+cvx_end                                 <span class="comment">% cvx_end starts the calculation</span>
+
+disp(<span class="string">'Solution to Giapetto''s Workshop using CVX.'</span>);
+displaytable(x,{<span class="string">'Soldiers'</span>,<span class="string">'Trains'</span>});
+</pre><h2>Interactive Demo<a name="8"></a></h2><pre class="codeinput">dval =  40;
+cval =  80;
+fval = 100;
+
+f = [-3 -2];
+lb = [0; 0];
+A = [1 0; 1 1; 2 1];
+b = [dval; cval; fval];
+
+x = linprog(f,A,b,[],[],lb,[]);
+
+clf;
+subplot(8,1,1:7);
+hold <span class="string">on</span>;
+    demand = plot([dval dval],[0 100],<span class="string">'b'</span>,<span class="string">'LineWidth'</span>,2);
+    carpentry = plot([cval 0],[0 cval],<span class="string">'r'</span>,<span class="string">'LineWidth'</span>,2);
+    finishing = plot([fval/2 0],[0 fval],<span class="string">'g'</span>,<span class="string">'LineWidth'</span>,2);
+    optimum = plot(x(1),x(2),<span class="string">'r.'</span>,<span class="string">'Markersize'</span>,30);
+    [X1,X2] = meshgrid(0:100,0:100);
+    contour(X1,X2, 3*X1 + 2*X2,<span class="string">'ShowText'</span>,<span class="string">'on'</span>);
+hold <span class="string">off</span>;
+legend({<span class="string">'Demand'</span>,<span class="string">'Carpentry'</span>,<span class="string">'Finishing'</span>,<span class="string">'Optimum'</span>,<span class="string">'Profit'</span>});
+axis([0 100 0 100]);
+axis <span class="string">'square'</span>;
+xlabel(<span class="string">'Soldiers'</span>);
+ylabel(<span class="string">'Trains'</span>);
+title(<span class="string">'Giapetto''s Workshop'</span>);
+
+update = @(dval,cval,fval) { <span class="keyword">...</span>
+    suiPlot(demand,[dval dval],[0 100]);
+    suiPlot(carpentry,[cval 0],[0 cval]);
+    suiPlot(finishing,[fval/2 0],[0 fval]);
+    suiPlot(optimum,linprog(f,A,[dval;cval;fval],[],[],lb,[])')};
+
+[d,loc] = suiSlider(0,100,dval,<span class="string">'Demand'</span>,[10,10],150);
+[c,loc] = suiSlider(0,100,cval,<span class="string">'Carpentry'</span>,loc.Right,150);
+[f,loc] = suiSlider(0,200,fval,<span class="string">'Finishing'</span>,loc.Right,150);
+suiButton(@()close(<span class="string">'all'</span>),<span class="string">'Done'</span>,loc.Right,50);
+
+suiUpdate(@()update(d(),c(),f()));
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Linear Programming: Introductory Examples
+%
+% This file demonstrates the formulation and solution of simple linear
+% programs in Matlab.  To use this demo you will need REPLACE_WITH_DASH_DASH
+%
+% # Optimization Toolbox: This is included in the version of Matlab
+%   distributed to ND students.
+% # CVX: This is an optimization modeling language. If you haven't already
+%   done so, you'll need to download and install CVX from
+%   <http://www.cvxr.com http://cvxr.com> .
+% # |displaytable.m| This is a simple file for formatting data tables. It's
+%   located in the course folder labelled 'Matlab Files'.
+
+%% Installing |CVX|
+%
+% <html>
+% Click here <a HREF="matlab:web -browser 'http://cvxr.com/cvx/download/'"> http://cvxr.com </a>
+% </html>
+
+%%
+% Initialize the workspace to a known state.
+
+close all
+clear all
+clc
+
+%% Giapetto's Workshop (from Winston, Operations Research)
+%
+% Giapetto's Workshop produces two types of wooden toys:
+% 
+% * Soldiers - Each sells for $27, and requires $10 of raw materials, and
+%   $14 of labor consisting of 2 hours of finishing labor and 1 hour of
+%   carpentry labor.
+%
+% * Trains - Each sells for $21, and requires $9 of raw
+%   materials, and $10 of labor consisting of 1 hour of finishing labor,
+%   and 1 hour of carpentry labor
+%
+% Weekly production is constrainted by the weekly availability of no more
+% than 100 finishing hours and 80 carpentry hours. At most 40 toy soldiers
+% will be sold each week.
+%
+% What is the maximum achievable weekly profit?
+
+%% Analysis
+%
+% * The decisions variablse will be the number of soldiers produced, 
+%   |x(1)|, and the number of trains produced, |x(2)|.
+% * Each soldier sells for $27 and costs $24 to produce a $3 profit.
+%   Each train sells for $21 and costs $19 to produce a $2 profit.
+% * Both |x(1)| and |x(2)| must be non-negative. These form lower bounds on
+%   the decision variables.
+% * There are three constraints on |x(1)| and |x(2)| based on demand and
+%   the availability of carpentry and finishing labor.
+
+%% Solution using |CVX|
+%
+% CVX is a simple language embedded within Matlab for modeling and solving
+% convex optimization problems. Linear programming is an example of convex
+% optimization.
+
+cvx_quiet TRUE                          % suppresses verbose output
+cvx_begin                               % model starts with cvx_begin
+    variables x(2) ;                    % creates 2 decision variables
+    x(1) >= 0;                          % lower bound on x(1): Soldiers
+    x(2) >= 0;                          % lower bound on x(2): Trains
+    x(1) <= 40;                         % demand constraint on Soldiers
+    x(1) + x(2) <= 80                   % carpentry labor bound
+    2*x(1) + x(2) <= 100;               % finishing labor bound
+    profit = 3*x(1) + 2*x(2);           % profit objective
+    maximize profit;                    % objective
+cvx_end                                 % cvx_end starts the calculation
+
+disp('Solution to Giapetto''s Workshop using CVX.');
+displaytable(x,{'Soldiers','Trains'});  % Display results as a table
+
+%% Solution using |linprog|
+%
+% The Optimization Toolbox in Matlab provides a linear programming function
+% call |linprog| to *minimize* linear objectives subject to linear
+% constraints.  Check the documentation ('doc linprog') for usage.  It's
+% quicker and more efficient than CVX, but requires you to create matrices
+% and vectors containing the problem data.
+%
+% For the Giapetto's workshop problem, let |x| be a two element column
+% representing Soldiers and Trains. Then
+%
+%              minimize f'*x
+% subject to    
+%                  x >= lb
+%                A*x <= b
+
+f = [-3 -2];
+lb = [0; 0];
+A = [1 0; 1 1; 2 1];
+b = [40; 80; 100];
+
+x = linprog(f,A,b,[],[],lb,[]);
+
+disp('Solution to Giapetto''s Workshop using linprog.');
+displaytable(x,{'Soldiers','Trains'});
+
+%% CVX Again
+%
+% The matrices and vectors used for |linprog| can also be used in |CVX|.
+% This produces a more succinct code.
+
+cvx_quiet TRUE                          % suppresses verbose output
+cvx_begin                               % model starts with cvx_begin
+    variables x(2) ;                    % creates 2 decision variables
+    x >= lb;                            % lower bounds
+    A*x <= b;                           % constraints
+    profit = -f*x;                      % profit objective
+    maximize profit;                    % objective
+cvx_end                                 % cvx_end starts the calculation
+
+disp('Solution to Giapetto''s Workshop using CVX.');
+displaytable(x,{'Soldiers','Trains'});
+
+%% Interactive Demo
+
+dval =  40;
+cval =  80;
+fval = 100;
+
+f = [-3 -2];
+lb = [0; 0];
+A = [1 0; 1 1; 2 1];
+b = [dval; cval; fval];
+
+x = linprog(f,A,b,[],[],lb,[]);
+
+clf;
+subplot(8,1,1:7);
+hold on;
+    demand = plot([dval dval],[0 100],'b','LineWidth',2);
+    carpentry = plot([cval 0],[0 cval],'r','LineWidth',2);
+    finishing = plot([fval/2 0],[0 fval],'g','LineWidth',2);
+    optimum = plot(x(1),x(2),'r.','Markersize',30);
+    [X1,X2] = meshgrid(0:100,0:100);
+    contour(X1,X2, 3*X1 + 2*X2,'ShowText','on');
+hold off;
+legend({'Demand','Carpentry','Finishing','Optimum','Profit'});
+axis([0 100 0 100]);
+axis 'square';
+xlabel('Soldiers');
+ylabel('Trains');
+title('Giapetto''s Workshop');
+
+update = @(dval,cval,fval) { ...
+    suiPlot(demand,[dval dval],[0 100]);
+    suiPlot(carpentry,[cval 0],[0 cval]);
+    suiPlot(finishing,[fval/2 0],[0 fval]);
+    suiPlot(optimum,linprog(f,A,[dval;cval;fval],[],[],lb,[])')};
+
+[d,loc] = suiSlider(0,100,dval,'Demand',[10,10],150);
+[c,loc] = suiSlider(0,100,cval,'Carpentry',loc.Right,150);
+[f,loc] = suiSlider(0,200,fval,'Finishing',loc.Right,150);
+suiButton(@()close('all'),'Done',loc.Right,50);
+
+suiUpdate(@()update(d(),c(),f()));
+
+
+##### SOURCE END #####
+--></body></html>

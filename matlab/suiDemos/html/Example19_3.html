@@ -1,0 +1,212 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>SEMD Example 19.3</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2012-03-22"><meta name="DC.source" content="Example19_3.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>SEMD Example 19.3</h1><!--introduction--><p>Determine the optimal production schedule for the following process.</p><pre>                           ____________
+                          |            |----&gt; Gasoline ($36/bbl)
+   Crude 1 ($24/bbl) ----&gt;|            |----&gt; Kerosene ($24/bbl)
+                          |  Refinery  |----&gt; Fuel Oil ($21/bbl)
+   Crude 2 ($15/bbl) ----&gt;|            |----&gt; Residual ($10/bbl)
+                          |____________|</pre><pre>                     Volumetric Yield      Capacity
+                    Crude #1  Crude #2      bbl/day
+   Gasoline            80%       44%         24,000
+   Kerosine             5%       10%          2,000
+   Fuel Oil            10%       36%          6,000</pre><pre>   Processing Cost   $0.50/bbl $1.00/bbl</pre><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Script Requirments</a></li><li><a href="#2">Decision Variables</a></li><li><a href="#3">CVX Optimization Model</a></li><li><a href="#4">Crude Utilization</a></li><li><a href="#5">Production</a></li><li><a href="#6">Process Utilization</a></li><li><a href="#7">Questions to Explore</a></li></ul></div><h2>Script Requirments<a name="1"></a></h2><div><ul><li><tt>displaytable.m</tt></li><li>CVX</li></ul></div><h2>Decision Variables<a name="2"></a></h2><pre class="codeinput">clabels = {<span class="string">'Crude 1'</span>,<span class="string">'Crude 2'</span>};
+plabels = {<span class="string">'Gasoline'</span>,<span class="string">'Kerosene'</span>,<span class="string">'Fuel Oil'</span>,<span class="string">'Residual'</span>};
+</pre><h2>CVX Optimization Model<a name="3"></a></h2><pre class="codeinput">cvx_begin
+
+    <span class="comment">% Decision Variables</span>
+
+    variables <span class="string">c(2)</span> <span class="string">p(4)</span>
+    c &gt;= 0; p &lt;= 100000;
+    p &gt;= 0; p &lt;= 100000;
+
+    <span class="comment">% Objective Function</span>
+
+    revenue = 36*p(1) + 24*p(2) + 21*p(3) + 10*p(4);
+    rawmaterials = 24*c(1) + 15*c(2);
+    processing = 0.5*c(1) + 1.0*c(2);
+    profit = revenue - rawmaterials - processing;
+
+    maximize(profit)
+
+    <span class="comment">% Refinery Yield Model</span>
+
+    Y = [0.80 0.44; 0.05 0.10; 0.10 0.36; 0.05 0.10];
+    p == Y*c;
+
+    <span class="comment">% Refinery Production Capacity</span>
+
+    dual <span class="string">variable</span> <span class="string">z</span>
+    Capacity = [24000; 2000; 6000; 100000];
+    z : p &lt;= Capacity;
+
+cvx_end
+</pre><h2>Crude Utilization<a name="4"></a></h2><pre class="codeinput">displaytable(c,clabels,<span class="string">'bbl/day'</span>,<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">         bbl/day
+Crude 1  26206.9
+Crude 2   6896.6
+
+</pre><h2>Production<a name="5"></a></h2><pre class="codeinput">displaytable(p,plabels,<span class="string">'bbl/day'</span>,<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">          bbl/day
+Gasoline  24000.0
+Kerosene   2000.0
+Fuel Oil   5103.4
+Residual   2000.0
+
+</pre><h2>Process Utilization<a name="6"></a></h2><pre class="codeinput">displaytable( <span class="keyword">...</span>
+    [p, Capacity, Capacity - p, z], plabels, <span class="keyword">...</span>
+    {<span class="string">'Production'</span>,<span class="string">'Capacity'</span>,<span class="string">'Slack'</span>,<span class="string">'Sensitivity'</span>},<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">           Production     Capacity        Slack  Sensitivity
+Gasoline      24000.0      24000.0         -0.0          4.7
+Kerosene       2000.0       2000.0          0.0         87.5
+Fuel Oil       5103.4       6000.0        896.6         -0.0
+Residual       2000.0     100000.0      98000.0         -0.0
+
+</pre><h2>Questions to Explore<a name="7"></a></h2><div><ol><li>Why is the sensitivity so high for Kerosene?</li><li>You're considering expanding the Kerosene and Fuel Oil capacities for   the plant. Each bbl of additional capacity has the same cost. Plot the   additional profit as a function of additional capacity.</li></ol></div><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% SEMD Example 19.3
+%
+% Determine the optimal production schedule for the following process.
+%
+%                             ____________
+%                            |            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Gasoline ($36/bbl)
+%     Crude 1 ($24/bbl) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH>|            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Kerosene ($24/bbl)
+%                            |  Refinery  |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Fuel Oil ($21/bbl)
+%     Crude 2 ($15/bbl) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH>|            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Residual ($10/bbl)
+%                            |____________|
+%
+%
+%                       Volumetric Yield      Capacity
+%                      Crude #1  Crude #2      bbl/day
+%     Gasoline            80%       44%         24,000
+%     Kerosine             5%       10%          2,000
+%     Fuel Oil            10%       36%          6,000
+%
+%     Processing Cost   $0.50/bbl $1.00/bbl
+
+%% Script Requirments
+%
+% * |displaytable.m| 
+% * CVX
+
+%% Decision Variables
+
+clabels = {'Crude 1','Crude 2'};
+plabels = {'Gasoline','Kerosene','Fuel Oil','Residual'};
+
+%% CVX Optimization Model
+
+cvx_begin
+
+    % Decision Variables
+    
+    variables c(2) p(4)
+    c >= 0; p <= 100000;
+    p >= 0; p <= 100000;
+    
+    % Objective Function
+    
+    revenue = 36*p(1) + 24*p(2) + 21*p(3) + 10*p(4);
+    rawmaterials = 24*c(1) + 15*c(2);
+    processing = 0.5*c(1) + 1.0*c(2);
+    profit = revenue - rawmaterials - processing;
+    
+    maximize(profit)
+    
+    % Refinery Yield Model
+    
+    Y = [0.80 0.44; 0.05 0.10; 0.10 0.36; 0.05 0.10];
+    p == Y*c;
+    
+    % Refinery Production Capacity
+    
+    dual variable z
+    Capacity = [24000; 2000; 6000; 100000];
+    z : p <= Capacity;
+
+cvx_end
+
+%% Crude Utilization
+
+displaytable(c,clabels,'bbl/day','%6.1f');
+
+%% Production
+
+displaytable(p,plabels,'bbl/day','%6.1f');
+
+%% Process Utilization
+
+displaytable( ...
+    [p, Capacity, Capacity - p, z], plabels, ...
+    {'Production','Capacity','Slack','Sensitivity'},'%6.1f');
+
+%% Questions to Explore
+%
+% # Why is the sensitivity so high for Kerosene?
+% # You're considering expanding the Kerosene and Fuel Oil capacities for
+%   the plant. Each bbl of additional capacity has the same cost. Plot the
+%   additional profit as a function of additional capacity.
+##### SOURCE END #####
+--></body></html>

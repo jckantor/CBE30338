@@ -1,0 +1,613 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Project 1. Modeling and Simulation of a Continuous Bioreactor</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="ContinuousBioreactor.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Project 1. Modeling and Simulation of a Continuous Bioreactor</h1><!--introduction--><p>The following example is a Matlab implementation of a model for a continuous bioreactor based on problem 2.15 of SEMD. Use the Matlab 'publish' command to view the results. This script requires <tt>displaytable</tt> and <tt>addplot</tt> from the CBE30338 matlab utilities folder.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Version History</a></li><li><a href="#2">Process Description</a></li><li><a href="#5">PART 1. Model for the Continuous Bioreactor</a></li><li><a href="#12">PART 2. Phase Plane</a></li><li><a href="#15">PART 3. Step Testing</a></li><li><a href="#22">PART 4. Proportional Control</a></li><li><a href="#27">OPTIONAL. Proportional-Integral Control</a></li></ul></div><h2>Version History<a name="1"></a></h2><pre>2012/02/05 -- Original Version, Jeff Kantor
+2012/02/06 -- Added PI simulation.</pre><h2>Process Description<a name="2"></a></h2><p>Operation of the continuous bioreactor begins with an initial batch of cells. A growth substrate is added to the reactor at a programmed rate F(t) over the period of operation. Substrate is consumed and a desired product produced during the course of normal cell growth and metabolism.</p><pre>                          _____
+   Substrate ----        |Mixer|
+     F, Sf       |        \___/
+              ___|__________|______________
+             |              |              |
+             | V: Volume    | P: Product   |-------------&gt;
+             | S: Substrate | X: Cells     |   Product
+             |            _ | _            |    X,S,P
+             |           |_|-|_|           |
+             |_____________________________|</pre><p>Parameter values for the fed-batch bioreactor are from Table 2.3 of SEMD.</p><pre>MATLAB   PARAMETER           DESCRIPTION   VALUE     UNITS
+ mumax    mu_{max}   Maximum Growth Rate    0.20    1/hour
+    Ks         K_s        Monod Constant    1.00   g/liter
+   Yxs     Y_{X/S}            Cell yield     0.5       g/g
+   Ypx     Y_{P/X}         Product yield     0.2       g/g
+    Sf         S_f   Feed Substrate Conc    10.0   g/liter</pre><pre class="codeinput">mumax = 0.20;
+Ks    = 1.00;
+Yxs   = 0.5;
+Ypx   = 0.2;
+Sf    = 10.0;
+</pre><p>Rate equations for cell growth are implemented using anonymous functions. The following lines implement the rate models given by equations (2-93) through (2-95) in SEMD.</p><pre class="codeinput">mu = @(S) mumax*S./(Ks + S);    <span class="comment">% Monod Equation (2-94)</span>
+rg = @(X,S) mu(S)*X;            <span class="comment">% Rate of cell growth (2-93)</span>
+rp = @(X,S) Ypx*rg(X,S);        <span class="comment">% Rate of product formation (2-95)</span>
+</pre><h2>PART 1. Model for the Continuous Bioreactor<a name="5"></a></h2><p>Convert the model of the fed-batch bioreactor to a continuous bioreactor operating at constant volume. The inlet flowrate is F (volumetric units, not mass as mistakenly indicated in the problem), and is equal to the outlet flowrate. The volume is fixed.  In your model, F and V will appear as the ratio F/V which is called the dilution rate and represented by the symbol D.</p><p>--------- SOLUTION ---------</p><p>Simulating systems of differential equations in Matlab requires all of the variables to be included in a single Matlab vector. The following table shows how the model variables are mapped to the Matlab vector <tt>x</tt> for simulation.</p><pre>MATLAB  SYMBOL       DESCRIPTION     IC     UNITS
+  x(1)       X        Cell Conc.   0.05   g/liter
+  x(2)       S   Substrate Conc.   10.0   g/liter
+  x(3)       P     Product Conc.    0.0   g/liter</pre><pre class="codeinput">ic = [0.05; 10.0; 0.0];
+</pre><p>The dilution rate is the ratio of volumetric flowrate to reactor volume, that is F/V with units 1/hour.</p><pre class="codeinput">D = @(t) 0.1;
+</pre><p>The differential equations given in SEMD for the fed-batch bioreactor model the rate of change for total cell mass, product mass, substrate mass, and volume. These equations are modified for the case of constant volume, and an exit flow.</p><pre class="codeinput">dX = @(t,x) -D(t)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t)*x(3)      + rp(x(1),x(2));
+</pre><p>The right hand sides of the differential equations are assembled into a corresponding function that produces a vector of function values.</p><pre class="codeinput">f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+</pre><p>Use <tt>ode45</tt> for the integration.</p><pre class="codeinput">tspan = [0 100];
+[t,x] = ode45(f,tspan,ic);
+</pre><p>Display</p><pre class="codeinput">subplot(2,2,1);
+plot(t,x(:,1));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'X (g/L)'</span>);
+title(<span class="string">'Cell Concentration'</span>);
+
+subplot(2,2,2);
+plot(t,x(:,3));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'P (g/L)'</span>);
+title(<span class="string">'Product Concentration'</span>);
+
+subplot(2,2,3);
+plot(t,x(:,2));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'S (g/L)'</span>);
+title(<span class="string">'Substrate Concentration'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_01.png" alt=""> <h2>PART 2. Phase Plane<a name="12"></a></h2><p>For a fixed value D = 0.1 (units = 1/hr), and all other parameters as given in Table 2.3, simulate the response of the bioreactor from an initial condition X(0) = 0.05; S(0) = 10; P(0) = 0. Repeat the simulation for an initial condition X(0) = 2.0. What is the major difference in these results?  Construct a plot of the two simulations where X is plotted as a function of S.</p><p>--------- SOLUTION ---------</p><p>Having already established the model with D(t) = 0.1, all that needs to be done is to simulate the response for two different initial conditions.</p><pre class="codeinput">ic1 = [0.05; 10; 0];
+ic2 = [2.0; 10; 0];
+
+[t1,x1] = ode45(f,tspan,ic1);
+[t2,x2] = ode45(f,tspan,ic2);
+
+clf;
+
+subplot(2,2,1);
+plot(t1,x1(:,1),t2,x2(:,1));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'X (g/L)'</span>);
+title(<span class="string">'Cell Concentration [g/L]'</span>);
+
+subplot(2,2,2);
+plot(t1,x1(:,3),t2,x2(:,3));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'P (g/L)'</span>);
+title(<span class="string">'Product Concentration [g/L]'</span>);
+
+subplot(2,2,3);
+plot(t1,x1(:,2),t2,x2(:,2));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'S (g/L)'</span>);
+title(<span class="string">'Substrate Concentration [g/L]'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_02.png" alt=""> <p>Plotting one state variable as function of another is called the phase plane. Phase plane analysis is particularly useful in studying the behavior of nonlinear systems.</p><pre class="codeinput">clf;
+plot(x1(:,2),x1(:,1),x2(:,2),x2(:,1));
+xlabel(<span class="string">'Substrate Concentration [g/L]'</span>);
+ylabel(<span class="string">'Cell Concentration [g/L]'</span>);
+legend(<span class="string">'IC = [0.05; 10; 0]'</span>,<span class="string">'IC = [2.0; 10; 0]'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_03.png" alt=""> <h2>PART 3. Step Testing<a name="15"></a></h2><p>Choose the initial conditions so that the process starts at steady state with D = 0.1.  Do a step test by increasing D to 0.12 at t = 0. Plot the step response of S(t).  Find a transfer function that approximates this step response.</p><p>--------- SOLUTION ---------</p><p>The first task is to identify the steady state solution. We do this in two steps. First run the ode45 simulation for a while to get near a steady state, then pass that to fsolve as a starting point for finding precise values for the steady state solution.</p><pre class="codeinput">[t,x] = ode45(f,[0 100],ic);
+xss = fsolve(@(x)f(0,x),x(end,:)');
+
+displaytable(D(0),<span class="string">'Dilution Rate = '</span>);
+displaytable(xss,{<span class="string">'X'</span>,<span class="string">'S'</span>,<span class="string">'P'</span>},<span class="string">'Steady State'</span>);
+</pre><pre class="codeoutput">
+Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the default value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+
+
+Dilution Rate =   0.1
+
+   Steady State
+X           4.5
+S             1
+P           0.9
+
+</pre><p>A step change in D from 0.10 to 0.12 can be conveniently implemented in Matlab using anonymous functions.</p><pre class="codeinput">D = @(t) (t&lt;0)*0.10 + (t&gt;=0)*0.12;
+</pre><p>Because D(t) has changed, it is necessary to rebuilding the functions from the point of the change.</p><pre class="codeinput">dX = @(t,x) -D(t)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t)*x(3)      + rp(x(1),x(2));
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+</pre><p>Simulation of the step response starting at the steady state.</p><pre class="codeinput">[t,x] = ode45(f,[0 20],xss);
+
+plot(t,x(:,2));
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'S (g/L)'</span>);
+title(<span class="string">'Substrate Concentration [g/L]'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_04.png" alt=""> <p>There are many ways to fit a transfer function. Here we start by expressing the step as a deviation from steady state.</p><pre class="codeinput">Sd = x(:,2) - xss(2);
+clf;
+plot(t,Sd);
+xlabel(<span class="string">'Time (hr)'</span>);
+ylabel(<span class="string">'S_d = S - S_{ss} (g/L)'</span>);
+title(<span class="string">'Substrate Deviation from Steady-State [g/L]'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_05.png" alt=""> <p>The deviation in controlled variable is rescaled by dividing by the magnitude of the step in D. For a first order transfer function, the 'gain' is then the maximum value, and the time constant is the time necessary to acheive 0.6321 of the ultimate response.</p><pre class="codeinput">Dd = max(D(t)) - 0.10;
+G = Sd./Dd;
+
+<span class="comment">% The gain is the max</span>
+K = max(G);
+
+[tmp,i] = min(abs(G-0.6321*K));
+tau = t(i);
+
+Sdpred = xss(2) + K*(1-exp(-t/tau))*Dd;
+plot(t,x(:,2),t,Sdpred);
+legend(<span class="string">'S(t) Deviation'</span>,<span class="string">'First-Order Step Response'</span>,<span class="string">'Location'</span>,<span class="string">'SE'</span>);
+title(<span class="string">'Step Response'</span>);
+
+displaytable(K, <span class="string">'Gain [g*hr/liter] = '</span>);
+displaytable(tau,<span class="string">'Tau [hr] = '</span>);
+</pre><pre class="codeoutput">Gain [g*hr/liter] =   24.916
+
+Tau [hr] =   3.1164
+
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_06.png" alt=""> <h2>PART 4. Proportional Control<a name="22"></a></h2><p>Implement a proportional feedback control that measures substrate concentration S then adjusts D to maintain S at a setpoint near 2.0 grams/liter.  Be sure to limit D so that it always positive (for example, using a max function such as in the expression D = @(t,x) max(0, 0.1+Kp*(Ssp -x(2)) ).</p><p>--------- SOLUTION ---------</p><p>The controller is implemented to determine a deviation for the dilution rate that is proportional to deviation of substrate concentration x(2) from the setpoint Sp. For clarity, we'll start the simulation a bit before time 0 in order to see how the substrate concentration and dilution rate changes with the setpoint change.</p><pre class="codeinput">Sp = @(t) xss(2) + (2-xss(2))*(t &gt;= 0);
+Kp = 0.2;
+</pre><p>Proportional control, subject to constraint on non-negativity.</p><pre class="codeinput">D = @(t,x) max(0, 0.1 + Kp*(Sp(t) - x(2)));
+</pre><p>Renew the process model. Note that D is now a function of t and x.</p><pre class="codeinput">dX = @(t,x) -D(t,x)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t,x)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t,x)*x(3)      + rp(x(1),x(2));
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+[t,x] = ode45(f,[-2 20],xss);
+
+clf;
+subplot(2,1,1);
+plot(t,x(:,2));
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Substrate S [g/L]'</span>);
+title(<span class="string">'Controlled Substrate Concentration'</span>);
+
+subplot(2,1,2);
+plot(t, max(0, 0.1 + Kp*(Sp(t)-x(:,2))));
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Dilution Rate [1/hr]'</span>);
+title(<span class="string">'Dilution Rate'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_07.png" alt=""> <p>The dilution rate exhibits a sharp spike when the setpoint changes, and the substrate concentration never quite reaches the desired steady-state.</p><h2>OPTIONAL. Proportional-Integral Control<a name="27"></a></h2><p>Integral control adds a feature whereby the difference between a controlled variable and its setpoint is integrated and used to adjust the manipulated variable.</p><pre class="codeinput">Kp = 0.15;
+Ki = 0.15;
+</pre><p>Proportional-Integral control, subject to constraint on non-negativity.</p><pre class="codeinput">D = @(t,x) max(0, 0.1 + Kp*(Sp(t) - x(2)) + Ki*x(4));
+
+dX = @(t,x) -D(t,x)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t,x)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t,x)*x(3)      + rp(x(1),x(2));
+dI = @(t,x) Sp(t) - x(2);
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x); dI(t,x)];
+[t,x] = ode45(f,[-2 20],[xss;0]);
+
+subplot(2,1,1);
+addplot(t,x(:,2),<span class="string">'r'</span>);
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Substrate S [g/L]'</span>);
+title(<span class="string">'Controlled Substrate Concentration'</span>);
+
+subplot(2,1,2);
+addplot(t, max(0, 0.1 + Kp*(Sp(t)-x(:,2))+Ki*x(:,4)),<span class="string">'r'</span>);
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Dilution Rate [1/hr]'</span>);
+title(<span class="string">'Dilution Rate'</span>);
+</pre><img vspace="5" hspace="5" src="ContinuousBioreactor_08.png" alt=""> <p>Compared to Proportional control, we see that Proportional-Integral control can be adjusted to eliminate steady-state offset from the desired setpoint, and reduce the overall range of dilution changes necessary for good control performance.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Project 1. Modeling and Simulation of a Continuous Bioreactor
+%
+% The following example is a Matlab implementation of a model for a
+% continuous bioreactor based on problem 2.15 of SEMD. Use the Matlab
+% 'publish' command to view the results. This script requires
+% |displaytable| and |addplot| from the CBE30338 matlab utilities folder.
+
+%% Version History
+%
+%  2012/02/05 REPLACE_WITH_DASH_DASH Original Version, Jeff Kantor
+%  2012/02/06 REPLACE_WITH_DASH_DASH Added PI simulation.
+
+%% Process Description
+%
+% Operation of the continuous bioreactor begins with an initial batch of
+% cells. A growth substrate is added to the reactor at a programmed rate
+% F(t) over the period of operation. Substrate is consumed and a desired
+% product produced during the course of normal cell growth and metabolism.
+%
+%                            _____
+%     Substrate REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH        |Mixer|
+%       F, Sf       |        \___/
+%                ___|__________|______________
+%               |              |              |
+%               | V: Volume    | P: Product   |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH->
+%               | S: Substrate | X: Cells     |   Product
+%               |            _ | _            |    X,S,P
+%               |           |_|-|_|           |
+%               |_____________________________|
+
+%%
+%
+% Parameter values for the fed-batch bioreactor are from Table 2.3 of SEMD.
+%
+%  MATLAB   PARAMETER           DESCRIPTION   VALUE     UNITS
+%   mumax    mu_{max}   Maximum Growth Rate    0.20    1/hour
+%      Ks         K_s        Monod Constant    1.00   g/liter
+%     Yxs     Y_{X/S}            Cell yield     0.5       g/g
+%     Ypx     Y_{P/X}         Product yield     0.2       g/g
+%      Sf         S_f   Feed Substrate Conc    10.0   g/liter
+
+mumax = 0.20;
+Ks    = 1.00;
+Yxs   = 0.5;
+Ypx   = 0.2;
+Sf    = 10.0;
+
+%%
+%
+% Rate equations for cell growth are implemented using anonymous functions.
+% The following lines implement the rate models given by equations (2-93)
+% through (2-95) in SEMD.
+
+mu = @(S) mumax*S./(Ks + S);    % Monod Equation (2-94)
+rg = @(X,S) mu(S)*X;            % Rate of cell growth (2-93)
+rp = @(X,S) Ypx*rg(X,S);        % Rate of product formation (2-95)
+
+%% PART 1. Model for the Continuous Bioreactor
+%
+% Convert the model of the fed-batch bioreactor to a continuous bioreactor
+% operating at constant volume. The inlet flowrate is F (volumetric units,
+% not mass as mistakenly indicated in the problem), and is equal to the
+% outlet flowrate. The volume is fixed.  In your model, F and V will appear
+% as the ratio F/V which is called the dilution rate and represented by the
+% symbol D.
+
+%%
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH- SOLUTION REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+% Simulating systems of differential equations in Matlab requires all of
+% the variables to be included in a single Matlab vector. The following
+% table shows how the model variables are mapped to the Matlab vector |x|
+% for simulation.
+%
+%  MATLAB  SYMBOL       DESCRIPTION     IC     UNITS
+%    x(1)       X        Cell Conc.   0.05   g/liter
+%    x(2)       S   Substrate Conc.   10.0   g/liter
+%    x(3)       P     Product Conc.    0.0   g/liter
+
+ic = [0.05; 10.0; 0.0];
+
+%%
+%
+% The dilution rate is the ratio of volumetric flowrate to reactor volume,
+% that is F/V with units 1/hour. 
+
+D = @(t) 0.1;
+
+%%
+%
+% The differential equations given in SEMD for the fed-batch bioreactor
+% model the rate of change for total cell mass, product mass, substrate
+% mass, and volume. These equations are modified for the case of constant
+% volume, and an exit flow.
+
+dX = @(t,x) -D(t)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t)*x(3)      + rp(x(1),x(2));
+
+%%
+% The right hand sides of the differential equations are assembled into a
+% corresponding function that produces a vector of function values.
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+
+%%
+% Use |ode45| for the integration. 
+
+tspan = [0 100];
+[t,x] = ode45(f,tspan,ic);
+
+%%
+% Display
+
+subplot(2,2,1);
+plot(t,x(:,1));
+xlabel('Time (hr)');
+ylabel('X (g/L)');
+title('Cell Concentration');
+
+subplot(2,2,2);
+plot(t,x(:,3));
+xlabel('Time (hr)');
+ylabel('P (g/L)');
+title('Product Concentration');
+
+subplot(2,2,3);
+plot(t,x(:,2));
+xlabel('Time (hr)');
+ylabel('S (g/L)');
+title('Substrate Concentration');
+
+%% PART 2. Phase Plane
+%
+% For a fixed value D = 0.1 (units = 1/hr), and all other parameters as
+% given in Table 2.3, simulate the response of the bioreactor from an
+% initial condition X(0) = 0.05; S(0) = 10; P(0) = 0. Repeat the simulation
+% for an initial condition X(0) = 2.0. What is the major difference in
+% these results?  Construct a plot of the two simulations where X is
+% plotted as a function of S.
+
+%%
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH- SOLUTION REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+% Having already established the model with D(t) = 0.1, all that needs to
+% be done is to simulate the response for two different initial conditions.
+
+ic1 = [0.05; 10; 0];
+ic2 = [2.0; 10; 0];
+
+[t1,x1] = ode45(f,tspan,ic1);
+[t2,x2] = ode45(f,tspan,ic2);
+
+clf;
+
+subplot(2,2,1);
+plot(t1,x1(:,1),t2,x2(:,1));
+xlabel('Time (hr)');
+ylabel('X (g/L)');
+title('Cell Concentration [g/L]');
+
+subplot(2,2,2);
+plot(t1,x1(:,3),t2,x2(:,3));
+xlabel('Time (hr)');
+ylabel('P (g/L)');
+title('Product Concentration [g/L]');
+
+subplot(2,2,3);
+plot(t1,x1(:,2),t2,x2(:,2));
+xlabel('Time (hr)');
+ylabel('S (g/L)');
+title('Substrate Concentration [g/L]');
+
+%%
+% Plotting one state variable as function of another is called the phase
+% plane. Phase plane analysis is particularly useful in studying the
+% behavior of nonlinear systems.
+
+clf;
+plot(x1(:,2),x1(:,1),x2(:,2),x2(:,1));
+xlabel('Substrate Concentration [g/L]');
+ylabel('Cell Concentration [g/L]');
+legend('IC = [0.05; 10; 0]','IC = [2.0; 10; 0]');
+
+%% PART 3. Step Testing
+%
+% Choose the initial conditions so that the process starts at steady state
+% with D = 0.1.  Do a step test by increasing D to 0.12 at t = 0. Plot the
+% step response of S(t).  Find a transfer function that approximates this
+% step response.
+
+%%
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH- SOLUTION REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+% The first task is to identify the steady state solution. We do this in
+% two steps. First run the ode45 simulation for a while to get near a
+% steady state, then pass that to fsolve as a starting point for finding
+% precise values for the steady state solution.
+
+[t,x] = ode45(f,[0 100],ic);
+xss = fsolve(@(x)f(0,x),x(end,:)');
+
+displaytable(D(0),'Dilution Rate = ');
+displaytable(xss,{'X','S','P'},'Steady State');
+
+%%
+% A step change in D from 0.10 to 0.12 can be conveniently implemented in
+% Matlab using anonymous functions.
+
+D = @(t) (t<0)*0.10 + (t>=0)*0.12;
+
+%%
+% Because D(t) has changed, it is necessary to rebuilding the functions
+% from the point of the change.
+
+dX = @(t,x) -D(t)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t)*x(3)      + rp(x(1),x(2));
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+
+%% 
+% Simulation of the step response starting at the steady state.
+
+[t,x] = ode45(f,[0 20],xss);
+
+plot(t,x(:,2));
+xlabel('Time (hr)');
+ylabel('S (g/L)');
+title('Substrate Concentration [g/L]');
+
+%%
+% There are many ways to fit a transfer function. Here we start by
+% expressing the step as a deviation from steady state.
+
+Sd = x(:,2) - xss(2);
+clf;
+plot(t,Sd);
+xlabel('Time (hr)');
+ylabel('S_d = S - S_{ss} (g/L)');
+title('Substrate Deviation from Steady-State [g/L]');
+
+%% 
+% The deviation in controlled variable is rescaled by dividing by the
+% magnitude of the step in D. For a first order transfer function, the
+% 'gain' is then the maximum value, and the time constant is the time
+% necessary to acheive 0.6321 of the ultimate response.
+
+Dd = max(D(t)) - 0.10;
+G = Sd./Dd;
+
+% The gain is the max
+K = max(G);
+
+[tmp,i] = min(abs(G-0.6321*K));
+tau = t(i);
+
+Sdpred = xss(2) + K*(1-exp(-t/tau))*Dd;
+plot(t,x(:,2),t,Sdpred);
+legend('S(t) Deviation','First-Order Step Response','Location','SE');
+title('Step Response');
+
+displaytable(K, 'Gain [g*hr/liter] = ');
+displaytable(tau,'Tau [hr] = ');
+
+%% PART 4. Proportional Control
+% 
+% Implement a proportional feedback control that measures substrate
+% concentration S then adjusts D to maintain S at a setpoint near 2.0
+% grams/liter.  Be sure to limit D so that it always positive (for example,
+% using a max function such as in the expression D = @(t,x) max(0,
+% 0.1+Kp*(Ssp -x(2)) ).
+
+%%
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH- SOLUTION REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+% The controller is implemented to determine a deviation for the dilution
+% rate that is proportional to deviation of substrate concentration x(2)
+% from the setpoint Sp. For clarity, we'll start the simulation a bit
+% before time 0 in order to see how the substrate concentration and
+% dilution rate changes with the setpoint change.
+
+Sp = @(t) xss(2) + (2-xss(2))*(t >= 0);
+Kp = 0.2;
+
+%%
+% Proportional control, subject to constraint on non-negativity.
+
+D = @(t,x) max(0, 0.1 + Kp*(Sp(t) - x(2)));
+
+%%
+% Renew the process model. Note that D is now a function of t and x.
+
+dX = @(t,x) -D(t,x)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t,x)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t,x)*x(3)      + rp(x(1),x(2));
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x)];
+[t,x] = ode45(f,[-2 20],xss);
+
+clf;
+subplot(2,1,1);
+plot(t,x(:,2));
+xlabel('Time [hr]');
+ylabel('Substrate S [g/L]');
+title('Controlled Substrate Concentration');
+
+subplot(2,1,2);
+plot(t, max(0, 0.1 + Kp*(Sp(t)-x(:,2))));
+xlabel('Time [hr]');
+ylabel('Dilution Rate [1/hr]');
+title('Dilution Rate');
+
+%%
+% The dilution rate exhibits a sharp spike when the setpoint changes, and
+% the substrate concentration never quite reaches the desired steady-state.
+
+%% OPTIONAL. Proportional-Integral Control
+%
+% Integral control adds a feature whereby the difference between a
+% controlled variable and its setpoint is integrated and used to adjust the
+% manipulated variable.
+
+Kp = 0.15;
+Ki = 0.15;
+
+%%
+% Proportional-Integral control, subject to constraint on non-negativity.
+
+D = @(t,x) max(0, 0.1 + Kp*(Sp(t) - x(2)) + Ki*x(4));
+
+dX = @(t,x) -D(t,x)*x(1)      + rg(x(1),x(2));
+dS = @(t,x)  D(t,x)*(Sf-x(2)) - rg(x(1),x(2))/Yxs;
+dP = @(t,x) -D(t,x)*x(3)      + rp(x(1),x(2));
+dI = @(t,x) Sp(t) - x(2);
+
+f = @(t,x) [dX(t,x); dS(t,x); dP(t,x); dI(t,x)];
+[t,x] = ode45(f,[-2 20],[xss;0]);
+
+subplot(2,1,1);
+addplot(t,x(:,2),'r');
+xlabel('Time [hr]');
+ylabel('Substrate S [g/L]');
+title('Controlled Substrate Concentration');
+
+subplot(2,1,2);
+addplot(t, max(0, 0.1 + Kp*(Sp(t)-x(:,2))+Ki*x(:,4)),'r');
+xlabel('Time [hr]');
+ylabel('Dilution Rate [1/hr]');
+title('Dilution Rate');
+
+%%
+% Compared to Proportional control, we see that Proportional-Integral
+% control can be adjusted to eliminate steady-state offset from the desired
+% setpoint, and reduce the overall range of dilution changes necessary for
+% good control performance.
+
+##### SOURCE END #####
+--></body></html>

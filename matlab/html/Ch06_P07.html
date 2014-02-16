@@ -1,0 +1,239 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Problem 6.07</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-10"><meta name="DC.source" content="Ch06_P07.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Problem 6.07</h1><!--introduction--><p>File: <tt>Ch06_P07.m</tt></p><p>Build a simulation model in Matlab that accepts values for K, tau, and zeta. (See the <tt>ClosedLoopTF.m</tt> file in Matlab files for examples on how to do this). Adjust K, tau, and zeta to fit the experimental data reasonably well. (Don't do a-d).</p><p>-------------------------- SOLUTION --------------------------</p><!--/introduction--><p>Step 1. Extract empirical step test data gathered from Figure E6.7a for a step input of 2 psi and confirm with by plotting.</p><pre class="codeinput">data = [ 0  12.0; <span class="keyword">...</span>
+         5  15.3; <span class="keyword">...</span>
+        10  23.2; <span class="keyword">...</span>
+        15  27.2; <span class="keyword">...</span>
+        20  25.1; <span class="keyword">...</span>
+        25  20.0; <span class="keyword">...</span>
+        30  16.2; <span class="keyword">...</span>
+        35  16.2; <span class="keyword">...</span>
+        40  18.2; <span class="keyword">...</span>
+        45  20.0; <span class="keyword">...</span>
+        50  20.0; <span class="keyword">...</span>
+        55  18.5; <span class="keyword">...</span>
+        60  17.8; <span class="keyword">...</span>
+        65  17.2; <span class="keyword">...</span>
+        70  17.7; <span class="keyword">...</span>
+        75  18.1; <span class="keyword">...</span>
+        80  18.3; <span class="keyword">...</span>
+        85  18.1; <span class="keyword">...</span>
+        90  18.0; <span class="keyword">...</span>
+        95  17.6; <span class="keyword">...</span>
+       100  17.8];
+
+tdata = data(:,1);
+ydata = data(:,2);
+
+clf;
+plot(tdata,ydata,<span class="string">'x'</span>,<span class="string">'Markersize'</span>,10,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [mins]'</span>);
+ylabel(<span class="string">'P_m(%%)'</span>);
+grid;
+</pre><img vspace="5" hspace="5" src="Ch06_P07_01.png" alt=""> <p>Step 2. Express the transfer function as a function of K, tau, zeta</p><pre class="codeinput">Ga = @(K,tau,zeta) tf([K],[tau*tau 2*zeta*tau 1],<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+Gb = tf([-3],[20 1],<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+G = @(K,tau,zeta) Ga(K,tau,zeta) + Gb;
+</pre><p>Step 3. Construct an initial estimate for K, tau, zeta.  Note the steady state response to a step disturbance of 2 is about 6. Doing a bit of algebra we see that K is approximately +6. After a little trial and error we find get the following estimates.</p><pre class="codeinput">K = 6;
+tau = 6;
+zeta = 0.3;
+
+hold <span class="string">on</span>;
+y = ydata(1) + 2*step(G(K,tau,zeta),tdata);
+plot(tdata,y,<span class="string">'b'</span>);
+hold <span class="string">off</span>;
+
+displaytable([K;tau;zeta],{<span class="string">'K'</span>,<span class="string">'tau'</span>,<span class="string">'zeta'</span>},<span class="string">'Initial Estimate'</span>);
+</pre><pre class="codeoutput">      Initial Estimate
+K                    6
+tau                  6
+zeta               0.3
+
+</pre><img vspace="5" hspace="5" src="Ch06_P07_02.png" alt=""> <p>Step 3. Refine the estimates by regression.</p><pre class="codeinput">err = @(K,tau,zeta) norm(ydata - ydata(1) - 2*step(G(K,tau,zeta),tdata));
+x = fminsearch(@(x)err(x(1),x(2),x(3)),[K,tau,zeta]);
+
+K = x(1);
+tau = x(2);
+zeta = x(3);
+
+hold <span class="string">on</span>;
+y = ydata(1) + 2*step(G(K,tau,zeta),tdata);
+plot(tdata,y,<span class="string">'r'</span>);
+hold <span class="string">off</span>;
+legend(<span class="string">'Data'</span>,<span class="string">'Trial Fit'</span>,<span class="string">'Best Fit'</span>);
+</pre><img vspace="5" hspace="5" src="Ch06_P07_03.png" alt=""> <p>Step 4. Report results</p><pre class="codeinput">displaytable([K;tau;zeta],{<span class="string">'K'</span>,<span class="string">'tau'</span>,<span class="string">'zeta'</span>},<span class="string">'Regressed'</span>);
+Ga(K,tau,zeta)
+</pre><pre class="codeoutput">      Regressed
+K        5.9685
+tau       5.016
+zeta    0.19759
+
+
+ans =
+ 
+           5.969
+  -----------------------
+  25.16 s^2 + 1.982 s + 1
+ 
+Continuous-time transfer function.
+
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Problem 6.07
+%
+% File: |Ch06_P07.m|
+%
+% Build a simulation model in Matlab that accepts values for K, tau, and
+% zeta. (See the |ClosedLoopTF.m| file in Matlab files for examples on how
+% to do this). Adjust K, tau, and zeta to fit the experimental data
+% reasonably well. (Don't do a-d).
+%
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH SOLUTION REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+
+%%
+% Step 1. Extract empirical step test data gathered from Figure E6.7a for a step input of 2
+% psi and confirm with by plotting.
+
+data = [ 0  12.0; ...
+         5  15.3; ...
+        10  23.2; ...
+        15  27.2; ...
+        20  25.1; ...
+        25  20.0; ...
+        30  16.2; ...
+        35  16.2; ...
+        40  18.2; ...
+        45  20.0; ...
+        50  20.0; ...
+        55  18.5; ...
+        60  17.8; ...
+        65  17.2; ...
+        70  17.7; ...
+        75  18.1; ...
+        80  18.3; ...
+        85  18.1; ...
+        90  18.0; ...
+        95  17.6; ...
+       100  17.8];
+
+tdata = data(:,1);
+ydata = data(:,2);
+
+clf;
+plot(tdata,ydata,'x','Markersize',10,'LineWidth',2);
+xlabel('Time [mins]');
+ylabel('P_m(%%)');
+grid;
+
+%%
+% Step 2. Express the transfer function as a function of K, tau, zeta
+
+Ga = @(K,tau,zeta) tf([K],[tau*tau 2*zeta*tau 1],'TimeUnit','minutes');
+Gb = tf([-3],[20 1],'TimeUnit','minutes');
+G = @(K,tau,zeta) Ga(K,tau,zeta) + Gb;
+
+%%
+% Step 3. Construct an initial estimate for K, tau, zeta.  Note the steady
+% state response to a step disturbance of 2 is about 6. Doing a bit of
+% algebra we see that K is approximately +6. After a little trial and error
+% we find get the following estimates.
+
+K = 6;
+tau = 6;
+zeta = 0.3;
+
+hold on;
+y = ydata(1) + 2*step(G(K,tau,zeta),tdata);
+plot(tdata,y,'b');
+hold off;
+
+displaytable([K;tau;zeta],{'K','tau','zeta'},'Initial Estimate');
+
+
+%%
+% Step 3. Refine the estimates by regression.
+
+err = @(K,tau,zeta) norm(ydata - ydata(1) - 2*step(G(K,tau,zeta),tdata));
+x = fminsearch(@(x)err(x(1),x(2),x(3)),[K,tau,zeta]);
+
+K = x(1);
+tau = x(2);
+zeta = x(3);
+
+hold on;
+y = ydata(1) + 2*step(G(K,tau,zeta),tdata);
+plot(tdata,y,'r');
+hold off;
+legend('Data','Trial Fit','Best Fit');
+
+%%
+% Step 4. Report results
+
+displaytable([K;tau;zeta],{'K','tau','zeta'},'Regressed');
+Ga(K,tau,zeta)
+##### SOURCE END #####
+--></body></html>

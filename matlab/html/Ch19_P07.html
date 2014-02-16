@@ -1,0 +1,134 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>SEMD Problem 19.7 Data Reconciliation for Material Balances</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch19_P07.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>SEMD Problem 19.7 Data Reconciliation for Material Balances</h1><!--introduction--><p>File: <tt>Ch19_P07.m</tt></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Measurement Data</a></li><li><a href="#2">CVX Model</a></li><li><a href="#3">show result</a></li></ul></div><h2>Measurement Data<a name="1"></a></h2><pre class="codeinput">mB = [92.4; 94.3; 93.8];
+mC = [11.1; 10.8; 11.4];
+</pre><h2>CVX Model<a name="2"></a></h2><pre class="codeinput">cvx_begin
+
+    <span class="comment">% mass balance model</span>
+    variables <span class="string">wA</span> <span class="string">wB</span> <span class="string">wC</span>;
+    wA + wC == wB;
+    wA &gt;= 0;
+    wB &gt;= 0;
+    wC &gt;= 0;
+
+    <span class="comment">% measurement errors</span>
+    variables <span class="string">eB(3)</span> <span class="string">eC(3)</span>;
+    mB == wB + eB;
+    mC == wC + eC;
+
+    <span class="comment">% least squares objective</span>
+    minimize <span class="string">sum(eC.^2 + eB.^2)</span>
+
+cvx_end
+</pre><h2>show result<a name="3"></a></h2><pre class="codeinput">fprintf(<span class="string">'wA = %6.2f\n'</span>, wA);
+fprintf(<span class="string">'wB = %6.2f\n'</span>, wB);
+fprintf(<span class="string">'wC = %6.2f\n'</span>, wC);
+</pre><pre class="codeoutput">wA =  82.40
+wB =  93.50
+wC =  11.10
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% SEMD Problem 19.7 Data Reconciliation for Material Balances
+%
+% File: |Ch19_P07.m|
+
+%% Measurement Data
+
+mB = [92.4; 94.3; 93.8];
+mC = [11.1; 10.8; 11.4];
+
+%% CVX Model
+
+cvx_begin
+
+    % mass balance model
+    variables wA wB wC;
+    wA + wC == wB;
+    wA >= 0;
+    wB >= 0;
+    wC >= 0;
+    
+    % measurement errors
+    variables eB(3) eC(3);
+    mB == wB + eB;
+    mC == wC + eC;
+
+    % least squares objective
+    minimize sum(eC.^2 + eB.^2)
+    
+cvx_end
+
+%% show result
+
+fprintf('wA = %6.2f\n', wA);
+fprintf('wB = %6.2f\n', wB);
+fprintf('wC = %6.2f\n', wC);
+
+
+##### SOURCE END #####
+--></body></html>

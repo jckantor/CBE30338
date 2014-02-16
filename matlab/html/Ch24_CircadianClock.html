@@ -1,0 +1,352 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Circadian Clock</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch24_CircadianClock.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Circadian Clock</h1><!--introduction--><p>The circadian clock controls the daily physiological behavior of many organisms. It is known that for mammals the circadian clock resides in the hypothalamus region of the brain, and involves the synchronization of a gene regulatory network. A simple model of this network was proposed by Tyson and coworkers in 1999 and described in some detail in the SEMD textbook.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Citations</a></li><li><a href="#2">Parameters</a></li><li><a href="#3">Dependence of mRNA transcription rate on protein concentration</a></li><li><a href="#4">Concentration dynamics of mRNA (M) and protein (P).</a></li><li><a href="#5">Numerical Solution</a></li><li><a href="#6">Nullclines and the Phase Plane</a></li><li><a href="#8">Entrainment</a></li><li><a href="#9">Entrainment appears to be aperiodic</a></li></ul></div><h2>Citations<a name="1"></a></h2><p>1. Tyson, J. J., C. I. Hong, C. D. Thron, B. Novak. 1999. A Simple Model of Circadian Rhythms Based on Dimerization and Proteolysis of PER and TIM. Biophysical J. 77:2411-2417.</p><p>2. SEMD Section 24.2.1.</p><h2>Parameters<a name="2"></a></h2><pre class="codeinput">vm = 1;
+km = 0.1;
+vp = 0.5;
+kp1 = 10;
+kp2 = 0.03;
+kp3 = 0.1;
+Keq = 200;
+Pcrit = 0.1;
+Jp = 0.05;
+</pre><h2>Dependence of mRNA transcription rate on protein concentration<a name="3"></a></h2><pre class="codeinput">q = @(P) 2./(1+sqrt(1+8*Keq*P));
+</pre><h2>Concentration dynamics of mRNA (M) and protein (P).<a name="4"></a></h2><pre class="codeinput">Mdot = @(M,P) vm/(1 + (P*(1-q(P))/2/Pcrit)^2) - km*M;
+Pdot = @(M,P) vp*M - (kp1*P*q(P)+kp2*P)/(Jp+P) - kp3*P;
+
+M0 = 2;
+P0 = 2;
+</pre><h2>Numerical Solution<a name="5"></a></h2><pre class="codeinput"><span class="comment">% Differential equations and initial conditions</span>
+
+deriv = @(t,x) [ <span class="keyword">...</span>
+    Mdot(x(1),x(2));
+    Pdot(x(1),x(2))];
+
+x0 = [M0;P0];
+
+<span class="comment">% Calculate solution</span>
+
+tf = 100;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0);
+
+<span class="comment">% Evaluate solution</span>
+
+t = 0:0.1:tf;
+M = deval(soln,t,1);
+P = deval(soln,t,2);
+
+<span class="comment">% Display solution</span>
+
+figure(1);clf;
+plot(t,M,t,P,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Concentration'</span>);
+legend(<span class="string">'M'</span>,<span class="string">'P'</span>);
+</pre><img vspace="5" hspace="5" src="Ch24_CircadianClock_01.png" alt=""> <h2>Nullclines and the Phase Plane<a name="6"></a></h2><pre class="codeinput">figure(2);clf;
+
+Mnull = @(P) vm./km./(1 + (P.*(1-q(P))/2/Pcrit).^2);
+Pnull = @(P) (kp1*P.*q(P)+kp2*P)./(vp*(Jp+P)) + kp3*P/vp;
+
+Ps = logspace(-3,1,100);
+loglog(Ps,Mnull(Ps),Ps,Pnull(Ps),<span class="string">'LineWidth'</span>,2);
+axis([0.001 10 0.1 100]);
+xlabel(<span class="string">'M'</span>);
+ylabel(<span class="string">'P'</span>);
+legend(<span class="string">'M nullcline'</span>,<span class="string">'N nullcline'</span>);
+</pre><img vspace="5" hspace="5" src="Ch24_CircadianClock_02.png" alt=""> <p>Plotting the solution in the phase plane demonstrates the relationship between the nullclines and solution obtained above.</p><pre class="codeinput">hold <span class="string">on</span>
+loglog(P,M,<span class="string">'r'</span>);
+hold <span class="string">off</span>
+</pre><img vspace="5" hspace="5" src="Ch24_CircadianClock_03.png" alt=""> <h2>Entrainment<a name="8"></a></h2><p>The circadian clock synchronizes to periodic changes in the equilbrium constant Keq. To study this phenomena, we introduce a periodic forcing function Keq(t).</p><pre class="codeinput"><span class="comment">% The following function produces periodic square wave with period T</span>
+
+u = @(t,T) (mod(t,T)/T &gt;= 0.5);
+
+T = 20;
+Keq = @(t) 100 + 100*u(t,T);
+
+<span class="comment">% Dependence of mRNA transcription rate on protein concentration</span>
+
+q = @(P,Keq) 2./(1+sqrt(1+8*Keq*P));
+
+<span class="comment">% Concentration dynamics of mRNA (M) and protein (P).</span>
+
+Mdot = @(M,P,Keq) vm/(1 + (P*(1-q(P,Keq))/2/Pcrit)^2) - km*M;
+Pdot = @(M,P,Keq) vp*M - (kp1*P*q(P,Keq)+kp2*P)/(Jp+P) - kp3*P;
+
+M0 = 0;
+P0 = 0;
+
+<span class="comment">% Differential equations</span>
+
+deriv = @(t,x) [ <span class="keyword">...</span>
+    Mdot(x(1),x(2),Keq(t));
+    Pdot(x(1),x(2),Keq(t))];
+
+x0 = [M0;P0];
+
+<span class="comment">% Calculate solution</span>
+
+tf = 400;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0);
+
+<span class="comment">% Evaluate and Display solution</span>
+
+figure(3);clf;
+
+t = 0:0.1:tf;
+subplot(5,1,[1:4])
+plot(t,deval(soln,t));
+legend(<span class="string">'M'</span>,<span class="string">'P'</span>);
+title(<span class="string">'Entrainment'</span>);
+
+subplot(5,1,5)
+plot(t,Keq(t),<span class="string">'r'</span>);
+axis([0 tf 0 300]);
+xlabel(<span class="string">'Time [hr]'</span>);
+ylabel(<span class="string">'Keq'</span>);
+</pre><img vspace="5" hspace="5" src="Ch24_CircadianClock_04.png" alt=""> <h2>Entrainment appears to be aperiodic<a name="9"></a></h2><pre class="codeinput">tf = 2000;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0,odeset(<span class="string">'RelTol'</span>,1e-6));
+
+<span class="comment">% Evaluate solution</span>
+
+t = 400:0.1:tf;
+M = deval(soln,t,1);
+P = deval(soln,t,2);
+
+figure(4);clf;
+
+semilogy(M,P);
+xlabel(<span class="string">'M'</span>);
+ylabel(<span class="string">'P'</span>);
+</pre><img vspace="5" hspace="5" src="Ch24_CircadianClock_05.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Circadian Clock
+% 
+% The circadian clock controls the daily physiological behavior of many
+% organisms. It is known that for mammals the circadian clock resides in
+% the hypothalamus region of the brain, and involves the synchronization of
+% a gene regulatory network. A simple model of this network was proposed by
+% Tyson and coworkers in 1999 and described in some detail in the SEMD
+% textbook.
+
+%% Citations
+%
+% 1. Tyson, J. J., C. I. Hong, C. D. Thron, B. Novak. 1999. A Simple Model
+% of Circadian Rhythms Based on Dimerization and Proteolysis of PER and
+% TIM. Biophysical J. 77:2411-2417.
+%
+% 2. SEMD Section 24.2.1.
+
+%% Parameters
+
+vm = 1;
+km = 0.1;
+vp = 0.5;
+kp1 = 10;
+kp2 = 0.03;
+kp3 = 0.1;
+Keq = 200;
+Pcrit = 0.1;
+Jp = 0.05;
+
+%% Dependence of mRNA transcription rate on protein concentration
+
+q = @(P) 2./(1+sqrt(1+8*Keq*P));
+
+%% Concentration dynamics of mRNA (M) and protein (P).
+
+Mdot = @(M,P) vm/(1 + (P*(1-q(P))/2/Pcrit)^2) - km*M;
+Pdot = @(M,P) vp*M - (kp1*P*q(P)+kp2*P)/(Jp+P) - kp3*P;
+
+M0 = 2;
+P0 = 2;
+
+%% Numerical Solution
+
+% Differential equations and initial conditions
+
+deriv = @(t,x) [ ...
+    Mdot(x(1),x(2));
+    Pdot(x(1),x(2))];
+
+x0 = [M0;P0];
+
+% Calculate solution
+
+tf = 100;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0);
+
+% Evaluate solution
+
+t = 0:0.1:tf;
+M = deval(soln,t,1);
+P = deval(soln,t,2);
+
+% Display solution
+
+figure(1);clf;
+plot(t,M,t,P,'LineWidth',2);
+xlabel('Time [hr]');
+ylabel('Concentration');
+legend('M','P');
+
+%% Nullclines and the Phase Plane
+
+figure(2);clf;
+
+Mnull = @(P) vm./km./(1 + (P.*(1-q(P))/2/Pcrit).^2);
+Pnull = @(P) (kp1*P.*q(P)+kp2*P)./(vp*(Jp+P)) + kp3*P/vp;
+
+Ps = logspace(-3,1,100);
+loglog(Ps,Mnull(Ps),Ps,Pnull(Ps),'LineWidth',2);
+axis([0.001 10 0.1 100]);
+xlabel('M');
+ylabel('P');
+legend('M nullcline','N nullcline');
+
+%%
+% Plotting the solution in the phase plane demonstrates the relationship
+% between the nullclines and solution obtained above.
+
+hold on
+loglog(P,M,'r');
+hold off
+
+%% Entrainment
+%
+% The circadian clock synchronizes to periodic changes in the equilbrium
+% constant Keq. To study this phenomena, we introduce a periodic forcing
+% function Keq(t).
+
+% The following function produces periodic square wave with period T
+
+u = @(t,T) (mod(t,T)/T >= 0.5);
+
+T = 20;
+Keq = @(t) 100 + 100*u(t,T);
+
+% Dependence of mRNA transcription rate on protein concentration
+
+q = @(P,Keq) 2./(1+sqrt(1+8*Keq*P));
+
+% Concentration dynamics of mRNA (M) and protein (P).
+
+Mdot = @(M,P,Keq) vm/(1 + (P*(1-q(P,Keq))/2/Pcrit)^2) - km*M;
+Pdot = @(M,P,Keq) vp*M - (kp1*P*q(P,Keq)+kp2*P)/(Jp+P) - kp3*P;
+
+M0 = 0;
+P0 = 0;
+
+% Differential equations
+
+deriv = @(t,x) [ ...
+    Mdot(x(1),x(2),Keq(t));
+    Pdot(x(1),x(2),Keq(t))];
+
+x0 = [M0;P0];
+
+% Calculate solution
+
+tf = 400;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0);
+
+% Evaluate and Display solution
+
+figure(3);clf;
+
+t = 0:0.1:tf;
+subplot(5,1,[1:4])
+plot(t,deval(soln,t));
+legend('M','P');
+title('Entrainment');
+
+subplot(5,1,5)
+plot(t,Keq(t),'r');
+axis([0 tf 0 300]);
+xlabel('Time [hr]');
+ylabel('Keq');
+
+%% Entrainment appears to be aperiodic
+
+tf = 2000;
+soln = ode45(@(t,x)deriv(t,x),[0 tf],x0,odeset('RelTol',1e-6));
+
+% Evaluate solution
+
+t = 400:0.1:tf;
+M = deval(soln,t,1);
+P = deval(soln,t,2);
+
+figure(4);clf;
+
+semilogy(M,P);
+xlabel('M');
+ylabel('P');
+
+
+
+##### SOURCE END #####
+--></body></html>

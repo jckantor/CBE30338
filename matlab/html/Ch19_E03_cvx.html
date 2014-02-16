@@ -1,0 +1,220 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Example 19.03 Refinery Optimization</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch19_E03_cvx.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Example 19.03 Refinery Optimization</h1><!--introduction--><p>File: <tt>Ch19_E03_cvx.m</tt></p><p>Determine the optimal production schedule for the following process.</p><pre>                           ____________
+                          |            |----&gt; Gasoline ($36/bbl)
+   Crude 1 ($24/bbl) ----&gt;|            |----&gt; Kerosene ($24/bbl)
+                          |  Refinery  |----&gt; Fuel Oil ($21/bbl)
+   Crude 2 ($15/bbl) ----&gt;|            |----&gt; Residual ($10/bbl)
+                          |____________|</pre><pre>                     Volumetric Yield      Capacity
+                    Crude #1  Crude #2      bbl/day
+   Gasoline            80%       44%         24,000
+   Kerosine             5%       10%          2,000
+   Fuel Oil            10%       36%          6,000</pre><pre>   Processing Cost   $0.50/bbl $1.00/bbl</pre><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Script Requirments</a></li><li><a href="#2">Decision Variables</a></li><li><a href="#3">CVX Optimization Model</a></li><li><a href="#4">Crude Utilization</a></li><li><a href="#5">Production</a></li><li><a href="#6">Process Utilization</a></li><li><a href="#7">Questions to Explore</a></li></ul></div><h2>Script Requirments<a name="1"></a></h2><div><ul><li><tt>displaytable.m</tt></li><li>CVX</li></ul></div><pre class="codeinput">addpath(<span class="string">'utilities'</span>);
+</pre><h2>Decision Variables<a name="2"></a></h2><pre class="codeinput">clabels = {<span class="string">'Crude 1'</span>,<span class="string">'Crude 2'</span>};
+plabels = {<span class="string">'Gasoline'</span>,<span class="string">'Kerosene'</span>,<span class="string">'Fuel Oil'</span>,<span class="string">'Residual'</span>};
+</pre><h2>CVX Optimization Model<a name="3"></a></h2><pre class="codeinput">cvx_begin
+
+    <span class="comment">% Decision Variables</span>
+
+    variables <span class="string">c(2)</span> <span class="string">p(4)</span>
+    c &gt;= 0; p &lt;= 100000;
+    p &gt;= 0; p &lt;= 100000;
+
+    <span class="comment">% Objective Function</span>
+
+    revenue = 36*p(1) + 24*p(2) + 21*p(3) + 10*p(4);
+    rawmaterials = 24*c(1) + 15*c(2);
+    processing = 0.5*c(1) + 1.0*c(2);
+    profit = revenue - rawmaterials - processing;
+
+    maximize(profit)
+
+    <span class="comment">% Refinery Yield Model</span>
+
+    Y = [0.80 0.44; 0.05 0.10; 0.10 0.36; 0.05 0.10];
+    p == Y*c;
+
+    <span class="comment">% Refinery Production Capacity</span>
+
+    dual <span class="string">variable</span> <span class="string">z</span>
+    Capacity = [24000; 2000; 6000; 100000];
+    z : p &lt;= Capacity;
+
+cvx_end
+</pre><h2>Crude Utilization<a name="4"></a></h2><pre class="codeinput">displaytable(c,clabels,<span class="string">'bbl/day'</span>,<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">         bbl/day
+Crude 1  26206.9
+Crude 2   6896.6
+
+</pre><h2>Production<a name="5"></a></h2><pre class="codeinput">displaytable(p,plabels,<span class="string">'bbl/day'</span>,<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">          bbl/day
+Gasoline  24000.0
+Kerosene   2000.0
+Fuel Oil   5103.4
+Residual   2000.0
+
+</pre><h2>Process Utilization<a name="6"></a></h2><pre class="codeinput">displaytable( <span class="keyword">...</span>
+    [p, Capacity, Capacity - p, z], plabels, <span class="keyword">...</span>
+    {<span class="string">'Production'</span>,<span class="string">'Capacity'</span>,<span class="string">'Slack'</span>,<span class="string">'Sensitivity'</span>},<span class="string">'%6.1f'</span>);
+</pre><pre class="codeoutput">           Production     Capacity        Slack  Sensitivity
+Gasoline      24000.0      24000.0          0.0          4.7
+Kerosene       2000.0       2000.0          0.0         87.5
+Fuel Oil       5103.4       6000.0        896.6          0.0
+Residual       2000.0     100000.0      98000.0          0.0
+
+</pre><h2>Questions to Explore<a name="7"></a></h2><div><ol><li>Why is the sensitivity so high for Kerosene?</li><li>You're considering expanding the Kerosene and Fuel Oil capacities for   the plant. Each bbl of additional capacity has the same cost. Plot the   additional profit as a function of additional capacity.</li></ol></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Example 19.03 Refinery Optimization
+%
+% File: |Ch19_E03_cvx.m|
+%
+% Determine the optimal production schedule for the following process.
+%
+%                             ____________
+%                            |            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Gasoline ($36/bbl)
+%     Crude 1 ($24/bbl) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH>|            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Kerosene ($24/bbl)
+%                            |  Refinery  |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Fuel Oil ($21/bbl)
+%     Crude 2 ($15/bbl) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH>|            |REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH> Residual ($10/bbl)
+%                            |____________|
+%
+%
+%                       Volumetric Yield      Capacity
+%                      Crude #1  Crude #2      bbl/day
+%     Gasoline            80%       44%         24,000
+%     Kerosine             5%       10%          2,000
+%     Fuel Oil            10%       36%          6,000
+%
+%     Processing Cost   $0.50/bbl $1.00/bbl
+
+%% Script Requirments
+%
+% * |displaytable.m| 
+% * CVX
+
+addpath('utilities');
+
+%% Decision Variables
+
+clabels = {'Crude 1','Crude 2'};
+plabels = {'Gasoline','Kerosene','Fuel Oil','Residual'};
+
+%% CVX Optimization Model
+
+cvx_begin
+
+    % Decision Variables
+    
+    variables c(2) p(4)
+    c >= 0; p <= 100000;
+    p >= 0; p <= 100000;
+    
+    % Objective Function
+    
+    revenue = 36*p(1) + 24*p(2) + 21*p(3) + 10*p(4);
+    rawmaterials = 24*c(1) + 15*c(2);
+    processing = 0.5*c(1) + 1.0*c(2);
+    profit = revenue - rawmaterials - processing;
+    
+    maximize(profit)
+    
+    % Refinery Yield Model
+    
+    Y = [0.80 0.44; 0.05 0.10; 0.10 0.36; 0.05 0.10];
+    p == Y*c;
+    
+    % Refinery Production Capacity
+    
+    dual variable z
+    Capacity = [24000; 2000; 6000; 100000];
+    z : p <= Capacity;
+
+cvx_end
+
+%% Crude Utilization
+
+displaytable(c,clabels,'bbl/day','%6.1f');
+
+%% Production
+
+displaytable(p,plabels,'bbl/day','%6.1f');
+
+%% Process Utilization
+
+displaytable( ...
+    [p, Capacity, Capacity - p, z], plabels, ...
+    {'Production','Capacity','Slack','Sensitivity'},'%6.1f');
+
+%% Questions to Explore
+%
+% # Why is the sensitivity so high for Kerosene?
+% # You're considering expanding the Kerosene and Fuel Oil capacities for
+%   the plant. Each bbl of additional capacity has the same cost. Plot the
+%   additional profit as a function of additional capacity.
+
+##### SOURCE END #####
+--></body></html>

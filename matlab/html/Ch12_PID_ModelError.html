@@ -1,0 +1,524 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Demonstrating the Effect of Model Error on PID Control</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch12_PID_ModelError.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Demonstrating the Effect of Model Error on PID Control</h1><!--introduction--><p>File: <tt>Ch12_PID_ModelError.m</tt></p><p>Processes are never exactly understood; even the best dynamical models will not perfectly match the behavior of the process being model. For control design, the issue is whether the closed-loop controlled behavior of the process will be sensitive to minor errors in the model used to tune the controller. This demonstration illustrates some of the complexity behind this question.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Nominal Process Model</a></li><li><a href="#2">PID Controller</a></li><li><a href="#3">Nominal Closed-Loop Response</a></li><li><a href="#5">Case 1: Uncertain Process Gain and Time Constant</a></li><li><a href="#7">Case 2. Uncertain Time-Delay</a></li><li><a href="#10">Conclusions</a></li></ul></div><h2>Nominal Process Model<a name="1"></a></h2><p>Consider a process model consisting of a first-order transfer function with dead-time.</p><p><img src="Ch12_PID_ModelError_eq02043.png" alt="$$G_p(s) = \frac{K e^{-\tau_{d}s}}{\tau s + 1}$$"></p><p>where the process parameters <img src="Ch12_PID_ModelError_eq14888.png" alt="$K$">, <img src="Ch12_PID_ModelError_eq89224.png" alt="$\tau$"> and <img src="Ch12_PID_ModelError_eq79194.png" alt="$\tau_d$"> are not precisely known.</p><p>We'll start with a nominal process model where the steady state gain <img src="Ch12_PID_ModelError_eq14888.png" alt="$K$"> and the time constants are chosen to match the observed cross-over frequency and critical amplitude ratio observed in an auto-tuning experiment.</p><pre class="codeinput">K = 7;
+wco = 3;
+ARc = 0.5;
+
+tau = sqrt((K/ARc)^2 - 1)/wco;
+tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);
+
+Gp = tf(K,[tau 1],<span class="string">'InputDelay'</span>,tau_d,<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>)
+</pre><pre class="codeoutput">
+Gp =
+ 
+                       7
+  exp(-0.547*s) * -----------
+                  4.655 s + 1
+ 
+Continuous-time transfer function.
+
+</pre><h2>PID Controller<a name="2"></a></h2><p>The Ziegler-Nichols tuning rules only require knowledge of the cross-over frequency and the amplitude ratio at cross-over. We implement a simple two-degree of freedom PID control using the ZN tuning rules for PID control. We'll be using this same PID control for all of the examples to follow.</p><pre class="codeinput">Kcu = 1/ARc;
+Pu = 2*pi/wco;
+
+Kp = 0.6*Kcu;
+Ti = Pu/2;
+Td = Pu/8;
+
+P = tf(1,1,<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+I = tf(1,[Ti 0],<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+D = tf([Td 0],[Td/10 1],<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+
+Ky = Kp*(P + I + D)
+Kr = Kp*(0.5*P + I + 0*D)
+</pre><pre class="codeoutput">
+Ky =
+ 
+  0.3619 s^2 + 1.288 s + 1.2
+  --------------------------
+    0.02742 s^2 + 1.047 s
+ 
+Continuous-time transfer function.
+
+
+Kr =
+ 
+  0.6283 s + 1.2
+  --------------
+     1.047 s
+ 
+Continuous-time transfer function.
+
+</pre><h2>Nominal Closed-Loop Response<a name="3"></a></h2><p>Following our usual procedures, we can evaluate control performance under the assumption that the model used for controller tuning is an accurate model of the process. As we expect, if there was no model error then the Ziegler-Nichols tuning gives reasonably good setpoint control.</p><pre class="codeinput"><span class="comment">% Select time and frequency grids</span>
+
+t = 0:.001:15;
+w = logspace(-2,1,100);
+
+<span class="comment">% Calculate open-loop response</span>
+
+[mag,phase] = bode(Gp,w);
+yol = step(Gp,t);
+
+<span class="comment">% Calculate losed-loop response</span>
+
+Hyr = Gp*Kr/(1+Gp*Ky);
+ycl = step(Hyr,t);
+</pre><p>Display results</p><pre class="codeinput">figure(1);clf;
+subplot(2,1,1);
+loglog(w,mag(:),<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Frequency [rad/min]'</span>);
+ylabel(<span class="string">'AR'</span>);
+title(<span class="string">'Open-Loop Process Frequency Response'</span>);
+grid;
+hold <span class="string">on</span>;
+
+subplot(2,1,2);
+semilogx(w,phase(:),<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Frequency [rad/min]'</span>);
+ylabel(<span class="string">'Phase [deg]'</span>);
+grid;
+hold <span class="string">on</span>;
+
+figure(2);clf;
+subplot(2,1,1);
+plot(t,yol,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [min]'</span>);
+ylabel(<span class="string">'y'</span>);
+title(<span class="string">'Open Loop Step Response'</span>);
+hold <span class="string">on</span>
+
+subplot(2,1,2);
+plot(t,ycl,<span class="string">'b'</span>,t,(t&gt;0),<span class="string">'r--'</span>,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [min]'</span>);
+ylabel(<span class="string">'y'</span>);
+title(<span class="string">'Closed-Loop Step Response: Hyr'</span>);
+hold <span class="string">on</span>
+</pre><img vspace="5" hspace="5" src="Ch12_PID_ModelError_01.png" alt=""> <img vspace="5" hspace="5" src="Ch12_PID_ModelError_02.png" alt=""> <h2>Case 1: Uncertain Process Gain and Time Constant<a name="5"></a></h2><p>We repeat the calculations for a range of possible values for the steady state gain. For each gain the the first order time constant is adjusted to maintain the same cross-over frequency and the same AR.</p><pre class="codeinput"><span class="keyword">for</span> K = 1:2:13
+
+    <span class="comment">% Adjust model parameters</span>
+
+    tau = sqrt((K/ARc)^2 - 1)/wco;
+    <span class="comment">% tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);</span>
+
+    <span class="comment">% Recalculate open- and closed-loop responses</span>
+
+    Gp = tf(K,[tau 1],<span class="string">'InputDelay'</span>,tau_d,<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+
+    [mag,phase] = bode(Gp,w);
+    yol = step(Gp,t);
+    Hyr = Gp*Kr/(1+Gp*Ky);
+    ycl = step(Hyr,t);
+
+    <span class="comment">% Update display</span>
+
+    figure(1);
+    subplot(2,1,1);
+    loglog(w,mag(:));
+    subplot(2,1,2);
+    semilogx(w,phase(:));
+
+    figure(2);
+    subplot(2,1,1);
+    plot(t,yol);
+    subplot(2,1,2);
+    plot(t,ycl);
+
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="Ch12_PID_ModelError_03.png" alt=""> <img vspace="5" hspace="5" src="Ch12_PID_ModelError_04.png" alt=""> <p>We observe the same PID controller can do an adequate job of setpoint control for a wide range of steady state gains. This is not surprising since other model parameters have been adjusted to changes in the cross-over conditions small.</p><h2>Case 2. Uncertain Time-Delay<a name="7"></a></h2><p>Next consider the effect of increaseing the time-delay. In this case, however, the other model parameters are not adjusted.</p><pre class="codeinput"><span class="comment">% Restore the nominal process model</span>
+
+K = 7;
+tau = sqrt((K/ARc)^2 - 1)/wco;
+tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);
+
+Gp = tf(K,[tau 1],<span class="string">'InputDelay'</span>,tau_d,<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+
+<span class="comment">% Recalculate the nominal open- and closed-loop responses</span>
+
+[mag,phase] = bode(Gp,w);
+yol = step(Gp,t);
+Hyr = Gp*Kr/(1+Gp*Ky);
+ycl = step(Hyr,t);
+
+<span class="comment">% Initialize display</span>
+
+figure(3);clf;
+subplot(2,1,1);
+loglog(w,mag(:),<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Frequency [rad/min]'</span>);
+ylabel(<span class="string">'AR'</span>);
+title(<span class="string">'Open-Loop Process Frequency Response'</span>);
+grid;
+hold <span class="string">on</span>;
+
+subplot(2,1,2);
+semilogx(w,phase(:),<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Frequency [rad/min]'</span>);
+ylabel(<span class="string">'Phase [deg]'</span>);
+grid;
+hold <span class="string">on</span>;
+
+figure(4);clf;
+subplot(2,1,1);
+plot(t,yol,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [min]'</span>);
+ylabel(<span class="string">'y'</span>);
+title(<span class="string">'Open Loop Step Response'</span>);
+hold <span class="string">on</span>
+
+subplot(2,1,2);
+plot(t,ycl,<span class="string">'b'</span>,t,(t&gt;0),<span class="string">'r--'</span>,<span class="string">'LineWidth'</span>,2);
+xlabel(<span class="string">'Time [min]'</span>);
+ylabel(<span class="string">'y'</span>);
+title(<span class="string">'Closed-Loop Step Response: Hyr'</span>);
+hold <span class="string">on</span>
+</pre><img vspace="5" hspace="5" src="Ch12_PID_ModelError_05.png" alt=""> <img vspace="5" hspace="5" src="Ch12_PID_ModelError_06.png" alt=""> <pre>Repeat calculations for process models with longer time delays</pre><pre class="codeinput"><span class="keyword">for</span> tau_d = (1:.2:1.8)*tau_d
+
+    <span class="comment">% Recalculate open- and closed-loop responses</span>
+
+    Gp = tf(K,[tau 1],<span class="string">'InputDelay'</span>,tau_d,<span class="string">'TimeUnit'</span>,<span class="string">'minutes'</span>);
+
+    [mag,phase] = bode(Gp,w);
+    yol = step(Gp,t);
+    Hyr = Gp*Kr/(1+Gp*Ky);
+    ycl = step(Hyr,t);
+
+    <span class="comment">% Update display</span>
+
+    figure(3);
+    subplot(2,1,1);
+    loglog(w,mag(:));
+    subplot(2,1,2);
+    semilogx(w,phase(:));
+
+    figure(4);
+    subplot(2,1,1);
+    plot(t,yol);
+    subplot(2,1,2);
+    plot(t,ycl);
+
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="Ch12_PID_ModelError_07.png" alt=""> <img vspace="5" hspace="5" src="Ch12_PID_ModelError_08.png" alt=""> <p>In this case a  small change in the open-loop step response can result in a big change in the closed-loop behavior. The root cause is that small changes in time delay can substantially alter the conditions at cross-over.</p><h2>Conclusions<a name="10"></a></h2><div><ul><li>When modeling for control, it is essential to accurately model the cross-over frequency and the amplitude ration at cross-over.</li><li>Modeling for steady-state response and modeling for control have different requirements.</li><li>WHEN MODELING, IT IS ESSENTIAL TO UNDERSTAND THE INTENDED PURPOSE OF MODEL.</li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Demonstrating the Effect of Model Error on PID Control
+%
+% File: |Ch12_PID_ModelError.m|
+%
+% Processes are never exactly understood; even the best dynamical models
+% will not perfectly match the behavior of the process being model. For
+% control design, the issue is whether the closed-loop controlled behavior
+% of the process will be sensitive to minor errors in the model used to
+% tune the controller. This demonstration illustrates some of the
+% complexity behind this question.
+
+%% Nominal Process Model
+%
+% Consider a process model consisting of a first-order
+% transfer function with dead-time. 
+%
+% $$G_p(s) = \frac{K e^{-\tau_{d}s}}{\tau s + 1}$$
+%
+% where the process parameters $K$, $\tau$ and $\tau_d$ are not precisely
+% known. 
+%
+% We'll start with a nominal process model where the steady state gain $K$
+% and the time constants are chosen to match the observed cross-over
+% frequency and critical amplitude ratio observed in an auto-tuning
+% experiment.
+
+K = 7;
+wco = 3;
+ARc = 0.5;
+
+tau = sqrt((K/ARc)^2 - 1)/wco;
+tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);
+
+Gp = tf(K,[tau 1],'InputDelay',tau_d,'TimeUnit','minutes')
+
+%% PID Controller
+%
+% The Ziegler-Nichols tuning rules only require knowledge of the cross-over
+% frequency and the amplitude ratio at cross-over. We implement a
+% simple two-degree of freedom PID control using the ZN tuning rules for
+% PID control. We'll be using this same PID control for all of the examples
+% to follow.
+
+Kcu = 1/ARc;
+Pu = 2*pi/wco;
+
+Kp = 0.6*Kcu;
+Ti = Pu/2;
+Td = Pu/8;
+
+P = tf(1,1,'TimeUnit','minutes');
+I = tf(1,[Ti 0],'TimeUnit','minutes');
+D = tf([Td 0],[Td/10 1],'TimeUnit','minutes');
+
+Ky = Kp*(P + I + D)
+Kr = Kp*(0.5*P + I + 0*D)
+
+%% Nominal Closed-Loop Response
+%
+% Following our usual procedures, we can evaluate control performance under
+% the assumption that the model used for controller tuning is an accurate
+% model of the process. As we expect, if there was no model error then the
+% Ziegler-Nichols tuning gives reasonably good setpoint control.
+
+% Select time and frequency grids
+
+t = 0:.001:15;
+w = logspace(-2,1,100);
+
+% Calculate open-loop response
+
+[mag,phase] = bode(Gp,w);
+yol = step(Gp,t);
+
+% Calculate losed-loop response
+
+Hyr = Gp*Kr/(1+Gp*Ky);
+ycl = step(Hyr,t);
+
+%%
+% Display results
+
+figure(1);clf;
+subplot(2,1,1);
+loglog(w,mag(:),'LineWidth',2);
+xlabel('Frequency [rad/min]');
+ylabel('AR');
+title('Open-Loop Process Frequency Response');
+grid;
+hold on;
+
+subplot(2,1,2);
+semilogx(w,phase(:),'LineWidth',2);
+xlabel('Frequency [rad/min]');
+ylabel('Phase [deg]');
+grid;
+hold on;
+
+figure(2);clf;
+subplot(2,1,1);
+plot(t,yol,'LineWidth',2);
+xlabel('Time [min]');
+ylabel('y');
+title('Open Loop Step Response');
+hold on
+
+subplot(2,1,2);
+plot(t,ycl,'b',t,(t>0),'rREPLACE_WITH_DASH_DASH','LineWidth',2);
+xlabel('Time [min]');
+ylabel('y');
+title('Closed-Loop Step Response: Hyr');
+hold on
+    
+%% Case 1: Uncertain Process Gain and Time Constant
+%
+% We repeat the calculations for a range of possible values for the steady
+% state gain. For each gain the the first order time constant is adjusted
+% to maintain the same cross-over frequency and the same AR.
+
+for K = 1:2:13
+    
+    % Adjust model parameters
+    
+    tau = sqrt((K/ARc)^2 - 1)/wco;
+    % tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);
+  
+    % Recalculate open- and closed-loop responses
+
+    Gp = tf(K,[tau 1],'InputDelay',tau_d,'TimeUnit','minutes');
+    
+    [mag,phase] = bode(Gp,w);
+    yol = step(Gp,t);
+    Hyr = Gp*Kr/(1+Gp*Ky);
+    ycl = step(Hyr,t);
+    
+    % Update display
+    
+    figure(1);
+    subplot(2,1,1);
+    loglog(w,mag(:)); 
+    subplot(2,1,2);
+    semilogx(w,phase(:));
+    
+    figure(2);
+    subplot(2,1,1);
+    plot(t,yol);
+    subplot(2,1,2);
+    plot(t,ycl);
+    
+end
+
+%%
+% We observe the same PID controller can do an adequate job of setpoint
+% control for a wide range of steady state gains. This is not surprising
+% since other model parameters have been adjusted to changes in the
+% cross-over conditions small.
+
+
+%% Case 2. Uncertain Time-Delay
+%
+% Next consider the effect of increaseing the time-delay. In this case,
+% however, the other model parameters are not adjusted.
+
+% Restore the nominal process model
+
+K = 7;
+tau = sqrt((K/ARc)^2 - 1)/wco;
+tau_d = (180-(180/pi)*atan(wco*tau))/((180/pi)*wco);
+
+Gp = tf(K,[tau 1],'InputDelay',tau_d,'TimeUnit','minutes');
+
+% Recalculate the nominal open- and closed-loop responses
+
+[mag,phase] = bode(Gp,w);
+yol = step(Gp,t);
+Hyr = Gp*Kr/(1+Gp*Ky);
+ycl = step(Hyr,t);
+
+% Initialize display
+
+figure(3);clf;
+subplot(2,1,1);
+loglog(w,mag(:),'LineWidth',2);
+xlabel('Frequency [rad/min]');
+ylabel('AR');
+title('Open-Loop Process Frequency Response');
+grid;
+hold on;
+
+subplot(2,1,2);
+semilogx(w,phase(:),'LineWidth',2);
+xlabel('Frequency [rad/min]');
+ylabel('Phase [deg]');
+grid;
+hold on;
+
+figure(4);clf;
+subplot(2,1,1);
+plot(t,yol,'LineWidth',2);
+xlabel('Time [min]');
+ylabel('y');
+title('Open Loop Step Response');
+hold on
+
+subplot(2,1,2);
+plot(t,ycl,'b',t,(t>0),'rREPLACE_WITH_DASH_DASH','LineWidth',2);
+xlabel('Time [min]');
+ylabel('y');
+title('Closed-Loop Step Response: Hyr');
+hold on
+
+%%
+%  Repeat calculations for process models with longer time delays
+
+for tau_d = (1:.2:1.8)*tau_d
+    
+    % Recalculate open- and closed-loop responses
+
+    Gp = tf(K,[tau 1],'InputDelay',tau_d,'TimeUnit','minutes');
+
+    [mag,phase] = bode(Gp,w);
+    yol = step(Gp,t);    
+    Hyr = Gp*Kr/(1+Gp*Ky);
+    ycl = step(Hyr,t);
+    
+    % Update display
+    
+    figure(3);
+    subplot(2,1,1);
+    loglog(w,mag(:));
+    subplot(2,1,2);
+    semilogx(w,phase(:));
+
+    figure(4);
+    subplot(2,1,1);
+    plot(t,yol);
+    subplot(2,1,2);
+    plot(t,ycl);
+    
+end
+
+%%
+% In this case a  small change in the open-loop step response can result in
+% a big change in the closed-loop behavior. The root cause is that small
+% changes in time delay can substantially alter the conditions at
+% cross-over.
+
+%% Conclusions
+%
+% * When modeling for control, it is essential to accurately model the
+% cross-over frequency and the amplitude ration at cross-over.
+% * Modeling for steady-state response and modeling for control have
+% different requirements. 
+% * WHEN MODELING, IT IS ESSENTIAL TO UNDERSTAND THE INTENDED PURPOSE OF
+% MODEL.
+
+
+##### SOURCE END #####
+--></body></html>

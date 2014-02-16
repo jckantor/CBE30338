@@ -1,0 +1,205 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Problem 19.14 Constrainted Nonlinear Optimization with fmincon</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch19_P14.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Problem 19.14 Constrainted Nonlinear Optimization with <tt>fmincon</tt></h1><!--introduction--><p>File: <tt>Ch19_P14.m</tt></p><p>Exercise 19.13, 19.14, and 19.15 are examples of constrained nonlinear optimization. The following Matlab code uses Exercise 19.14 to demonstrate an approach to solving these problems using <tt>fmincon</tt> from the Matlab optimization toolbox.  Consult the documentation on <tt>fmincon</tt> (i.e., 'doc fmincon') for further information.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Available Information</a></li><li><a href="#2">Material Balances and Production</a></li><li><a href="#3">Decision Variables with Upper and Lower Bounds</a></li><li><a href="#4">Objective function</a></li><li><a href="#5">Steady-State Constraints</a></li><li><a href="#6">Constrained Nonlinear Minimization</a></li><li><a href="#7">Display results</a></li></ul></div><h2>Available Information<a name="1"></a></h2><pre class="codeinput">V   = 200;    <span class="comment">% liters</span>
+Fa  = 150;    <span class="comment">% liters/hour</span>
+Caf = 0.3;    <span class="comment">% moles/liter</span>
+Cbf = 0.3;    <span class="comment">% moles/liter</span>
+k1  = 2;      <span class="comment">% 1/hr</span>
+k2  = 1.5;    <span class="comment">% 1/hr</span>
+</pre><h2>Material Balances and Production<a name="2"></a></h2><p>These functions express the material balances for the two components Ca and Cb, and the total production of b.  deriv(Ca,Cb,Fb) computes a two element vector that will be equal to zero at steady-state.</p><pre class="codeinput">deriv = @(Ca,Cb,Fb) [ <span class="keyword">...</span>
+    Fa*Caf - (Fa + Fb)*Ca - k1*Ca + k2*Cb;
+    Fb*Cbf - (Fa + Fb)*Cb + k1*Ca - k2*Cb];
+
+production = @(Cb,Fb) (Fa + Fb)*Cb;
+</pre><h2>Decision Variables with Upper and Lower Bounds<a name="3"></a></h2><p>Here we identify the vector of decision variables and associated bounds. Note that by material balances, the maximum concentration of a or b can be no greater the sum Ca + Cb</p><p>x(1): Ca    0 &lt;= Ca &lt;= Caf + Cbf x(2): Cb    0 &lt;= Cb &lt;= Caf + Cbf x(3): Fb    0 &lt;= Fb &lt;= 200</p><pre class="codeinput">lb = [0; 0; 0];
+ub = [Caf+Cbf; Caf+Cbf; 200];
+
+<span class="comment">% An initial estimate is the midpoint between the upper and lower bounds</span>
+
+x0 = (lb + ub)/2;
+</pre><h2>Objective function<a name="4"></a></h2><p>Matlab's optimization toolbox solves minimization problems. The problem is a maximization problem. Therefore we introduce a minus sign to change the problem objective from maximization to minimization.</p><pre class="codeinput">fun = @(x) -production(x(2),x(3));
+</pre><h2>Steady-State Constraints<a name="5"></a></h2><p>The steady state equations are found by setting the derivatives to zero.</p><pre class="codeinput">ceq = @(x) deriv(x(1),x(2),x(3));
+</pre><h2>Constrained Nonlinear Minimization<a name="6"></a></h2><p><tt>fmincon</tt> is the Matlab function from the optimization toolbox for doing nonlinear multivariable optimization subject to equality and inequality constraints. It's a rather complex function. Here we need to use only a subset of the inputs.</p><pre class="codeinput">xopt = fmincon(fun,x0,[],[],[],[],lb,ub,@(x)deal([],ceq(x)))
+</pre><pre class="codeoutput">Warning: The default trust-region-reflective algorithm does not solve problems
+with the constraints you have specified. FMINCON will use the active-set
+algorithm instead. For information on applicable algorithms, see Choosing the
+Algorithm in the documentation. 
+Warning: Your current settings will run a different algorithm (interior-point)
+in a future release. 
+
+Local minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in 
+feasible directions, to within the default value of the function tolerance,
+and constraints are satisfied to within the default value of the constraint tolerance.
+
+
+
+Active inequalities (to within options.TolCon = 1e-06):
+  lower      upper     ineqlin   ineqnonlin
+               3                      
+
+xopt =
+
+   1.0e+02 *
+
+   0.001285714285714
+   0.001714285714286
+   2.000000000000000
+
+</pre><h2>Display results<a name="7"></a></h2><pre class="codeinput">disp(<span class="string">'Optimal Operating Point'</span>);
+displaytable(xopt,{<span class="string">'Ca'</span>,<span class="string">'Cb'</span>,<span class="string">'Fb'</span>});
+</pre><pre class="codeoutput">Optimal Operating Point
+Ca  0.12857
+Cb  0.17143
+Fb      200
+
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Problem 19.14 Constrainted Nonlinear Optimization with |fmincon|
+%
+% File: |Ch19_P14.m|
+%
+% Exercise 19.13, 19.14, and 19.15 are examples of constrained nonlinear
+% optimization. The following Matlab code uses Exercise 19.14 to
+% demonstrate an approach to solving these problems using |fmincon| from
+% the Matlab optimization toolbox.  Consult the documentation on |fmincon|
+% (i.e., 'doc fmincon') for further information.
+
+%% Available Information
+
+V   = 200;    % liters
+Fa  = 150;    % liters/hour
+Caf = 0.3;    % moles/liter
+Cbf = 0.3;    % moles/liter
+k1  = 2;      % 1/hr
+k2  = 1.5;    % 1/hr
+
+%% Material Balances and Production
+% 
+% These functions express the material balances for the two components Ca
+% and Cb, and the total production of b.  deriv(Ca,Cb,Fb) computes a two
+% element vector that will be equal to zero at steady-state.
+
+deriv = @(Ca,Cb,Fb) [ ...
+    Fa*Caf - (Fa + Fb)*Ca - k1*Ca + k2*Cb;
+    Fb*Cbf - (Fa + Fb)*Cb + k1*Ca - k2*Cb];
+
+production = @(Cb,Fb) (Fa + Fb)*Cb;
+
+%% Decision Variables with Upper and Lower Bounds
+%
+% Here we identify the vector of decision variables and associated bounds.
+% Note that by material balances, the maximum concentration of a or b can
+% be no greater the sum Ca + Cb
+%
+% x(1): Ca    0 <= Ca <= Caf + Cbf
+% x(2): Cb    0 <= Cb <= Caf + Cbf
+% x(3): Fb    0 <= Fb <= 200
+
+lb = [0; 0; 0];
+ub = [Caf+Cbf; Caf+Cbf; 200];
+
+% An initial estimate is the midpoint between the upper and lower bounds
+
+x0 = (lb + ub)/2;
+
+%% Objective function
+%
+% Matlab's optimization toolbox solves minimization problems. The problem
+% is a maximization problem. Therefore we introduce a minus sign to change
+% the problem objective from maximization to minimization.
+
+fun = @(x) -production(x(2),x(3));
+
+%% Steady-State Constraints
+%
+% The steady state equations are found by setting the derivatives to zero.
+
+ceq = @(x) deriv(x(1),x(2),x(3));
+
+%% Constrained Nonlinear Minimization
+%
+% |fmincon| is the Matlab function from the optimization toolbox for doing
+% nonlinear multivariable optimization subject to equality and inequality
+% constraints. It's a rather complex function. Here we need to use only a
+% subset of the inputs.
+
+xopt = fmincon(fun,x0,[],[],[],[],lb,ub,@(x)deal([],ceq(x)))
+
+%% Display results
+
+disp('Optimal Operating Point');
+displaytable(xopt,{'Ca','Cb','Fb'});
+
+
+
+
+    
+##### SOURCE END #####
+--></body></html>

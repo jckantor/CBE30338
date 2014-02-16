@@ -1,0 +1,95 @@
+#--------------------------- Tool Specifications -------------------------
+#
+# Modify the following macros to reflect the tools you wish to use for
+# compiling and linking your code.
+#
+CC = /Applications/MATLAB_R2012a.app/bin/mex
+LD = $(CC)
+ 
+MACHINE     = Ch23_E01_bioreactor_mpc_mdl
+TARGET      = sfun
+CHART_SRCS =
+MACHINE_SRC	= Ch23_E01_bioreactor_mpc_mdl_sfun.c
+MACHINE_REG = Ch23_E01_bioreactor_mpc_mdl_sfun_registry.c
+MEX_WRAPPER =
+MAKEFILE    = Ch23_E01_bioreactor_mpc_mdl_sfun.mku
+MATLAB_ROOT	= /Applications/MATLAB_R2012a.app/toolbox/stateflow/stateflow/../../..
+BUILDARGS   = 
+#------------------------------ Include/Lib Path ------------------------------
+ 
+USER_INCLUDES = 
+AUX_INCLUDES = 
+MATLAB_INCLUDES = -I$(MATLAB_ROOT)/simulink/include \
+						-I$(MATLAB_ROOT)/extern/include \
+						-I/Applications/MATLAB_R2012a.app/stateflow/c/mex/include \
+						-I/Applications/MATLAB_R2012a.app/stateflow/c/debugger/include
+
+DSP_INCLUDES    =
+
+INCLUDE_PATH =   $(MATLAB_INCLUDES) $(DSP_INCLUDES) $(COMPILER_INCLUDES)
+ 
+#----------------- Compiler and Linker Options --------------------------------
+ 
+# Optimization Options
+OPT_OPTS = -O
+
+# Parallel Options
+PAR_OPTS = 
+        
+# General User Options
+OPTS =
+ 
+CC_OPTS = $(OPT_OPTS) $(OPTS) $(PAR_OPTS)
+CPP_REQ_DEFINES = -DMATLAB_MEX_FILE
+ 
+# Uncomment this line to move warning level to W4
+# cflags = $(cflags:W3=W4)
+CFLAGS = $(CC_OPTS) $(CPP_REQ_DEFINES) $(INCLUDE_PATH)
+ 
+LDFLAGS = 
+ 
+AUXLDFLAGS = 
+#----------------------------- Source Files -----------------------------------
+ 
+REQ_SRCS  = $(MACHINE_SRC) $(MACHINE_REG) $(MEX_WRAPPER) $(CHART_SRCS)
+
+USER_ABS_OBJS =
+
+AUX_ABS_OBJS =
+REQ_OBJS = $(REQ_SRCS:.cpp=.o)
+REQ_OBJS2 = $(REQ_OBJS:.c=.o)
+OBJS = $(REQ_OBJS2) $(USER_ABS_OBJS) $(AUX_ABS_OBJS)
+OBJLIST_FILE = Ch23_E01_bioreactor_mpc_mdl_sfun.mol
+SFCLIB = /Applications/MATLAB_R2012a.app/stateflow/c/mex/lib/maci64/sfc_mex.a /Applications/MATLAB_R2012a.app/stateflow/c/debugger/lib/maci64/sfc_debug.a
+AUX_LNK_OBJS =
+USER_LIBS =
+LINK_MACHINE_LIBS = \
+	/Users/jeff/Dropbox/Public/CBE30338_Public/slprj/_sfprj/Ch23_E01_bioreactor_mpc_mdl/mpclib/sfun/src/mpclib_sfun.a
+FIXEDPOINTLIB = -L/Applications/MATLAB_R2012a.app/bin/maci64 -lfixedpoint
+UTLIB = -lut
+EMLRTLIB = -lemlrt
+MWMATHUTILLIB = -lmwmathutil
+BLASLIB= -lmwblascompat32
+IPPLIB = -L/Applications/MATLAB_R2012a.app/bin/maci64 -lippmwipt
+PARLIB = 
+  MAPCSF = /Applications/MATLAB_R2012a.app/tools/maci64/mapcsf
+   # RUN_MAPCSF_ON_UNIX is defined only if MAPCSF exists on this platform.
+   ifneq ($(wildcard $(MAPCSF)),) # run MAPCSF if it exists on this platform
+      RUN_MAPCSF_ON_UNIX =  /Applications/MATLAB_R2012a.app/tools/maci64/mapcsf $@
+   endif
+ 
+#--------------------------------- Rules --------------------------------------
+ 
+MEX_FILE_NAME = $(MACHINE)_$(TARGET).mexmaci64
+ 
+ $(MEX_FILE_NAME): $(MAKEFILE) $(OBJS) $(SFCLIB) $(AUX_LNK_OBJS) $(USER_LIBS) $(MEXLIB)
+	@echo ### Linking ...
+	$(CC) -silent LDFLAGS="\$$LDFLAGS $(AUXLDFLAGS)" -output $(MEX_FILE_NAME) $(OBJS) $(AUX_LNK_OBJS) $(USER_LIBS) $(LINK_MACHINE_LIBS) $(SFCLIB) $(FIXEDPOINTLIB) $(UTLIB) $(MWMATHUTILLIB) $(EMLRTLIB) $(BLASLIB) $(PARLIB) $(IPPLIB)
+	$(RUN_MAPCSF_ON_UNIX)
+
+%.o :	%.c
+	$(CC) -c $(CFLAGS) $<
+
+%.o :	%.cpp
+	$(CC) -c $(CFLAGS) $<
+

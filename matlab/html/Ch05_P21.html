@@ -1,0 +1,310 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Linearization of an Exothermic Reactor</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch05_P21.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Linearization of an Exothermic Reactor</h1><!--introduction--><p>File: <tt>Ch05_P21.m</tt></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Model. CSTR exhibiting nonlinear dynamics.</a></li><li><a href="#2">Step 1: Specify parameters</a></li><li><a href="#3">Step 2: Specify nominal inputs</a></li><li><a href="#4">Step 3: Specify the right hand side of the differential equations</a></li><li><a href="#5">Step 4: Specify initial conditions and time horizon</a></li><li><a href="#6">Step 5: Solve</a></li><li><a href="#7">Step 6: Specify parameters for the transfer function</a></li><li><a href="#8">Step 7: Specify the state-space matrices</a></li><li><a href="#9">Using lsim to repeat the calculation under arbitrary conditions</a></li></ul></div><h2>Model. CSTR exhibiting nonlinear dynamics.<a name="1"></a></h2><pre class="language-matlab">dCa
+---  = (q/V) * (Cai - Ca) - k(T) * Ca
+dt
+</pre><pre class="language-matlab">dT
+--  = ((rho*q *Cp)*(Ti - T) + (-delta_H)*V*k(T)*Ca)/(V*rho*Cp)
+dt
+</pre><pre>Also, by Arrhenius law:</pre><pre class="language-matlab">k(T) = ko * exp(-E/T)
+</pre><h2>Step 1: Specify parameters<a name="2"></a></h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+Cp  = 0.8 ;                          <span class="comment">% Btu/(lb F)</span>
+rho = 52  ;                          <span class="comment">% lb/cu-ft</span>
+V = 100 ;                            <span class="comment">% gal</span>
+q = 20 ;                             <span class="comment">% gal/min</span>
+E = 20000 ;                          <span class="comment">% &deg;F</span>
+delta_H = -500 ;                     <span class="comment">% KJ/lb mole</span>
+ko = 2.4e15 ;                        <span class="comment">% 1/min</span>
+</pre><h2>Step 2: Specify nominal inputs<a name="3"></a></h2><pre class="codeinput">To = 150;                            <span class="comment">% &deg;F</span>
+CAio = 0.8 ;                         <span class="comment">% lb mol/cu-ft</span>
+k_To = ko * exp(-E/(To+460.67));     <span class="comment">% 1/min</span>
+Cao = (q * CAio)/(q + V * k_To);     <span class="comment">% lb mol/cu-ft</span>
+</pre><h2>Step 3: Specify the right hand side of the differential equations<a name="4"></a></h2><pre class="codeinput">f = @(t,x) [-((q + V * k_To)/V) * x(1)-(Cao * k_To * (E/((To+460.67)^2))) * x(2) + (q/V) * heaviside(t);
+            -(((delta_H) * k_To)/(rho * Cp)) * x(1) - <span class="keyword">...</span>
+            ((rho * q * Cp + delta_H * V * k_To * Cao * (E/((To+460.67)^2)))/(V * rho * Cp)) * x(2)];
+</pre><h2>Step 4: Specify initial conditions and time horizon<a name="5"></a></h2><pre class="codeinput">Cainit = 0;   <span class="comment">% lb mol/cu-ft</span>
+
+Tinit = 0;    <span class="comment">% &deg;F</span>
+
+x0 = [Tinit Cainit];
+
+tspan = linspace(0,45); <span class="comment">% minutes</span>
+</pre><h2>Step 5: Solve<a name="6"></a></h2><pre class="codeinput">[t,x] = ode15s(f,tspan,x0);
+figure(1);
+plot(t,x(:,2)+ To,<span class="string">'--'</span>);
+hold <span class="string">on</span>;
+</pre><img vspace="5" hspace="5" src="Ch05_P21_01.png" alt=""> <h2>Step 6: Specify parameters for the transfer function<a name="7"></a></h2><pre class="codeinput"><span class="comment">% In this part, we will do a first and second order approximation to the</span>
+<span class="comment">% transfer function. We will plot them both and see how they compare.</span>
+
+<span class="comment">% Parameters for the first approximation</span>
+num  = 12.69;
+den  = [0.41, 5.082, 1];
+sys = tf(num,den);
+step(sys + To);
+stepinfo(sys)
+
+<span class="comment">% Parameters for the second approximation</span>
+num2 = 12.69;
+den2 = [5 1];
+sys2 = tf(num2,den2);
+step(sys2 + To);
+stepinfo(sys2)
+</pre><pre class="codeoutput">
+ans = 
+
+        RiseTime: 10.9863
+    SettlingTime: 19.6439
+     SettlingMin: 11.4579
+     SettlingMax: 12.6815
+       Overshoot: 0
+      Undershoot: 0
+            Peak: 12.6815
+        PeakTime: 36.6111
+
+
+ans = 
+
+        RiseTime: 10.9850
+    SettlingTime: 19.5604
+     SettlingMin: 11.4781
+     SettlingMax: 12.6897
+       Overshoot: 0
+      Undershoot: 0
+            Peak: 12.6897
+        PeakTime: 52.7292
+
+</pre><img vspace="5" hspace="5" src="Ch05_P21_02.png" alt=""> <h2>Step 7: Specify the state-space matrices<a name="8"></a></h2><pre class="codeinput"><span class="comment">% We will first specify the state space matrices and vectors, then we will</span>
+<span class="comment">% calculate a step response for the system to extract the necessary</span>
+<span class="comment">% information to plot.</span>
+
+A = [-((q+V*k_To)/V),-(Cao*k_To*(E/((To+460.67)^2))); -(((delta_H)*k_To)/(rho * Cp)),<span class="keyword">...</span>
+     -((rho * q * Cp + delta_H * V * k_To * Cao * (E/((To+460.67)^2)))/(V * rho * Cp))];
+
+B = [(q/V);0];
+
+C = [0,0];
+
+D = 0;
+
+<span class="comment">% In this step, the state-space model is defined.</span>
+sys3 = ss(A,B,C,D);
+
+<span class="comment">% We will calculate the step response and calculate the change in the</span>
+<span class="comment">% Temperature with respect to time.</span>
+
+[y,t,x] = step(sys3,45);
+
+plot(t,x(:,2) + To,<span class="string">'-.'</span>)
+
+legend(<span class="string">'ODE Solution'</span>, <span class="keyword">...</span>
+    <span class="string">'1st Order Approx.'</span>, <span class="keyword">...</span>
+    <span class="string">'2nd Order Approx'</span>, <span class="keyword">...</span>
+    <span class="string">'State Space Solution'</span>);
+</pre><img vspace="5" hspace="5" src="Ch05_P21_03.png" alt=""> <h2>Using lsim to repeat the calculation under arbitrary conditions<a name="9"></a></h2><pre class="codeinput"><span class="comment">% We can perform the same calculation, but using lsim to simulate an</span>
+<span class="comment">% arbitrary response.</span>
+
+T = 0:0.01:45;
+
+u = ones(size(T));
+
+[y1,t1,x1] = lsim(sys3,u,T);
+
+figure(2);
+plot(T, x1(:,2) + To,<span class="string">'-.'</span>)
+</pre><img vspace="5" hspace="5" src="Ch05_P21_04.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Linearization of an Exothermic Reactor
+%
+% File: |Ch05_P21.m|
+
+%% Model. CSTR exhibiting nonlinear dynamics.
+%
+%   dCa
+%   REPLACE_WITH_DASH_DASH-  = (q/V) * (Cai - Ca) - k(T) * Ca
+%   dt
+%
+%   dT
+%   REPLACE_WITH_DASH_DASH  = ((rho*q *Cp)*(Ti - T) + (-delta_H)*V*k(T)*Ca)/(V*rho*Cp)
+%   dt
+%
+%  Also, by Arrhenius law: 
+%   
+%   k(T) = ko * exp(-E/T) 
+%
+%% Step 1: Specify parameters
+clc; 
+clear all; 
+close all;
+
+Cp  = 0.8 ;                          % Btu/(lb F)
+rho = 52  ;                          % lb/cu-ft
+V = 100 ;                            % gal
+q = 20 ;                             % gal/min
+E = 20000 ;                          % °F
+delta_H = -500 ;                     % KJ/lb mole
+ko = 2.4e15 ;                        % 1/min
+ 
+%% Step 2: Specify nominal inputs 
+
+To = 150;                            % °F 
+CAio = 0.8 ;                         % lb mol/cu-ft
+k_To = ko * exp(-E/(To+460.67));     % 1/min
+Cao = (q * CAio)/(q + V * k_To);     % lb mol/cu-ft
+
+%% Step 3: Specify the right hand side of the differential equations
+
+f = @(t,x) [-((q + V * k_To)/V) * x(1)-(Cao * k_To * (E/((To+460.67)^2))) * x(2) + (q/V) * heaviside(t);
+            -(((delta_H) * k_To)/(rho * Cp)) * x(1) - ...
+            ((rho * q * Cp + delta_H * V * k_To * Cao * (E/((To+460.67)^2)))/(V * rho * Cp)) * x(2)];
+        
+%% Step 4: Specify initial conditions and time horizon
+
+Cainit = 0;   % lb mol/cu-ft
+
+Tinit = 0;    % °F
+
+x0 = [Tinit Cainit];
+
+tspan = linspace(0,45); % minutes
+
+%% Step 5: Solve
+
+[t,x] = ode15s(f,tspan,x0); 
+figure(1);  
+plot(t,x(:,2)+ To,'REPLACE_WITH_DASH_DASH'); 
+hold on; 
+
+%% Step 6: Specify parameters for the transfer function
+
+% In this part, we will do a first and second order approximation to the
+% transfer function. We will plot them both and see how they compare. 
+
+% Parameters for the first approximation
+num  = 12.69; 
+den  = [0.41, 5.082, 1]; 
+sys = tf(num,den);
+step(sys + To);
+stepinfo(sys)
+
+% Parameters for the second approximation
+num2 = 12.69; 
+den2 = [5 1]; 
+sys2 = tf(num2,den2); 
+step(sys2 + To); 
+stepinfo(sys2)
+%% Step 7: Specify the state-space matrices
+
+% We will first specify the state space matrices and vectors, then we will
+% calculate a step response for the system to extract the necessary
+% information to plot.
+
+A = [-((q+V*k_To)/V),-(Cao*k_To*(E/((To+460.67)^2))); -(((delta_H)*k_To)/(rho * Cp)),... 
+     -((rho * q * Cp + delta_H * V * k_To * Cao * (E/((To+460.67)^2)))/(V * rho * Cp))];
+       
+B = [(q/V);0]; 
+ 
+C = [0,0];
+ 
+D = 0; 
+
+% In this step, the state-space model is defined. 
+sys3 = ss(A,B,C,D);
+
+% We will calculate the step response and calculate the change in the
+% Temperature with respect to time. 
+
+[y,t,x] = step(sys3,45);
+
+plot(t,x(:,2) + To,'-.')
+
+legend('ODE Solution', ...
+    '1st Order Approx.', ...
+    '2nd Order Approx', ...
+    'State Space Solution');
+
+
+%% Using lsim to repeat the calculation under arbitrary conditions 
+
+% We can perform the same calculation, but using lsim to simulate an
+% arbitrary response. 
+
+T = 0:0.01:45;
+
+u = ones(size(T)); 
+
+[y1,t1,x1] = lsim(sys3,u,T); 
+
+figure(2);
+plot(T, x1(:,2) + To,'-.')
+
+ 
+##### SOURCE END #####
+--></body></html>

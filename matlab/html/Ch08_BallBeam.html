@@ -1,0 +1,341 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Control of the Ball and Beam System</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-10"><meta name="DC.source" content="Ch08_BallBeam.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Control of the Ball and Beam System</h1><!--introduction--><p>File: <tt>Ch08_BallBeam.m</tt></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">Proportional Control</a></li><li><a href="#3">Proportional-Derivative Control (Underdamped)</a></li><li><a href="#4">Proportional-Derivative Control (Overdamped)</a></li><li><a href="#5">Proportional-Derivative Control (Critically Damped)</a></li></ul></div><p>The ball and beam system is modeled using a second order differential equation</p><p><img src="Ch08_BallBeam_eq15640.png" alt="$$J\frac{d^2x}{dt^2} = -u$$"></p><p>and associated control law. The Matlab function <tt>ode45</tt> integrates systems of first-order differential equations. So for simulation purposes, the first step is to recast the ball and beam system as a pair of first-order differential equations.</p><p><img src="Ch08_BallBeam_eq46989.png" alt="$$\frac{dx}{dt} = v$$"></p><p><img src="Ch08_BallBeam_eq46816.png" alt="$$\frac{dv}{dt} = -\frac{1}{J}u$$"></p><p>A Matlab vector must hold both <img src="Ch08_BallBeam_eq43551.png" alt="$x$"> and <img src="Ch08_BallBeam_eq77996.png" alt="$v$">. We'll call this vector <img src="Ch08_BallBeam_eq44020.png" alt="$y$"> such that <img src="Ch08_BallBeam_eq99797.png" alt="$y_1=x$"> and <img src="Ch08_BallBeam_eq94146.png" alt="$y_2=v$">. With this notation we have</p><p><img src="Ch08_BallBeam_eq71158.png" alt="$$\frac{dy_1}{dt} = y_2$$"></p><p><img src="Ch08_BallBeam_eq70684.png" alt="$$\frac{dy_2}{dt} = -\frac{1}{J}u$$"></p><p>The following Matlab code demonstrates this technique assume u has a constant value.</p><pre class="codeinput"><span class="comment">% Parameters</span>
+J = 0.5;         <span class="comment">% Inertia</span>
+tspan = [0,30];  <span class="comment">% Simulation time span</span>
+ic    = [0;0];   <span class="comment">% Initial conditions</span>
+
+<span class="comment">% Assume beam angle is a constant function</span>
+u = @(t,y) -0.1;
+
+<span class="comment">% Model Equations</span>
+f = @(t,y) [y(2); -u(t,y)/J];
+
+<span class="comment">% Integration and Plotting</span>
+ode45(f,tspan,ic);
+legend(<span class="string">'Position'</span>,<span class="string">'Velocity'</span>,<span class="string">'Location'</span>,<span class="string">'NW'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Distance [cm]/Velocity [cm/s]'</span>);
+</pre><img vspace="5" hspace="5" src="Ch08_BallBeam_01.png" alt=""> <h2>Proportional Control<a name="2"></a></h2><p>Feedback control can be used to adjust the beam position in order to bring the ball to a desired position called the setpoint. Here we explore whether or not proportional control can do the job.</p><pre class="codeinput">Kp  =  0.1;
+xsp =  1;
+
+<span class="comment">% Proportional feedback control</span>
+u = @(t,y) Kp*(y(1)-xsp);
+
+<span class="comment">% Model Equations</span>
+f = @(t,y) [y(2); -u(t,y)/J];
+
+<span class="comment">% Integration and Plotting</span>
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend(<span class="string">'Position'</span>,<span class="string">'Velocity'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Distance [cm]/Velocity [cm/s]'</span>);
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend(<span class="string">'Control [rad]'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Angle [rad]'</span>);
+</pre><img vspace="5" hspace="5" src="Ch08_BallBeam_02.png" alt=""> <h2>Proportional-Derivative Control (Underdamped)<a name="3"></a></h2><p>Derviative action is needed to dampen the feedback control response for the ball and beam system. An analysis shows that the response to P-D control can be underdamped, overdamped, or critically damped.</p><pre class="codeinput"><span class="comment">% Set Kd to a value 1/4 of that needed for critical damping.</span>
+Kd = 0.25*(sqrt(4*J*Kp));
+
+<span class="comment">% Proportional-Derivative Control</span>
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+<span class="comment">% Model Equations</span>
+f = @(t,y) [y(2); -u(t,y)/J];
+
+<span class="comment">% Integration and Plotting</span>
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend(<span class="string">'Position'</span>,<span class="string">'Velocity'</span>,<span class="string">'Pred.'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Distance [cm]/Velocity [cm/s]'</span>);
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend(<span class="string">'Control [rad]'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Angle [rad]'</span>);
+</pre><pre class="codeoutput">Warning: Ignoring extra legend entries. 
+</pre><img vspace="5" hspace="5" src="Ch08_BallBeam_03.png" alt=""> <h2>Proportional-Derivative Control (Overdamped)<a name="4"></a></h2><pre class="codeinput"><span class="comment">% Set Kd to a value 4 times of that needed for critical damping.</span>
+Kd = 4*(sqrt(4*J*Kp));
+
+<span class="comment">% Proportional-Derivative Control</span>
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+<span class="comment">% Model Equations</span>
+f = @(t,y) [y(2); -u(t,y)/J];
+
+<span class="comment">% Integration and Plotting</span>
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend(<span class="string">'Position'</span>,<span class="string">'Velocity'</span>,<span class="string">'Location'</span>,<span class="string">'NW'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Distance [cm]/Velocity [cm/s]'</span>);
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend(<span class="string">'Control [rad]'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Angle [rad]'</span>);
+</pre><img vspace="5" hspace="5" src="Ch08_BallBeam_04.png" alt=""> <h2>Proportional-Derivative Control (Critically Damped)<a name="5"></a></h2><pre class="codeinput"><span class="comment">% Set Kd to that needed for critical damping.</span>
+Kd = (sqrt(4*J*Kp));
+
+<span class="comment">% Proportional-Derivative Control</span>
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+<span class="comment">% Model Equations</span>
+f = @(t,y) [y(2); -u(t,y)/J];
+
+<span class="comment">% Integration and Plotting</span>
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend(<span class="string">'Position'</span>,<span class="string">'Velocity'</span>,<span class="string">'Location'</span>,<span class="string">'NW'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Distance [cm]/Velocity [cm/s]'</span>);
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend(<span class="string">'Control [rad]'</span>);
+xlabel(<span class="string">'Time [s]'</span>);
+ylabel(<span class="string">'Angle [rad]'</span>);
+</pre><img vspace="5" hspace="5" src="Ch08_BallBeam_05.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Control of the Ball and Beam System
+%
+% File: |Ch08_BallBeam.m|
+
+%%
+%
+% The ball and beam system is modeled using a second order differential
+% equation
+%
+% $$J\frac{d^2x}{dt^2} = -u$$
+% 
+% and associated control law. The Matlab function |ode45| integrates
+% systems of first-order differential equations. So for simulation
+% purposes, the first step is to recast the ball and beam system as a pair
+% of first-order differential equations. 
+%
+% $$\frac{dx}{dt} = v$$
+%
+% $$\frac{dv}{dt} = -\frac{1}{J}u$$
+%
+% A Matlab vector must hold both $x$ and $v$. We'll call
+% this vector $y$ such that $y_1=x$ and $y_2=v$. With this notation we
+% have
+%
+% $$\frac{dy_1}{dt} = y_2$$
+%
+% $$\frac{dy_2}{dt} = -\frac{1}{J}u$$
+%
+% The following Matlab code demonstrates this technique assume u has a
+% constant value.
+
+% Parameters
+J = 0.5;         % Inertia
+tspan = [0,30];  % Simulation time span
+ic    = [0;0];   % Initial conditions
+
+% Assume beam angle is a constant function
+u = @(t,y) -0.1;
+
+% Model Equations
+f = @(t,y) [y(2); -u(t,y)/J];
+
+% Integration and Plotting
+ode45(f,tspan,ic);
+legend('Position','Velocity','Location','NW');
+xlabel('Time [s]');
+ylabel('Distance [cm]/Velocity [cm/s]');
+
+
+%% Proportional Control
+% 
+% Feedback control can be used to adjust the beam position in order to
+% bring the ball to a desired position called the setpoint. Here we explore
+% whether or not proportional control can do the job.
+
+Kp  =  0.1;
+xsp =  1;
+
+% Proportional feedback control
+u = @(t,y) Kp*(y(1)-xsp);
+
+% Model Equations
+f = @(t,y) [y(2); -u(t,y)/J];
+
+% Integration and Plotting
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend('Position','Velocity');
+xlabel('Time [s]');
+ylabel('Distance [cm]/Velocity [cm/s]');
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend('Control [rad]');
+xlabel('Time [s]');
+ylabel('Angle [rad]');
+
+%% Proportional-Derivative Control (Underdamped)
+%
+% Derviative action is needed to dampen the feedback control response for
+% the ball and beam system. An analysis shows that the response to P-D
+% control can be underdamped, overdamped, or critically damped. 
+
+% Set Kd to a value 1/4 of that needed for critical damping.
+Kd = 0.25*(sqrt(4*J*Kp));
+
+% Proportional-Derivative Control
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+% Model Equations
+f = @(t,y) [y(2); -u(t,y)/J];
+
+% Integration and Plotting
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend('Position','Velocity','Pred.');
+xlabel('Time [s]');
+ylabel('Distance [cm]/Velocity [cm/s]');
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend('Control [rad]');
+xlabel('Time [s]');
+ylabel('Angle [rad]');
+
+%% Proportional-Derivative Control (Overdamped)
+
+% Set Kd to a value 4 times of that needed for critical damping.
+Kd = 4*(sqrt(4*J*Kp));
+
+% Proportional-Derivative Control
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+% Model Equations
+f = @(t,y) [y(2); -u(t,y)/J];
+
+% Integration and Plotting
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend('Position','Velocity','Location','NW');
+xlabel('Time [s]');
+ylabel('Distance [cm]/Velocity [cm/s]');
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend('Control [rad]');
+xlabel('Time [s]');
+ylabel('Angle [rad]');
+
+%% Proportional-Derivative Control (Critically Damped)
+
+% Set Kd to that needed for critical damping.
+Kd = (sqrt(4*J*Kp));
+
+% Proportional-Derivative Control
+u = @(t,y) Kp*(y(1)-xsp) + Kd*y(2);
+
+% Model Equations
+f = @(t,y) [y(2); -u(t,y)/J];
+
+% Integration and Plotting
+[t,y] = ode45(f,tspan,ic);
+
+subplot(2,1,1)
+plot(t,y);
+legend('Position','Velocity','Location','NW');
+xlabel('Time [s]');
+ylabel('Distance [cm]/Velocity [cm/s]');
+
+subplot(2,1,2);
+plot(t,arrayfun(@(t,x,v)u(t,[x;v]),t,y(:,1),y(:,2)));
+legend('Control [rad]');
+xlabel('Time [s]');
+ylabel('Angle [rad]');
+
+##### SOURCE END #####
+--></body></html>

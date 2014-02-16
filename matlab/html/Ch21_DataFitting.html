@@ -1,0 +1,329 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Fitting Linear Relationships</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-11"><meta name="DC.source" content="Ch21_DataFitting.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Fitting Linear Relationships</h1><!--introduction--><p>File: <tt>Ch21_DataFitting.m</tt></p><p>Fitting linear relationships to experimental data is one of the basic tools for laboratory data analysis. This script demonstrates a simple approach using Matlab.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Data</a></li><li><a href="#2">Preliminary data exploration</a></li><li><a href="#3">Model fitting</a></li><li><a href="#4">Remove Outliers</a></li><li><a href="#5">error estimates</a></li></ul></div><h2>Data<a name="1"></a></h2><p>The sample data comes from Example 21.5 of Seborg, et al. The first column is the biological oxygen demand (BOD) and the second column is solids concentration (mg/liter) for a series of daily samples of the effluent of a waste water treatment plant.</p><pre class="codeinput">data = [ <span class="keyword">...</span>
+    17.7    1380;
+    23.6    1458;
+    13.2    1322;
+    25.2    1448;
+    13.1    1334;
+    27.8    1485;
+    29.8    1503;
+     9.0    1540;
+    14.3    1341;
+    26.0    1448;
+    23.2    1426;
+    22.8    1417;
+    20.4    1384;
+    17.5    1380;
+    18.4    1396;
+    16.8    1345;
+    13.8    1349;
+    19.4    1398;
+    24.7    1426;
+    16.8    1361;
+    14.9    1347;
+    27.6    1476;
+    26.1    1454;
+    20.0    1393;
+    22.9    1427;
+    22.4    1431;
+    19.6    1405;
+    31.5    1521;
+    19.9    1409;
+    20.3    1392];
+</pre><h2>Preliminary data exploration<a name="2"></a></h2><p>Our expectation is that BOD ought to be related to the dissolved solids. We'll assume that a linear relationship exists of the form</p><pre>[BOD] = alpha*[solids] + beta</pre><p>where alpha and beta are to be determined from the data. Our first step is to examine the data to see if this is a plausible model.</p><pre class="codeinput">BOD = data(:,1);
+solids = data(:,2);
+N = length(BOD);
+
+figure(1); clf;
+plot(solids,BOD,<span class="string">'.'</span>,<span class="string">'Markersize'</span>,20);
+xlabel(<span class="string">'Solids [mg/liter]'</span>);
+ylabel(<span class="string">'BOD'</span>);
+title(<span class="string">'BOD versus Solids'</span>);
+grid;
+</pre><img vspace="5" hspace="5" src="Ch21_DataFitting_01.png" alt=""> <h2>Model fitting<a name="3"></a></h2><p>Our initial conclusion is that the data appears consistent with a linear relationship, though there is at least one point that may be an outlier. Let's first do a least squares fit using all of the data.</p><pre class="codeinput"><span class="comment">% create data matrix where the unknown parameters are stored in x such that</span>
+<span class="comment">% Ax = b + e where are model/measurement errors and</span>
+<span class="comment">%</span>
+<span class="comment">%   x(1) : alpha</span>
+<span class="comment">%   x(2) : beta</span>
+
+A = [solids ones(N,1)];
+b = [BOD];
+
+<span class="comment">% least squares solution for x = [alpha;beta]</span>
+x = A\b;
+
+<span class="comment">% residuals</span>
+e = b - A*x;
+s = std(e);
+t95 = tinv(0.975,N-2);
+
+plot(solids,BOD,<span class="string">'+'</span>, <span class="keyword">...</span>
+     solids,A*x,<span class="string">'-'</span>, <span class="keyword">...</span>
+     solids,A*x + t95*s, <span class="string">'r-'</span>, <span class="keyword">...</span>
+     solids,A*x - t95*s, <span class="string">'r-'</span>, <span class="keyword">...</span>
+     <span class="string">'Markersize'</span>,10,<span class="string">'Linewidth'</span>,2);
+
+xlabel(<span class="string">'Solids [mg/liter]'</span>);
+ylabel(<span class="string">'BOD'</span>);
+title(<span class="string">'BOD versus Solids'</span>);
+legend(<span class="string">'data'</span>,<span class="string">'fit'</span>,<span class="string">'+/- 95% C.I.'</span>,<span class="string">'Location'</span>,<span class="string">'NW'</span>);
+grid;
+</pre><img vspace="5" hspace="5" src="Ch21_DataFitting_02.png" alt=""> <h2>Remove Outliers<a name="4"></a></h2><p>Remove all points that lie outside of the 99% confidence interval</p><pre class="codeinput">t99 = tinv(0.995,N-2);
+idx = find(abs(e) &lt; t99*s);
+
+<span class="comment">% data matrix</span>
+A = [solids(idx) ones(length(idx),1)];
+b = [BOD(idx)];
+
+<span class="comment">% least squares solution</span>
+x = A\b;
+
+<span class="comment">% error bounds</span>
+e = b - A*x;
+s = std(e);
+t95 = tinv(0.025,N-2);
+
+<span class="comment">% plotting</span>
+plot(solids(idx),A*x,<span class="string">'-'</span>, <span class="keyword">...</span>
+     solids(idx),A*x + t95*s, <span class="string">'r:'</span>, <span class="keyword">...</span>
+     solids(idx),A*x - t95*s, <span class="string">'r:'</span>, <span class="keyword">...</span>
+     solids(idx),BOD(idx),<span class="string">'+'</span>,<span class="string">'Markersize'</span>,10,<span class="string">'Linewidth'</span>,2);
+xlabel(<span class="string">'Solids [mg/liter]'</span>);
+ylabel(<span class="string">'BOD'</span>);
+title(<span class="string">'BOD versus Solids'</span>);
+grid;
+</pre><img vspace="5" hspace="5" src="Ch21_DataFitting_03.png" alt=""> <h2>error estimates<a name="5"></a></h2><pre class="codeinput">K = 1000;
+xs = zeros(K,length(x));
+n  = size(idx,1);
+
+<span class="keyword">for</span> k = 1:K
+
+    ndx = idx(randsample(n,n,1));
+
+    A = [solids(ndx) ones(n,1)];
+    b = [BOD(ndx)];
+
+    <span class="comment">% least squares solution</span>
+    x = A\b;
+    xs(k,:) = x';
+
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Fitting Linear Relationships
+%
+% File: |Ch21_DataFitting.m|
+%
+% Fitting linear relationships to experimental data is one of the basic
+% tools for laboratory data analysis. This script demonstrates a simple
+% approach using Matlab.
+
+%% Data
+% The sample data comes from Example 21.5 of Seborg, et al. The first
+% column is the biological oxygen demand (BOD) and the second column is
+% solids concentration (mg/liter) for a series of daily samples of the
+% effluent of a waste water treatment plant.
+
+data = [ ...
+    17.7    1380;
+    23.6    1458;
+    13.2    1322;
+    25.2    1448;
+    13.1    1334;
+    27.8    1485;
+    29.8    1503;
+     9.0    1540;
+    14.3    1341;
+    26.0    1448;
+    23.2    1426;
+    22.8    1417;
+    20.4    1384;
+    17.5    1380;
+    18.4    1396;
+    16.8    1345;
+    13.8    1349;
+    19.4    1398;
+    24.7    1426;
+    16.8    1361;
+    14.9    1347;
+    27.6    1476;
+    26.1    1454;
+    20.0    1393;
+    22.9    1427;
+    22.4    1431;
+    19.6    1405;
+    31.5    1521;
+    19.9    1409;
+    20.3    1392];
+
+%% Preliminary data exploration
+% Our expectation is that BOD ought to be related to the dissolved solids.
+% We'll assume that a linear relationship exists of the form
+%
+%  [BOD] = alpha*[solids] + beta
+%
+% where alpha and beta are to be determined from the data. Our first step
+% is to examine the data to see if this is a plausible model.
+
+BOD = data(:,1);
+solids = data(:,2);
+N = length(BOD);
+
+figure(1); clf;
+plot(solids,BOD,'.','Markersize',20);
+xlabel('Solids [mg/liter]');
+ylabel('BOD');
+title('BOD versus Solids');
+grid;
+
+%% Model fitting
+% Our initial conclusion is that the data appears consistent with a linear
+% relationship, though there is at least one point that may be an outlier.
+% Let's first do a least squares fit using all of the data.
+
+% create data matrix where the unknown parameters are stored in x such that
+% Ax = b + e where are model/measurement errors and
+%
+%   x(1) : alpha
+%   x(2) : beta
+
+A = [solids ones(N,1)];
+b = [BOD];
+
+% least squares solution for x = [alpha;beta]
+x = A\b;
+
+% residuals
+e = b - A*x;
+s = std(e);
+t95 = tinv(0.975,N-2);
+
+plot(solids,BOD,'+', ...
+     solids,A*x,'-', ...
+     solids,A*x + t95*s, 'r-', ...
+     solids,A*x - t95*s, 'r-', ...
+     'Markersize',10,'Linewidth',2);
+
+xlabel('Solids [mg/liter]');
+ylabel('BOD');
+title('BOD versus Solids');
+legend('data','fit','+/- 95% C.I.','Location','NW');
+grid;
+
+%% Remove Outliers
+% Remove all points that lie outside of the 99% confidence interval
+
+t99 = tinv(0.995,N-2);
+idx = find(abs(e) < t99*s);
+
+% data matrix
+A = [solids(idx) ones(length(idx),1)];
+b = [BOD(idx)];
+
+% least squares solution
+x = A\b;
+
+% error bounds
+e = b - A*x;
+s = std(e);
+t95 = tinv(0.025,N-2);
+
+% plotting
+plot(solids(idx),A*x,'-', ...
+     solids(idx),A*x + t95*s, 'r:', ...
+     solids(idx),A*x - t95*s, 'r:', ...
+     solids(idx),BOD(idx),'+','Markersize',10,'Linewidth',2);
+xlabel('Solids [mg/liter]');
+ylabel('BOD');
+title('BOD versus Solids');
+grid;
+
+%% error estimates
+
+K = 1000;
+xs = zeros(K,length(x));
+n  = size(idx,1);
+
+for k = 1:K
+    
+    ndx = idx(randsample(n,n,1));
+
+    A = [solids(ndx) ones(n,1)];
+    b = [BOD(ndx)];
+
+    % least squares solution
+    x = A\b;
+    xs(k,:) = x';
+    
+end
+
+
+%% 
+##### SOURCE END #####
+--></body></html>
