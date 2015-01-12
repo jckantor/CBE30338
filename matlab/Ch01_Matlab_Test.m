@@ -30,8 +30,3 @@ clc;
 disp(['Matlab Version: ',version]);
 disp([' Computer Type: ',computer]);
 disp([' Computer Name: ',name(1:end-1)]);
-
-    
-
-
-
