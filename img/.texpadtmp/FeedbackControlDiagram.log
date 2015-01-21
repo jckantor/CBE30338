@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 JAN 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 JAN 2015 13:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -341,7 +341,7 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  63i,7n,58p,435b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on /Users/jeff/Dropbox/Git/CBE30338/img/.texpadtmp/FeedbackControlDiagram.pdf (1 page, 10056 bytes).
+Output written on /Users/jeff/Dropbox/Git/CBE30338/img/.texpadtmp/FeedbackControlDiagram.pdf (1 page, 10047 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  12 compressed objects within 1 object stream

@@ -51,14 +51,15 @@ ylabel('Inlet flowrate [kg/min]');
 % w2(t) is the flowrate of the manipulated flow. For the first simulation
 % we'll assume a constant flowrate.
 
-w2 = @(t) 50;   % kg/hour
+w2 = @(t) 60;   % kg/hour
 
 %% Blending Tank Model
 %
 % For a simple problem like this one, we'll use an anonymous function to
 % model the tank dynamics.
 
-f  = @(t,x) (w1(t)*(x1(t)-x) + w2(t)*(1-x))/rho/V;
+dw  = @(t,w,I) (w1(t)*(x1(t)-x) + w2(t)*(1-x))/rho/V;
+dI  = @(t,w,I) (wSP(t) - w)
 
 %% Integrate differential equation and plot results
 %
@@ -66,7 +67,7 @@ f  = @(t,x) (w1(t)*(x1(t)-x) + w2(t)*(1-x))/rho/V;
 % x(0) = 1.
 
 [t,x] = ode45(f,[0,200],1);
-clg;
+clf;
 plot(t,x);
 
 xlabel('Time [hr]');
@@ -77,12 +78,14 @@ ylabel('Mass Fraction');
 % Next we install a feedback controller using proportional control.
 
 Kp = 100;
-xSP = 0.8;
+xSP = 0.5;
 
 w2offset = w1(0)*(xSP-x1(0))/(1-xSP)
 w2 = @(t,x) w2offset + Kp*(xSP - x);
 
 f  = @(t,x) (w1(t)*(x1(t)-x) + w2(t,x)*(1-x))/rho/V;
+
+f = @(t,x) [dw(t,x(1),x(2)),dI(t,x(1))]
 
 [t,x] = ode45(f,[0,200],1);
 subplot(2,1,1);

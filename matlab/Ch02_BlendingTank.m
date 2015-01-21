@@ -1,4 +1,4 @@
-%% Simulation of a Blending Tank with Proportional Control
+%% Simulation of a Blending Tank with Proportional and Integral Control
 %
 % File: |Ch02_BlendingTank.m|
 %

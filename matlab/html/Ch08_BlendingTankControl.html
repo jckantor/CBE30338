@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Simulation of a Blending Tank with Proportional Control</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-10"><meta name="DC.source" content="Ch08_BlendingTankControl.m"><style type="text/css">
+      --><title>Simulation of a Blending Tank with Proportional Control</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-01-20"><meta name="DC.source" content="Ch08_BlendingTankControl.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -23,7 +23,7 @@ a:visited { color:#004aa0; text-decoration:none; }
 
 p { padding:0px; margin:0px 0px 20px; }
 img { padding:0px; margin:0px 0px 20px; border:none; }
-p img, pre img, tt img, li img { margin-bottom:0px; } 
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
 
 ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
 ul li { padding:0px; margin:0px 0px 7px 0px; }
@@ -38,11 +38,12 @@ ol li ul li { list-style:square; }
 
 .content { font-size:1.2em; line-height:140%; padding: 20px; }
 
-pre, tt, code { font-size:12px; }
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
 pre { margin:0px 0px 20px; }
-pre.error { color:red; }
 pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
 pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
 
 @media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
 
@@ -65,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Simulation of a Blending Tank with Proportional Control</h1><!--introduction--><p>File: <tt>Ch08_BlendingTankControl.m</tt></p><p>A blending tank accepts a flow from from a plant at mass flow rate <img src="Ch08_BlendingTankControl_eq09769.png" alt="$w_1$">. The mass fraction of A is <img src="Ch08_BlendingTankControl_eq06004.png" alt="$x_1$">.  A stream of pure A (<img src="Ch08_BlendingTankControl_eq16434.png" alt="$x_2$"> = 1) is blended with the plant stream in a well-mixed tank. The tank is designed to maintain constant volume. The task is to design a control system to maintain the effluent concentration at a desired setpoint <img src="Ch08_BlendingTankControl_eq38020.png" alt="$x_{SP}$">.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Process Diagram</a></li><li><a href="#2">Parameter Values</a></li><li><a href="#3">Disturbance Variables (DV)</a></li><li><a href="#4">Manipulated Variable (MV)</a></li><li><a href="#5">Blending Tank Model</a></li><li><a href="#6">Integrate differential equation and plot results</a></li><li><a href="#7">Feedback Control</a></li><li><a href="#8">Exercises</a></li></ul></div><h2>Process Diagram<a name="1"></a></h2><pre>        From Plant                         Pure A
+  </style></head><body><div class="content"><h1>Simulation of a Blending Tank with Proportional Control</h1><!--introduction--><p>File: <tt>Ch08_BlendingTankControl.m</tt></p><p>A blending tank accepts a flow from from a plant at mass flow rate <img src="Ch08_BlendingTankControl_eq01440009178689586507.png" alt="$w_1$">. The mass fraction of A is <img src="Ch08_BlendingTankControl_eq06613056106014670631.png" alt="$x_1$">.  A stream of pure A (<img src="Ch08_BlendingTankControl_eq03385156042344747669.png" alt="$x_2$"> = 1) is blended with the plant stream in a well-mixed tank. The tank is designed to maintain constant volume. The task is to design a control system to maintain the effluent concentration at a desired setpoint <img src="Ch08_BlendingTankControl_eq03831358700280848903.png" alt="$x_{SP}$">.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Process Diagram</a></li><li><a href="#2">Parameter Values</a></li><li><a href="#3">Disturbance Variables (DV)</a></li><li><a href="#4">Manipulated Variable (MV)</a></li><li><a href="#5">Blending Tank Model</a></li><li><a href="#6">Integrate differential equation and plot results</a></li><li><a href="#7">Feedback Control</a></li><li><a href="#8">Exercises</a></li></ul></div><h2>Process Diagram<a name="1"></a></h2><pre>        From Plant                         Pure A
           w1,x1 ------            ---|X|-- w2,x2
                       |          |
                       v          v
@@ -75,7 +76,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
                    |                |-----&gt; w3,x3
                     ----------------</pre><h2>Parameter Values<a name="2"></a></h2><pre class="codeinput">rho = 1.00;   <span class="comment">% kg/liter, assume constant</span>
 V   = 4000;   <span class="comment">% liters</span>
-</pre><h2>Disturbance Variables (DV)<a name="3"></a></h2><p>The disturbances are functions of time. Here we specify a constant value for <img src="Ch08_BlendingTankControl_eq06004.png" alt="$x_1$">, and a flowrate <img src="Ch08_BlendingTankControl_eq09769.png" alt="$w_1$"> with a step change at <img src="Ch08_BlendingTankControl_eq89013.png" alt="$t=50$">.</p><pre class="codeinput">x1 = @(t) 0.2;  <span class="comment">% Mass fraction</span>
+</pre><h2>Disturbance Variables (DV)<a name="3"></a></h2><p>The disturbances are functions of time. Here we specify a constant value for <img src="Ch08_BlendingTankControl_eq06613056106014670631.png" alt="$x_1$">, and a flowrate <img src="Ch08_BlendingTankControl_eq01440009178689586507.png" alt="$w_1$"> with a step change at <img src="Ch08_BlendingTankControl_eq09061819109133405932.png" alt="$t=50$">.</p><pre class="codeinput">x1 = @(t) 0.2;  <span class="comment">% Mass fraction</span>
 w1 = @(t) 100 + (t &gt;= 50).*50;  <span class="comment">% kg/min</span>
 
 t = 0:200;
@@ -91,13 +92,11 @@ ylabel(<span class="string">'Inlet flowrate [kg/min]'</span>);
 </pre><img vspace="5" hspace="5" src="Ch08_BlendingTankControl_01.png" alt=""> <h2>Manipulated Variable (MV)<a name="4"></a></h2><p>w2(t) is the flowrate of the manipulated flow. For the first simulation we'll assume a constant flowrate.</p><pre class="codeinput">w2 = @(t) 50;   <span class="comment">% kg/hour</span>
 </pre><h2>Blending Tank Model<a name="5"></a></h2><p>For a simple problem like this one, we'll use an anonymous function to model the tank dynamics.</p><pre class="codeinput">f  = @(t,x) (w1(t)*(x1(t)-x) + w2(t)*(1-x))/rho/V;
 </pre><h2>Integrate differential equation and plot results<a name="6"></a></h2><p>We integrate the model from t = 0 to t = 200 with an initial condition x(0) = 1.</p><pre class="codeinput">[t,x] = ode45(f,[0,200],1);
-clg;
+clf;
 plot(t,x);
 
 xlabel(<span class="string">'Time [hr]'</span>);
 ylabel(<span class="string">'Mass Fraction'</span>);
-</pre><pre class="codeoutput">Warning: This function is obsolete and may be removed in future versions. Use
-Clf instead 
 </pre><img vspace="5" hspace="5" src="Ch08_BlendingTankControl_02.png" alt=""> <h2>Feedback Control<a name="7"></a></h2><p>Next we install a feedback controller using proportional control.</p><pre class="codeinput">Kp = 100;
 xSP = 0.8;
 
@@ -121,7 +120,7 @@ w2offset =
 
   300.0000
 
-</pre><img vspace="5" hspace="5" src="Ch08_BlendingTankControl_03.png" alt=""> <h2>Exercises<a name="8"></a></h2><div><ol><li>Change the control constant from Kp = 100 to Kp = 10000. Is the result realistic?  Adjust the control rule so that you're getting realistic values of the outlet flow.</li><li>Implement a feedforward controller.</li></ol></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="Ch08_BlendingTankControl_03.png" alt=""> <h2>Exercises<a name="8"></a></h2><div><ol><li>Change the control constant from Kp = 100 to Kp = 10000. Is the result realistic?  Adjust the control rule so that you're getting realistic values of the outlet flow.</li><li>Implement a feedforward controller.</li></ol></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Simulation of a Blending Tank with Proportional Control
 %
@@ -191,7 +190,7 @@ f  = @(t,x) (w1(t)*(x1(t)-x) + w2(t)*(1-x))/rho/V;
 % x(0) = 1.
 
 [t,x] = ode45(f,[0,200],1);
-clg;
+clf;
 plot(t,x);
 
 xlabel('Time [hr]');
