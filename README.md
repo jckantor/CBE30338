@@ -13,7 +13,8 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 * Ch02_GravityTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_GravityTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_GravityTank.pdf)] 
 * Ch02_Lorenz_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz_chebfun.m)]
 * Ch02_Lorenz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Lorenz.pdf)] 
-* HareLynx (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)]
+* Ball and Beam Model (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/BallBeam.slx)]
+* Hare and Lynx Preditor-Prey (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)]
 
 ### 4. Transfer Function Models ###
 * Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
