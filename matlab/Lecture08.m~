@@ -1,0 +1,61 @@
+%% Lecture 08 Demonstration
+
+%% Parameters for a single gravity drained tank.
+
+Cv = 1.2;    % Outlet orifice constant (m^3/min at 1 meter head)
+A = 2.0;     % Area (m^2)
+
+%% Simulation 1. Constant input
+
+qbar = 0.8;
+f = @(t,h) (qbar - Cv*sqrt(h))/A ;
+[t,h] = ode45(f,[0 20],0);
+
+plot(t,h,'Linewidth',2);
+ylim([0 1]);
+xlabel('Time [min]');
+ylabel('Height [m]');
+title('Dynamics of a single gravity filled tank.');
+
+%% Calculate Steady State
+
+hbar = (qbar/Cv)^2;
+hold on
+plot(t,hbar*ones(size(t)),'r--','Linewidth',2);
+hold off;
+legend('Nonlinear Response,','Steady State');
+
+%% Simulation 2. Response to a deviation in inflow
+
+u = @(t) 0.1 * (t >= 12);
+f = @(t,h) (qbar + u(t) - Cv*sqrt(h))/A ;
+
+t = 0:.1:30;
+[t,h] = ode15s(f,t,0);     % Need a stiff solver
+
+plot(t,h,'Linewidth',2);
+ylim([0 1]);
+xlabel('Time [min]');
+ylabel('Height [m]');
+title('Dynamics of a single gravity filled tank.');
+hold on
+plot(t,hbar*ones(size(t)),'r--','Linewidth',2)
+hold off;
+
+%% Simulation 3 - Linear Approximation
+
+g = @(t,x) u(t)/A - Cv*x/(2*A*sqrt(hbar));
+
+hold on
+[t,x] = ode45(g,[0 40],-0.444)
+plot(t,x+hbar,'Linewidth',2)
+hold off
+
+
+%%
+
+u = @(t) 0.1*(t >= 20);
+
+f = @(t,h) (qbar + u(t) - Cv*sqrt(h))/A;
+
+ode45(f,[0 30],0)
