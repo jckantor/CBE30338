@@ -15,6 +15,7 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 * Ch02_Lorenz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Lorenz.pdf)] 
 * Ball and Beam Model (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/BallBeam.slx)]
 * Hare and Lynx Preditor-Prey (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)]
+* Gravity Tanks (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanks.slx)]
 
 ### 4. Transfer Function Models ###
 * Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
@@ -24,6 +25,8 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 * Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)] 
 * Ch08_Bioreactor_Continuous [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_Bioreactor_Continuous.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_Bioreactor_Continuous.pdf)] 
 * Ch08_BlendingTankControl [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BlendingTankControl,m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BlendingTankControl.pdf)] 
+* Gravity Tanks PID Control (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanksPID.slx)]
+
 
 ### 11. Closed-Loop Dynamics ###
 * Ch11_ClosedLoopDemo_Full [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch11_ClosedLoopDemo_Full.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch11_ClosedLoopDemo_Full.pdf)] 
