@@ -17,6 +17,8 @@ xlabel('Time [min]');
 ylabel('Height [m]');
 title('Dynamics of a single gravity filled tank.');
 
+print -dpng -r300 
+
 %% Calculate Steady State
 
 hbar = (qbar/Cv)^2;
