@@ -9,4 +9,4 @@ notebooks/.ipynb_checkpoints/
 matlab/html/
 
 *.m~
-*.autosave
+simulink/*.autosave
