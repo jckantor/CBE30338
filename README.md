@@ -9,7 +9,7 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 * Ch02_Bioreactor_FedBatch [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] 
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)] 
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
-* Ch02_E05_CSTR [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)]
+* Ch02_E05_CSTR [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
 * Ch02_GravityTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_GravityTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_GravityTank.pdf)] 
 * Ch02_Lorenz_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz_chebfun.m)]
 * Ch02_Lorenz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Lorenz.pdf)] 
