@@ -16,6 +16,9 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 * Ball and Beam Model (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/BallBeam.slx)]
 * Hare and Lynx Preditor-Prey (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)]
 * Gravity Tanks (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanks.slx)]
+* Bioreactor Linearization in Simulink [[.pdf](http://jckantor.github.io/CBE30338/pdf/Bioreactor.pdf)]. 
+To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
+[Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
 
 ### 4. Transfer Function Models ###
 * Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
