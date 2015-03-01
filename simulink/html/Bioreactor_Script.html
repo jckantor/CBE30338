@@ -338,8 +338,58 @@ Inputs:
 (2.) Bioreactor/Substrate Feed Deviation
       u: 0            
 </pre><h2>Linearization: Operating Point 1<a name="15"></a></h2><pre class="codeinput">io = getlinio(<span class="string">'Bioreactor'</span>);
-sys1 = linearize(<span class="string">'Bioreactor'</span>,op1,io);
-</pre><h2>Linearization: Operating Point 2<a name="16"></a></h2><pre class="codeinput">sys2 = linearize(<span class="string">'Bioreactor'</span>,op2,io);
+sys1 = linearize(<span class="string">'Bioreactor'</span>,op1,io)
+</pre><pre class="codeoutput">
+sys1 =
+ 
+  a = 
+                 biomass   substrate
+   biomass    -1.178e-10       0.225
+   substrate        -0.2       -0.55
+ 
+  b = 
+                 u     d
+   biomass    -4.5     0
+   substrate     9   0.1
+ 
+  c = 
+        biomass  substrate
+   X          1          0
+   S          0          1
+ 
+  d = 
+      u  d
+   X  0  0
+   S  0  0
+ 
+Continuous-time state-space model.
+
+</pre><h2>Linearization: Operating Point 2<a name="16"></a></h2><pre class="codeinput">sys2 = linearize(<span class="string">'Bioreactor'</span>,op2,io)
+</pre><pre class="codeoutput">
+sys2 =
+ 
+  a = 
+                 biomass   substrate
+   biomass    -7.825e-09      0.4222
+   substrate     -0.1333     -0.9111
+ 
+  b = 
+                    u        d
+   biomass      -4.75        0
+   substrate      9.5  0.06667
+ 
+  c = 
+        biomass  substrate
+   X          1          0
+   S          0          1
+ 
+  d = 
+      u  d
+   X  0  0
+   S  0  0
+ 
+Continuous-time state-space model.
+
 </pre><h2>Close windows<a name="17"></a></h2><pre class="codeinput">bdclose(<span class="string">'Bioreactor'</span>);
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
@@ -501,11 +551,11 @@ op2 = findop('Bioreactor',opspec2)
 %
 
 io = getlinio('Bioreactor');
-sys1 = linearize('Bioreactor',op1,io);
+sys1 = linearize('Bioreactor',op1,io)
 
 %% Linearization: Operating Point 2
 
-sys2 = linearize('Bioreactor',op2,io);
+sys2 = linearize('Bioreactor',op2,io)
 
 %% Close windows
 

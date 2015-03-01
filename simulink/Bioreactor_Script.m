@@ -156,11 +156,11 @@ op2 = findop('Bioreactor',opspec2)
 %
 
 io = getlinio('Bioreactor');
-sys1 = linearize('Bioreactor',op1,io);
+sys1 = linearize('Bioreactor',op1,io)
 
 %% Linearization: Operating Point 2
 
-sys2 = linearize('Bioreactor',op2,io);
+sys2 = linearize('Bioreactor',op2,io)
 
 %% Close windows
 
