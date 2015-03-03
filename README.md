@@ -20,7 +20,7 @@ This is Git repository of Matlab scripts for CBE30338 "Chemical Process Control"
 To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
 [Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
 
-## [Exam 1 Guide](http://htmlpreview.github.io/?https://github.com/jckantor/CBE30338/blob/master/Exam_1_Guide.html)
+### [Exam 1 Guide](http://htmlpreview.github.io/?https://github.com/jckantor/CBE30338/blob/master/Exam_1_Guide.html)
 
 ### 4. Transfer Function Models ###
 * Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
