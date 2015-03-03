@@ -153,7 +153,6 @@ opspec2.Inputs(1).Min = -str2num( ...
 op2 = findop('Bioreactor',opspec2)
 
 %% Linearization: Operating Point 1
-%
 
 io = getlinio('Bioreactor');
 sys1 = linearize('Bioreactor',op1,io)
