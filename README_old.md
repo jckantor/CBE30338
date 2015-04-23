@@ -67,6 +67,9 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch23_E01_bioreactor_PID [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E01_bioreactor_PID.m)] 
 * Ch23_E01_bioreactor_mdl [[.mdl](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E01_bioreactor_mdl.mdl)] 
 * Ch23_E01_bioreactor_mdl_mpc [[.mdl](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E01_bioreactor_mdl_mpc.mdl)] 
+* Ch23_E03_diabetes [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E03_diabetes.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch23_E03_diabetes.pdf)] 
+* Ch23_E03_diabetes_plot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E03_diabetes_plot.m)] 
+* Ch23_E03_diabetes_mdl [[.mdl](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch23_E03_diabetes_mdl.mdl)] 
 
 ### 23. Dynamics and Control of Biological Systems ###
 * Ch24_CircadianClock [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch24_CircadianClock.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch24_CircadianClock.pdf)] 
