@@ -49,6 +49,7 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)] 
 
 ### 19. Real-Time Optimization ###
+* Getting Started with CVXPY [[.ipynb](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)]
 * Ch19_E01 [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E01.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E01.pdf)] 
 * Ch19_E03_cvx [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E03_cvx.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E03_cvx.pdf)] 
 * Ch19_E03_sui [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E03_sui.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E03_sui.pdf)] 
