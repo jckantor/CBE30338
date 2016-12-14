@@ -22,10 +22,5 @@ function [xopt,fopt,yopt,iter,yopt] = linprog(f,A,b,Aeq,beq,lb,ub)
     
 endfunction
 
-// define a better interface to Scilab's builtin linear programming function in.
+xopt = linprog(f,[],[],Aeq,beq,lb,ub)
 
-function [fopt, xopt, yopt, exitflag] = lp(f,A,b,Aeq,beq,lb,ub)
-    
-    [xopt,fopt,exitflag,iter,yopt] = karmarkar(Aeq,beq,f,[],[],[],[],[],A,b,lb,ub)
-    
-endfunction

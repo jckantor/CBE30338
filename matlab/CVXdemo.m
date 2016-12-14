@@ -72,7 +72,7 @@ cvx_begin
 cvx_end
 
 %displaytable(profit,'Maximum Profit = ');
-%displaytable([x,ub,ub-x,y],{'A','B','E','F'},{'Opt','UB','Slack','Sens.'});
+displaytable([x,ub,ub-x,y],{'A','B','E','F'},{'Opt','UB','Slack','Sens.'});
 
 %% Observations
 % # There are two active constraints.
