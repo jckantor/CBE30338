@@ -1,4 +1,4 @@
-# CBE 30338 Chemical Process Control
+# Chemical Process Control
 
 This git repository comprises a collection of Matlab scripts, Simulink models, and Jupyter/Python notebooks in support of a course entitled **CBE 30338 Chemical Process Control**. The materials are organized by Chapter following the textbook [_Process Dynamics and Control_ by Seborg, _et al._](http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP001620.html)
 
