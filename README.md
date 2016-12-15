@@ -4,6 +4,7 @@ This git repository comprises a collection of Matlab scripts, Simulink models, a
 
 
 ### 1. Getting Started ###
+* [Getting Started with Python](https://github.com/jckantor/CBE30338/blob/master/notebooks/Ch01_Matlab_Test.m)
 * Ch01_Matlab_Test [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch01_Matlab_Test.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch01_Matlab_Test.pdf)] 
 * Ch01_Matlab_Tips [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch01_Matlab_Tips.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch01_Matlab_Tips.pdf)] 
 
