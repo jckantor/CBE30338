@@ -2,6 +2,13 @@
 
 This git repository comprises a collection of Matlab scripts, Simulink models, and Jupyter/Python notebooks in support of a course entitled **CBE 30338 Chemical Process Control**. The materials are organized by Chapter following the textbook [_Process Dynamics and Control_ by Seborg, _et al._](http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP001620.html)
 
+These materials are available in multiple formats:
+
+* `.m`  Matlab file or script
+* `.slx` Simulink model
+* `.pdf` PDF document produced with Matlab publish command
+* `.ipynb` Jupyter/Python notebook
+
 
 ### 1. Getting Started ###
 * Getting Started with Python [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)]
