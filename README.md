@@ -14,7 +14,7 @@ These materials are available in multiple formats:
 * Getting Started with Python [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)]
 
 ### 2. Theoretical Models
-* Ch02_Bioreactor_FedBatch [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] 
+* Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)] 
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
 * Ch02_E05_CSTR [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
