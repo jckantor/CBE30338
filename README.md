@@ -6,8 +6,8 @@ These materials are available in multiple formats:
 
 | `.m` | Matlab file or script |
 | `.slx` | Simulink model |
-* `.pdf` PDF document produced with Matlab publish command
-* `.ipynb` Jupyter/Python notebook
+| `.pdf` PDF document produced with Matlab publish command
+| `.ipynb` Jupyter/Python notebook
 
 
 ### 1. Getting Started ###
