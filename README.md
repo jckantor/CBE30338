@@ -4,6 +4,7 @@ This git repository comprises a collection of Matlab scripts, Simulink models, a
 
 These materials are available in multiple formats:
 
+| Format   | Descripton                                |
 | :------- | :---------------------------------------- |
 | `.m`     | Matlab file or script                     |
 | `.slx`   | Simulink model                            |
