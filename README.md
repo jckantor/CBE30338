@@ -4,10 +4,12 @@ This git repository comprises a collection of Matlab scripts, Simulink models, a
 
 These materials are available in multiple formats:
 
-| `.m` | Matlab file or script |
-| `.slx` | Simulink model |
-| `.pdf` PDF document produced with Matlab publish command
-| `.ipynb` Jupyter/Python notebook
+|          |                                           |
+| :------- | :---------------------------------------- |
+| `.m`     | Matlab file or script                     |
+| `.slx`   | Simulink model                            |
+| `.pdf`   | PDF document produced with Matlab publish |
+| `.ipynb` | Jupyter/Python notebook (via nbviewer)    |
 
 
 ### 1. Getting Started ###
