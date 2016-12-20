@@ -17,7 +17,7 @@ These materials are available in multiple formats:
 
 ### 2. Theoretical Models
 * Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
-* Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)] 
+* Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)]
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
 * Ch02_E05_CSTR [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
 * Ch02_GravityTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_GravityTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_GravityTank.pdf)] 
@@ -55,6 +55,10 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 
 ### 14. Frequency Domain Control Design ###
 * Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)] 
+
+### 17. Sampling and Signal Reconstruction
+
+* Zero Order Hold and Interpolation [[.ipynb]()]
 
 ### 19. Real-Time Optimization ###
 * Getting Started with CVXPY [[.ipynb](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)]
