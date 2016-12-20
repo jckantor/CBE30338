@@ -58,7 +58,7 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 
 ### 17. Sampling and Signal Reconstruction
 
-* Zero Order Hold and Interpolation [[.ipynb]()]
+* Zero Order Hold and Interpolation [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)]
 
 ### 19. Real-Time Optimization ###
 * Getting Started with CVXPY [[.ipynb](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)]
