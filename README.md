@@ -53,7 +53,7 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch12_PID_Simulink_Model [[.slx](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch12_PID_Simulink_Model.slx)] 
 
 ### 14. Frequency Domain Control Design ###
-* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
+* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb?flush_cache=true)]
 
 ### 17. Sampling and Signal Reconstruction
 
