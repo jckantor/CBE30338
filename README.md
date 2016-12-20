@@ -40,7 +40,6 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch08_BlendingTankControl [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BlendingTankControl,m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BlendingTankControl.pdf)] 
 * Gravity Tanks PID Control (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanksPID.slx)]
 
-
 ### 11. Closed-Loop Dynamics ###
 * Ch11_ClosedLoopDemo_Full [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch11_ClosedLoopDemo_Full.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch11_ClosedLoopDemo_Full.pdf)] 
 * Ch11_ClosedLoopDemo [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch11_ClosedLoopDemo.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch11_ClosedLoopDemo.pdf)] 
@@ -54,7 +53,7 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch12_PID_Simulink_Model [[.slx](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch12_PID_Simulink_Model.slx)] 
 
 ### 14. Frequency Domain Control Design ###
-* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)][[.ipynb](https://github.com/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
+* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
 
 ### 17. Sampling and Signal Reconstruction
 
