@@ -34,6 +34,9 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 * Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
 * Ch04_PredatorPrey [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)] 
 
+### 5. First and Second Order Models ###
+* Manometer [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer.ipynb)]
+
 ### 8. Feedback Controllers ###
 * Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)] 
 * Ch08_Bioreactor_Continuous [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_Bioreactor_Continuous.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_Bioreactor_Continuous.pdf)] 
