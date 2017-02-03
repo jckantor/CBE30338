@@ -25,7 +25,7 @@ These materials are available in multiple formats:
 * Ch02_Lorenz_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz_chebfun.m)]
 * Ch02_Lorenz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Lorenz.pdf)] 
 * Ball and Beam Model (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/BallBeam.slx)]
-* Hare and Lynx Preditor-Prey (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)]
+* Hare and Lynx Preditor-Prey [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.ipynb](https://github.com/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx.ipynb)]
 * Gravity Tanks (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanks.slx)]
 * Bioreactor Linearization in Simulink [[.pdf](http://jckantor.github.io/CBE30338/pdf/Bioreactor.pdf)]. 
 To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
