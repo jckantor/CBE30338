@@ -19,6 +19,7 @@ These materials have been developed over time in multiple formats:
 ### 1. First and Second Order Linear Systems
 
 * One Compartment Pharacokinetics Model [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics%20Model.ipynb)]
+* Second Order Linear Systems [[.ipynb]()]
 * Manometer [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)]
 * Assignment_02 [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Assignment_02/Assignment_02.ipynb)]
 
