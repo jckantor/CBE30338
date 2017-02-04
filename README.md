@@ -14,7 +14,7 @@ These materials have been developed over time in multiple formats:
 
 ### 0. Getting Started ###
 * Getting Started with Python [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)]
-* Python Tutorial [[.ipynb]()]
+* Python Tutorial [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python%20Tutorial.ipynb)]
 
 ### 1. First and Second Order Linear Systems
 
