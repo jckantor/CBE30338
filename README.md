@@ -1,8 +1,8 @@
 # Chemical Process Control
 
-This git repository comprises a collection of Matlab scripts, Simulink models, and Jupyter/Python notebooks in support of a course entitled [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). The materials are organized by Chapter following the textbook [_Process Dynamics and Control_ by Seborg, _et al._](http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP001620.html)
+This git repository comprises a collection of Matlab scripts, Simulink models, and Jupyter/Python notebooks in support of a course entitled [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). 
 
-These materials are available in multiple formats:
+These materials have been developed over time in multiple formats:
 
 | Format   | Descripton                                |
 | :------- | :---------------------------------------- |
@@ -12,11 +12,16 @@ These materials are available in multiple formats:
 | `.ipynb` | Jupyter/Python notebook (via nbviewer)    |
 
 
-### 1. Getting Started ###
+### 0. Getting Started ###
 * Getting Started with Python [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)]
 
-### 2. Theoretical Models
+### 1. First and Second Order Linear Systems
+
 * One Compartment Pharacokinetics Model [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics%20Model.ipynb)]
+* Manometer [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)]
+
+### 2. Nonlinear Models
+
 * Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)]
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
@@ -30,13 +35,10 @@ These materials are available in multiple formats:
 * Bioreactor Linearization in Simulink [[.pdf](http://jckantor.github.io/CBE30338/pdf/Bioreactor.pdf)]. 
 To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
 [Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
-
-### 4. Transfer Function Models ###
-* Ch04_PredatorPrey_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey_chebfun.m)]
 * Ch04_PredatorPrey [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)] 
 
-### 5. First and Second Order Models ###
-* Manometer [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)]
+### 3. Linear Approximations
+
 
 ### 8. Feedback Controllers ###
 * Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)] 
