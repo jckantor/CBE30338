@@ -30,12 +30,9 @@ These materials have been developed over time in multiple formats:
 * Ch02_Lorenz_chebfun [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz_chebfun.m)]
 * Ch02_Lorenz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Lorenz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Lorenz.pdf)] 
 * Ball and Beam Model (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/BallBeam.slx)]
-* Hare and Lynx Preditor-Prey [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx.ipynb)]
+* Hare and Lynx Preditor-Prey [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx.ipynb)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)] 
 * Gravity Tanks (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanks.slx)]
-* Bioreactor Linearization in Simulink [[.pdf](http://jckantor.github.io/CBE30338/pdf/Bioreactor.pdf)]. 
-To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
-[Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
-* Ch04_PredatorPrey [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)] 
+
 
 ### 3. Linear Approximations
 
@@ -90,3 +87,10 @@ To run this example you will need to download [Bioreactor.slx](https://github.co
 ### 23. Dynamics and Control of Biological Systems ###
 * Ch24_CircadianClock [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch24_CircadianClock.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch24_CircadianClock.pdf)] 
 *  Ch24_EnzymeKinetics [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch24_EnzymeKinetics.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch24_EnzymeKinetics.pdf)] 
+
+
+### Deprecated Models
+* Bioreactor Linearization in Simulink [[.pdf](http://jckantor.github.io/CBE30338/pdf/Bioreactor.pdf)]. 
+To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
+[Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
+
