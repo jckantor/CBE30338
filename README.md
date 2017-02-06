@@ -25,8 +25,8 @@ These materials have been developed over time in multiple formats:
 
 ### 2. Nonlinear Models
 
-* Hare and Lynx Preditor-Prey [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx.ipynb)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)] 
-* Ch02_E05_CSTR [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
+* Hare and Lynx Preditor-Prey [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx.ipynb)]
+* Exothermic Stirred-Tank Reactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
 * Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)]
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
