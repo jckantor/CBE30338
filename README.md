@@ -35,7 +35,7 @@ These materials have been developed over time in multiple formats:
 * Linear Approximation of Process Models [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20Process%20Models.ipynb?flush_cache=true)]
 
 ### 8. Feedback Controllers ###
-* Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)] 
+* Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)][[.ipynb](https://github.com/jckantor/Ball-and-Beam)]
 * Ch08_Bioreactor_Continuous [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_Bioreactor_Continuous.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_Bioreactor_Continuous.pdf)] 
 * Ch08_BlendingTankControl [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BlendingTankControl,m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BlendingTankControl.pdf)] 
 * Gravity Tanks PID Control (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanksPID.slx)]
