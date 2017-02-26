@@ -29,6 +29,7 @@ These materials have been developed over time in multiple formats:
 * Exothermic Stirred-Tank Reactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
 [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)]
 * Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
+* Animation in Jupyter Notebooks [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)]
 
 ### 3. Linear Approximations
 
