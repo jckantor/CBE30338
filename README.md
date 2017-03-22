@@ -39,6 +39,9 @@ These materials have been developed over time in multiple formats:
 * Getting Started with Transfer Functions [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)]
 * Block Diagrams [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Block%20Diagrams.ipynb?flush_cache=true)]
 
+### 4. PID Control
+* PI Control Tuning [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)]
+
 ### 8. Feedback Controllers ###
 * Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)][[.ipynb](https://github.com/jckantor/Ball-and-Beam)]
 * Ch08_Bioreactor_Continuous [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_Bioreactor_Continuous.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_Bioreactor_Continuous.pdf)] 
