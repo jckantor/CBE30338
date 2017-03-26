@@ -37,7 +37,7 @@ These materials have been developed over time in multiple formats:
 
 ### 4. Transfer Functions
 * Getting Started with Transfer Functions [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)]
-* Block Diagrams [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Block%20Diagrams.ipynb?flush_cache=true)]
+* Block Diagrams [[.ipynb](https://github.com/jckantor/CBE30338/blob/master/notebooks/Block%20Diagrams.ipynb)]
 
 ### 5. PID Control
 * PI Control Tuning [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)]
