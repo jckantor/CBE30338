@@ -42,6 +42,14 @@ These materials have been developed over time in multiple formats:
 ### 5. PID Control
 * PI Control Tuning [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)]
 
+### 6. Frequency Domain Control Design
+* Bode Plot [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
+* Controller Tuning Rules in Frequency Domain [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Controller%20Tuning%20Rules%20in%20Frequency%20Domain.ipynb)]
+
+### 7. Applications
+
+* Baroreflex as a Linear Control System [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear Control%20System.ipynb)]
+
 =====================
 
 ### 8. Feedback Controllers ###
