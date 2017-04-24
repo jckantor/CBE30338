@@ -41,6 +41,7 @@ These materials have been developed over time in multiple formats:
 
 ### 5. PID Control
 * PI Control Tuning [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)]
+* Implementing PID Control in Nonlinear Simulations [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Implementing%20PID%20Control%20in%20Nonlinear%20Simulations.ipynb?flush_cache=true)]
 
 ### 6. Frequency Domain Control Design
 * Bode Plot [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
