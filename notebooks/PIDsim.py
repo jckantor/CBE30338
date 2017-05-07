@@ -1,11 +1,10 @@
-
 import matplotlib.pyplot as plt
 import numpy as np
 
 class PID:
     """ An implementation of a PID control class for use in process control simulations.
     """
-    def __init__(self, name=None, SP=0, Kp=0.2, Ki=0, Kd=0, beta=0, gamma=0, Range=(0,100), DirectAction=False):
+    def __init__(self, name=None, SP=None, Kp=0.2, Ki=0, Kd=0, beta=1, gamma=0, MVrange=(0,100), DirectAction=False):
         self.name = name
         self.SP = SP
         self.Kp = Kp
@@ -13,31 +12,32 @@ class PID:
         self.Kd = Kd
         self.beta = beta
         self.gamma = gamma
-        self.range = Range
+        self.MVrange = MVrange
         self.DirectAction = DirectAction
-        self.mode = 'inManual'
+        self._mode = 'inAuto'
         self._log = []
+        self._errorP0 = 0
+        self._errorD0 = 0
+        self._errorD1 = 0
+        self._lastT = 0
+        self._currT = 0
         
-    def auto(self,t,PV,MV):
-        """Change to automatic control mode.
+    def auto(self):
+        """Change to automatic control mode. In automatic control mode the .update()
+        method computes new values for the manipulated variable using a velocity algorithm.
         """
-        self._lastT = t
-        self.PV = PV
-        self.MV = MV
-        self._errorP0 = self.beta*self.SP - self.PV
-        self._errorD0 = self.gamma*self.SP - self.PV
-        self._errorD1 = self._errorD0
         self._mode = 'inAuto'
         
-    def manual(self,t,PV,MV):
-        """Change to manual control mode.
+    def manual(self):
+        """Change to manual control mode. In manual mode the setpoint tracks the process 
+        variable to provide bumpless transfer on return to automatic model.
         """
-        self._lastT = t
-        self.PV = PV
-        self.MV = MV
         self._mode = 'inManual'
         
-    def _logger(self,t,PV,MV,SP):
+    def _logger(self,t,SP,PV,MV):
+        """The PID simulator logs values of time (t), setpoint (SP), process variable (PV),
+        and manipulated variable (MV) that can be plotted with the .plot() method.
+        """
         self._log.append([t,SP,PV,MV])
         
     def plot(self):
@@ -65,13 +65,16 @@ class PID:
         
     @beta.setter
     def beta(self,beta):
-        self._beta = beta
+        self._beta = max(0.0,min(1.0,beta))
         
     @property
     def DirectAction(self):
         """DirectAction is a logical variable setting the direction of the control. A True
-        value means the controller output MV increases with increase in measured process 
-        variable CV. If False the controller is reverse acting. The default value is False.
+        value means the controller output MV should increase for PV > SP. If False the controller
+        is reverse acting, and ouput MV will increase for SP > PV. IFf the steady state
+        process gain is positive then a control will be reverse acting. 
+        
+        The default value is False.
         """
         return self._DirectAction
     
@@ -79,8 +82,10 @@ class PID:
     def DirectAction(self,DirectAction):
         if DirectAction:
             self._DirectAction = True
+            self._action = +1.0
         else:
             self._DirectAction = False
+            self._action = -1.0
     
     @property
     def gamma(self):
@@ -122,18 +127,29 @@ class PID:
     @Kd.setter
     def Kd(self,Kd):
         self._Kd = Kd
-    
+        
     @property
-    def range(self):
+    def MV(self):
+        """MV is the manipulated (or PID outpout) variable. It is automatically
+        restricted to the limits given in MVrange.
+        """
+        return self._MV
+    
+    @MV.setter
+    def MV(self,MV):
+        self._MV = max(self._MVmin,min(self._MVmax,MV))
+        
+    @property
+    def MVrange(self):
         """range is a tuple specifying the minimum and maximum controller output.
         Default value is (0,100).
         """
-        return (self._min,self._max)
+        return (self._MVmin,self._MVmax)
     
-    @range.setter
-    def range(self,Range):
-        self._min = Range[0]
-        self._max = Range[1]
+    @MVrange.setter
+    def MVrange(self,MVrange):
+        self._MVmin = MVrange[0]
+        self._MVmax = MVrange[1]
 
     @property
     def SP(self):
@@ -146,16 +162,6 @@ class PID:
         self._SP = SP
         
     @property
-    def MV(self):
-        """MV is the manipulated (or PID outpout) variable.
-        """
-        return self._MV
-    
-    @MV.setter
-    def MV(self,MV):
-        self._MV = max(self._min,min(self._max,MV))
-        
-    @property
     def PV(self):
         """PV is the measured process (or control) variable.
         """
@@ -165,24 +171,25 @@ class PID:
     def PV(self,PV):
         self._PV = PV
 
-    def update(self,t,PV,MV):
+    def update(self,t,SP,PV,MV):
+        self.SP = SP
         self.PV = PV
         self.MV = MV 
-        if t > self._lastT and self._mode=='inAuto':
+        if t > self._lastT:
             dt = t - self._lastT
             self._lastT = t
+            if self._mode=='inManual':
+                self.SP = PV
             self._errorP1 = self._errorP0
             self._errorP0 = self.beta*self.SP - self.PV
-            self._errorI0 = self.SP - self.PV
+            self._errorI0 = self.SP - self.PV            
             self._errorD2 = self._errorD1
             self._errorD1 = self._errorD0
             self._errorD0 = self.gamma*self.SP - self.PV
-            self._deltaMV = self.Kp*(self._errorP0 - self._errorP1) \
-                + self.Ki*dt*self._errorI0 \
-                + self.Kd*(self._errorD0 - 2*self._errorD1 + self._errorD2)/dt
-            if self.DirectAction:
-                self.MV -= self._deltaMV
-            else:
-                self.MV += self._deltaMV
-        self._logger(t,self.PV,self.MV,self.SP)
+            if self._mode=='inAuto':
+                self._deltaMV = self.Kp*(self._errorP0 - self._errorP1) \
+                    + self.Ki*dt*self._errorI0 \
+                    + self.Kd*(self._errorD0 - 2*self._errorD1 + self._errorD2)/dt
+                self.MV -= self._action*self._deltaMV
+        self._logger(t,self.SP,self.PV,self.MV)
         return self.MV 
