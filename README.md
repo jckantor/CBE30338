@@ -21,7 +21,7 @@ These materials have been developed over time in multiple formats:
 * One Compartment Pharacokinetics Model [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics%20Model.ipynb)]
 * Second Order Linear Systems [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Second%20Order%20Linear%20Systems.ipynb)]
 * Manometer [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)]
-* Assignment_02 [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Assignment_02/Assignment_02.ipynb)]
+* Solution to Homework Problems [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Solution%20to%20Homework%20Problems/Solution%20to%20Homework%20Problems.ipynb)]
 
 ### 2. Nonlinear Models
 
