@@ -20,14 +20,15 @@ These materials have been developed over time in multiple formats. The most rece
 
 ### 1. First and Second Order Linear Systems
 
-* [One Compartment Pharacokinetics Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics%20Model.ipynb)
+* [One Compartment Pharacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb)
+[[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb#/)]
 * [Second Order Linear Systems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Second%20Order%20Linear%20Systems.ipynb)
 * [Manometer](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)
 * [Solution to Homework Problems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Solution%20to%20Homework%20Problems/Solution%20to%20Homework%20Problems.ipynb)
 
 ### 2. Nonlinear Models
 
-* Hare and Lynx Population Dynamics [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)]
+* [Hare and Lynx Population Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)[[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb#/)]
 * Exothermic Stirred-Tank Reactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
 [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)]
 * Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
@@ -51,7 +52,7 @@ These materials have been developed over time in multiple formats. The most rece
 
 ### 7. Applications
 
-* [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear Control%20System.ipynb)
+* [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear%20Control%20System.ipynb)
 
 ## Matlab/Simulink
 
@@ -112,6 +113,7 @@ These materials have been developed over time in multiple formats. The most rece
 To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
 [Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
 
+* Hare and Lynx Population Dynamics [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)]
 
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)]
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
