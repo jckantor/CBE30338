@@ -1,9 +1,16 @@
 # Chemical Process Control
 
-This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). 
+This repository comprises a collection of Jupyter/Python notebooks and Google Sheets in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). These materials have been developed over a period of time, earlier versions written in Matlab/Simulink are available [here](REAME_DEPRECATED.md].
+
+The following links allow you to view the notebooks as regular HTML web pages (and in some instances display them as presentation slides). From there you can download the notebooks for execution on your laptop. You will need one of the free distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
+
+These notebooks are intended to supplement (not replace) a good textbook on Process Control. Let me know if you any comments, suggestions, or contributions on how these good be improved. 
+
+Jeff Kantor (jeff @ nd.edu)
 
 
 ## 0. Getting Started with Python and Jupyter Notebooks
+
 
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
@@ -44,5 +51,8 @@ This repository comprises a collection of Jupyter/Python notebooks in support of
 * [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear%20Control%20System.ipynb)
 
 
-### 7. Applications
+### 7. Linear Optimization
+
+* [Knapsack Problem (Google Sheet)](https://docs.google.com/spreadsheets/d/1KXEmKDCyUH-sQEbmSN4CMhcQtO88npDcgTK2b4CRVdI/edit?usp=sharing)
+* [
 
