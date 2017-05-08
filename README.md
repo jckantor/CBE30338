@@ -4,7 +4,7 @@ This repository comprises a collection of Jupyter/Python notebooks in support of
 
 The links below allow you to view the notebooks as regular HTML web pages (and in a few instances display as presentation slides). From there you can download the notebooks for execution on your laptop. For that you will need one of the free distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
 
-These notebooks are intended to supplement (not replace) a good textbook on Process Control. Let me know if you any comments, suggestions, or contributions on how these good be improved. 
+Let me know if you any thoughts or suggestions on how these improved for the purposes of teaching and learning Chemical Process Control.
 
 
 ## 0. Getting Started with Python and Jupyter Notebooks
