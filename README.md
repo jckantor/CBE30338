@@ -17,6 +17,7 @@ These materials have been developed over time in multiple formats. The most rece
 ### 0. Getting Started ###
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
+* [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
 ### 1. First and Second Order Linear Systems
 
@@ -30,7 +31,6 @@ These materials have been developed over time in multiple formats. The most rece
 * [Hare and Lynx Population Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb#/)]
 * [Exothermic Stirred-Tank Reactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)
 * [Fed-Batch Bioreactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)
-* [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
 ### 3. Linear Approximations
 
@@ -73,8 +73,7 @@ These materials have been developed over time in multiple formats. The most rece
 * Ch12_PID_Simulink_Model [[.slx](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch12_PID_Simulink_Model.slx)] 
 
 ### 14. Frequency Domain Control Design ###
-* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Bode%20Plot.ipynb)]
-* Controller Tuning Rules in Frequency Domain [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Controller%20Tuning%20Rules%20in%20Frequency%20Domain.ipynb)]
+* Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)]
 
 ### 17. Sampling and Signal Reconstruction
 
