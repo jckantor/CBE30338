@@ -14,7 +14,8 @@ These materials have been developed over time in multiple formats. The most rece
 
 ## Jupyter/Python Notebooks
 
-### 0. Getting Started ###
+### 0. Getting Started with Python and Jupyter Notebooks
+
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
 * [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
@@ -41,6 +42,8 @@ These materials have been developed over time in multiple formats. The most rece
 * [Block Diagrams](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Block%20Diagrams.ipynb)
 
 ### 5. PID Control
+
+* [Balancing a Ball on a Beam with Proportional-Derivative Control](http://nbviewer.jupyter.org/github/jckantor/Ball-and-Beam/blob/master/index.ipynb)
 * [PI Control Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)
 * [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Implementing%20PID%20Control%20in%20Nonlinear%20Simulations.ipynb?flush_cache=true)
 
@@ -55,7 +58,7 @@ These materials have been developed over time in multiple formats. The most rece
 ## Matlab/Simulink
 
 ### 8. Feedback Controllers ###
-* Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)][[.ipynb](https://github.com/jckantor/Ball-and-Beam)]
+* Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)]
 * Ch08_Bioreactor_Continuous [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_Bioreactor_Continuous.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_Bioreactor_Continuous.pdf)] 
 * Ch08_BlendingTankControl [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BlendingTankControl,m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BlendingTankControl.pdf)] 
 * Gravity Tanks PID Control (Simulink) [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/GravityTanksPID.slx)]
