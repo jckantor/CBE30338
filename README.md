@@ -1,6 +1,6 @@
 # Chemical Process Control
 
-This repository comprises a collection of Jupyter/Python notebooks and Google Sheets in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). These materials have been developed over a period of time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
+This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). These materials have been developed over a period of time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
 
 The links below allow you to view the notebooks as regular HTML web pages (and in a few instances display as presentation slides). From there you can download the notebooks for execution on your laptop. For that you will need one of the free distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
 
@@ -53,11 +53,4 @@ These notebooks are intended to supplement (not replace) a good textbook on Proc
 * [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
 * [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
-* [Transportation Network Optimization (Google Sheet)](https://docs.google.com/spreadsheets/d/1-loaUHVteMnf09fKJy9F03x51OfnUvvbiLgX4k_eaPs/edit?usp=sharing)
-* [Project Management with the Critical Path (Google Sheet)](https://docs.google.com/spreadsheets/d/170KbWCvI-9eonNeGbZhDq3GyvmUiR3aSjtUzXT3Cono/edit?usp=sharing)
-* [Machine Bottleneck Scheduling (Google Sheet)](https://docs.google.com/spreadsheets/d/1e3a0hSMW_Oht56hB2YtIZMjh4OZTMOQpTUYuq-JGJ40/edit?usp=sharing)
-* [Stochastic Programming: Two Stage Solution for the Newsvendor Problem (Google Sheet)](https://docs.google.com/spreadsheets/d/1I6bt5_QUz9-toGgiVc2Y5fHlHNJtevChd-0-2R3jyrI/edit?usp=sharing)
-* [Knapsack Problem (Google Sheet)](https://docs.google.com/spreadsheets/d/1KXEmKDCyUH-sQEbmSN4CMhcQtO88npDcgTK2b4CRVdI/edit?usp=sharing)
-* [Stock Cutting (Google Sheet)](https://docs.google.com/spreadsheets/d/1Djn5eApF1rbJOV5CZpY_YrnYFeEH5FuCAGjj0ShXKAc/edit?usp=sharing)
-* [Soduko Solver 4x4 (Google Sheet)](https://docs.google.com/spreadsheets/d/1XMkn64lSKxzxcSeIDBJjEGiI5eUU8f90gEiPQ2JKLOk/edit?usp=sharing)
 
