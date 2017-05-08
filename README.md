@@ -18,6 +18,7 @@ These materials have been developed over time in multiple formats. The most rece
 
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
+* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)
 * [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
 ### 1. First and Second Order Linear Systems
@@ -45,6 +46,7 @@ These materials have been developed over time in multiple formats. The most rece
 
 * [Balancing a Ball on a Beam with Proportional-Derivative Control](http://nbviewer.jupyter.org/github/jckantor/Ball-and-Beam/blob/master/index.ipynb)
 * [PI Control Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)
+* [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
 * [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Implementing%20PID%20Control%20in%20Nonlinear%20Simulations.ipynb?flush_cache=true)
 
 ### 6. Frequency Domain Control Design
@@ -78,12 +80,8 @@ These materials have been developed over time in multiple formats. The most rece
 ### 14. Frequency Domain Control Design ###
 * Ch14_BodePlot [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch14_BodePlot.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch14_BodePlot.pdf)]
 
-### 17. Sampling and Signal Reconstruction
-
-* Zero Order Hold and Interpolation [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)]
 
 ### 19. Real-Time Optimization ###
-* Getting Started with CVXPY [[.ipynb](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)]
 * Ch19_E01 [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E01.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E01.pdf)] 
 * Ch19_E03_cvx [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E03_cvx.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E03_cvx.pdf)] 
 * Ch19_E03_sui [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch19_E03_sui.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch19_E03_sui.pdf)] 
@@ -113,12 +111,10 @@ These materials have been developed over time in multiple formats. The most rece
 To run this example you will need to download [Bioreactor.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor.slx), [Bioreactor_Script.m](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_Script.m), and
 [Bioreactor_schematic.png](https://github.com/jckantor/CBE30338/blob/master/simulink/Bioreactor_schematic.png).
 
-* Hare and Lynx Population Dynamics [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)][[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)]
+* Hare and Lynx Population Dynamics [[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/HareLynx.slx)][[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch04_PredatorPrey.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch04_PredatorPrey.pdf)
 
 * Exothermic Stirred-Tank Reactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_E05_CSTR.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_E05_CSTR.pdf)][[.slx](https://github.com/jckantor/CBE30338/blob/master/simulink/ExothermicCSTR.slx)]
-[[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)]
-* Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)] [[.ipynb](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)]
-
+* Fed-Batch Bioreactor [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Bioreactor_FedBatch.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Bioreactor_FedBatch.pdf)]
 
 * Ch02_BlendingTank [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_BlendingTank.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_BlendingTank.pdf)]
 * Ch02_Braatz [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch02_Braatz.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch02_Braatz.pdf)] 
