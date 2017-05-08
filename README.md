@@ -1,8 +1,8 @@
 # Chemical Process Control
 
-This git repository comprises a collection of Matlab scripts, Simulink models, and Jupyter/Python notebooks in support of a course entitled [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). 
+This repository comprises a collection of Jupyter/Python notebooks, Matlab scripts, and Simulink models in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). 
 
-These materials have been developed over time in multiple formats:
+These materials have been developed over time in multiple formats. The most recent collection are in the form of Jupyter/Python notebooks and are listed first.  In some cases materials are listed in mulitple formats, with links coded according to this table:
 
 | Format   | Descripton                                |
 | :------- | :---------------------------------------- |
@@ -11,6 +11,8 @@ These materials have been developed over time in multiple formats:
 | `.pdf`   | PDF document produced with Matlab publish |
 | `.ipynb` | Jupyter/Python notebook (via nbviewer)    |
 
+
+## Jupyter/Python Notebooks
 
 ### 0. Getting Started ###
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
@@ -51,7 +53,7 @@ These materials have been developed over time in multiple formats:
 
 * [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear Control%20System.ipynb)
 
-=====================
+## Matlab/Simulink
 
 ### 8. Feedback Controllers ###
 * Ch08_BallBeam [[.m](https://github.com/jckantor/CBE30338/blob/master/matlab/Ch08_BallBeam.m)][[.pdf](http://jckantor.github.io/CBE30338/pdf/Ch08_BallBeam.pdf)][[.ipynb](https://github.com/jckantor/Ball-and-Beam)]
