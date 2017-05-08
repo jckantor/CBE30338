@@ -18,7 +18,7 @@ These notebooks are intended to supplement (not replace) a good textbook on Proc
 
 * [One Compartment Pharacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb#/)]
 * [Second Order Linear Systems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Second%20Order%20Linear%20Systems.ipynb)
-* [Interacting Tanks]()
+* [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interacting%20Tanks.ipynb)
 * [Manometer](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)
 * [Solution to Homework Problems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Solution%20to%20Homework%20Problems/Solution%20to%20Homework%20Problems.ipynb)
 
