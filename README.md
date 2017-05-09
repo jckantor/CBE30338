@@ -7,7 +7,7 @@ The links below allow you to view the notebooks as regular HTML web pages (and i
 Let me know if you any thoughts or suggestions on how these improved for the purposes of teaching and learning Chemical Process Control.
 
 
-## 0. Getting Started with Python and Jupyter Notebooks
+## 0. Getting Started with Python
 
 
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
