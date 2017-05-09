@@ -51,7 +51,6 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 * [Controller Tuning Rules in Frequency Domain](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Controller%20Tuning%20Rules%20in%20Frequency%20Domain.ipynb)
 * [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear%20Control%20System.ipynb)
 
-
 ## 7. Linear Optimization
 
 * [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)
