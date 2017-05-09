@@ -20,7 +20,6 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 * [Second Order Linear Systems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Second%20Order%20Linear%20Systems.ipynb)
 * [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interacting%20Tanks.ipynb)
 * [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)
-* [Solution to Homework Problems](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Solution%20to%20Homework%20Problems/Solution%20to%20Homework%20Problems.ipynb)
 
 ## 2. Nonlinear Models and Dynamics
 
