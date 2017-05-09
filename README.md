@@ -40,10 +40,10 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 
 ## 5. PID Control
 
-* [Balancing a Ball on a Beam with Proportional-Derivative Control](http://nbviewer.jupyter.org/github/jckantor/Ball-and-Beam/blob/master/index.ipynb)
-* [PI Control Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)
-* [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
 * [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Implementing%20PID%20Control%20in%20Nonlinear%20Simulations.ipynb?flush_cache=true)
+* [PI Control Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PI%20Control%20Tuning.ipynb?flush_cache=true)
+* [Balancing a Ball on a Beam with Proportional-Derivative Control](http://nbviewer.jupyter.org/github/jckantor/Ball-and-Beam/blob/master/index.ipynb)
+* [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
 
 ## 6. Frequency Domain Control Design
 
