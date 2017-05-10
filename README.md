@@ -36,7 +36,7 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 ## 4. Transfer Functions
 
 * [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)
-* [Block Diagrams](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Block%20Diagrams.ipynb)
+* [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Closed-Loop%20Transfer%20Functions%20for%20Car%20Cruise%20Control.ipynb)
 
 ## 5. PID Control
 
