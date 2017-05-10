@@ -31,7 +31,8 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 
 ## 3. Linear Approximations
 
-* [Linear Approximation of Process Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20Process%20Models.ipynb?flush_cache=true)
+* [Fitting a Linear Model to the Step Response of a Gravity Drained Tank]()
+* [Linear Approximation of a Process Models using Taylor Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20Process%20Models.ipynb?flush_cache=true)
 
 ## 4. Transfer Functions
 
