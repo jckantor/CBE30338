@@ -34,7 +34,7 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 * [Fitting a Linear Model to the Step Response of a Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fitting%20a%20Linear%20Model%20to%20the%20Step%20Response%20of%20a%20Gravity%20Drained%20Tank.ipynb)
 * [Linear Approximation of a Process Model using Taylor Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20a%20Process%20Model%20using%20Taylor%20Series.ipynb)
 * [Linear Approximation of a Multivariable Model using Taylor Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20a%20Multivariable%20Model%20using%20Taylor%20Series.ipynb)
-* [Fitting First-Order plus Time-Delay (FOPTD) to Step Response Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fitting%20First-Order%20plus%20Time-Delay%20%28FOPTD%29%20to%20Step%20Response%20Data.ipynb)
+* [Fitting First-Order plus Time-Delay (FOPTD) to Step Response Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fitting%20First-Order%20plus%20Time-Delay%20%28FOPTD%29%20to%20Step%20Response%20Data.ipynb) [[view as slides]()]
 
 
 ## 4. Transfer Functions
