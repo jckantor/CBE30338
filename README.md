@@ -61,3 +61,8 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
 * [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
 
+## Student Projects
+
+These are selection of student projects submitted in Spring, 2017.
+
+* [Wind Turbine Collective Blade Pitch Angle Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/02%20Wind%20Turbine%20Control/Wind%20Turbine%20Collective%20Blade%20Pitch%20Angle%20Control.ipynb)
