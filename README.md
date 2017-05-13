@@ -66,3 +66,4 @@ Let me know if you any thoughts or suggestions on how these improved for the pur
 These are selection of student projects submitted in Spring, 2017.
 
 * [Wind Turbine Collective Blade Pitch Angle Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/02%20Wind%20Turbine%20Control/Wind%20Turbine%20Collective%20Blade%20Pitch%20Angle%20Control.ipynb)
+* [Insulin Control for Treating Type I Diabetes](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/05%20Insulin%20Control/Insulin%20Control%20for%20Treating%20Type%20I%20Diabetes.ipynb)
