@@ -69,3 +69,6 @@ These are selection of student projects submitted in Spring, 2017.
 * [Insulin Control for Treating Type I Diabetes](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/05%20Insulin%20Control/Insulin%20Control%20for%20Treating%20Type%20I%20Diabetes.ipynb)
 * [Modeling the Blending of Different Types of Chocolate](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/06%20Chocolate%20Production/Chocolate%20Blending%20Final%20Project%20_Breier%2C%20Flavin%2C%20Mallette%2C%20Mikes_.ipynb)
 * [Temperature Profile Optimization of the Brewing Process](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/09%20Beer%20Production/Temperature%20Profile%20Optimization%20of%20the%20Brewing%20Process.ipynb)
+* [Municipal Wastewater Aeration](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/10%20Wastewater%20Treatment/Municipal%20Wastewater%20Aeration.ipynb)
+* [T cell therapy for Chronic Myelogenous Leukemia]()
+* [Control of a Reverse Osmosis Desalination Process]()
