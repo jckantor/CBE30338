@@ -67,4 +67,4 @@ These are selection of student projects submitted in Spring, 2017.
 
 * [Wind Turbine Collective Blade Pitch Angle Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/02%20Wind%20Turbine%20Control/Wind%20Turbine%20Collective%20Blade%20Pitch%20Angle%20Control.ipynb)
 * [Insulin Control for Treating Type I Diabetes](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/05%20Insulin%20Control/Insulin%20Control%20for%20Treating%20Type%20I%20Diabetes.ipynb)
-* [Modeling the Blending of Different Types of Chocolate]()
+* [Modeling the Blending of Different Types of Chocolate](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/projects2017/06%20Chocolate%20Production/Chocolate%20Blending%20Final%20Project%20_Breier%2C%20Flavin%2C%20Mallette%2C%20Mikes_.ipynb)
