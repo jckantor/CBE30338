@@ -1,14 +1,12 @@
 # Chemical Process Control
 
-This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01). These materials have been developed over a period of time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
+This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01) taught at the University of Notre Dame. These materials have been developed over a period time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
 
-The links below allow you to view the notebooks as regular HTML web pages (and in a few instances display as presentation slides). From there you can download the notebooks for execution on your laptop. For that you will need one of the free distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
+The links below display the notebooks as regular HTML web pages or, where indicated, as presentation slides. From there you can download the notebooks to execute on your laptop. To execute you will need to install a distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
 
-Let me know if you any thoughts or suggestions on how these improved for the purposes of teaching and learning Chemical Process Control.
-
+Please me know if you any thoughts or suggestions on how these notebooks could be improved for the purposes of teaching and learning the principles of Chemical Process Control.
 
 ## 0. Getting Started with Python
-
 
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
