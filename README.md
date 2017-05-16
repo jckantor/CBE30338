@@ -46,6 +46,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Interactive PID Control Tuning with Ziegler-Nichols](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interactive%20PID%20Control%20Tuning%20with%20%20Ziegler-Nichols.ipynb)
 * [Balancing a Ball on a Beam with Proportional-Derivative Control](http://nbviewer.jupyter.org/github/jckantor/Ball-and-Beam/blob/master/index.ipynb)
 * [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
+* Advanced Topic: [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A%20Modular%20Approach%20to%20Simulation%20using%20Python%20Generators.ipynb)
 
 ## 6. Frequency Domain Control Design
 
