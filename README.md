@@ -2,7 +2,7 @@
 
 This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01) taught at the University of Notre Dame. These materials have been developed over a period time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
 
-The links below display the notebooks as regular HTML web pages or, where indicated, as presentation slides. From there you can download the notebooks to execute on your laptop. To execute you will need to install a distributions of Jupyter/Python, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
+The links below display the notebooks as regular HTML web pages or, where indicated, as presentation slides. From there you can download the notebooks to execute on your laptop. To execute you will need to install a distributions of Jupyter and Python 3, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
 
 Please me know if you any thoughts or suggestions on how these notebooks could be improved for the purposes of teaching and learning the principles of Chemical Process Control.
 
