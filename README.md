@@ -15,7 +15,8 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 ## 1. Using the Temperature Control Lab (TCLab)
 
 * [Relay Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Relay_Control.ipynb)
-* [Step Testing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Step_Testing.ipynb)
+* [Step Test Experiment](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Step_Test_Experiment.ipynb)
+* [Step Test Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Step_Test_Model.ipynb)
 
 ## 2. First and Second Order Linear Systems
 
