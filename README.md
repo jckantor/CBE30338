@@ -14,7 +14,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## 1. Using the Temperature Control Lab (TCLab)
 
-* [TCLab Overview](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/0_TCLab_Overview.ipynb)
+* [Getting Started with the Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Getting_Started_with_the_Temperature_Control_Laboratory.ipynb)
 
 ## 2. First and Second Order Linear Systems
 
