@@ -8,10 +8,9 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## 0. Getting Started with Python
 
+* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Python Tutorial 1 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_1_2018.ipynb)
 * [Python Tutorial 2 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_2_2018.ipynb)
-* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
-* [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
 * Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
 ## 1. Using the Temperature Control Lab (TCLab)
