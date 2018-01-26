@@ -2,13 +2,14 @@
 
 This repository comprises a collection of Jupyter/Python notebooks in support of [**CBE 30338 Chemical Process Control**](https://sakailogin.nd.edu/portal/site/SP17-CBE-30338-01) taught at the University of Notre Dame. These materials have been developed over a period time, earlier versions having been created in Matlab/Simulink and available [here](REAME_DEPRECATED.md).
 
-The links below display the notebooks as regular HTML web pages or, where indicated, as presentation slides. From there you can download the notebooks to execute on your laptop. To execute you will need to install a distributions of Jupyter and Python 3, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).  
+The links below display the notebooks as regular HTML web pages or, where indicated, as presentation slides. From there you can download the notebooks to execute on your laptop. To execute you will need to install a distributions of Jupyter and Python 3, such as the excellent [Anaconda distribution available from Continuum Analytics](https://www.continuum.io/downloads).
 
 Please me know if you any thoughts or suggestions on how these notebooks could be improved for the purposes of teaching and learning the principles of Chemical Process Control.
 
 ## 0. Getting Started with Python
 
-* [Python Tutorial 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_2018.ipynb)
+* [Python Tutorial 1 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_1_2018.ipynb)
+* [Python Tutorial 2 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_2_2018.ipynb)
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Introduction to Python - A Python Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Introduction%20to%20Python%20-%20A%20Python%20Tutorial.ipynb)
 * Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
@@ -68,7 +69,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## Student Projects
 
-This is a selection of about 1/3 of the student projects submitted in Spring, 2017. 
+This is a selection of about 1/3 of the student projects submitted in Spring, 2017.
 
 * [Wind Turbine Collective Blade Pitch Angle Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Projects_2017/02%20Wind%20Turbine%20Control/Wind%20Turbine%20Collective%20Blade%20Pitch%20Angle%20Control.ipynb)
 * [Insulin Control for Treating Type I Diabetes](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Projects_2017/05%20Insulin%20Control/Insulin%20Control%20for%20Treating%20Type%20I%20Diabetes.ipynb)
