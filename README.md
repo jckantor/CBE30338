@@ -30,6 +30,11 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interacting%20Tanks.ipynb)
 * [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)
 
+## Exam 1 Review
+
+* [Process Control Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Process_Control_Outline.ipynb)
+
+
 ## 3. Nonlinear Models and Dynamics
 
 * [Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb#/)]
