@@ -11,7 +11,7 @@ TCLab Documentation
    :caption: Contents:
 
 
-   notebooks/Continuous_Blending_Process.ipynb
+   notebooks/Continuous_Product_Blending.ipynb
 
 
 Search Page
