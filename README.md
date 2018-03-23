@@ -60,14 +60,15 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## 7. Optimization
 
-* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/00_Getting_Started_with_CVXPY.ipynb)
-* [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
-* [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
+* [Unconstrained Scalar Optimization](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/01_Unconstrained_Scalar_Optimization.ipynb)
+* [Linear Production Model with Constraints](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/02_Linear_Production_Model_with_Constraints.ipynb)
+* [Linear Programming](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/03_Linear_Programming.ipynb)
+* [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/04_Getting_Started_with_Pyomo.ipynb)
+* [Pyomo Examples](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/05_Pyomo_Examples.ipynb)
 
 
-## 7. Optimization (Old)
+## 7. Spreadsheet Optimization
 
-* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/00_Getting_Started_with_CVXPY.ipynb)
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
 * [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
 
