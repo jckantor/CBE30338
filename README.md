@@ -49,11 +49,27 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Linear Approximation of a Multivariable Model using Taylor Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Linear%20Approximation%20of%20a%20Multivariable%20Model%20using%20Taylor%20Series.ipynb)
 * [Fitting First-Order plus Time-Delay (FOPTD) to Step Response Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fitting%20First-Order%20plus%20Time-Delay%20%28FOPTD%29%20to%20Step%20Response%20Data.ipynb) [[view as slides]()]
 
+## 6. PID Control
+* [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/01_PID_Control.ipynb)
+* [Implementing PID Control with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/02_Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
+* [PID Control with Setpoint Weighting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/03_PID_Control_with_Setpoint_Weighting.ipynb)
+* [PID Control with Bumpless Transfer](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/04_PID_Control_with_Bumpless_Transfer.ipynb)
+* [PID Control with Anti-Reset Windup](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/05_PID_Control_with_Anti-Reset-Windup.ipynb)
+* [Realizable PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/06_Realizable_PID_Control.ipynb)
+* [PID Controller Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/07_PID_Controller_Tuning.ipynb)
 
-## 5. Transfer Functions
+## 7. Optimization
 
-* [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)
-* [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Closed-Loop%20Transfer%20Functions%20for%20Car%20Cruise%20Control.ipynb)
+* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/00_Getting_Started_with_CVXPY.ipynb)
+* [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
+* [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
+
+
+## 7. Optimization (Old)
+
+* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/00_Getting_Started_with_CVXPY.ipynb)
+* [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
+* [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
 
 ## 6. PID Control (Old)
 
@@ -63,27 +79,14 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
 * Advanced Topic: [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A%20Modular%20Approach%20to%20Simulation%20using%20Python%20Generators.ipynb)
 
-## 6. PID Control (2018)
-* [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/01_PID_Control.ipynb)
-* [Implementing PID Control with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/02_Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
-* [PID Control with Setpoint Weighting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/03_PID_Control_with_Setpoint_Weighting.ipynb)
-* [PID Control with Bumpless Transfer](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/04_PID_Control_with_Bumpless_Transfer.ipynb)
-* [PID Control with Anti-Reset Windup](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/05_PID_Control_with_Anti-Reset-Windup.ipynb)
-* [Realizable PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/06_Realizable_PID_Control.ipynb)
-* [PID Controller Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/07_PID_Controller_Tuning.ipynb)
+## 8. Frequency Domain Control Design
 
-
-## 7. Frequency Domain Control Design
-
+* [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)
+* [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Closed-Loop%20Transfer%20Functions%20for%20Car%20Cruise%20Control.ipynb)
 * [Creating Bode Plots](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Creating%20Bode%20Plots.ipynb) [[view slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/Creating%20Bode%20Plots.ipynb#/)]
 * [Controller Tuning Rules in Frequency Domain](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Controller%20Tuning%20Rules%20in%20Frequency%20Domain.ipynb)
 * [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Baroreflex%20as%20a%20Linear%20Control%20System.ipynb)
 
-## 8. Linear Optimization
-
-* [Getting Started with CVXPY](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20CVXPY.ipynb)
-* [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
-* [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
 
 ## Student Projects
 
