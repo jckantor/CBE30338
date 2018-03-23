@@ -66,7 +66,6 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/04_Getting_Started_with_Pyomo.ipynb)
 * [Pyomo Examples](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/05_Pyomo_Examples.ipynb)
 
-
 ## 7. Spreadsheet Optimization
 
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
