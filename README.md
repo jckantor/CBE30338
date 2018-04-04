@@ -65,6 +65,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Linear Programming](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/03_Linear_Programming.ipynb)
 * [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/04_Getting_Started_with_Pyomo.ipynb)
 * [Pyomo Examples](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/05_Pyomo_Examples.ipynb)
+* [Linear Blending Problem](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/06_Linear_Blending_Problem.ipynb)
 
 ## 7. Spreadsheet Optimization
 
