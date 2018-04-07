@@ -66,6 +66,8 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/04_Getting_Started_with_Pyomo.ipynb)
 * [Pyomo Examples](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/05_Pyomo_Examples.ipynb)
 * [Linear Blending Problem](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/06_Linear_Blending_Problem.ipynb)
+* [Design of a Cold Weather Fuel](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
+* [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/08_Gasoline_Blending.ipynb)
 
 ## 7. Spreadsheet Optimization
 
