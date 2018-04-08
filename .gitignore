@@ -10,3 +10,5 @@ matlab/html/
 
 *.m~
 simulink/*.autosave
+
+notebooks/Solutions/
