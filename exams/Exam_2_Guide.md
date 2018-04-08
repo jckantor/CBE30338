@@ -22,19 +22,11 @@ You can expect to see four problems on the exam, roughly distributed according t
   * write the PID algorithm as a mathematical formula, and describe the function of all terms, in either standard or parallel formulations.
   * identify three conditions necessary for bumpless transfer.
   * describe reset-windup, and identify strategy for anti-reset windup.
-  
-
+* Review textbook 
 
 ### 3. Linear Programming
 
-* Review Textbook Section 2.4, the Bioreactor example from problem 2.15
-* Be able to interpret a Simulink model and draw correspondence to a system of differential equations.
-* Be able to use mass and energy balances to construct simple models of lumped processes.
-* Textbook problems 2.2, 2.3, 2.4, 2.8, 2.12, 2.13
 
 ### 4. Modeling for Optimization
 
-* Textbook section 4.4, examples 4.6, 4.7, 4.8
-* Be able to execute the four step linearization method for a simple model.
-* Textbook problem 4.8, 4.12, 4.13
 
