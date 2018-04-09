@@ -2,7 +2,7 @@
 
 ## Study Guide for Exam 2
 
-This will be a closed-book exam. You can bring one page of personal notes (8.5 x 11, both sides). You can expect to see four problems on the exam, roughly distributed according to the following topics. 
+This will be a closed-book exam. You can bring one page of personal notes (8.5 x 11, both sides) which shold be turned in with the exam. You can expect to see four problems on the exam, roughly distributed according to the following topics. 
 
 ### 1. Modeling for Process Control
 
