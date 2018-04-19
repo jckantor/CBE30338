@@ -75,7 +75,6 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Scheduling State-Task Networks]
 (http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
 
-Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks
 ## 7. Spreadsheet Optimization
 
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
