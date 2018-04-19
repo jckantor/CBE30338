@@ -68,12 +68,8 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Linear Blending Problem](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/06_Linear_Blending_Problem.ipynb)
 * [Design of a Cold Weather Fuel](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
 * [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/08_Gasoline_Blending.ipynb)
-
-* [State-Task Networks]
-(http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
-
-* [Scheduling State-Task Networks]
-(http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
+* [State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
+* [Scheduling State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
 
 ## 7. Spreadsheet Optimization
 
