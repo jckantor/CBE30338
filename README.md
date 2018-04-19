@@ -69,6 +69,13 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Design of a Cold Weather Fuel](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
 * [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/08_Gasoline_Blending.ipynb)
 
+* [State-Task Networks]
+(http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
+
+* [State-Task Networks]
+(http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
+
+Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks
 ## 7. Spreadsheet Optimization
 
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)

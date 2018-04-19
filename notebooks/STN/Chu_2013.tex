@@ -1,0 +1,81 @@
+\documentclass[tikz]{standalone}
+\usepackage{units}
+\usepackage{helvet}
+\usepackage[T1]{sansmath}
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont
+
+\begin{document}
+\begin{sansmath}
+\footnotesize    
+\tikzstyle{task} = [
+	draw, 
+	minimum height = 1.0cm,
+	minimum width = 1.5cm,
+	fill=yellow!0,
+	rectangle,
+	text centered]
+	
+\tikzstyle{state} = [
+	draw,
+	minimum height = 0.7cm,
+	circle]
+
+\begin{tikzpicture}[auto,thick,node distance = 1cm, scale=0.95]
+    %\draw[step=1cm,gray,very thin] (0,0) grid (16,9);
+  
+  	% states
+  	\draw ( 0, 8) node [state] (M1) {M1};
+  	\draw ( 0,6.67) node [state] (M2) {M2};
+  	\draw ( 0,5.33) node [state] (M3) {M3};
+  	\draw ( 0, 4) node [state] (M4) {M4};
+  	\draw ( 4, 6) node [state] (I1) {I1};
+  	\draw ( 6, 4) node [state] (I2) {I2};
+  	\draw ( 8, 8) node [state] (I3) {I3};
+  	\draw ( 8, 6) node [state] (I4) {I4};
+  	\draw (12, 8) node [state] (I5) {I5};
+  	\draw (12, 6) node [state] (I6) {I6};
+  	\draw (16,10) node [state] (P1) {P1};
+  	\draw (16, 8) node [state] (P2) {P2};
+  	\draw (16, 6) node [state] (P3) {P3};
+  	\draw (16, 4) node [state] (P4) {P4};
+
+	% tasks
+	\draw ( 2, 6) node [task] (RMPrep) {RM Prep};
+	\draw ( 4, 8) node [task] (Reaction1) {Reaction 1};
+	\draw ( 4, 4) node [task] (Reaction2) {Reaction 2};
+	\draw ( 6, 6) node [task] (Reaction3) {Reaction 3};
+	\draw (10, 8) node [task] (Packing1) {Packing 1};
+	\draw (10, 6) node [task] (Packing2) {Packing 2};
+	\draw (14, 8) node [task] (Drum1) {Drum 1};
+	\draw (14, 6) node [task] (Drum2) {Drum 2};
+	
+    % state to task arcs
+    \draw [->] (M1) -- node [below] {80\%} (Reaction1);
+    \draw [->] (M2) -- node [above] {50\%} (RMPrep);
+    \draw [->] (M3) -- node [below] {50\%} (RMPrep);
+    \draw [->] (M4) -- node [above] {70\%} (Reaction2);
+    \draw [->] (I1) -- node [left] {20\%} (Reaction1);
+    \draw [->] (I1) -- node [left] {30\%} (Reaction2);
+    \draw [->] (I1) -- node [below] {40\%} (Reaction3);
+    \draw [->] (I2) -- node [left] {60\%} (Reaction3);
+    \draw [->] (I3) -- (Packing1);
+    \draw [->] (I4) -- (Packing2);
+    \draw [->] (I5) -- (Drum1);
+    \draw [->] (I6) -- (Drum2);
+
+	% task to state arcs
+	\draw [->] (RMPrep) -- (I1);
+    \draw [->] (Packing1) -- node [right] {50\%} ++(0,2) -- (P1);
+    \draw [->] (Packing1) -- node [above] {50\%} (I5);
+    \draw [->] (Drum1) -- (P2);
+    \draw [->] (Drum2) -- (P3);
+    \draw [->] (Packing2) -- node [right] {50\%} ++(0,-2) -- (P4);
+    \draw [->] (Packing2) -- node [above] {50\%} (I6);
+    \draw [->] (Reaction1) -- (I3);
+	\draw [->] (Reaction2) -- (I2);
+	\draw [->] (Reaction3) -- (I4);
+
+\end{tikzpicture}
+\end{sansmath}
+\end{document}
