@@ -72,7 +72,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [State-Task Networks]
 (http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
 
-* [State-Task Networks]
+* [Scheduling State-Task Networks]
 (http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
 
 Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks
