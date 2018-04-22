@@ -70,6 +70,8 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/Optimization/08_Gasoline_Blending.ipynb)
 * [State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
 * [Scheduling State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
+* [Firsst Order System in Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/DAE/First_Order_System_in_Pyomo.ipynb)
+* [Path Planning for a Simple Car](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/DAE/Path_Planning_for_a_Simple_Car.ipynb)
 
 ## 7. Spreadsheet Optimization
 
