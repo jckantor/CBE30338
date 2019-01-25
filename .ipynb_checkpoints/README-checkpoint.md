@@ -6,7 +6,7 @@ The links below display the notebooks as regular HTML web pages or, where indica
 
 Please me know if you any thoughts or suggestions on how these notebooks could be improved for the purposes of teaching and learning the principles of Chemical Process Control.
 
-## 0. Getting Started with Python
+## Getting Started with Python
 
 * [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
 * [Python Tutorial 1 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_1_2018.ipynb)
@@ -14,7 +14,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Python Tutorial 3 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_3_2018.ipynb)
 * Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
-## 1. Using the Temperature Control Lab (TCLab)
+## Using the Temperature Control Lab (TCLab)
 
 * [Getting Started with the Temperature Control Laboratory 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/Getting_Started_with_the_Temperature_Control_Laboratory.ipynb)
 * [Empirical Methods for Feedback Control 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/1_Empirical_Methods_for_Feedback_Control.ipynb)
@@ -24,6 +24,9 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Modeling Part 3 - Single Heater with Non-uniform Temperature 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/3_Modeling_Part_3.ipynb)
 * [Modeling Part 4 - Dual Heater with Non-uniform Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/3_Modeling_Part_4.ipynb)
 
+## Process Variables, Models, and Degrees of Freedom
+
+* [Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Process_Variables/Process_Variables.ipynb)
 
 ## 2. First and Second Order Linear Systems
 
