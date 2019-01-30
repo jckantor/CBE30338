@@ -1,7 +1,7 @@
 .DS_Store
 
 .ipynb_checkpoints/
-notebooks/.ipynb_checkpoints/
+*/.ipynb_checkpoints/
 
 .texpadtmp/
 *.aux
