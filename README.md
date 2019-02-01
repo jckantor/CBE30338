@@ -38,13 +38,13 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## 3. Nonlinear Models and Dynamics
 
-* [Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb#/)]
-* [Blending Tank Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Blending%20Tank%20Simulation.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/Blending%20Tank%20Simulation.ipynb#/)]
-* [Continuous Product Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Continuous_Product_Blending.ipynb)
-* [Hare and Lynx Population Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb) [[open in Google Colab](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb)]
-* [Exothermic Stirred-Tank Reactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)
+* [Gravity Drained Tank](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb) 
+* [Blending Tank Simulation](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Blending%20Tank%20Simulation.ipynb)
+* [Continuous Product Blending](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Continuous_Product_Blending.ipynb)
+* [Hare and Lynx Population Dynamics](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb)
+* [Exothermic Stirred-Tank Reactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)
 * [Exothermic Stirred-Tank Reactor (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/DAE/Exothermic_CSTR_Pyomo.ipynb)
-* [Fed-Batch Bioreactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)
+* [Fed-Batch Bioreactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)
 
 
 ## 4. Linear Approximation to Nonlinear Models
