@@ -22,7 +22,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Modeling Part 1 - Single Heater with Uniform Temperature](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_1.ipynb)
 * [Modeling Part 2 - Dual Heaters with Uniform Temperature](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_2.ipynb)
 * [Modeling Part 3 - Single Heater with Non-uniform Temperature](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_3.ipynb)
-* [Modeling Part 4 - Dual Heater with Non-uniform Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_4.ipynb)
+<!-- * [Modeling Part 4 - Dual Heater with Non-uniform Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_4.ipynb) -->
 
 ## Process Variables, Models, and Degrees of Freedom
 
