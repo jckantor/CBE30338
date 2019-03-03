@@ -10,12 +10,12 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ### Python for Process Control
 
-* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Getting%20Started%20with%20Python.ipynb)
-* [Python Tutorial 1](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_1_2018.ipynb)
-* [Python Tutorial 2](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_2_2018.ipynb)
-* [Python Tutorial 3](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_3_2018.ipynb)
-* Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Animation%20in%20Jupyter%20Notebooks.ipynb)
-* Advanced Topic: [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/A%20Modular%20Approach%20to%20Simulation%20using%20Python%20Generators.ipynb)
+* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Getting_Started_with_Python.ipynb)
+* [Python Tutorial 1](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_1.ipynb)
+* [Python Tutorial 2](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_2.ipynb)
+* [Python Tutorial 3](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_3.ipynb)
+* Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Animation_in_Jupyter_Notebooks.ipynb)
+* Advanced Topic: [Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Modular_Approach_to_Simulation_using_Python_Generators.ipynb)
 
 ### Temperature Control Lab (TCLab)
 
