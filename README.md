@@ -16,7 +16,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## Using the Temperature Control Lab (TCLab)
 
-* [Overview of the Temperature Control Laboratory 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/0_TCLab_Overview.ipynb)
+* [Overview of the Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/0_TCLab_Overview.ipynb)
 * [Empirical Methods for Feedback Control 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/1_Empirical_Methods_for_Feedback_Control.ipynb)
 * [Coding Controllers with Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/2_Coding_Controllers_with_Python_Generators.ipynb)
 * [Modeling Part 1 - Single Heater with Uniform Temperature](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/TCLab_notebooks/3_Modeling_Part_1.ipynb)
