@@ -8,11 +8,11 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## Getting Started with Python
 
-* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Python.ipynb)
-* [Python Tutorial 1 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_1_2018.ipynb)
-* [Python Tutorial 2 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_2_2018.ipynb)
-* [Python Tutorial 3 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Python_Tutorial_3_2018.ipynb)
-* Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Animation%20in%20Jupyter%20Notebooks.ipynb)
+* [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Getting%20Started%20with%20Python.ipynb)
+* [Python Tutorial 1 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_1_2018.ipynb)
+* [Python Tutorial 2 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_2_2018.ipynb)
+* [Python Tutorial 3 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Python_Tutorial_3_2018.ipynb)
+* Advanced Topic: [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/python/Animation%20in%20Jupyter%20Notebooks.ipynb)
 
 ## Using the Temperature Control Lab (TCLab)
 
@@ -30,21 +30,21 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## 2. First and Second Order Linear Systems
 
-* [One Compartment Pharacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/notebooks/One%20Compartment%20Pharmacokinetics.ipynb#/)]
-* [Second Order Linear Models 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Empirical_Models/Second_Order_Models.ipynb)
-* [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interacting%20Tanks.ipynb)
-* [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Manometer%20Models%20and%20Dynamics.ipynb)
+* [One Compartment Pharacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/One%20Compartment%20Pharmacokinetics.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/linear/notebooks/One%20Compartment%20Pharmacokinetics.ipynb#/)]
+* [Second Order Linear Models 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Second_Order_Models.ipynb)
+* [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Interacting%20Tanks.ipynb)
+* [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Manometer%20Models%20and%20Dynamics.ipynb)
 
 
 ## 3. Nonlinear Models and Dynamics
 
-* [Gravity Drained Tank](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Gravity%20Drained%20Tank.ipynb) 
-* [Blending Tank Simulation](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Blending%20Tank%20Simulation.ipynb)
-* [Continuous Product Blending](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Continuous_Product_Blending.ipynb)
-* [Hare and Lynx Population Dynamics](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb)
-* [Exothermic Stirred-Tank Reactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Exothermic%20CSTR.ipynb)
+* [Gravity Drained Tank](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Gravity%20Drained%20Tank.ipynb) 
+* [Blending Tank Simulation](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Blending%20Tank%20Simulation.ipynb)
+* [Continuous Product Blending](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Continuous_Product_Blending.ipynb)
+* [Hare and Lynx Population Dynamics](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb)
+* [Exothermic Stirred-Tank Reactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Exothermic%20CSTR.ipynb)
 * [Exothermic Stirred-Tank Reactor (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/DAE/Exothermic_CSTR_Pyomo.ipynb)
-* [Fed-Batch Bioreactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/Fed%20Batch%20Bioreactor.ipynb)
+* [Fed-Batch Bioreactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Fed%20Batch%20Bioreactor.ipynb)
 
 
 ## 4. Linear Approximation to Nonlinear Models
