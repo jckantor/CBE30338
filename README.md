@@ -26,13 +26,13 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Modeling Part 3 - Single Heater with Non-uniform Temperature](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/3_Modeling_Part_3.ipynb)
 <!-- * [Modeling Part 4 - Dual Heater with Non-uniform Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/3_Modeling_Part_4.ipynb) -->
 
-## Process Modeling
+## 2. Process Modeling
 
 ### Process Variables, Models, and Degrees of Freedom
 
 * [Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Process_Variables/Process_Variables.ipynb)
 
-## 3. Nonlinear Models and Dynamics
+### Nonlinear Models and Dynamics
 
 * [Gravity Drained Tank](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Gravity%20Drained%20Tank.ipynb) 
 * [Blending Tank Simulation](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Blending%20Tank%20Simulation.ipynb)
@@ -41,7 +41,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Exothermic Stirred-Tank Reactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Exothermic%20CSTR.ipynb)
 * [Fed-Batch Bioreactor](https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/modeling/Fed%20Batch%20Bioreactor.ipynb)
 
-## 4. Linear Approximation to Nonlinear Models
+### Linear Approximation to Nonlinear Models
 
 * [Fitting a Linear Model to the Step Response of a Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Fitting%20a%20Linear%20Model%20to%20the%20Step%20Response%20of%20a%20Gravity%20Drained%20Tank.ipynb)
 * [Linear Approximation of a Process Model using Taylor Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Linear%20Approximation%20of%20a%20Process%20Model%20using%20Taylor%20Series.ipynb)
@@ -49,16 +49,16 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Fitting First-Order plus Time-Delay (FOPTD) to Step Response Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Fitting%20First-Order%20plus%20Time-Delay%20%28FOPTD%29%20to%20Step%20Response%20Data.ipynb) [[view as slides]()]
 
 
-## 2. First and Second Order Linear Systems
+### First and Second Order Linear Systems
 
 * [One Compartment Pharacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/One%20Compartment%20Pharmacokinetics.ipynb) [[view as slides](http://nbviewer.jupyter.org/format/slides/github/jckantor/CBE30338/blob/master/linear/notebooks/One%20Compartment%20Pharmacokinetics.ipynb#/)]
 * [Second Order Linear Models 2018](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Second_Order_Models.ipynb)
 * [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Interacting%20Tanks.ipynb)
 * [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/linear/Manometer%20Models%20and%20Dynamics.ipynb)
 
-## Control
+## 3. Control
 
-### 6. PID Control
+### PID Control
 * [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/01_PID_Control.ipynb)
 * [Implementing PID Control with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/02_Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
 * [PID Control with Setpoint Weighting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/03_PID_Control_with_Setpoint_Weighting.ipynb)
@@ -67,7 +67,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Realizable PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/06_Realizable_PID_Control.ipynb)
 * [PID Controller Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/PID/07_PID_Controller_Tuning.ipynb)
 
-## 6. PID Control (Old)
+### PID Control (Old)
 
 * [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Implementing%20PID%20Control%20in%20Nonlinear%20Simulations.ipynb?flush_cache=true)
 * [Interactive PID Control Tuning with Ziegler-Nichols](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Interactive%20PID%20Control%20Tuning%20with%20%20Ziegler-Nichols.ipynb)
@@ -75,7 +75,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Zero Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Zero%20Order%20Hold%20and%20Interpolation.ipynb)
 * Advanced Topic: [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A%20Modular%20Approach%20to%20Simulation%20using%20Python%20Generators.ipynb)
 
-## 8. Frequency Domain Control Design
+### Frequency Domain Control Design
 
 * [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Getting%20Started%20with%20Transfer%20Functions.ipynb?flush_cache=true)
 * [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/Closed-Loop%20Transfer%20Functions%20for%20Car%20Cruise%20Control.ipynb)
@@ -86,7 +86,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ## Optimization
 
-## 7. Spreadsheet Optimization
+### Spreadsheet Optimization
 
 * [Production Planning with Constraints (Google Sheet)](https://docs.google.com/spreadsheets/d/1StL_Z-GnE23LuS93mr9fybxmcAopFuWVvGTauJgvxng/edit?usp=sharing)
 * [SEMD Refinery (Google Sheet)](https://docs.google.com/spreadsheets/d/1x-DX4rnt6LCLiDpuSEwZDF0zs5mpVrpcjlU5kb2dmUA/edit?usp=sharing)
@@ -102,22 +102,18 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Design of a Cold Weather Fuel](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
 * [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/08_Gasoline_Blending.ipynb)
 
-## Differential-Algebraic Systems
+### Differential-Algebraic Systems
 
 * [Exothermic Stirred-Tank Reactor (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb)
 * [First Order System in Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/First_Order_System_in_Pyomo.ipynb)
 * [Path Planning for a Simple Car](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Path_Planning_for_a_Simple_Car.ipynb)
 
 
-## State-Task Networks
+### State-Task Networks
 
 * [State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/State-Task_Networks.ipynb)
 
 * [Scheduling State-Task Networks](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb)
-
-
-
-
 
 
 ## Student Projects
