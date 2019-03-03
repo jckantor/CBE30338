@@ -60,7 +60,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 <!-- * [Modeling Part 4 - Dual Heater with Non-uniform Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/TCLab/3_Modeling_Part_4.ipynb) -->
 
 
-## 3. Control
+## 3. Process Control
 
 ### PID Control
 * [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/pid/01_PID_Control.ipynb)
@@ -88,7 +88,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 * [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/freqdomain/Baroreflex%20as%20a%20Linear%20Control%20System.ipynb)
 
 
-## Optimization
+## Process Optimization
 
 ### Spreadsheet Optimization
 
