@@ -97,7 +97,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ### Algebraic Models
 
-* [Unconstrained Scalar Optimization](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/01_Unconstrained_Scalar_Optimization.ipynb)
+* [Unconstrained Scalar Optimization](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/01_Unconstrained_Scalar_Optimization.ipynb)
 * [Linear Production Model with Constraints](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/02_Linear_Production_Model_with_Constraints.ipynb)
 * [Linear Programming](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/03_Linear_Programming.ipynb)
 * [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/04_Getting_Started_with_Pyomo.ipynb)
