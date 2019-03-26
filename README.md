@@ -98,19 +98,19 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 ### Algebraic Models
 
 * [Unconstrained Scalar Optimization](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/01_Unconstrained_Scalar_Optimization.ipynb)
-* [Linear Production Model with Constraints](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/02_Linear_Production_Model_with_Constraints.ipynb)
-* [Linear Programming](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/03_Linear_Programming.ipynb)
-* [Getting Started with Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/04_Getting_Started_with_Pyomo.ipynb)
-* [Pyomo Examples](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/05_Pyomo_Examples.ipynb)
-* [Linear Blending Problem](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/06_Linear_Blending_Problem.ipynb)
-* [Design of a Cold Weather Fuel](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
-* [Gasoline Blending](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/08_Gasoline_Blending.ipynb)
+* [Linear Production Model with Constraints](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/02_Linear_Production_Model_with_Constraints.ipynb)
+* [Linear Programming](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/03_Linear_Programming.ipynb)
+* [Getting Started with Pyomo](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/04_Getting_Started_with_Pyomo.ipynb)
+* [Pyomo Examples](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/05_Pyomo_Examples.ipynb)
+* [Linear Blending Problem](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/06_Linear_Blending_Problem.ipynb)
+* [Design of a Cold Weather Fuel](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb)
+* [Gasoline Blending](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/optimization/08_Gasoline_Blending.ipynb)
 
 ### Differential-Algebraic Systems
 
-* [Exothermic Stirred-Tank Reactor (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb)
-* [First Order System in Pyomo](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/First_Order_System_in_Pyomo.ipynb)
-* [Path Planning for a Simple Car](http://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Path_Planning_for_a_Simple_Car.ipynb)
+* [Exothermic Stirred-Tank Reactor (Pyomo)](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb)
+* [First Order System in Pyomo](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/First_Order_System_in_Pyomo.ipynb)
+* [Path Planning for a Simple Car](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Path_Planning_for_a_Simple_Car.ipynb)
 
 
 ### State-Task Networks
