@@ -108,7 +108,7 @@ Please me know if you any thoughts or suggestions on how these notebooks could b
 
 ### Differential-Algebraic Systems
 
-* [Exothermic Stirred-Tank Reactor (Pyomo)](https://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb)
+* [Exothermic Stirred-Tank Reactor (Pyomo)](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb)
 * [First Order System in Pyomo](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/First_Order_System_in_Pyomo.ipynb)
 * [Path Planning for a Simple Car](https://nbviewer.ipython.org/github/jckantor/CBE30338/blob/master/notebooks/dae/Path_Planning_for_a_Simple_Car.ipynb)
 
