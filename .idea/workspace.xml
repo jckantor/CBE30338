@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b6ca68f-4dc3-4521-b4b1-6eae572e1d79" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/add_course_info.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/add_navigation.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/generate_contents.py" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/01_PID_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/02_Implementing_PID_Control_with_Python_Yield_Statement.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/03_PID_Control_with_Setpoint_Weighting.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/04_PID_Control_with_Bumpless_Transfer.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/05_PID_Control_with_Anti-Reset-Windup.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/06_Realizable_PID_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/07_PID_Controller_Tuning.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/10_PID_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/PID/A Modular Approach to Simulation using Python Generators.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/5-Figure1-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Chu_2013.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Chu_2013.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Chu_2013.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Kondili_1993.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Kondili_1993.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Kondili_1993.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Kondili_gantt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Machine Bottleneck (Pyomo).ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/MarveliasGrossman2003a.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/MarveliasGrossman2003a.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/MarveliasGrossman2003a.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/MarveliasGrossman2003b.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/MarveliasGrossman2003b.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Scheduling_Multipurpose_Batch_Processes_using_State-Task_Networks.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Screen Shot 2017-09-19 at 8.15.10 AM.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/Screen Shot 2018-04-17 at 4.15.33 PM.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/State-Task_Networks.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/State-task-network-representation-for-example-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/STN/State-task-network-representation-for-example2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/0_TCLab_Overview.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/1_Empirical_Methods_for_Feedback_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/2_Coding_Controllers_with_Python_Generators.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/3_Modeling_Part_1.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/3_Modeling_Part_2.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/3_Modeling_Part_3.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/3_Modeling_Part_4.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/4_PID_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Cascade Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Control with Realtime Simpy.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Experiments.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/GUI Experiments.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Lab Assignment 2.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Lab Assignment 4 - PID Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/MPC Introduction.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/PID_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Programming Controllers.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Realtime Plotting.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Relay_Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Step_Data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Step_Test_Data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Step_Test_Experiment.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Step_Test_Model.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/Step_test.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/TCLab PID.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/TCLab Simulation.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/datafile.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/515px-Honeywell_thermostat_open.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/FeedbackControlDiagram.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/Inkbird-16-Manual.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/Inkbird-16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/TCLabOverview.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/TCLabOverview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/TCLabOverview.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/arduino_lab_kit.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/images/tclab_device.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/pidgui.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/TCLab/thermostat.data.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dae/Exothermic_CSTR_Pyomo.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dae/First_Order_System_in_Pyomo.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dae/Path_Planning_for_a_Simple_Car.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dae/Transient Heat Transfer in Various Geometries.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dae/Untitled.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/freqdomain/Baroreflex as a Linear Control System.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/freqdomain/Closed-Loop Transfer Functions for Car Cruise Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/freqdomain/Controller Tuning Rules in Frequency Domain.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/freqdomain/Creating Bode Plots.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/freqdomain/Getting Started with Transfer Functions.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Fitting First-Order plus Time-Delay (FOPTD) to Step Response Data.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Fitting a Linear Model to the Step Response of a Gravity Drained Tank.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Interacting Tanks.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Linear Approximation of a Multivariable Model using Taylor Series.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Linear Approximation of a Process Model using Taylor Series.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Manometer Models and Dynamics.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/One Compartment Pharmacokinetics.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/Second_Order_Models.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/ThermocoupleData.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/linear/ThermocoupleResponse.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Blending Tank Simulation.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Continuous_Product_Blending.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Exothermic CSTR.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Fed Batch Bioreactor.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Gravity Drained Tank.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/HareLynx/Hare_and_Lynx_Population_Dynamics.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/HareLynx/MainLynx.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Process_Control_Outline.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Process_Variables.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/modeling/Untitled.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/01_Unconstrained_Scalar_Optimization.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/02_Linear_Production_Model_with_Constraints.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/03_Linear_Programming.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/04_Getting_Started_with_Pyomo.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/05_Pyomo_Examples.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/06_Linear_Blending_Problem.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/07_Mixture_Design_Cold_Weather_Fuel.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/08_Gasoline_Blending - Answer Key.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/08_Gasoline_Blending.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/DAE.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Formaldehyde_Process.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Problem_19_01.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Problem_19_03.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Problem_19_04.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Problem_19_05.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Problem_19_06.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Untitled.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/optimization/Untitled1.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/pid/Implementing PID Control in Nonlinear Simulations.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/pid/Interactive PID Control Tuning with  Ziegler-Nichols.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/pid/PIDsim.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/pid/Zero Order Hold and Interpolation.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/02 Wind Turbine Control/Wind Turbine Collective Blade Pitch Angle Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/02 Wind Turbine Control/figs/Figure1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/02 Wind Turbine Control/figs/Figure2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/02 Wind Turbine Control/figs/Figure3.JPG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/05 Insulin Control/Control Loop.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/05 Insulin Control/Insulin Control for Treating Type I Diabetes.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/2.0 Chart Blender Diagram.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/7.2 Results.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/7.2 mv graphs.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/Appendix.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/Chocolate Blending Final Project _Breier, Flavin, Mallette, Mikes_.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/06 Chocolate Production/Chocolate+Blending+Final+Project+_Breier%2C+Flavin%2C+Mallette%2C+Mikes_.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/09 Beer Production/IndustrialTemp.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/09 Beer Production/Temperature Profile Optimization of the Brewing Process.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/09 Beer Production/rxn.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/09 Beer Production/temp_profiles.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure1a1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure1a2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure2a1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure2a2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure3b1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Figure3b2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Municipal Wastewater Aeration.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/10 Wastewater Treatment/Process_Controls.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/18 Cancer Treatment with T cells/T cell Therapy of Chronic Myelogenous Leukemia.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/19 Desalinization/Control of a Reverse Osmosis Desalination Process.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/19 Desalinization/ROBlockDiagramF.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/19 Desalinization/ROSysDiagram.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/23 Anesthsia Delivery by Feedback Control/CLADsystemLoop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/23 Anesthsia Delivery by Feedback Control/Closed Loop Anesthetic Delivery (CLAD) System.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/23 Anesthsia Delivery by Feedback Control/TwoCompartmentModel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Autoregulation and Baroreflex Regulation in Mean Arterial Blood Pressure Maintenance.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/PIDBlockDiagram.JPG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/PIDBlockDiagram2.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theo1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory2.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory3.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory4.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory5.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/27 Baroreflex and Autoregulation/Theory6.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2017/28 Sailboat Mast Control/Sailboat Mast Control.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/projects/2018/NCAA_Football_Field.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Animation_in_Jupyter_Notebooks.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Getting_Started_with_Python.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Modular_Approach_to_Simulation_using_Python_Generators.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Python_Tutorial_1.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Python_Tutorial_2.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python/Python_Tutorial_3.ipynb" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="generate_contents.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_navigation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-179">
+              <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_course_info.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/add_course_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="14" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>itertool</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tools/generate_content.py" />
+        <option value="$PROJECT_DIR$/tools/add_course_info.py" />
+        <option value="$PROJECT_DIR$/tools/add_navigation.py" />
+        <option value="$PROJECT_DIR$/tools/generate_contents.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="348" />
+    <option name="y" value="211" />
+    <option name="width" value="1394" />
+    <option name="height" value="926" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CBE30338" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBE30338" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBE30338" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBE30338" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b6ca68f-4dc3-4521-b4b1-6eae572e1d79" name="Default" comment="" />
+      <created>1553682010839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553682010839</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="348" y="211" width="1394" height="926" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179">
+          <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/add_course_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+notedown
+control
+ipopt
+pyomo
+pandas
+tclab
