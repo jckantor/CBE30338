@@ -6,6 +6,8 @@ NOTEBOOK_DIR = os.path.join(os.path.dirname(__file__), '..', 'notebooks')
 
 INDEX_FILE = os.path.join(NOTEBOOK_DIR, 'index.md')
 
+INDEX_NB = os.path.join(NOTEBOOK_DIR, 'index.ipynb')
+
 INDEX_HEADER = """
 # CBE 30338 Chemical Process Control
 

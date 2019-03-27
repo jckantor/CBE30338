@@ -16,12 +16,13 @@ def prev_this_next(it):
 
 
 PREV_TEMPLATE = "< [{title}]({url}) "
-CONTENTS = "| [Contents](Index.ipynb) |"
+CONTENTS = "| [Contents](index.md) |"
 NEXT_TEMPLATE = " [{title}]({url}) >"
 NAV_COMMENT = "<!--NAVIGATION-->\n"
 
 COLAB_LINK = """
 <a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/{notebook_filename}"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>
+
 """
 
 
