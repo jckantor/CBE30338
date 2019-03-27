@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b6ca68f-4dc3-4521-b4b1-6eae572e1d79" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/notebooks/02.02-Gravity-Drained-Tank.ipynb" afterPath="$PROJECT_DIR$/notebooks/02.02-Gravity-Drained-Tank.ipynb" />
-      <change beforePath="$PROJECT_DIR$/tools/add_navigation.py" afterPath="$PROJECT_DIR$/tools/add_navigation.py" />
+      <change beforePath="$PROJECT_DIR$/tools/generate_contents.py" afterPath="$PROJECT_DIR$/tools/generate_contents.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="generate_contents.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generate_contents.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_navigation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_navigation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="20">
+              <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -63,8 +62,8 @@
       <list>
         <option value="$PROJECT_DIR$/tools/generate_content.py" />
         <option value="$PROJECT_DIR$/tools/add_course_info.py" />
-        <option value="$PROJECT_DIR$/tools/generate_contents.py" />
         <option value="$PROJECT_DIR$/tools/add_navigation.py" />
+        <option value="$PROJECT_DIR$/tools/generate_contents.py" />
       </list>
     </option>
   </component>
@@ -195,21 +194,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
+    <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
+    <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
