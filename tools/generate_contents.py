@@ -75,7 +75,7 @@ def write_contents(FILE, HEADER, directory=None):
 
 
 if __name__ == '__main__':
-    write_contents(INDEX_FILE, INDEX_HEADER,
-        'http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/')
-    write_contents(README_FILE, README_HEADER,
-        'http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/')
+    directory = 'http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/'
+    write_contents(INDEX_FILE, INDEX_HEADER, directory)
+    os.system(' '.join(['notedown', INDEX_FILE, '>', INDEX_NB]))
+    write_contents(README_FILE, README_HEADER,  directory)
