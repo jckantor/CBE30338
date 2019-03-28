@@ -31,8 +31,7 @@ to install a distributions of Jupyter and Python 3, such as the excellent
 [Anaconda distribution from Continuum Analytics](https://www.continuum.io/downloads).
 
 Please me know if you any thoughts or suggestions on how these notebooks could
-be improved for the purposes of teaching and learning the principles of 
-Chemical Process Control.
+be improved for teaching and learning the principles of Chemical Process Control.
 
 ## Table of Contents
 """

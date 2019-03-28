@@ -35,11 +35,11 @@
 - [Realizable PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.06-Realizable_PID_Control.ipynb)
 - [PID Controller Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.07-PID_Controller_Tuning.ipynb)
 - [PID Control - Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.10-PID_Control.ipynb)
-- [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing PID Control in Nonlinear Simulations.ipynb)
-- [Interactive PID Control Tuning with  Ziegler-Nichols](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive PID Control Tuning with  Ziegler-Nichols.ipynb)
+- [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb)
+- [Interactive PID Control Tuning with  Ziegler-Nichols](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb)
 
 ### [05. Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
-- [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.01-Getting Started with Transfer Functions.ipynb)
+- [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb)
 - [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed-Loop Transfer Functions for Car Cruise Control.ipynb)
 - [Creating Bode Plots](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating Bode Plots.ipynb)
 - [Controller Tuning Rules in Frequency Domain](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller Tuning Rules in Frequency Domain.ipynb)
@@ -65,7 +65,7 @@
 - [Pyomo Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled1.ipynb)
 
 ### [07. Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Optimal-Control.ipynb)
-- [None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-DAE.ipynb)
+- [Solving Differential Equations with Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Solving-Differential-Equations-with-Pyomo.ipynb)
 - [Exothermic CSTR (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Exothermic_CSTR_Pyomo.ipynb)
 - [First Order System in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.03-First_Order_System_in_Pyomo.ipynb)
 - [Path Planning for a Simple Car](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.04-Path_Planning_for_a_Simple_Car.ipynb)
