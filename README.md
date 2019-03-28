@@ -64,9 +64,10 @@ be improved for teaching and learning the principles of Chemical Process Control
 
 ### [6. Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
 - [Unconstrained Scalar Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb)
-- [Linear Progamming with Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model.ipynb)
+- [Linear Production Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model.ipynb)
 - [Linear Programming](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.03-Linear-Programming.ipynb)
-- [Getting Started with Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.05-Linear-Programming-with-Pyomo.ipynb)
+- [Linear Production Model in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Production-Model-in-Pyomo.ipynb)
+- [Linear Programming in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Programming-in-Pyomo.ipynb)
 - [Linear Blending Problem](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.06-Linear-Blending-Problem.ipynb)
 - [Design of a Cold Weather Fuel](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb)
 - [Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb)
@@ -79,7 +80,6 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Problem 19.6](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.14-Problem_19_06.ipynb)
 - [Pyomo Examples](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Pyomo-Examples.ipynb)
 - [None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled.ipynb)
-- [Pyomo Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled1.ipynb)
 
 ### [7. Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
 - [Simulation in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-in-Pyomo.ipynb)
