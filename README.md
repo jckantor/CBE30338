@@ -22,7 +22,6 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Python Basics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb)
 - [Python Conditionals and Libraries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb)
 - [Python Numeric Integration Revisited](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb)
-- [Process Control - Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.99-Process_Control_Outline.ipynb)
 
 ### [02. Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
 - [Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb)
@@ -61,7 +60,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb)
 - [Creating Bode Plots](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating-Bode-Plots.ipynb)
 - [Controller Tuning Rules in Frequency Domain](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb)
-- [# Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb)
+- [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb)
 
 ### [06. Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
 - [Unconstrained Scalar Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb)
@@ -90,7 +89,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Transient Heat Transfer in Various Geometries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.05-Transient-Heat-Transfer-in-Various-Geometries.ipynb)
 - [Path Constraints](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.06-Path-Constraints.ipynb)
 
-### [08. None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Model-Predictive-Control.ipynb)
+### [08. Predictive Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Predictive-Control.ipynb)
 - [Zero-Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb)
 
 ### [09. Discrete Events](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.00-Discrete-Events.ipynb)
@@ -126,3 +125,6 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Step Test: Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.99-Step-Test-Model.ipynb)
 - [PID control on TCLab](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.99-TCLab-PID.ipynb)
 - [TCLab Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.99-TCLab-Simulation.ipynb)
+
+### [C. Miscellaneous Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.00-Miscellaneous-Notebooks.ipynb)
+- [Process Control - Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Process_Control_Outline.ipynb)
