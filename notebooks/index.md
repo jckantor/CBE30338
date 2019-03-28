@@ -1,5 +1,5 @@
 
-# CBE 30338 Chemical Process Control
+# [Chemical Process Control](http://jckantor.github.io/CBE30338/)
 
 ## Table of Contents
 
