@@ -16,7 +16,7 @@ def prev_this_next(it):
 
 
 PREV_TEMPLATE = "< [{title}]({url}) "
-CONTENTS = "| [Contents](index.md) |"
+CONTENTS = "| [Contents](index.ipynb) |"
 NEXT_TEMPLATE = " [{title}]({url}) >"
 NAV_COMMENT = "<!--NAVIGATION-->\n"
 
