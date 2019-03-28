@@ -3,60 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b6ca68f-4dc3-4521-b4b1-6eae572e1d79" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.00-Getting-Started.ipynb" afterPath="$PROJECT_DIR$/notebooks/01.00-Getting-Started.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb" afterPath="$PROJECT_DIR$/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.02-Python-Basics.ipynb" afterPath="$PROJECT_DIR$/notebooks/01.02-Python-Basics.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb" afterPath="$PROJECT_DIR$/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb" afterPath="$PROJECT_DIR$/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01.99-Process_Control_Outline.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/02.00-Process-Modeling.ipynb" afterPath="$PROJECT_DIR$/notebooks/02.00-Process-Modeling.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.04-Fitting-First-Order-plus-Time-Delay-to-Step-Response.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.04-Fitting-First-Order-plus-Time-Delay-to-Step-Response.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.06-Second-Order-Models.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.06-Second-Order-Models.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.07-Interacting-Tanks.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.07-Interacting-Tanks.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb" afterPath="$PROJECT_DIR$/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.00-PID-Control.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.00-PID-Control.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.04-PID_Control_with_Bumpless_Transfer.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.04-PID_Control_with_Bumpless_Transfer.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.05-PID-Control-with-Anti--Reset--Windup.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.05-PID-Control-with-Anti--Reset--Windup.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.06-Realizable-PID-Control.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.06-Realizable-PID-Control.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.07-PID-Controller-Tuning.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.07-PID-Controller-Tuning.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.10-PID-Control.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.10-PID-Control.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb" afterPath="$PROJECT_DIR$/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.00-Frequency-Domain-Control-Design.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.00-Frequency-Domain-Control-Design.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.03-Creating-Bode-Plots.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.03-Creating-Bode-Plots.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb" afterPath="$PROJECT_DIR$/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.00-Optimization.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.00-Optimization.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.02-Linear-Production-Model-with-Constraints.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.02-Linear-Production-Model-with-Constraints.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.03-Linear-Programming.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.03-Linear-Programming.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.04-Getting-Started-with-Pyomo.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.04-Getting-Started-with-Pyomo.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.05-Pyomo-Examples.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.05-Pyomo-Examples.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.06-Linear-Blending-Problem.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.06-Linear-Blending-Problem.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.07-Mixture-Design-Cold-Weather-Fuel.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.07-Mixture-Design-Cold-Weather-Fuel.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.08-Gasoline-Blending.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.08-Gasoline-Blending.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.09-Formaldehyde-Process.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.09-Formaldehyde-Process.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06.10-Problem_19_01.ipynb" afterPath="$PROJECT_DIR$/notebooks/06.10-Problem_19_01.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.00-Optimal-Control.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.00-Optimal-Control.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.01-Solving-Differential-Equations-with-Pyomo.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.01-Solving-Differential-Equations-with-Pyomo.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.02-Exothermic-CSTR-Pyomo.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.02-Exothermic-CSTR-Pyomo.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.03-First-Order-System-in-Pyomo.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.03-First-Order-System-in-Pyomo.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.04-Path-Planning-for-a-Simple-Car.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.04-Path-Planning-for-a-Simple-Car.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.05-Transient-Heat-Transfer-in-Various-Geometries.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.05-Transient-Heat-Transfer-in-Various-Geometries.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07.06-Path-Constraints.ipynb" afterPath="$PROJECT_DIR$/notebooks/07.06-Path-Constraints.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/08.00-Model-Predictive-Control.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb" afterPath="$PROJECT_DIR$/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/09.00-Discrete-Events.ipynb" afterPath="$PROJECT_DIR$/notebooks/09.00-Discrete-Events.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb" afterPath="$PROJECT_DIR$/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/09.02-State--Task-Networks.ipynb" afterPath="$PROJECT_DIR$/notebooks/09.02-State--Task-Networks.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/09.03-Machine-Bottleneck.ipynb" afterPath="$PROJECT_DIR$/notebooks/09.03-Machine-Bottleneck.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/images/baroreflex.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/images/nrcardio.2015.96-f2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tools/generate_contents.py" afterPath="$PROJECT_DIR$/tools/generate_contents.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="generate_contents.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generate_contents.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="24" column="76" lean-forward="false" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+            <state relative-caret-position="182">
+              <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -79,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_navigation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_navigation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-278">
+            <state relative-caret-position="-247">
               <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding />
             </state>
@@ -203,11 +150,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="534" y="339" width="1394" height="926" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -247,21 +195,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
+    <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="24" column="76" lean-forward="false" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-247">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/add_navigation.py">
+    <entry file="file://$PROJECT_DIR$/tools/generate_contents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-278">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="182">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

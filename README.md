@@ -17,13 +17,13 @@ be improved for teaching and learning the principles of Chemical Process Control
 
 ## Table of Contents
 
-### [01. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
+### [1. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
 - [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb)
 - [Python Basics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb)
 - [Python Conditionals and Libraries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb)
 - [Python Numeric Integration Revisited](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb)
 
-### [02. Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
+### [2. Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
 - [Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb)
 - [Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.02-Gravity-Drained-Tank.ipynb)
 - [Blending Tank Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.03-Blending-Tank-Simulation.ipynb)
@@ -33,7 +33,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Fed-Batch Bioreactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb)
 - [Model Library](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.08-Model-Library.ipynb)
 
-### [03. Linearization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.00-Linearization.ipynb)
+### [3. Linearization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.00-Linearization.ipynb)
 - [Step Response of a Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb)
 - [Linear Approximation of a Process Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.02-Linear-Approximation-of-a-Process-Model.ipynb)
 - [Linear Approximation of a Multivariable Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb)
@@ -43,7 +43,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb)
 - [Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb)
 
-### [04. PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID-Control.ipynb)
+### [4. PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID-Control.ipynb)
 - [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-PID_Control.ipynb)
 - [Implementing PID Controllers with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.02-Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
 - [PID Control with Setpoint Weighting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.03-PID_Control_with_Setpoint_Weighting.ipynb)
@@ -55,14 +55,14 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb)
 - [Interactive PID Control Tuning with  Ziegler-Nichols](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb)
 
-### [05. Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
+### [5. Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
 - [Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb)
 - [Closed-Loop Transfer Functions for Car Cruise Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb)
 - [Creating Bode Plots](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating-Bode-Plots.ipynb)
 - [Controller Tuning Rules in Frequency Domain](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb)
 - [Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb)
 
-### [06. Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
+### [6. Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
 - [Unconstrained Scalar Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb)
 - [Linear Production Model with Constraints](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model-with-Constraints.ipynb)
 - [Linear Programming](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.03-Linear-Programming.ipynb)
@@ -81,7 +81,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled.ipynb)
 - [Pyomo Tutorial](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled1.ipynb)
 
-### [07. Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Optimal-Control.ipynb)
+### [7. Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Optimal-Control.ipynb)
 - [Solving Differential Equations with Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Solving-Differential-Equations-with-Pyomo.ipynb)
 - [Exothermic CSTR (Pyomo)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Exothermic-CSTR-Pyomo.ipynb)
 - [First Order System in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.03-First-Order-System-in-Pyomo.ipynb)
@@ -89,10 +89,10 @@ be improved for teaching and learning the principles of Chemical Process Control
 - [Transient Heat Transfer in Various Geometries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.05-Transient-Heat-Transfer-in-Various-Geometries.ipynb)
 - [Path Constraints](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.06-Path-Constraints.ipynb)
 
-### [08. Predictive Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Predictive-Control.ipynb)
+### [8. Predictive Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Predictive-Control.ipynb)
 - [Zero-Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb)
 
-### [09. Discrete Events](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.00-Discrete-Events.ipynb)
+### [9. Discrete Events](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.00-Discrete-Events.ipynb)
 - [Scheduling State-Task Networks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb)
 - [State-Task Networks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb)
 - [Machine Bottleneck](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.03-Machine-Bottleneck.ipynb)

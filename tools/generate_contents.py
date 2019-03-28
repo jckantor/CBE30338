@@ -61,6 +61,7 @@ def gen_contents(directory=None):
             if chapter in ['00']:
                 yield '\n### [{0}]({1})'.format(title, nb_url)
             else:
+                chapter = int(chapter) if chapter.isdigit() else chapter
                 yield '\n### [{0}. {1}]({2})'.format(chapter,
                                                      title, nb_url)
         else:
