@@ -4,7 +4,11 @@
 ## Table of Contents
 
 ### [01. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
-- [Process Control - Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Process_Control_Outline.ipynb)
+- [Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb)
+- [Python Basics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb)
+- [Python Conditionals and Libraries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb)
+- [Python Numeric Integration Revisited](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb)
+- [Process Control - Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.99-Process_Control_Outline.ipynb)
 
 ### [02. Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
 - [Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb)
@@ -80,13 +84,10 @@
 - [State-Task Networks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb)
 - [Machine Bottleneck](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.03-Machine-Bottleneck.ipynb)
 
-### [A. Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Getting-Started-with-Python.ipynb)
-- [Python Tutorial 1. Introduction](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Tutorial-1.ipynb)
-- [Python Tutorial 2. Conditionals and Libraries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Python-Tutorial-2.ipynb)
-- [Python Tutorial 3 - Numeric Integration Revisited](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Python-Tutorial-3.ipynb)
-- [Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.04-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
-- [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.05-Animation-in-Jupyter-Notebooks.ipynb)
-- [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.99-Modular-Simulation-using-Python-Generators.ipynb)
+### [A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
+- [Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
+- [Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb)
+- [A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Modular-Simulation-using-Python-Generators.ipynb)
 
 ### [B. Overview of the Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-TCLab.ipynb)
 - [1 Empirical Methods for Feedback Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-Empirical-Methods-for-Feedback-Control.ipynb)
