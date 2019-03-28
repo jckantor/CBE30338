@@ -4,6 +4,7 @@
 */.ipynb_checkpoints/
 
 .texpadtmp/
+.idea/
 *.aux
 *.log
 
