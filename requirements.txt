@@ -1,6 +1,5 @@
-notedown
-control
-ipopt
-pyomo
-pandas
-tclab
+notedown>=1.5.1
+ipopt>=0.1.9
+Pyomo>=5.6.1
+pandas>=0.24.2
+tclab>=0.4.8
