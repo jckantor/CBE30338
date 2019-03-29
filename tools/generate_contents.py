@@ -36,18 +36,20 @@ be improved for teaching and learning the principles of Chemical Process Control
 ## Table of Contents
 """
 
+# regular expression that matches notebook filenames to be included in the TOC
 REG = re.compile(r'(\d\d|[A-Z])\.(\d\d)-(.*)\.ipynb')
 
 def iter_notebooks():
-    """Return list of notebooks that match regular expression"""
-    return sorted(nb_file for nb_file in os.listdir(NOTEBOOK_DIR)
-                  if REG.match(nb_file))
+    """Return list of notebooks matched by regular expression"""
+    return sorted(nb_file for nb_file in os.listdir(NOTEBOOK_DIR) if REG.match(nb_file))
 
 def get_notebook_title(nb_file):
+    """Return title header from a notebook if it exists, else returns None"""
     nb = nbformat.read(os.path.join(NOTEBOOK_DIR, nb_file), as_version=4)
     for cell in nb.cells:
-        if cell.source.startswith('#'):
-            return cell.source[1:].splitlines()[0].strip()
+        if cell.cell_type == "markdown":
+            if cell.source.startswith('#'):
+                return cell.source[1:].splitlines()[0].strip()
 
 def gen_contents(directory=None):
     for nb_file in iter_notebooks():
