@@ -11,9 +11,11 @@
 *.aux
 *.log
 
-matlab/
-
 __pycache__/
 /tools/__pycache__/
 *.py[cod]
 *$py.class
+
+matlab/
+
+development/
