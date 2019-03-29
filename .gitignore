@@ -6,12 +6,10 @@
 */.ipynb_checkpoints/
 
 .texpadtmp/
+*/.texpadtmp/
 *.aux
 *.log
 
-matlab/html/
+matlab/
 
-*.m~
-simulink/*.autosave
 
-notebooks/Solutions/
