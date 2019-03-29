@@ -99,6 +99,3 @@
 - [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb)
 - [Lab Assignment 4: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-4--PID-Control.ipynb)
 - [Coding Controllers with Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb)
-
-### [C. Miscellaneous Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.00-Miscellaneous-Notebooks.ipynb)
-- [Process Control - Outline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Process_Control_Outline.ipynb)
