@@ -2,6 +2,7 @@
 
 .idea/
 */.idea
+
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 
@@ -12,4 +13,7 @@
 
 matlab/
 
-
+__pycache__/
+/tools/__pycache__/
+*.py[cod]
+*$py.class
