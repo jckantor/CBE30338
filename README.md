@@ -72,7 +72,6 @@ Chemical Process Control.
 - [6.7 Design of a Cold Weather Fuel](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb)
 - [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb)
 - [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending.ipynb)
-- [6.9 None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.09-Formaldehyde-Process.ipynb)
 - [6.99 Pyomo Examples](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Pyomo-Examples.ipynb)
 
 ### [Chapter 7. Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
