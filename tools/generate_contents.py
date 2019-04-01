@@ -59,13 +59,13 @@ def gen_contents(directory=None):
         if chapter.isdigit():
             chapter = int(chapter)
             if chapter == 0:
-                strfmt = "\n### [{2}]({3})" if section in '00' else "- [{2}]({3})"
+                fmt = "\n### [{2}]({3})" if section in '00' else "- [{2}]({3})"
             else:
-                strfmt = "\n### [Chapter {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
+                fmt = "\n### [Chapter {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
         else:
-            strfmt = "\n### [Appendix {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
+            fmt = "\n### [Appendix {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
 
-        yield strfmt.format(chapter, int(section), get_notebook_title(nb_file), nb_url)
+        yield fmt.format(chapter, int(section), get_notebook_title(nb_file), nb_url)
 
 
 def write_contents(FILE, HEADER, directory=None):
