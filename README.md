@@ -73,13 +73,7 @@ Chemical Process Control.
 - [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb)
 - [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending.ipynb)
 - [6.9 None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.09-Formaldehyde-Process.ipynb)
-- [6.10 Problem 19.1](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.10-Problem_19_01.ipynb)
-- [6.11 Problem 19.3](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.11-Problem_19_03.ipynb)
-- [6.12 Problem 19.4](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.12-Problem_19_04.ipynb)
-- [6.13 Problem 19.5](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.13-Problem_19_05.ipynb)
-- [6.14 Problem 19.6](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.14-Problem_19_06.ipynb)
 - [6.99 Pyomo Examples](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Pyomo-Examples.ipynb)
-- [6.99 None](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Untitled.ipynb)
 
 ### [Chapter 7. Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
 - [7.1 Simulation in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-in-Pyomo.ipynb)
