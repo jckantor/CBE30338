@@ -55,7 +55,6 @@
 - [6.4 Linear Programming in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Programming-in-Pyomo.ipynb)
 - [6.6 Linear Blending Problem](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.06-Linear-Blending-Problem.ipynb)
 - [6.7 Design of a Cold Weather Fuel](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb)
-- [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending-Answer-Key.ipynb)
 - [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending.ipynb)
 - [6.99 Pyomo Examples](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Pyomo-Examples.ipynb)
 
