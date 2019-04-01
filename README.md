@@ -11,9 +11,7 @@ or download to run on your own laptop. To run on your own laptop you will need
 to install Jupyter and Python 3, such as the excellent 
 [Anaconda distribution from Continuum Analytics](https://www.continuum.io/downloads).
 
-Please let me know (jeff at nd.edu) if you any thoughts or suggestions on how 
-these notebooks could be improved for teaching and learning the principles of 
-Chemical Process Control.
+Comments and suggestions are most welcome (jeff at nd.edu).
 
 ## Contents
 ---
