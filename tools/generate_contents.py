@@ -44,7 +44,7 @@ def iter_notebooks():
     return sorted(nb_file for nb_file in os.listdir(NOTEBOOK_DIR) if REG.match(nb_file))
 
 def get_notebook_title(nb_file):
-    """Return title header from a notebook if it exists, else returns None"""
+    """Returns notebook title header if it exists, else None"""
     nb = nbformat.read(os.path.join(NOTEBOOK_DIR, nb_file), as_version=4)
     for cell in nb.cells:
         if cell.cell_type == "markdown":
@@ -53,21 +53,17 @@ def get_notebook_title(nb_file):
 
 def gen_contents(directory=None):
     for nb_file in iter_notebooks():
-        if directory:
-            nb_url = os.path.join(directory, nb_file)
-        else:
-            nb_url = nb_file
-        chapter, section, title = REG.match(nb_file).groups()
+        nb_url = os.path.join(directory, nb_file) if directory else nb_file
+        chapter, section, name = REG.match(nb_file).groups()
         title = get_notebook_title(nb_file)
         if section == '00':
             if chapter in ['00']:
                 yield '\n### [{0}]({1})'.format(title, nb_url)
             else:
                 chapter = int(chapter) if chapter.isdigit() else chapter
-                yield '\n### [{0}. {1}]({2})'.format(chapter,
-                                                     title, nb_url)
+                yield '\n### [{0}. {1}]({2})'.format(chapter, title, nb_url)
         else:
-            yield "- [{0}]({1})".format(title, nb_url)
+            yield "- {0}.{1} [{2}]({3})".format(chapter, section, title, nb_url)
 
 
 def write_contents(FILE, HEADER, directory=None):
