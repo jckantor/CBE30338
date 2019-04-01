@@ -8,7 +8,7 @@ from generate_contents import iter_notebooks, NOTEBOOK_DIR
 
 COURSE_COMMENT = "<!--COURSE_INFORMATION-->"
 
-
+# header to be inserted into each notebook
 COURSE_INFO = COURSE_COMMENT + """
 *This notebook contains course material from [CBE 30338 Chemical Process Control](http://jckantor.github.io/CBE30338/) by Jeffrey Kantor (jeff at nd.edu); the content is available [on GitHub](https://github.com/jckantor/CBE30338).*
 *The text is released under the [CC-BY-NC-ND-4.0 license](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode), and code is released under the [MIT license](https://opensource.org/licenses/MIT).*

@@ -19,6 +19,7 @@ CONTENTS = "| [Contents](index.ipynb) |"
 NEXT_TEMPLATE = " [{title}]({url}) >"
 NAV_COMMENT = "<!--NAVIGATION-->\n"
 
+# link to open notebooks in Google colaboratory
 COLAB_LINK = """
 
 <a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/notebooks/{notebook_filename}"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>

@@ -2,20 +2,26 @@ import os
 import re
 import nbformat
 
+# location of notebook directory in the local repository
 NOTEBOOK_DIR = os.path.join(os.path.dirname(__file__), '..', 'notebooks')
 
+# location of the index file in the local respository
 INDEX_FILE = os.path.join(NOTEBOOK_DIR, 'index.md')
 
+# location of the index notebook in the local repository
 INDEX_NB = os.path.join(NOTEBOOK_DIR, 'index.ipynb')
 
+# header for the index file and notebook
 INDEX_HEADER = """
 # [Chemical Process Control](http://jckantor.github.io/CBE30338/)
 
 ## Table of Contents
 """
 
+# location of the README.md file in the local repository
 README_FILE = os.path.join(os.path.dirname(__file__), '..', 'README.md')
 
+# header for README.md
 README_HEADER = """
 # Chemical Process Control
 
@@ -29,7 +35,9 @@ or download to run on your own laptop. To run on your own laptop you will need
 to install Jupyter and Python 3, such as the excellent 
 [Anaconda distribution from Continuum Analytics](https://www.continuum.io/downloads).
 
-Comments and suggestions are most welcome (jeff at nd.edu).
+Please let me know (jeff at nd.edu) if you any thoughts or suggestions on how 
+these notebooks could be improved for teaching and learning the principles of 
+Chemical Process Control.
 
 ## Contents
 ---
