@@ -33,7 +33,8 @@ to install a distributions of Jupyter and Python 3, such as the excellent
 Please me know if you any thoughts or suggestions on how these notebooks could
 be improved for teaching and learning the principles of Chemical Process Control.
 
-## Table of Contents
+## Contents
+---
 """
 
 # regular expression that matches notebook filenames to be included in the TOC
@@ -55,15 +56,16 @@ def gen_contents(directory=None):
     for nb_file in iter_notebooks():
         nb_url = os.path.join(directory, nb_file) if directory else nb_file
         chapter, section, name = REG.match(nb_file).groups()
-        title = get_notebook_title(nb_file)
-        if section == '00':
-            if chapter in ['00']:
-                yield '\n### [{0}]({1})'.format(title, nb_url)
+        if chapter.isdigit():
+            chapter = int(chapter)
+            if chapter == 0:
+                strfmt = "\n### [{2}]({3})" if section in '00' else "- [{2}]({3})"
             else:
-                chapter = int(chapter) if chapter.isdigit() else chapter
-                yield '\n### [{0}. {1}]({2})'.format(chapter, title, nb_url)
+                strfmt = "\n### [Chapter {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
         else:
-            yield "- {0}.{1} [{2}]({3})".format(chapter, section, title, nb_url)
+            strfmt = "\n### [Appendix {0}. {2}]({3})" if section in '00' else "- [{0}.{1} {2}]({3})"
+
+        yield strfmt.format(chapter, int(section), get_notebook_title(nb_file), nb_url)
 
 
 def write_contents(FILE, HEADER, directory=None):
