@@ -104,7 +104,7 @@ be improved for teaching and learning the principles of Chemical Process Control
 ### [B. The Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-TCLab.ipynb)
 - [The TCLab Python Package](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-The-TCLab-Python-Package.ipynb)
 - [Relay Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.02-Relay-Control.ipynb)
-- [Step Test Experiment](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.03-Step-Test-Experiment.ipynb)
+- [Step Testing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.03-Step-Testing.ipynb)
 - [Fitting Step Test Data to Empirical Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb)
 - [First Order Model for a Single Heater](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.05-First-Order-Model-for-a-Single-Heater.ipynb)
 - [Two-Input, Two-Output Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.06-Two-Input-Two-Output-Model.ipynb)
