@@ -75,6 +75,7 @@ Chemical Process Control.
 
 ### [Chapter 7. Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
 - [7.1 Simulation and Optimal Control in Pharmacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-and-Optimal-Control-in-Pharmacokinetics.ipynb)
+- [7.2 Soft Landing a Rocket](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Soft-Landing-a-Rocket.ipynb)
 - [7.3 Simulation in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.03-Simulation-in-Pyomo.ipynb)
 - [7.4 Simulation of an Exothermic CSTR](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.04-Simulation-of-an-Exothermic-CSTR.ipynb)
 - [7.5 First Order System in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.05-First-Order-System-in-Pyomo.ipynb)
