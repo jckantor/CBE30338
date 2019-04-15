@@ -91,5 +91,5 @@
 - [B.7 Two State Model for a Single Heater](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.07-Two-State-Model-for-a-Single-Heater.ipynb)
 - [B.8 Four State Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.08-Four-State-Model.ipynb)
 - [B.9 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb)
-- [B.10 Lab Assignment 4: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-4--PID-Control.ipynb)
+- [B.10 Lab Assignment: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-PID-Control.ipynb)
 - [B.11 Coding Controllers with Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb)
