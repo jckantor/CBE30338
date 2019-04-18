@@ -93,4 +93,5 @@
 - [B.9 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb)
 - [B.10 Lab Assignment: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-PID-Control.ipynb)
 - [B.11 Coding Controllers with Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb)
-- [B.12 Laboratory Session 4. Open and Closed Loop Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.12-Open-and-Closed-Loop-Estimation.ipynb)
+- [B.12 Open and Closed Loop Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.12-Open-and-Closed-Loop-Estimation.ipynb)
+- [B.13 Simulation, Control, and Estimation using Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.13-Optimization-Control-and-Estimation-using-Pyomo.ipynb)
