@@ -108,3 +108,6 @@ teaching and learning the principles of Chemical Process Control.
 - [B.12 Open and Closed Loop Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.12-Open-and-Closed-Loop-Estimation.ipynb)
 - [B.13 Simulation, Control, and Estimation using Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.13-Optimization-Control-and-Estimation-using-Pyomo.ipynb)
 - [B.14 Simulation, Control, and Estimation using Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.14-Optimization-Control-and-Estimation-using-Pyomo-With-Windows-ipopt.ipynb)
+
+### [Appendix C. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.00-Student-Projects.ipynb)
+- [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
