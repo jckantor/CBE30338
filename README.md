@@ -11,9 +11,7 @@ laptop you will need to install Jupyter and Python 3, such as the excellent
 
 Please let me know (jeff at nd.edu) if you any thoughts or suggestions on how these notebooks could be improved for 
 teaching and learning the principles of Chemical Process Control.
-
----
-
+### [Table of Contents](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/index.ipynb?flush=true)
 ### [Chapter 1. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
 - [1.1 Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb)
 - [1.2 Python Basics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb)
@@ -112,3 +110,10 @@ teaching and learning the principles of Chemical Process Control.
 - [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
 - [C.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
 - [C.3 Optimal Control for Cooking Meats](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.03-Optimal-Control-for-Cooking-Meats.ipynb)
+
+**License Requirements.** The materials in this repository are available at 
+[http://github.com/jckantor/CBE30338](http://github.com/jckantor/CBE30338) for noncommercial use under terms of the 
+[Creative Commons Attribution Noncommericial ShareAlike License](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
+You are invited to fork this repository, and to use, adapt, remix these material for non-commericial purposes. The 
+license terms require you to give attribution and share your work under the same terms. Pull requests for corrections 
+and additions to these materials are most welcome.
