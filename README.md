@@ -12,7 +12,6 @@ laptop you will need to install Jupyter and Python 3, such as the excellent
 Please let me know (jeff at nd.edu) if you any thoughts or suggestions on how these notebooks could be improved for 
 teaching and learning the principles of Chemical Process Control.
 
-## Contents
 ---
 
 ### [Chapter 1. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
