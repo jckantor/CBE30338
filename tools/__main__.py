@@ -13,7 +13,7 @@ INDEX_HEADER = "# [{0}]({1})".format(DESC, PAGE)
 NBVIEWER_BASE_URL = "http://nbviewer.jupyter.org/github/{0}/{1}/blob/master/notebooks/".format(USER, REPO)
 
 # Header point to Table of Contents page viewed on nbviewer
-TOC_HEADER = "### [Table of Contents]({0}index.ipynb?flush=true)".format(NBVIEWER_BASE_URL)
+README_TOC = "### [Table of Contents]({0}index.ipynb?flush=true)".format(NBVIEWER_BASE_URL)
 
 # template for link to open notebooks in Google colaboratory
 COLAB_TEMPLATE = """
@@ -38,16 +38,19 @@ COURSE_INFO = COURSE_COMMENT + COURSE_INFO_HEADER
 # regular expression that matches notebook filenames to be included in the TOC
 REG = re.compile(r'(\d\d|[A-Z])\.(\d\d)-(.*)\.ipynb')
 
+# regular expression to match markdown figures
+FIG = re.compile(r'(?:!\[(.*?)\]\((.*?)\))')
+
 # functions to create Nav bar
 PREV_TEMPLATE = "< [{title}]({url}) "
 CONTENTS = "| [Contents](index.ipynb) |"
 NEXT_TEMPLATE = " [{title}]({url}) >"
 NAV_COMMENT = "<!--NAVIGATION-->\n"
 
-FMT = {'##':   '    - [{0}]({1})',
-       '###':  '        - [{0}]({1})',
-       '####': '            - [{0}]({1})',
-       '#####':'                - [{0}]({1})'}
+FMT = {'##':   '- [{0}]({1})',
+       '###':  '    - [{0}]({1})',
+       '####': '        - [{0}]({1})',
+       '#####':'            - [{0}]({1})'}
 
 
 class notebook():
@@ -60,8 +63,9 @@ class notebook():
         self.nb = nbformat.read(self.path, as_version=4)
         self.title = self.read_title()
         self.navbar = None
-        self.toc_entry = self.get_toc_entry()
-        self.toc = self.get_toc()
+        self.readme = self.get_readme()
+        self.index = self.get_index()
+        self.figs = self.get_figs()
 
     def read_title(self):
         title = None
@@ -94,7 +98,7 @@ class notebook():
             self.nb.cells.append(new_markdown_cell(source=self.navbar))
         nbformat.write(self.nb, self.path)
 
-    def get_toc_entry(self):
+    def get_readme(self):
         if self.chapter.isdigit():
             self.chapter = int(self.chapter)
             if self.chapter == 0:
@@ -105,8 +109,13 @@ class notebook():
             fmt = "\n### [Appendix {0}. {2}]({3})" if self.section in '00' else "- [{0}.{1} {2}]({3})"
         return fmt.format(self.chapter, int(self.section), self.title, self.url)
 
-    def get_toc(self):
-        toc = []
+    def get_index(self):
+        if isinstance(self.chapter, int):
+            self.chapter = int(self.chapter)
+            fmt = "\n## [Chapter {0}. {2}]({3})" if self.section in '00' else "\n### [{0}.{1} {2}]({3})"
+        else:
+            fmt = "\n## [Appendix {0}. {2}]({3})" if self.section in '00' else "\n### [{0}.{1} {2}]({3})"
+        toc = [fmt.format(self.chapter, int(self.section), self.title, self.url)]
         for cell in self.nb.cells:
             if cell.cell_type == "markdown":
                 if cell.source.startswith('##'):
@@ -115,6 +124,13 @@ class notebook():
                     url = '#'.join([self.url, '-'.join(header[1:])])
                     toc.append(FMT[header[0]].format(txt, url))
         return toc
+
+    def get_figs(self):
+        figs = []
+        for cell in self.nb.cells:
+            if cell.cell_type == "markdown":
+                figs.extend(FIG.findall(cell.source))
+        return figs
 
     def __gt__(self, nb):
         return self.filename > nb.filename
@@ -143,12 +159,15 @@ for n in notebooks:
 
 with open(README_FILE, 'w') as f:
     f.write(README_HEADER)
-    f.write(TOC_HEADER)
-    f.write('\n'.join([n.toc_entry for n in notebooks]))
+    f.write(README_TOC)
+    f.write('\n'.join([n.readme for n in notebooks]))
     f.write('\n' + README_FOOTER)
 
 with open(INDEX_FILE, 'w') as f:
     f.write(INDEX_HEADER)
-    f.write('\n'.join(['\n'.join([n.toc_entry, *n.toc]) for n in notebooks]))
+    #f.write('\n'.join(['\n'.join(n.index) for n in notebooks]))
+    for n in notebooks:
+        f.write('\n' + '\n'.join(n.index))
+        f.write('\n' + '\n'.join(["* Figure: [{0}]({1})".format(fig[0] if fig[0] else fig[1], fig[1]) for fig in n.figs]))
 
 os.system(' '.join(['notedown', INDEX_FILE, '>', INDEX_NB]))
