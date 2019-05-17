@@ -602,9 +602,9 @@
 
 
 ### [B.4 Fitting Step Test Data to Empirical Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb)
-    - [Read the Data File](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Read-the-Data-File)
+- [Read the Data File](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Read-the-Data-File)
 - [Parameter Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Parameter-Estimation)
-- [Fitting the Step Change Data to a First Order Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Fitting-the-Step-Change-Data-to-a-First-Order-Model)
+    - [Fitting the Step Change Data to a First Order Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Fitting-the-Step-Change-Data-to-a-First-Order-Model)
     - [Reading Saved Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Reading-Saved-Data)
     - [Estimating Gain and Time Constant](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#Estimating-Gain-and-Time-Constant)
 - [First Order plus Dead Time](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb#First-Order-plus-Dead-Time)
