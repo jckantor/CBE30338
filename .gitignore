@@ -4,13 +4,10 @@ ipopt
 .DS_Store
 
 .idea/
-*/.idea
 
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/
-
 .texpadtmp/
-*/.texpadtmp/
+
 *.aux
 *.log
 
@@ -19,6 +16,4 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-matlab/
-
-development/
+in-development/
