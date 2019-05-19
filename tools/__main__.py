@@ -6,20 +6,20 @@ import itertools
 
 from configure import *
 
-# Header on index page pointing back to github.io
-INDEX_HEADER = "# [{0}]({1})".format(DESC, PAGE)
+# Header on TOC page pointing back to github.io
+TOC_HEADER = f"# [{PAGE_TITLE}]({PAGE_URL})"
 
 # location of remote notebook directory
-NBVIEWER_BASE_URL = "http://nbviewer.jupyter.org/github/{0}/{1}/blob/master/notebooks/".format(USER, REPO)
+NBVIEWER_BASE_URL = f"http://nbviewer.jupyter.org/github/{GITHUB_USER}/{GITHUB_REPO}/blob/master/notebooks/"
 
 # Header point to Table of Contents page viewed on nbviewer
-README_TOC = "### [Table of Contents]({0}index.ipynb?flush=true)".format(NBVIEWER_BASE_URL)
+README_TOC = f"### [Table of Contents]({NBVIEWER_BASE_URL}toc.ipynb?flush=true)"
 
 # template for link to open notebooks in Google colaboratory
-COLAB_TEMPLATE = """
-<p><a href="https://colab.research.google.com/github/{0}/{1}/blob/master/notebooks/{2}"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a>
-"""
-COLAB_LINK = COLAB_TEMPLATE.format(USER, REPO, "{notebook_filename}")
+COLAB_LINK = f'<p><a href="https://colab.research.google.com/github/{GITHUB_USER}/{GITHUB_REPO}' \
+             '/blob/master/notebooks/{notebook_filename}">' + \
+             '<img align="left" src="https://colab.research.google.com/assets/colab-badge.svg"' + \
+             ' alt="Open in Colab" title="Open in Google Colaboratory"></a>'
 
 # location of the README.md file in the local repository
 README_FILE = os.path.join(os.path.dirname(__file__), '..', 'README.md')
@@ -27,110 +27,133 @@ README_FILE = os.path.join(os.path.dirname(__file__), '..', 'README.md')
 # location of notebook directory in the local repository
 NOTEBOOK_DIR = os.path.join(os.path.dirname(__file__), '..', 'notebooks')
 
-# location of the index files in the local respository
-INDEX_FILE = os.path.join(NOTEBOOK_DIR, 'index.md')
-INDEX_NB = os.path.join(NOTEBOOK_DIR, 'index.ipynb')
+# location of the table of contents files in the local respository
+TOC_FILE = os.path.join(NOTEBOOK_DIR, 'toc.md')
+TOC_NB = os.path.join(NOTEBOOK_DIR, 'toc.ipynb')
 
-# html comment used to tag the location of the course information in each notebook
-COURSE_COMMENT = "<!--COURSE_INFORMATION-->"
-COURSE_INFO = COURSE_COMMENT + COURSE_INFO_HEADER
+# tag the location of the course information in each notebook
+#NOTEBOOK_HEADER_TAG = "<!--NOTEBOOK_HEADER-->"
+NOTEBOOK_HEADER_TAG = "<!--NOTEBOOK_HEADER-->"
+NOTEBOOK_HEADER = "<!--NOTEBOOK_HEADER-->" + NOTEBOOK_HEADER_CONTENT
 
 # regular expression that matches notebook filenames to be included in the TOC
 REG = re.compile(r'(\d\d|[A-Z])\.(\d\d)-(.*)\.ipynb')
 
-# regular expression to match markdown figures
-FIG = re.compile(r'(?:!\[(.*?)\]\((.*?)\))')
-
-# functions to create Nav bar
+# nav bar templates
 PREV_TEMPLATE = "< [{title}]({url}) "
-CONTENTS = "| [Contents](index.ipynb) |"
+CONTENTS = "| [Contents](toc.ipynb) |"
 NEXT_TEMPLATE = " [{title}]({url}) >"
-NAV_COMMENT = "<!--NAVIGATION-->\n"
-
-FMT = {'##':   '- [{0}]({1})',
-       '###':  '    - [{0}]({1})',
-       '####': '        - [{0}]({1})',
-       '#####':'            - [{0}]({1})'}
+NAVBAR_TAG = "<!--NAVIGATION-->\n"
 
 
-class notebook():
+class nb():
+
     def __init__(self, filename):
         self.filename = filename
         self.path = os.path.join(NOTEBOOK_DIR, filename)
         self.chapter, self.section, _ = REG.match(filename).groups()
+        self.isfrontmatter = self.chapter in "00"
+        self.ischapter = self.chapter.isdigit() and (not self.chapter in "00")
+        self.isappendix = not (self.ischapter or self.isfrontmatter)
+        self.issection = not self.section in "00"
         self.url = os.path.join(NBVIEWER_BASE_URL, filename)
         self.colab_link = COLAB_LINK.format(notebook_filename=os.path.basename(self.filename))
-        self.nb = nbformat.read(self.path, as_version=4)
-        self.title = self.read_title()
+        self.source = nbformat.read(self.path, as_version=4)
         self.navbar = None
-        self.readme = self.get_readme()
-        self.index = self.get_index()
-        self.figs = self.get_figs()
 
-    def read_title(self):
-        title = None
-        for cell in self.nb.cells:
+    @property
+    def title(self):
+        for cell in self.source.cells:
             if cell.cell_type == "markdown":
                 if cell.source.startswith('#'):
-                    title = cell.source[1:].splitlines()[0].strip()
-                    break
-        return title
+                    return cell.source[1:].splitlines()[0].strip()
 
-    def write_course_info(self):
-        if self.nb.cells[0].source.startswith(COURSE_COMMENT):
-            print('- amending comment for: {0}'.format(self.filename))
-            self.nb.cells[0].source = COURSE_INFO
-        else:
-            print('- inserting comment for {0}'.format(self.filename))
-            self.nb.cells.insert(0, new_markdown_cell(COURSE_INFO))
-        nbformat.write(self.nb, self.path)
-
-    def write_navbar(self):
-        if self.nb.cells[1].source.startswith(NAV_COMMENT):
-            print("- amending navbar for {0}".format(self.filename))
-            self.nb.cells[1].source = self.navbar
-        else:
-            print("- inserting navbar for {0}".format(self.filename))
-            self.nb.cells.insert(1, new_markdown_cell(source=self.navbar))
-        if self.nb.cells[-1].source.startswith(NAV_COMMENT):
-            self.nb.cells[-1].source = self.navbar
-        else:
-            self.nb.cells.append(new_markdown_cell(source=self.navbar))
-        nbformat.write(self.nb, self.path)
-
-    def get_readme(self):
-        if self.chapter.isdigit():
-            self.chapter = int(self.chapter)
-            if self.chapter == 0:
-                fmt = "\n### [{2}]({3})" if self.section in '00' else "- [{2}]({3})"
-            else:
-                fmt = "\n### [Chapter {0}. {2}]({3})" if self.section in '00' else "- [{0}.{1} {2}]({3})"
-        else:
-            fmt = "\n### [Appendix {0}. {2}]({3})" if self.section in '00' else "- [{0}.{1} {2}]({3})"
-        return fmt.format(self.chapter, int(self.section), self.title, self.url)
-
-    def get_index(self):
-        if isinstance(self.chapter, int):
-            self.chapter = int(self.chapter)
-            fmt = "\n## [Chapter {0}. {2}]({3})" if self.section in '00' else "\n### [{0}.{1} {2}]({3})"
-        else:
-            fmt = "\n## [Appendix {0}. {2}]({3})" if self.section in '00' else "\n### [{0}.{1} {2}]({3})"
-        toc = [fmt.format(self.chapter, int(self.section), self.title, self.url)]
-        for cell in self.nb.cells:
+    FIG = re.compile(r'(?:!\[(.*?)\]\((.*?)\))')
+    @property
+    def figs(self):
+        figs = []
+        for cell in self.source.cells:
             if cell.cell_type == "markdown":
-                if cell.source.startswith('##'):
-                    header = cell.source.splitlines()[0].strip().split()
-                    txt = ' '.join(header[1:])
-                    url = '#'.join([self.url, '-'.join(header[1:])])
-                    toc.append(FMT[header[0]].format(txt, url))
+                figs.extend(self.__class__.FIG.findall(cell.source))
+        return figs
+
+    LINK = re.compile(r'(?:[^!]\[(.*?)\]\((.*?)\))')
+    @property
+    def links(self):
+        links = []
+        for cell in self.source.cells[2:-1]:
+            if cell.cell_type == "markdown":
+                links.extend(self.__class__.LINK.findall(cell.source))
+        return links
+
+    IMG = re.compile(r'<img')
+    @property
+    def imgs(self):
+        imgs = []
+        for cell in self.source.cells[2:-1]:
+            if cell.cell_type == "markdown":
+                imgs.extend(self.__class__.IMG.findall(cell.source))
+        return imgs
+
+    @property
+    def link(self):
+        if self.isfrontmatter:
+            return f"[{self.title}]({self.url})"
+        elif self.ischapter:
+            if not self.issection:
+                return f"[Chapter {int(self.chapter)}. {self.title}]({self.url})"
+            else:
+                return f"[{int(self.chapter)}.{int(self.section)} {self.title}]({self.url})"
+        else:
+            if not self.issection:
+                return f"[Appendix {self.chapter}. {self.title}]({self.url})"
+            else:
+                return f"[{self.chapter}.{int(self.section)} {self.title}]({self.url})"
+
+    @property
+    def readme(self):
+        return "- " + self.link if self.issection else "\n### " + self.link
+
+    @property
+    def toc(self):
+        toc = ["### " + self.link if self.issection else "\n## " + self.link]
+        hcells = (cell for cell in self.source.cells if cell.cell_type == "markdown" and cell.source.startswith("##"))
+        for hcell in hcells:
+            header = hcell.source.splitlines()[0].strip().split()
+            txt = ' '.join(header[1:])
+            url = '#'.join([self.url, '-'.join(header[1:])])
+            toc.append("    "*(len(header[0])-2) + f"- [{txt}]({url})")
         return toc
 
-    def get_figs(self):
-        figs = []
-        for cell in self.nb.cells:
+    ORPHAN = re.compile(r"^#+")
+    @property
+    def orphan_headers(self):
+        orphans = []
+        for cell in self.source.cells:
             if cell.cell_type == "markdown":
-                figs.extend(FIG.findall(cell.source))
-        return figs
+                 for line in cell.source.splitlines()[1:]:
+                     if self.__class__.ORPHAN.match(line):
+                         orphans.append(line)
+        return orphans
+
+    def write_header(self):
+        if self.source.cells[0].source.startswith(NOTEBOOK_HEADER_TAG):
+            print('- amending header for {0}'.format(self.filename))
+            self.source.cells[0].source = NOTEBOOK_HEADER
+        else:
+            print('- inserting header for {0}'.format(self.filename))
+            self.source.cells.insert(0, new_markdown_cell(NOTEBOOK_HEADER))
+        nbformat.write(self.source, self.path)
+
+    def write_navbar(self):
+        for cell in [self.source.cells[1], self.source.cells[-1]]:
+            if cell.source.startswith(NAVBAR_TAG):
+                print(f"- amending navbar for {self.filename}")
+                cell.source = self.navbar
+            else:
+                print(f"- inserting navbar for {self.filename}")
+                cell.insert(1, new_markdown_cell(source=self.navbar))
+        nbformat.write(self.source, self.path)
 
     def __gt__(self, nb):
         return self.filename > nb.filename
@@ -139,35 +162,64 @@ class notebook():
         return self.filename
 
 
-def set_navbars(notebooks):
-    a, b, c = itertools.tee(notebooks, 3)
-    next (c)
-    for prev_nb, this_nb, next_nb in zip(itertools.chain([None], a), b, itertools.chain(c, [None])):
-        this_nb.navbar = NAV_COMMENT
-        this_nb.navbar += PREV_TEMPLATE.format(title=prev_nb.title, url=prev_nb.url) if prev_nb else ''
-        this_nb.navbar += CONTENTS
-        this_nb.navbar += NEXT_TEMPLATE.format(title=next_nb.title, url=next_nb.url) if next_nb else ''
-        this_nb.navbar += this_nb.colab_link
+class nbcollection():
 
-notebooks = sorted([notebook(filename) for filename in os.listdir(NOTEBOOK_DIR) if REG.match(filename)])
+    def __init__(self, dir=NOTEBOOK_DIR):
+        self.notebooks = sorted([nb(filename) for filename in os.listdir(dir) if REG.match(filename)])
 
-set_navbars(notebooks)
+    def write_headers(self):
+        for nb in self.notebooks:
+            nb.write_header()
 
-for n in notebooks:
-    n.write_course_info()
-    n.write_navbar()
+    def write_navbars(self):
+        a, b, c = itertools.tee(self.notebooks, 3)
+        next (c)
+        for prev_nb, nb, next_nb in zip(itertools.chain([None], a), b, itertools.chain(c, [None])):
+            nb.navbar = NAVBAR_TAG
+            nb.navbar += PREV_TEMPLATE.format(title=prev_nb.title, url=prev_nb.url) if prev_nb else ''
+            nb.navbar += CONTENTS
+            nb.navbar += NEXT_TEMPLATE.format(title=next_nb.title, url=next_nb.url) if next_nb else ''
+            nb.navbar += nb.colab_link
+            nb.write_navbar()
 
-with open(README_FILE, 'w') as f:
-    f.write(README_HEADER)
-    f.write(README_TOC)
-    f.write('\n'.join([n.readme for n in notebooks]))
-    f.write('\n' + README_FOOTER)
+    def write_toc(self):
+        with open(TOC_FILE, 'w') as f:
+            print(TOC_HEADER, file=f)
+            for nb in self.notebooks:
+                f.write('\n')
+                f.write('\n'.join(nb.toc) + '\n')
+                if nb.figs:
+                    print("* Figures", file=f)
+                    for txt, url in nb.figs:
+                        print("    - [{0}]({1})".format(txt if txt else url, url), file=f)
+                if nb.links:
+                    print("* Links", file=f)
+                    for txt, url in nb.links:
+                        print(f"    - [{txt}]({url})", file=f)
+        os.system(' '.join(['notedown', TOC_FILE, '>', TOC_NB]))
 
-with open(INDEX_FILE, 'w') as f:
-    f.write(INDEX_HEADER)
-    #f.write('\n'.join(['\n'.join(n.index) for n in notebooks]))
-    for n in notebooks:
-        f.write('\n' + '\n'.join(n.index))
-        f.write('\n' + '\n'.join(["* Figure: [{0}]({1})".format(fig[0] if fig[0] else fig[1], fig[1]) for fig in n.figs]))
+    def write_readme(self):
+        with open(README_FILE, 'w') as f:
+            f.write(README_HEADER)
+            f.write(README_TOC)
+            f.write('\n'.join([nb.readme for nb in self.notebooks]))
+            f.write('\n' + README_FOOTER)
 
-os.system(' '.join(['notedown', INDEX_FILE, '>', INDEX_NB]))
+    def lint(self):
+        for nb in self.notebooks:
+            if nb.imgs:
+                print("\nConsider replacing HTML image tags with Markdown links ", nb.filename)
+                for img in nb.imgs:
+                    print(img)
+            if nb.orphan_headers:
+                print("\nOrphan headers in ", nb.filename)
+                for orphan in nb.orphan_headers:
+                    print(orphan)
+
+
+notebooks = nbcollection()
+notebooks.write_headers()
+notebooks.write_navbars()
+notebooks.write_toc()
+notebooks.write_readme()
+notebooks.lint()
