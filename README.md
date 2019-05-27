@@ -109,7 +109,6 @@ teaching and learning the principles of Chemical Process Control.
 ### [Appendix C. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.00-Student-Projects.ipynb)
 - [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
 - [C.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
-- [C.3 Optimal Control for Cooking Meats](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.03-Optimal-Control-for-Cooking-Meats.ipynb)
 
 **License Requirements.** The materials in this repository are available at 
 [https://github.com/jckantor/CBE30338/](https://github.com/jckantor/CBE30338/) for noncommercial use under terms of the 
