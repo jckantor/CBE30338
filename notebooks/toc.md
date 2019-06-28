@@ -1,7 +1,7 @@
-# [CBE 30338 Chemical Process Control](http://jckantor.github.io/CBE30338/)
+# [CBE30338](https://jckantor.github.io/CBE30338)
 
 
-## [Chapter 1. Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
+## [Chapter 1.0 Getting Started](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.00-Getting-Started.ipynb)
 
 ### [1.1 Getting Started with Python and Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb)
 - [Summary](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb#Summary)
@@ -94,7 +94,7 @@
     - [Dr. Kantor's Notes](https://github.com/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)
 
 
-## [Chapter 2. Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
+## [Chapter 2.0 Process Modeling](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.00-Process-Modeling.ipynb)
 
 ### [2.1 Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb)
 - [Intensive and Entensive Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb#Intensive-and-Entensive-Variables)
@@ -196,7 +196,7 @@
 ### [2.8 Model Library](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.08-Model-Library.ipynb)
 
 
-## [Chapter 3. Linearization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.00-Linearization.ipynb)
+## [Chapter 3.0 Linearization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.00-Linearization.ipynb)
 
 ### [3.1 Step Response of a Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb)
 - [Mass Balance for Tank with Constant Cross-Sectional Area](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb#Mass-Balance-for-Tank-with-Constant-Cross-Sectional-Area)
@@ -299,7 +299,7 @@
     - [Model 6. State Space Representation](#model6)
 
 
-## [Chapter 4. PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
+## [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
 - [Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb#Implementation)
 
 ### [4.1 Implementing PID Controllers with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
@@ -383,7 +383,7 @@
     - [Wikipedia page describing the Ziegler-Nichols method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)
 
 
-## [Chapter 5. Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
+## [Chapter 5.0 Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
 
 ### [5.1 Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb)
 * Links
@@ -460,7 +460,7 @@
     - [Ziegler-Nichols tuning](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)
 
 
-## [Chapter 6. Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
+## [Chapter 6.0 Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.00-Optimization.ipynb)
 
 ### [6.1 Unconstrained Scalar Optimization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb)
 - [Example: Reactor for a Series Reaction](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.01-Unconstrained-Scalar-Optimization.ipynb#Example:-Reactor-for-a-Series-Reaction)
@@ -551,7 +551,7 @@
 - [Example: Linear Production Model with Constraints with Duals](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.99-Pyomo-Examples.ipynb#Example:-Linear-Production-Model-with-Constraints-with-Duals)
 
 
-## [Chapter 7. Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
+## [Chapter 7.0 Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
 - [Available Solvers](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb#Available-Solvers)
 * Links
     - [ampl.com](https://ampl.com/products/solvers/open-source/)
@@ -621,14 +621,14 @@
 - [Subscripting Equations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.08-Path-Constraints.ipynb#Subscripting-Equations)
 
 
-## [Chapter 8. Predictive Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Predictive-Control.ipynb)
+## [Chapter 8.0 Predictive Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.00-Predictive-Control.ipynb)
 
 ### [8.1 Zero-Order Hold and Interpolation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb)
 - [Interpolation Function](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb#Interpolation-Function)
 - [Demonstration](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/08.01-Zero-Order-Hold-and-Interpolation.ipynb#Demonstration)
 
 
-## [Chapter 9. Discrete Events](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.00-Discrete-Events.ipynb)
+## [Chapter 9.0 Discrete Events](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.00-Discrete-Events.ipynb)
 
 ### [9.1 Scheduling State-Task Networks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb)
 - [Example (Kondili, et al., 1993)](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb#Example-(Kondili,-et-al.,-1993))
