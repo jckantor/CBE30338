@@ -203,7 +203,7 @@ teaching and learning the principles of Chemical Process Control.
 
 
 **License Requirements.** The materials in this repository are available at
-[]() for noncommercial use under terms of the
+[https://github.com/jckantor/CBE30338.git](https://github.com/jckantor/CBE30338.git) for noncommercial use under terms of the
 [Creative Commons Attribution Noncommericial ShareAlike License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 You are invited to fork this repository, and to use, adapt, remix these material for non-commericial purposes. The
 license terms require you to give attribution and share your work under the same terms. Pull requests for corrections
