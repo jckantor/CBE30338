@@ -114,6 +114,7 @@ teaching and learning the principles of Chemical Process Control.
 - [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
 - [C.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
 
+## Textbooks
 
 **License Requirements.** The materials in this repository are available at
 [https://github.com/jckantor/CBE30338.git](https://github.com/jckantor/CBE30338.git) for noncommercial use under terms of the
