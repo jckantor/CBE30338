@@ -3,8 +3,10 @@
 
 # CBE 30338 Chemical Process Control
 
-This repository comprises a collection of Jupyter/Python notebooks in support of **CBE 30338 Chemical Process Control**
-taught at the University of Notre Dame.
+This repository comprises a collection of Jupyter/Python notebooks in support of **CBE 30338 Chemical Process Control**,
+a course taught at the University of Notre Dame. Please note there is a companion site
+[**CBE 32338 Process Control Laboratory**](https://jckantor.github.io/CBE32338/) with additional notebooks demonstrating
+the practical implementation of these concepts using the Temperature Control Laboratory.
 
 The links below display the notebooks as regular HTML web pages. From there you can run the notebook on
 [Google Colaboratory](https://colab.research.google.com) or download to run on your own laptop. To run on your own
