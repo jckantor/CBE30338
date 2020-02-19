@@ -114,25 +114,6 @@ teaching and learning the principles of Chemical Process Control.
 - [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
 - [C.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
 
-## On-line textbooks, videos, and other teaching materials
-
-Åström, Karl Johan, and Richard M. Murray. Feedback systems: an introduction for scientists and engineers. Princeton university press, 2010. Most recent edition and corrections available at [http;//fbsbook.org](http;//fbsbook.org).
-
-Murray, Richard M. Supplement: Optimization-Based Control. Available at [http://www.cds.caltech.edu/~murray/amwiki/index.php?title=OBC:Main_Page](http://www.cds.caltech.edu/~murray/amwiki/index.php?title=OBC:Main_Page).
-
-Marlin, Thomas E. Process Control. 2nd Edition. New York: McGraw-Hill, 2000. This textbook is available on-line at [http://pc-textbook.mcmaster.ca/](http://pc-textbook.mcmaster.ca/).
-
-[The Michigan Chemical Engineering Process Dynamics and Controls Open Textbook](https://web.archive.org/web/20080827235300/http://controls.engin.umich.edu/wiki)
-
-[LearnChemE Process Control](https://www.youtube.com/playlist?list=PL4xAk5aclnUhfXrHhv_ZQfbQ6w6ahwfFQ)
-
-[BYU Process Dynamics and Control](http://apmonitor.com/che436/)
-
-[Control Guru](https://controlguru.com/)
-
-Beard, Randal W., Timothy W. McLain, and Cammy Peterson. Introduction to Feedback Control using Design Studies. BYU, 2020. Available at [https://controlbook.byu.edu/doku.php](https://controlbook.byu.edu/doku.php)
-
-Powell, K., Fundamentals of Smart Systems, Ch En 5960 / 6960, Online Course, 2017. [View Video List](http://apmonitor.com/che436/uploads/Main/Powell_Dynamics_and_Control.pdf)
 
 **License Requirements.** The materials in this repository are available at
 [https://github.com/jckantor/CBE30338.git](https://github.com/jckantor/CBE30338.git) for noncommercial use under terms of the

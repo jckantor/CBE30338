@@ -10,9 +10,9 @@
     - [Working with Dictionaries](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb#Working-with-Dictionaries)
     - [Plotting with Matplotlib](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb#Plotting-with-Matplotlib)
     - [Solve Equations using Sympy Library](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.ipynb#Solve-Equations-using-Sympy-Library)
-* Figures
+* Markdown Figures
     - [Screen Shot Jupyter Session](../images/Screen Shot Jupyter Session.png)
-* Links
+* Markdown Links
     - [Jupyter Notebook](http://jupyter.org/)
     - [Step 0: Gain Executable Access to Jupyter Notebooks](#step0)
     - [Step 1: Start a Jupyter Notebook Session](#step1)
@@ -56,7 +56,7 @@
     - [Importing in Python: Math and plotting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb#Importing-in-Python:-Math-and-plotting)
     - [Loops in Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb#Loops-in-Python)
 - [Additional Resources](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.02-Python-Basics.ipynb#Additional-Resources)
-* Links
+* Markdown Links
     - [Code Academy](https://www.codecademy.com/learn/python)
     - [Official Python Reference](https://docs.python.org/2/reference/)
     - [Learn Python the Hard Way](https://learnpythonthehardway.org/book/)
@@ -66,7 +66,7 @@
 - [Functions in Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb#Functions-in-Python)
 - [Numpy - "The Fundamental Package for Scientific Computing with Python"](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb#Numpy---"The-Fundamental-Package-for-Scientific-Computing-with-Python")
 - [Additional Resources](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.03-Python-Conditionals-and-Libraries.ipynb#Additional-Resources)
-* Links
+* Markdown Links
     - [Code Academy](https://www.codecademy.com/learn/learn-python)
     - [Official Python Reference](https://docs.python.org/3/reference/)
     - [Learn Python the Hard Way](https://learnpythonthehardway.org/book/)
@@ -85,11 +85,11 @@
         - [Step 3: Define the differential equations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb#Step-3:-Define-the-differential-equations)
         - [Step 4: Integrate Differential Equations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb#Step-4:-Integrate-Differential-Equations)
         - [Step 5: Plot](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/01.04-Python-Numeric-Integration-Revisited.ipynb#Step-5:-Plot)
-* Figures
+* Markdown Figures
     - [http://boredomtherapy.com/wp-content/uploads/2015/12/14-canadian-lynx-paws-cute.jpg](http://boredomtherapy.com/wp-content/uploads/2015/12/14-canadian-lynx-paws-cute.jpg)
     - [http://www.cbc.ca/kidscbc2/content/contests/cute_snowshoe1.jpg](http://www.cbc.ca/kidscbc2/content/contests/cute_snowshoe1.jpg)
     - [MainLynx.jpg](MainLynx.jpg)
-* Links
+* Markdown Links
     - [Github's Markdown Guide](https://guides.github.com/features/mastering-markdown/)
     - [Dr. Kantor's Notes](https://github.com/jckantor/CBE30338/blob/master/notebooks/HareLynx/Hare%20and%20Lynx%20Population%20Dynamics.ipynb)
 
@@ -99,7 +99,7 @@
 ### [2.1 Process Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb)
 - [Intensive and Entensive Variables](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb#Intensive-and-Entensive-Variables)
 - [Thermodynamic State](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.01-Process-Variables.ipynb#Thermodynamic-State)
-* Links
+* Markdown Links
     - [brake specific fuel consumption (BSFC)]()
 
 ### [2.2 Gravity Drained Tank](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.02-Gravity-Drained-Tank.ipynb)
@@ -141,7 +141,7 @@
 - [Exercise 3.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.04-Continuous-Product-Blending.ipynb#Exercise-3.)
 - [Proportional-Integral Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.04-Continuous-Product-Blending.ipynb#Proportional-Integral-Control)
 - [Exercise 4.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.04-Continuous-Product-Blending.ipynb#Exercise-4.)
-* Figures
+* Markdown Figures
     - [../images/Continuous Mixed Tank.png](../images/Continuous Mixed Tank.png)
 
 ### [2.5 Hare and Lynx Population Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.05-Hare-and-Lynx-Population-Dynamics.ipynb)
@@ -166,7 +166,7 @@
     - [3. Stable and Unstable Nodes](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.05-Hare-and-Lynx-Population-Dynamics.ipynb#3.-Stable-and-Unstable-Nodes)
 - [Summary](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.05-Hare-and-Lynx-Population-Dynamics.ipynb#Summary)
 - [Suggested Exercise](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.05-Hare-and-Lynx-Population-Dynamics.ipynb#Suggested-Exercise)
-* Links
+* Markdown Links
     - [Snowshoe hare](https://en.wikipedia.org/wiki/Snowshoe_hare)
     - [Canadian lynx](https://en.wikipedia.org/wiki/Canada_lynx)
     - [Stenseth, 1997](http://www.pnas.org/content/94/10/5147.full)
@@ -185,8 +185,8 @@
 - [Nullclines](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.06-Exothermic-CSTR.ipynb#Nullclines)
 - [Phase Plane Analysis](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.06-Exothermic-CSTR.ipynb#Phase-Plane-Analysis)
 - [Suggested Exercises](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.06-Exothermic-CSTR.ipynb#Suggested-Exercises)
-* Figures
-    - [Exothermic Reactor](../images/408px-Agitated_vessel.png)
+* Markdown Figures
+    - [Exothermic Reactor](./images/408px-Agitated_vessel.png)
 
 ### [2.7 Fed-Batch Bioreactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb)
 - [Model Development](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb#Model-Development)
@@ -205,7 +205,7 @@
     - [Fit for $K$](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb#Fit-for-$K$)
     - [Fit for $\tau$](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb#Fit-for-$\tau$)
     - [Comparing the linear approximation to the nonlinear simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.01-Step-Response-of-a-Gravity-Drained-Tank.ipynb#Comparing-the-linear-approximation-to-the-nonlinear-simulation)
-* Links
+* Markdown Links
     - [https://github.com/jckantor/CBE30338](https://github.com/jckantor/CBE30338)
 
 ### [3.2 Linear Approximation of a Process Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.02-Linear-Approximation-of-a-Process-Model.ipynb)
@@ -226,7 +226,7 @@
     - [First Order Reaction in a CSTR](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb#First-Order-Reaction-in-a-CSTR)
     - [Two Gravity Drained Tanks in Series](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb#Two-Gravity-Drained-Tanks-in-Series)
     - [Isothermal CSTR with second-order reaction](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.03-Linear-Approximation-of-a-Multivariable-Model.ipynb#Isothermal-CSTR-with-second-order-reaction)
-* Figures
+* Markdown Figures
     - [Gravity Drained Tanks](figures/03.03-GravityDrainedTanks.png)
 
 ### [3.4 Fitting First Order plus Time Delay to Step Response](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.04-Fitting-First-Order-plus-Time-Delay-to-Step-Response.ipynb)
@@ -256,12 +256,12 @@
     - [Analysis of the Results](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb#Analysis-of-the-Results)
 - [Problem Statement 2](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb#Problem-Statement-2)
 - [Solution Strategy 3: Periodic Dosing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb#Solution-Strategy-3:-Periodic-Dosing)
-* Figures
+* Markdown Figures
     - [../images/Pharmaockinetics1.png](../images/Pharmaockinetics1.png)
     - [../images/nihms-475924-f0001.jpg](../images/nihms-475924-f0001.jpg)
     - [../images/Pharmaockinetics2.png](../images/Pharmaockinetics2.png)
     - [../images/nihms-475924-f0001.jpg](../images/nihms-475924-f0001.jpg)
-* Links
+* Markdown Links
     - [antibiotic resistance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4378521/)
     - [Levison, Matthew E., and Julie H. Levison. “Pharmacokinetics and Pharmacodynamics of Antibacterial Agents.” Infectious disease clinics of North America 23.4 (2009): 791–vii. PMC. Web. 8 May 2017.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3675903/)
     - [Levison, Matthew E., and Julie H. Levison. “Pharmacokinetics and Pharmacodynamics of Antibacterial Agents.” Infectious disease clinics of North America 23.4 (2009): 791–vii. PMC. Web. 8 May 2017.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3675903/)
@@ -277,7 +277,7 @@
 - [Estimating Parameters for an Underdamped System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.06-Second-Order-Models.ipynb#Estimating-Parameters-for-an-Underdamped-System)
     - [Starting with a Physical Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.06-Second-Order-Models.ipynb#Starting-with-a-Physical-Model)
     - [Starting with a Step Response](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.06-Second-Order-Models.ipynb#Starting-with-a-Step-Response)
-* Figures
+* Markdown Figures
     - [2ndOrder.png](2ndOrder.png)
 
 ### [3.7 Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb)
@@ -286,11 +286,11 @@
     - [Part a.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb#Part-a.)
     - [Part b.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb#Part-b.)
     - [Further Calculations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb#Further-Calculations)
-* Figures
+* Markdown Figures
     - [Image of a two interacting tanks](../images/InteractingTanks.png)
 
 ### [3.8 Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb)
-* Links
+* Markdown Links
     - [Model 1. Steady State Response to a Pressure Differential](#model1)
     - [Model 2. Dynamic Response with Negligible Viscosity](#model2)
     - [Model 3. Dynamic Response with Viscous Dissipation](#model3)
@@ -307,7 +307,7 @@
 - [PID Control Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb#PID-Control-Implementation)
 - [Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb#Simulation)
 - [Analysis](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb#Analysis)
-* Links
+* Markdown Links
     - [here](https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/)
 
 ### [4.2 PID Control with Setpoint Weighting](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.02-PID_Control_with_Setpoint_Weighting.ipynb)
@@ -350,9 +350,9 @@
 - [Simulation 4. Interactive Controller Tuning](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb#Simulation-4.-Interactive-Controller-Tuning)
 - [Simulation 5. Using the PIDsim Controller Class](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb#Simulation-5.-Using-the-PIDsim-Controller-Class)
     - [Contents of PIDsim.py](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb#Contents-of-PIDsim.py)
-* Figures
+* Markdown Figures
     - [Exothermic Reactor](../images/408px-Agitated_vessel.png)
-* Links
+* Markdown Links
     - [DISCRETE PID CONTROLLER (PYTHON RECIPE)](http://code.activestate.com/recipes/577231-discrete-pid-controller/)
     - [ivPID](https://github.com/ivmech/ivPID)
     - [python-pid_controller](https://gist.github.com/chaosmail/8372717)
@@ -379,14 +379,14 @@
     - [Exercise: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb#Exercise:-PID-Control)
     - [Exercise: Alternative Tuning Rules](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb#Exercise:-Alternative-Tuning-Rules)
 - [References](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.12-Interactive-PID-Control-Tuning-with-Ziegler--Nichols.ipynb#References)
-* Links
+* Markdown Links
     - [Wikipedia page describing the Ziegler-Nichols method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)
 
 
 ## [Chapter 5.0 Frequency Domain Control Design](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.00-Frequency-Domain-Control-Design.ipynb)
 
 ### [5.1 Getting Started with Transfer Functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.01-Getting-Started-with-Transfer-Functions.ipynb)
-* Links
+* Markdown Links
     - [Python Control Systems Library](https://github.com/python-control/python-control)
     - [Python Control Systems Documentation](http://python-control.readthedocs.io/en/latest/)
     - [Installation](#1)
@@ -404,12 +404,12 @@
 - [Additional Examples](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb#Additional-Examples)
     - [Internal Model Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb#Internal-Model-Control)
     - [SEMD Figure 11-14](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.02-Closed--Loop-Transfer-Functions-for-Car-Cruise-Control.ipynb#SEMD-Figure-11-14)
-* Figures
+* Markdown Figures
     - [Cruise Control Block Diagram](../images/CruiseControl.png)
     - [Cruise Control Block Diagram](../images/CruiseControl2.png)
     - [Internal Model Control](../images/Internal_Model_Control.png)
     - [Internal Model Control](../images/E11-10.png)
-* Links
+* Markdown Links
     - [Application: Vehicle Cruise Control](#application)
     - [Closed-Loop Transfer Functions](#closedloop)
     - [Step Responses](#stepresponse)
@@ -425,7 +425,7 @@
     - [Setting Other Plotting Options](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating-Bode-Plots.ipynb#Setting-Other-Plotting-Options)
 - [Adding Features to the Bode Plot](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating-Bode-Plots.ipynb#Adding-Features-to-the-Bode-Plot)
     - [Crossover Frequency and Gain at Crossover](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.03-Creating-Bode-Plots.ipynb#Crossover-Frequency-and-Gain-at-Crossover)
-* Links
+* Markdown Links
     - [Python Control Systems Library](https://github.com/python-control/python-control)
     - [here](http://python-control.readthedocs.io/en/latest/)
     - [Python Control Systems Library](https://github.com/python-control/python-control)
@@ -436,7 +436,7 @@
     - [Computing Ultimate Gain and Period](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb#Computing-Ultimate-Gain-and-Period)
 - [Ziegler-Nichols Tuning Rules](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb#Ziegler-Nichols-Tuning-Rules)
     - [Interactive Tuning of a PID Controller](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.04-Controller-Tuning-Rules-in-Frequency-Domain.ipynb#Interactive-Tuning-of-a-PID-Controller)
-* Links
+* Markdown Links
     - [Python Control Systems Library](https://github.com/python-control/python-control)
 
 ### [5.5 Baroreflex as a Linear Control System](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb)
@@ -450,10 +450,10 @@
 - [Modifications to the PD Controller](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb#Modifications-to-the-PD-Controller)
 - [Conclusions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb#Conclusions)
     - [References](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/05.05-Baroreflex-as-a-Linear-Control-System.ipynb#References)
-* Figures
+* Markdown Figures
     - [baroreflex system](figures/05.05-nrcardio.2015.96-f2.jpg)
     - [baroreflex control diagram](figures/05.05-baroreflex.png)
-* Links
+* Markdown Links
     - [baroreflex](https://en.wikipedia.org/wiki/Baroreceptor)
     - [baroreceptors](https://en.wikipedia.org/wiki/Baroreceptor)
     - [Python Control Systems Library](https://pypi.python.org/pypi/control/0.7.0)
@@ -480,7 +480,7 @@
 - [What are the active constraints?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model.ipynb#What-are-the-active-constraints?)
 - [What is the incremental value of labor?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model.ipynb#What-is-the-incremental-value-of-labor?)
 - [Theory of Constraints](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.02-Linear-Production-Model.ipynb#Theory-of-Constraints)
-* Links
+* Markdown Links
     - [Pyomo](http://www.pyomo.org/)
     - [glpk](https://en.wikibooks.org/wiki/GLPK)
     - [scipy.optimize library](https://docs.scipy.org/doc/scipy/reference/optimize.html)
@@ -495,7 +495,7 @@
 - [Example: Linear Production Model with Constraints](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Production-Model-in-Pyomo.ipynb#Example:-Linear-Production-Model-with-Constraints)
 - [Python Lists, Sets, Dictionaries, and Iterators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Production-Model-in-Pyomo.ipynb#Python-Lists,-Sets,-Dictionaries,-and-Iterators)
     - [Data in Matrix/Vector Format](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.04-Linear-Production-Model-in-Pyomo.ipynb#Data-in-Matrix/Vector-Format)
-* Links
+* Markdown Links
     - [Pyomo](http://www.pyomo.org/)
     - [Anaconda package for Python 3.x](https://www.anaconda.com/download)
     - [glpk](https://en.wikibooks.org/wiki/GLPK)
@@ -528,9 +528,9 @@
 - [Cold Weather Product Requirements](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb#Cold-Weather-Product-Requirements)
 - [Optimization Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb#Optimization-Model)
 - [Display Composition](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.07-Design-of-a-Cold-Weather-Fuel.ipynb#Display-Composition)
-* Figures
+* Markdown Figures
     - [img/alcohol_stove.jpeg](img/alcohol_stove.jpeg)
-* Links
+* Markdown Links
     - [manufacturer's product](https://www.korellis.com/wordpress/wp-content/uploads/2016/05/Alcohol-Denatured.pdf)
 
 ### [6.8 Gasoline Blending](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/06.08-Gasoline-Blending.ipynb)
@@ -553,7 +553,7 @@
 
 ## [Chapter 7.0 Simulation and Optimal Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb)
 - [Available Solvers](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.00-Simulation-and-Optimal-Control.ipynb#Available-Solvers)
-* Links
+* Markdown Links
     - [ampl.com](https://ampl.com/products/solvers/open-source/)
 
 ### [7.1 Simulation and Optimal Control in Pharmacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-and-Optimal-Control-in-Pharmacokinetics.ipynb)
@@ -562,7 +562,7 @@
 - [Simulation of Fixed Infusion Rate Strategy](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-and-Optimal-Control-in-Pharmacokinetics.ipynb#Simulation-of-Fixed-Infusion-Rate-Strategy)
 - [Optimizing the Infusion Strategy](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-and-Optimal-Control-in-Pharmacokinetics.ipynb#Optimizing-the-Infusion-Strategy)
 - [Alternative Objectives](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.01-Simulation-and-Optimal-Control-in-Pharmacokinetics.ipynb#Alternative-Objectives)
-* Links
+* Markdown Links
     - [Google Colaboratory](https://colab.research.google.com/)
 
 ### [7.2 Soft Landing a Rocket](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Soft-Landing-a-Rocket.ipynb)
@@ -579,7 +579,7 @@
     - [How much fuel is burned?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Soft-Landing-a-Rocket.ipynb#How-much-fuel-is-burned?)
     - [Minimize fuel consumption.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Soft-Landing-a-Rocket.ipynb#Minimize-fuel-consumption.)
 - [Version 3: Rocket Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.02-Soft-Landing-a-Rocket.ipynb#Version-3:-Rocket-Model)
-* Links
+* Markdown Links
     - [Apollo 11 Landing on the Moon, July 20, 1969](https://youtu.be/k_OD2V6fMLQ)
     - [SpaceX Falcon Heavy Side Boosters Landing at Kennedy Space Center, February 6, 2018 ](https://youtu.be/u0-pfzKbh2k)
     - [Blue Origin, November 24, 2014](https://youtu.be/9pillaOxGCo?t=103)
@@ -597,7 +597,7 @@
 - [Simulation and Visualization](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.04-Simulation-of-an-Exothermic-CSTR.ipynb#Simulation-and-Visualization)
     - [Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.04-Simulation-of-an-Exothermic-CSTR.ipynb#Simulation)
 - [Effect of Cooling Temperature](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.04-Simulation-of-an-Exothermic-CSTR.ipynb#Effect-of-Cooling-Temperature)
-* Figures
+* Markdown Figures
     - [Exothermic Reactor](../../images/408px-Agitated_vessel.png)
 
 ### [7.5 First Order System in Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/07.05-First-Order-System-in-Pyomo.ipynb)
@@ -646,18 +646,18 @@
     - [Unit Batch Inventories](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb#Unit-Batch-Inventories)
     - [Gannt Chart](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb#Gannt-Chart)
 - [Trace of Events and States](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.01-Scheduling-Multipurpose-Batch-Processes-using-State--Task-Networks.ipynb#Trace-of-Events-and-States)
-* Figures
+* Markdown Figures
     - [Kondili_1993.png](Kondili_1993.png)
 
 ### [9.2 State-Task Networks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb)
 - [Description](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb#Description)
 - [Exercise](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb#Exercise)
 - [References](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.02-State--Task-Networks.ipynb#References)
-* Figures
+* Markdown Figures
     - [Kondili_1993.png](Kondili_1993.png)
 
 ### [9.3 Machine Bottleneck](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.03-Machine-Bottleneck.ipynb)
-* Links
+* Markdown Links
     - [Example](#Example)
     - [Modeling](#Modeling)
     - [Pyomo Model](#Pyomo)
@@ -668,7 +668,7 @@
 ## [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
 
 ### [A.1 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
-* Links
+* Markdown Links
     - [Simulation using scipy.integrate.odeint()](#section1)
     - [Typical Usage](#section1-1)
     - [What's Wrong with That? ](#section1-2)
@@ -695,14 +695,14 @@
     - [Step 3. Create the Animation Object](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-3.-Create-the-Animation-Object)
     - [Step 4. Render the Animation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-4.-Render-the-Animation)
 - [Example: Phase Plane Animation for an Exothermic Stirred-Tank Reactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Example:-Phase-Plane-Animation-for-an-Exothermic-Stirred-Tank-Reactor)
-* Links
+* Markdown Links
     - [https://github.com/jckantor/CBE30338](https://github.com/jckantor/CBE30338)
     - [Animating the Lorenz System in 3D](https://jakevdp.github.io/blog/2013/02/16/animating-the-lorentz-system-in-3d/)
     - [Embedding Matplotlib Animations in Jupyter Notebooks](http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-notebooks/)
     - [here](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg)
 
 ### [A.3 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Modular-Simulation-using-Python-Generators.ipynb)
-* Links
+* Markdown Links
     - [https://github.com/jckantor/CBE30338](https://github.com/jckantor/CBE30338)
     - [Simulation using scipy.integrate.odeint()](#section1)
     - [Typical Usage](#section1-1)
@@ -727,7 +727,7 @@
 
 ## [Appendix B. The Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-TCLab.ipynb)
 - [Hardware](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-TCLab.ipynb#Hardware)
-* Links
+* Markdown Links
     - [Temperature Control Laboratory](http://apmonitor.com/pdc/index.php/Main/ArduinoTemperatureControl)
     - [TCLab](https://github.com/jckantor/TCLab)
     - [README](https://github.com/jckantor/TCLab/blob/master/README.rst)
@@ -746,7 +746,7 @@
 - [The TCLab `Plotter`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-The-TCLab-Python-Package.ipynb#The-TCLab-`Plotter`)
 - [Using TCLab Offline](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-The-TCLab-Python-Package.ipynb#Using-TCLab-Offline)
 - [Running Diagnostics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-The-TCLab-Python-Package.ipynb#Running-Diagnostics)
-* Links
+* Markdown Links
     - [TCLab](https://github.com/jckantor/TCLab)
     - [TCLab-sketch](https://github.com/jckantor/TCLab-sketch)
     - [Arduino IDE](https://www.arduino.cc/en/Main/Software)
@@ -785,9 +785,9 @@
     - [Plotting the Analytical Solution](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.05-First-Order-Model-for-a-Single-Heater.ipynb#Plotting-the-Analytical-Solution)
 - [Matching the Model to Experimental Data](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.05-First-Order-Model-for-a-Single-Heater.ipynb#Matching-the-Model-to-Experimental-Data)
     - [Does this solution make sense?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.05-First-Order-Model-for-a-Single-Heater.ipynb#Does-this-solution-make-sense?)
-* Figures
+* Markdown Figures
     - [images/arduino_comsol.png](images/arduino_comsol.png)
-* Links
+* Markdown Links
     - [specific heat capacity for solids](https://en.wikipedia.org/wiki/Heat_capacity)
 
 ### [B.6 Two-Input, Two-Output Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.06-Two-Input-Two-Output-Model.ipynb)
@@ -811,7 +811,7 @@
 ### [B.9 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb)
 - [PID Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb#PID-Simulation)
 - [PID Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb#PID-Implementation)
-* Links
+* Markdown Links
     - [Web version available]( http://www.cds.caltech.edu/~murray/amwiki/index.php/Second_Edition)
 
 ### [B.10 Lab Assignment: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-PID-Control.ipynb)
@@ -826,7 +826,7 @@
 - [Example: Proportional-Integral Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb#Example:-Proportional-Integral-Control)
     - [Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb#Simulation)
     - [Experiment](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb#Experiment)
-* Links
+* Markdown Links
     - [here](https://jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/)
 
 ### [B.12 Open and Closed Loop Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.12-Open-and-Closed-Loop-Estimation.ipynb)
