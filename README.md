@@ -94,25 +94,9 @@ teaching and learning the principles of Chemical Process Control.
 - [A.2 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb)
 - [A.3 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Modular-Simulation-using-Python-Generators.ipynb)
 
-### [Appendix B. The Temperature Control Laboratory](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-TCLab.ipynb)
-- [B.1 The TCLab Python Package](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-The-TCLab-Python-Package.ipynb)
-- [B.2 Relay Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.02-Relay-Control.ipynb)
-- [B.3 Step Testing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.03-Step-Testing.ipynb)
-- [B.4 Fitting Step Test Data to Empirical Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.04-Fitting-Step-Test-Data-to-Empirical-Models.ipynb)
-- [B.5 First Order Model for a Single Heater](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.05-First-Order-Model-for-a-Single-Heater.ipynb)
-- [B.6 Two-Input, Two-Output Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.06-Two-Input-Two-Output-Model.ipynb)
-- [B.7 Two State Model for a Single Heater](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.07-Two-State-Model-for-a-Single-Heater.ipynb)
-- [B.8 Four State Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.08-Four-State-Model.ipynb)
-- [B.9 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.09-PID_Control.ipynb)
-- [B.10 Lab Assignment: PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.10-Lab-Assignment-PID-Control.ipynb)
-- [B.11 Coding Controllers with Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.11-Coding-Controllers-with-Python-Generators.ipynb)
-- [B.12 Open and Closed Loop Estimation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.12-Open-and-Closed-Loop-Estimation.ipynb)
-- [B.13 Simulation, Control, and Estimation using Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.13-Optimization-Control-and-Estimation-using-Pyomo.ipynb)
-- [B.14 Simulation, Control, and Estimation using Pyomo](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.14-Optimization-Control-and-Estimation-using-Pyomo-With-Windows-ipopt.ipynb)
-
-### [Appendix C. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.00-Student-Projects.ipynb)
-- [C.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
-- [C.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/C.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
+### [Appendix B. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-Student-Projects.ipynb)
+- [B.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
+- [B.2 Visual Tracking of an Object with a Drone](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.02-Visual-Tracking-of-an-Object-with-a-Drone.ipynb)
 
 
 **License Requirements.** The materials in this repository are available at
