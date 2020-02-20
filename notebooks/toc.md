@@ -289,15 +289,6 @@
 * Markdown Figures
     - [Image of a two interacting tanks](../images/InteractingTanks.png)
 
-### [3.8 Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb)
-* Markdown Links
-    - [Model 1. Steady State Response to a Pressure Differential](#model1)
-    - [Model 2. Dynamic Response with Negligible Viscosity](#model2)
-    - [Model 3. Dynamic Response with Viscous Dissipation](#model3)
-    - [Model 4. Second Order System in Standard Form](#model4)
-    - [Model 5. Dynamic Response to Sinusoidal Input](#model5)
-    - [Model 6. State Space Representation](#model6)
-
 
 ## [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
 - [Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb#Implementation)
