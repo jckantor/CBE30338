@@ -42,6 +42,7 @@ teaching and learning the principles of Chemical Process Control.
 - [3.5 One Compartment Pharmacokinetics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.05-One-Compartment-Pharmacokinetics.ipynb)
 - [3.6 Second Order Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.06-Second-Order-Models.ipynb)
 - [3.7 Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb)
+- [3.8 Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb)
 
 ### [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
 - [4.1 Implementing PID Controllers with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
