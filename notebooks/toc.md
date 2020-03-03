@@ -298,18 +298,6 @@
     - [Model 5. Dynamic Response to Sinusoidal Input](#model5)
     - [Model 6. State Space Representation](#model6)
 
-### [3.9 Modeling the Coronavirus COVID-19 Outbreak](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb)
-- [The SARS-CoV-2 Coronavirus](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#The-SARS-CoV-2-Coronavirus)
-- [References](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#References)
-- [Model 1. SIR model for an infectious disease](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-1.-SIR-model-for-an-infectious-disease)
-- [Model 2. SEIR model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-2.-SEIR-model)
-- [Model 3. Mitigation and Social Distancing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-3.-Mitigation-and-Social-Distancing)
-- [Model 4. Improving the fidelity of the model.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-4.-Improving-the-fidelity-of-the-model.)
-- [Additional Modeling Opportunities. Transportation, power law kinetics, etc.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Additional-Modeling-Opportunities.-Transportation,-power-law-kinetics,-etc.)
-* Markdown Links
-    - [COVID-19](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
-    - [Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
-
 
 ## [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
 - [Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb#Implementation)
