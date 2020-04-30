@@ -298,17 +298,30 @@
     - [Model 5. Dynamic Response to Sinusoidal Input](#model5)
     - [Model 6. State Space Representation](#model6)
 
-### [3.9 Modeling and Control of a Coronavirus COVID-19 Outbreak in a Campus Environment](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb)
+### [3.9 Modeling and Control of a Campus Outbreak of Coronavirus COVID-19](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb)
 - [1. Brief background on the SARS-CoV-2 Coronavirus and COVID-19](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#1.-Brief-background-on-the-SARS-CoV-2-Coronavirus-and-COVID-19)
 - [Model 1. SIR model for an infectious disease](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-1.-SIR-model-for-an-infectious-disease)
+    - [Readings](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Readings)
+    - [Introduction to SIR models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Introduction-to-SIR-models)
+    - [Key Properties of the SIR Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Key-Properties-of-the-SIR-Model)
+    - [Simulation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Simulation)
+    - [How many people will be infected following an outbreak?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#How-many-people-will-be-infected-following-an-outbreak?)
 - [Model 2. SEIR model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-2.-SEIR-model)
 - [Model 3. Mitigation and Social Distancing](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-3.-Mitigation-and-Social-Distancing)
+    - [Social Distancing Strategies for the Campus](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Social-Distancing-Strategies-for-the-Campus)
 - [Model 4. Improving the fidelity of the model.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Model-4.-Improving-the-fidelity-of-the-model.)
 - [Additional Modeling Opportunities. Transportation, power law kinetics, etc.](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb#Additional-Modeling-Opportunities.-Transportation,-power-law-kinetics,-etc.)
 * Markdown Links
     - [COVID-19](https://www.who.int/health-topics/coronavirus)
-    - [WHO Situation Dashboard](https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd)
-    - [Johns Hopkins CSSE Department](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+    - [global health emergency by the World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019)
+    - [Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+    - [WHO Novel Coronavirus (COVID-19) Situation](https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd)
+    - [Cell Press Coronavirus Resource Hub](https://www.cell.com/2019-nCOV)
+    - [Lancet COVID-19 Resource Centre](https://www.thelancet.com/coronavirus)
+    - [medRxiv preprint server search on COVID-19](https://www.medrxiv.org/search/COVID-19%20numresults%3A50%20sort%3Apublication-date%20direction%3Adescending)
+    - [New England Journal of Medicine Coverage on Coronavirus (COVID-19)](https://www.nejm.org/coronavirus)
+    - [WHO Database of publications on coronavirus disease (COVID-19)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov)
+    - [CDC Social Distancing](https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-ihe-response.html)
 
 
 ## [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
@@ -679,7 +692,9 @@
 
 ## [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
 
-### [A.1 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
+### [A.1 Python Utilities for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb)
+
+### [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 * Markdown Links
     - [Simulation using scipy.integrate.odeint()](#section1)
     - [Typical Usage](#section1-1)
@@ -701,19 +716,19 @@
     - [Modular Simulation of Cascade Control for Two Tanks in Series](#section4-3)
     - [generators and iterators](http://nvie.com/posts/iterators-vs-generators/)
 
-### [A.2 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb)
-- [Step-by-Step Approach to Animation with Matplotlib](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-by-Step-Approach-to-Animation-with-Matplotlib)
-    - [Step 2. Define a function to draw each frame](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-2.-Define-a-function-to-draw-each-frame)
-    - [Step 3. Create the Animation Object](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-3.-Create-the-Animation-Object)
-    - [Step 4. Render the Animation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Step-4.-Render-the-Animation)
-- [Example: Phase Plane Animation for an Exothermic Stirred-Tank Reactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb#Example:-Phase-Plane-Animation-for-an-Exothermic-Stirred-Tank-Reactor)
+### [A.3 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb)
+- [Step-by-Step Approach to Animation with Matplotlib](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb#Step-by-Step-Approach-to-Animation-with-Matplotlib)
+    - [Step 2. Define a function to draw each frame](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb#Step-2.-Define-a-function-to-draw-each-frame)
+    - [Step 3. Create the Animation Object](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb#Step-3.-Create-the-Animation-Object)
+    - [Step 4. Render the Animation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb#Step-4.-Render-the-Animation)
+- [Example: Phase Plane Animation for an Exothermic Stirred-Tank Reactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb#Example:-Phase-Plane-Animation-for-an-Exothermic-Stirred-Tank-Reactor)
 * Markdown Links
     - [https://github.com/jckantor/CBE30338](https://github.com/jckantor/CBE30338)
     - [Animating the Lorenz System in 3D](https://jakevdp.github.io/blog/2013/02/16/animating-the-lorentz-system-in-3d/)
     - [Embedding Matplotlib Animations in Jupyter Notebooks](http://louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-notebooks/)
     - [here](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg)
 
-### [A.3 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Modular-Simulation-using-Python-Generators.ipynb)
+### [A.4 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.04-Modular-Simulation-using-Python-Generators.ipynb)
 * Markdown Links
     - [https://github.com/jckantor/CBE30338](https://github.com/jckantor/CBE30338)
     - [Simulation using scipy.integrate.odeint()](#section1)
