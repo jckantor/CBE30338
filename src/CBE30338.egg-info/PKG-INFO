@@ -1,6 +1,6 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: CBE30338
-Version: 0.0.1
+Version: 0.0.2
 Summary: Python code base for CBE30338 Chemical Process Control
 Home-page: UNKNOWN
 Author: Jeffrey Kantor
@@ -51,7 +51,7 @@ Description:
         - [3.6 Second Order Models](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.06-Second-Order-Models.ipynb)
         - [3.7 Interacting Tanks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.07-Interacting-Tanks.ipynb)
         - [3.8 Manometer Models and Dynamics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.08-Manometer-Models-and-Dynamics.ipynb)
-        - [3.9 Modeling and Control of a Coronavirus COVID-19 Outbreak in a Campus Environment](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb)
+        - [3.9 Modeling and Control of a Campus Outbreak of Coronavirus COVID-19](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/03.09-COVID-19.ipynb)
         
         ### [Chapter 4.0 PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.00-PID_Control.ipynb)
         - [4.1 Implementing PID Controllers with Python Yield Statement](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.01-Implementing_PID_Control_with_Python_Yield_Statement.ipynb)
@@ -101,9 +101,10 @@ Description:
         - [9.3 Machine Bottleneck](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.03-Machine-Bottleneck.ipynb)
         
         ### [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
-        - [A.1 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
-        - [A.2 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Animation-in-Jupyter-Notebooks.ipynb)
-        - [A.3 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Modular-Simulation-using-Python-Generators.ipynb)
+        - [A.1 Python Utilities for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb)
+        - [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
+        - [A.3 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb)
+        - [A.4 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.04-Modular-Simulation-using-Python-Generators.ipynb)
         
         ### [Appendix B. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-Student-Projects.ipynb)
         - [B.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
@@ -121,3 +122,4 @@ Classifier: Development Status :: 4 - Beta
 Classifier: Framework :: Jupyter
 Classifier: Intended Audience :: Education
 Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

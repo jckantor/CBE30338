@@ -693,6 +693,7 @@
 ## [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
 
 ### [A.1 Python Utilities for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb)
+- [`plotter()`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb#`plotter()`)
 
 ### [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 * Markdown Links
