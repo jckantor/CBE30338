@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plotter(*titles):
+def plotter(*titles, **kwargs):
     """Returns a list of axes corresponding to a given list of title strings."""
-    fig, ax = plt.subplots(len(titles), 1, figsize=(8, 1+2.5*len(titles)))
+    fig, ax = plt.subplots(len(titles), figsize=(8, 1+2.5*len(titles)), **kwargs)
     if len(titles) > 1:
         for (a, title) in zip(ax, titles):
             a.set_xlabel("time / seconds")

@@ -93,7 +93,7 @@ teaching and learning the principles of Chemical Process Control.
 - [9.3 Machine Bottleneck](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/09.03-Machine-Bottleneck.ipynb)
 
 ### [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
-- [A.1 Python Utilities for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb)
+- [A.1 Python Library for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb)
 - [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 - [A.3 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb)
 - [A.4 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.04-Modular-Simulation-using-Python-Generators.ipynb)

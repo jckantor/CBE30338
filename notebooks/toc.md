@@ -187,7 +187,7 @@
 - [Suggested Exercises](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.06-Exothermic-CSTR.ipynb#Suggested-Exercises)
 * Markdown Figures
     - [Exothermic Reactor](./images/408px-Agitated_vessel.png)
-
+* Tags:
 ### [2.7 Fed-Batch Bioreactor](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb)
 - [Model Development](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb#Model-Development)
 - [Python Implementation](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/02.07-Fed-Batch-Bioreactor.ipynb#Python-Implementation)
@@ -366,7 +366,7 @@
 - [PID Control](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.10-PID-Control.ipynb#PID-Control)
 - [Exercise 1. Is the transfer from manual to automatic bumpless?](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.10-PID-Control.ipynb#Exercise-1.-Is-the-transfer-from-manual-to-automatic-bumpless?)
 - [Exercise 2](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.10-PID-Control.ipynb#Exercise-2)
-
+* Tags:
 ### [4.11 Implementing PID Control in Nonlinear Simulations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb)
 - [Model](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb#Model)
 - [Simulation 1. Same Initial Condition, different values of $q_c$](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/04.11-Implementing-PID-Control-in-Nonlinear-Simulations.ipynb#Simulation-1.-Same-Initial-Condition,-different-values-of-$q_c$)
@@ -692,8 +692,19 @@
 
 ## [Appendix A. Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
 
-### [A.1 Python Utilities for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb)
-- [`plotter()`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Utilities-for-CBE30338.ipynb#`plotter()`)
+### [A.1 Python Library for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb)
+- [Some Python basics](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Some-Python-basics)
+    - [Python functions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Python-functions)
+        - [Functions are Python objects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Functions-are-Python-objects)
+        - [Create simple functions with `lambda`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Create-simple-functions-with-`lambda`)
+        - [Create complex functions with `def`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Create-complex-functions-with-`def`)
+    - [Comprehensions](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#Comprehensions)
+    - [`map`, `filter`, `reduce`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#`map`,-`filter`,-`reduce`)
+- [`CBE30338.plotter()`](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb#`CBE30338.plotter()`)
+* Markdown Links
+    - [Additional Python](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.00-Additional-Python.ipynb)
+    - [Contents](toc.ipynb)
+    - [Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 
 ### [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 * Markdown Links
