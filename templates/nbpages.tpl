@@ -4,7 +4,7 @@
 {% if cell['metadata'].get('tags', []) %}
     <div style="background-color:white; border:thin solid grey; margin-left:95px; margin-right:6px">
     {% for tag in cell['metadata'].get('tags', []) %}
-        &nbsp; <a href="https://jckantor.github.io/nbpages/tag_index.html#{{ tag }}">{{ tag }}</a>
+        &nbsp; <a href="https://jckantor.github.io/CBE30338/tag_index.html#{{ tag }}">{{ tag }}</a>
     {% endfor %}
     </div>
     {{ super() }}

@@ -3,6 +3,7 @@
 # CBE30338
 
 ### [Table of Contents](https://jckantor.github.io/CBE30338/toc.html)
+### [Tag Index](https://jckantor.github.io/CBE30338/tag_index.html)
 
 ### [Chapter 1.0 Getting Started](https://jckantor.github.io/CBE30338/01.00-Getting-Started.html)
 - [1.1 Getting Started with Python and Jupyter Notebooks](https://jckantor.github.io/CBE30338/01.01-Getting-Started-with-Python-and-Jupyter-Notebooks.html)
