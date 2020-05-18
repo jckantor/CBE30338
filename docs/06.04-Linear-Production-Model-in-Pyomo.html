@@ -13095,7 +13095,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> |</p>
+&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.04-Linear-Programming-in-Pyomo.html">6.4 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a></p>
 
 </div>
 </div>
@@ -13257,7 +13257,7 @@ x + y &amp; \leq 80  &amp; \mbox{labor A constraint} \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6.4.4.1-Step-1.-Import-Pyomo.">6.4.4.1 Step 1. Import Pyomo.<a class="anchor-link" href="#6.4.4.1-Step-1.-Import-Pyomo.">&#182;</a></h4><p>The first step in any Pyomo project is to import relevant components of the Pyomo library. This can be done with the following python statement.</p>
+<h3 id="6.4.4.1-Step-1.-Import-Pyomo.">6.4.4.1 Step 1. Import Pyomo.<a class="anchor-link" href="#6.4.4.1-Step-1.-Import-Pyomo.">&#182;</a></h3><p>The first step in any Pyomo project is to import relevant components of the Pyomo library. This can be done with the following python statement.</p>
 
 <pre><code>from pyomo.environ import *</code></pre>
 
@@ -13271,7 +13271,7 @@ x + y &amp; \leq 80  &amp; \mbox{labor A constraint} \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6.4.4.2-Step-2.-Create-the-model-object.">6.4.4.2 Step 2. Create the model object.<a class="anchor-link" href="#6.4.4.2-Step-2.-Create-the-model-object.">&#182;</a></h4><p>Pyomo provides two distinct methods to create models. Here we use <code>ConcreteModel()</code> to create a model instance which is appropriate when all of the data needed to complete the model is avaiable at the current time.</p>
+<h3 id="6.4.4.2-Step-2.-Create-the-model-object.">6.4.4.2 Step 2. Create the model object.<a class="anchor-link" href="#6.4.4.2-Step-2.-Create-the-model-object.">&#182;</a></h3><p>Pyomo provides two distinct methods to create models. Here we use <code>ConcreteModel()</code> to create a model instance which is appropriate when all of the data needed to complete the model is avaiable at the current time.</p>
 
 <pre><code>model = ConcreteModel()
 
@@ -13288,7 +13288,7 @@ x + y &amp; \leq 80  &amp; \mbox{labor A constraint} \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6.4.4.3-Step-3.-Add-the-Decision-Variables,-Objective,-and-Constraints-to-the-model-object.">6.4.4.3 Step 3. Add the Decision Variables, Objective, and Constraints to the model object.<a class="anchor-link" href="#6.4.4.3-Step-3.-Add-the-Decision-Variables,-Objective,-and-Constraints-to-the-model-object.">&#182;</a></h4><p>The first major component of a Pyomo model are decision variables which are added as fields to <code>model</code>. In the case we name the fields <code>model.x</code> and <code>model.y</code> corresponding to $x$ and $y$ in the process model. The Python class <code>Var()</code> is used to specify these as real numbers that must be greater than or equal to zero.</p>
+<h3 id="6.4.4.3-Step-3.-Add-the-Decision-Variables,-Objective,-and-Constraints-to-the-model-object.">6.4.4.3 Step 3. Add the Decision Variables, Objective, and Constraints to the model object.<a class="anchor-link" href="#6.4.4.3-Step-3.-Add-the-Decision-Variables,-Objective,-and-Constraints-to-the-model-object.">&#182;</a></h3><p>The first major component of a Pyomo model are decision variables which are added as fields to <code>model</code>. In the case we name the fields <code>model.x</code> and <code>model.y</code> corresponding to $x$ and $y$ in the process model. The Python class <code>Var()</code> is used to specify these as real numbers that must be greater than or equal to zero.</p>
 
 <pre><code>model.x = Var(domain=NonNegativeReals)
 model.y = Var(domain=NonNegativeReals)
@@ -13316,7 +13316,7 @@ model.laborB = Constraint(expr = 2*model.x + model.y &lt;= 100)</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6.4.4.4-Step-4.--Create-a-solver-object-and-solve.">6.4.4.4 Step 4.  Create a solver object and solve.<a class="anchor-link" href="#6.4.4.4-Step-4.--Create-a-solver-object-and-solve.">&#182;</a></h4><p>The Pyomo libary includes a <code>SolverFactory()</code> class used to specify a solver. In this case, because the problem is a linear programming problem, we use the <code>glpk</code> solver.</p>
+<h3 id="6.4.4.4-Step-4.--Create-a-solver-object-and-solve.">6.4.4.4 Step 4.  Create a solver object and solve.<a class="anchor-link" href="#6.4.4.4-Step-4.--Create-a-solver-object-and-solve.">&#182;</a></h3><p>The Pyomo libary includes a <code>SolverFactory()</code> class used to specify a solver. In this case, because the problem is a linear programming problem, we use the <code>glpk</code> solver.</p>
 
 <pre><code>results = SolverFactory('glpk').solve(model)
 results.write()
@@ -13336,7 +13336,7 @@ if results.solver.status == 'ok':
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6.4.4.5-Step-5.-Display-the-solution.">6.4.4.5 Step 5. Display the solution.<a class="anchor-link" href="#6.4.4.5-Step-5.-Display-the-solution.">&#182;</a></h4><p>Most applications will require access to specific components of the model. If a solution is found, the model will include methods with the same name as the fields created above, and which can be used to access solution values.</p>
+<h3 id="6.4.4.5-Step-5.-Display-the-solution.">6.4.4.5 Step 5. Display the solution.<a class="anchor-link" href="#6.4.4.5-Step-5.-Display-the-solution.">&#182;</a></h3><p>Most applications will require access to specific components of the model. If a solution is found, the model will include methods with the same name as the fields created above, and which can be used to access solution values.</p>
 
 <pre><code>print('Profit = ', model.profit())
 
@@ -13609,7 +13609,7 @@ x[ 1 ] = 5.0
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> |</p>
+&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.04-Linear-Programming-in-Pyomo.html">6.4 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a></p>
 
 </div>
 </div>
