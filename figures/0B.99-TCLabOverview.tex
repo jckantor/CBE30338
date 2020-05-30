@@ -1,0 +1,55 @@
+\documentclass[tikz]{standalone}
+\usepackage{units}
+\usepackage{helvet}
+\usepackage[T1]{sansmath}
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont
+
+\usetikzlibrary{arrows,positioning} 
+
+\begin{document}
+\begin{sansmath}
+ 
+\tikzstyle{block} = [
+    draw, 
+    minimum height = 1.0cm,
+    minimum width = 5.0cm,
+    rounded corners,
+    fill=yellow!20,
+    rectangle,
+    text centered]
+
+\tikzstyle{env} = [
+    draw, 
+    minimum height = 4.0cm,
+    minimum width = 6.0cm,
+    rounded corners,
+    fill=blue!20,
+    rectangle,
+    text centered]
+
+\begin{tikzpicture}[auto,thick,node distance = 1cm]
+    %\draw[step=1cm,gray,very thin] (0,0) grid (16,9);
+  
+    \draw (5,7) node[env] (laptop) {};
+    \draw (5,2) node[env] (device) {};
+    \draw (5,8) node[block] (top) {\large\bf Jupyter notebooks};
+    \draw (5,6) node[block] (mid) {\large\bf TCLab};
+    \draw (5,3) node[block] (bot) {\large\bf sketch.ino};
+    \draw (5,1) node[block] (ard) {\large\bf Arduino};
+
+    \draw[->, ultra thick] (top) ++(-1,-0.5) -- ++(0,-1);
+    \draw[->, ultra thick] (mid) ++(-1,-0.5) -- ++(0,-2);
+    \draw[->, ultra thick] (bot) ++(-1,-0.5) -- ++(0,-1);
+
+    \draw[<-, ultra thick] (top) ++(1,-0.5) -- ++(0,-1);
+    \draw[<-, ultra thick] (mid) ++(1,-0.5) -- ++(0,-2);
+    \draw[<-, ultra thick] (bot) ++(1,-0.5) -- ++(0,-1);
+
+    \draw (7,4.5) node {USB};
+    \draw (2.5,8.75) node[right] {Laptop};
+    \draw (2.5,0.25) node[right] {Arduino};	
+
+\end{tikzpicture}
+\end{sansmath}
+\end{document}
