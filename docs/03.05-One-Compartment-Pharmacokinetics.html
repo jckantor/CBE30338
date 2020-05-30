@@ -13190,7 +13190,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13221,7 +13221,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">V</span> <span class="o">=</span> <span class="mi">4</span>          <span class="c1"># liters</span>
@@ -13255,7 +13255,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">u</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -13287,7 +13287,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
@@ -13303,7 +13303,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;One Compartment Model with Known Initial Condition&#39;</span><span class="p">);</span>
     
 <span class="n">plotConcentration</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;figures/Pharmaockinetics1.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./figures/Pharmaockinetics1.png&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13349,8 +13349,8 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="figures/Pharmaockinetics1.png" alt=""></td>
-<td style="text-align:center"><img src="figures/nihms-475924-f0001.jpg" alt=""></td>
+<td style="text-align:center"><img src="./figures/Pharmaockinetics1.png" alt=""></td>
+<td style="text-align:center"><img src="./figures/nihms-475924-f0001.jpg" alt=""></td>
 </tr>
 </tbody>
 </table>
