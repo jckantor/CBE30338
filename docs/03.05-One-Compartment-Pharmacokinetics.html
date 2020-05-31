@@ -13350,7 +13350,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <tbody>
 <tr>
 <td style="text-align:center"><img src="./figures/Pharmaockinetics1.png" alt=""></td>
-<td style="text-align:center"><img src="./figures/nihms-475924-f0001.jpg" alt=""></td>
+<td style="text-align:center"><img src="figures/nihms-475924-f0001.jpg" alt=""></td>
 </tr>
 </tbody>
 </table>
@@ -13492,7 +13492,7 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Cinitial</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13500,7 +13500,7 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
 <span class="n">C</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">deriv</span><span class="p">,</span> <span class="n">Cinitial</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
 
 <span class="n">plotConcentration</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;figures/Pharmaockinetics2.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./figures/Pharmaockinetics2.png&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13546,8 +13546,8 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="figures/Pharmaockinetics2.png" alt=""></td>
-<td style="text-align:center"><img src="figures/nihms-475924-f0001.jpg" alt=""></td>
+<td style="text-align:center"><img src="./figures/Pharmaockinetics2.png" alt=""></td>
+<td style="text-align:center"><img src="./figures/nihms-475924-f0001.jpg" alt=""></td>
 </tr>
 </tbody>
 </table>
