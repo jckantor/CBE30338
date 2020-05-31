@@ -13119,24 +13119,6 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.1.1-Summary">1.1.1 Summary<a class="anchor-link" href="#1.1.1-Summary">&#182;</a></h2><p>The purpose of this <a href="http://jupyter.org/">Jupyter Notebook</a> is to get you started using Python and Jupyter Notebooks for routine chemical engineering calculations. This introduction assumes this is your first exposure to Python or Jupyter notebooks.</p>
-<ul>
-<li><a href="#step0">Step 0: Gain Executable Access to Jupyter Notebooks</a><ul>
-<li>Using Jupyter/Python in the Cloud</li>
-<li>Installing Jupyter/Python on your laptop</li>
-</ul>
-</li>
-<li><a href="#step1">Step 1: Start a Jupyter Notebook Session</a></li>
-<li><a href="#step2">Step 2: Simple Calculations with Python</a><ul>
-<li>Basic Arithmetic Operations</li>
-<li>Python Libraries</li>
-<li>Working with Lists</li>
-<li>Working with Dictionaries</li>
-<li>Plotting with Matplotlib</li>
-<li>Solve Equations with Sympy Library</li>
-</ul>
-</li>
-<li><a href="#step3">Step 3: Where to Learn More</a></li>
-</ul>
 
 </div>
 </div>
@@ -13148,13 +13130,34 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="step0"></a></p>
-<h2 id="Step-0:-Gain-Executable-Access-to-Jupyter-Notebooks">Step 0: Gain Executable Access to Jupyter Notebooks<a class="anchor-link" href="#Step-0:-Gain-Executable-Access-to-Jupyter-Notebooks">&#182;</a></h2><p>Jupyter notebooks are documents that can be viewed and executed inside any modern web browser. Since you're reading this notebook, you already know how to view a Jupyter notebook. The next step is to learn how to execute computations that may be embedded in a Jupyter notebook.</p>
+<h2 id="1.1.2-Step-0:-Gain-Executable-Access-to-Jupyter-Notebooks">1.1.2 Step 0: Gain Executable Access to Jupyter Notebooks<a class="anchor-link" href="#1.1.2-Step-0:-Gain-Executable-Access-to-Jupyter-Notebooks">&#182;</a></h2><p>Jupyter notebooks are documents that can be viewed and executed inside any modern web browser. Since you're reading this notebook, you already know how to view a Jupyter notebook. The next step is to learn how to execute computations that may be embedded in a Jupyter notebook.</p>
 <p>To execute Python code in a notebook you will need access to a Python kernal. A kernal is simply a program that runs in the background, maintains workspace memory for variables and functions, and executes Python code.  The kernal can be located on the same laptop as your web browser or located in an on-line cloud service.</p>
 <p><strong>Important Note Regarding Versions</strong> There are two versions of Python in widespread use. Version 2.7 released in 2010, which was the last release of the 2.x series. Version 3.5 is the most recent release of the 3.x series which represents the future direction of language. It has taken years for the major scientific libraries to complete the transition from 2.x to 3.x, but it is now safe to recommend Python 3.x for widespread use. So for this course be sure to use latest verstion, currently 3.6, of the Python language.</p>
-<h3 id="Using-Jupyter/Python-in-the-Cloud">Using Jupyter/Python in the Cloud<a class="anchor-link" href="#Using-Jupyter/Python-in-the-Cloud">&#182;</a></h3><p>The easiest way to use Jupyter notebooks is to sign up for a free or paid account on a cloud-based service such as <a href="https://www.wakari.io/">Wakari.io</a> or <a href="https://cloud.sagemath.com/">SageMathCloud</a>. You will need continuous internet connectivity to access your work, but the advantages are there is no software to install or maintain. All you need is a modern web browser on your laptop, Chromebook, tablet or other device. Note that the free services are generally heavily oversubscribed, so you should consider a paid account to assure access during prime hours.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.2.1-Using-Jupyter/Python-in-the-Cloud">1.1.2.1 Using Jupyter/Python in the Cloud<a class="anchor-link" href="#1.1.2.1-Using-Jupyter/Python-in-the-Cloud">&#182;</a></h3><p>The easiest way to use Jupyter notebooks is to sign up for a free or paid account on a cloud-based service such as <a href="https://www.wakari.io/">Wakari.io</a> or <a href="https://cloud.sagemath.com/">SageMathCloud</a>. You will need continuous internet connectivity to access your work, but the advantages are there is no software to install or maintain. All you need is a modern web browser on your laptop, Chromebook, tablet or other device. Note that the free services are generally heavily oversubscribed, so you should consider a paid account to assure access during prime hours.</p>
 <p>There are also demonstration sites in the cloud, such as <a href="https://tmpnb.org/">tmpnb.org</a>. These start an interactive session where you can upload an existing notebook or create a new one from scratch. Though convenient, these sites are intended mainly for demonstration and generally quite overloaded. More significantly, there is no way to retain your work between sessions, and some python functionality is removed for security reasons.</p>
-<h3 id="Installing-Jupyter/Python-on-your-Laptop">Installing Jupyter/Python on your Laptop<a class="anchor-link" href="#Installing-Jupyter/Python-on-your-Laptop">&#182;</a></h3><p>For regular off-line use you should consider installing a Jupyter Notebook/Python environment directly on your laptop. This will provide you with reliable off-line access to a computational environment. This will also allow you to install additional code libraries to meet particular needs.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.2.2-Installing-Jupyter/Python-on-your-Laptop">1.1.2.2 Installing Jupyter/Python on your Laptop<a class="anchor-link" href="#1.1.2.2-Installing-Jupyter/Python-on-your-Laptop">&#182;</a></h3><p>For regular off-line use you should consider installing a Jupyter Notebook/Python environment directly on your laptop. This will provide you with reliable off-line access to a computational environment. This will also allow you to install additional code libraries to meet particular needs.</p>
 <p>Choosing this option will require an initial software installation and routine updates. For this course the recommended package is <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> available from <a href="http://continuum.io/">Continuum Analytics</a>. Downloading and installing the software is well documented and easy to follow. Allow about 10-30 minutes for the installation depending on your connection speed.</p>
 <p>After installing be sure to check for updates before proceeding further. With the Anaconda package this is done by executing the following two commands in a terminal window:</p>
 
@@ -13174,8 +13177,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="step1"></a></p>
-<h2 id="Step-1:-Start-a-Jupyter-Notebook-Session">Step 1: Start a Jupyter Notebook Session<a class="anchor-link" href="#Step-1:-Start-a-Jupyter-Notebook-Session">&#182;</a></h2><p>If you are using a cloud-based service a Jupyter session will be started when you log on.</p>
+<h2 id="1.1.3-Step-1:-Start-a-Jupyter-Notebook-Session">1.1.3 Step 1: Start a Jupyter Notebook Session<a class="anchor-link" href="#1.1.3-Step-1:-Start-a-Jupyter-Notebook-Session">&#182;</a></h2><p>If you are using a cloud-based service a Jupyter session will be started when you log on.</p>
 <p>If you have installed a Jupyter/Python distribution on your laptop then you can open a Jupyter session in one of two different ways:</p>
 <ul>
 <li>Use the Anaconda Navigator App, or </li>
@@ -13185,7 +13187,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 </li>
 </ul>
 <p>Either way, once you have opened a session you should see a browser window like this:</p>
-<p><img src="../images/Screen Shot Jupyter Session.png" alt="Screen Shot Jupyter Session"></p>
+<p><img src="figures/Screen-Shot-Jupyter-Session.png" alt="Screen Shot Jupyter Session"></p>
 <p>At this point the browser displays a list of directories and files. You can navigate amoung the directories in the usual way by clicking on directory names or on the 'breadcrumbs' located just about the listing.</p>
 <p>Jupyter notebooks are simply files in a directory with a <code>.ipynb</code> suffix. They can be stored in any directory including Dropbox or Google Drive. Upload and create new Jupyter notebooks in the displayed directory using the appropriate buttons. Use the checkboxes to select items for other actions, such as to duplicate, to rename, or to delete notebooks and directories.</p>
 <ul>
@@ -13251,9 +13253,19 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="step2"></a></p>
-<h2 id="Step-2:-Simple-Calculations-with-Python">Step 2: Simple Calculations with Python<a class="anchor-link" href="#Step-2:-Simple-Calculations-with-Python">&#182;</a></h2><p>Python is an elegant and modern language for programming and problem solving that has found increasing use by engineers and scientists.  In the next few cells we'll demonstrate some basic Python functionality.</p>
-<h3 id="Basic-Arithmetic-Operations">Basic Arithmetic Operations<a class="anchor-link" href="#Basic-Arithmetic-Operations">&#182;</a></h3><p>Basic arithmetic operations are built into the Python langauge. Here are some examples. In particular, note that exponentiation is done with the ** operator.</p>
+<h2 id="1.1.4-Step-2:-Simple-Calculations-with-Python">1.1.4 Step 2: Simple Calculations with Python<a class="anchor-link" href="#1.1.4-Step-2:-Simple-Calculations-with-Python">&#182;</a></h2><p>Python is an elegant and modern language for programming and problem solving that has found increasing use by engineers and scientists.  In the next few cells we'll demonstrate some basic Python functionality.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.4.1-Basic-Arithmetic-Operations">1.1.4.1 Basic Arithmetic Operations<a class="anchor-link" href="#1.1.4.1-Basic-Arithmetic-Operations">&#182;</a></h3><p>Basic arithmetic operations are built into the Python langauge. Here are some examples. In particular, note that exponentiation is done with the ** operator.</p>
 
 </div>
 </div>
@@ -13307,7 +13319,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.1.1-Python-Libraries">1.1.1.1 Python Libraries<a class="anchor-link" href="#1.1.1.1-Python-Libraries">&#182;</a></h3><p>The Python language has only very basic operations. Most math functions are in various math libraries. The <code>numpy</code> library is convenient library.  This next cell shows how to import <code>numpy</code> with the prefix <code>np</code>, then use it to call a common mathematical functions.</p>
+<h3 id="1.1.4.2-Python-Libraries">1.1.4.2 Python Libraries<a class="anchor-link" href="#1.1.4.2-Python-Libraries">&#182;</a></h3><p>The Python language has only very basic operations. Most math functions are in various math libraries. The <code>numpy</code> library is convenient library.  This next cell shows how to import <code>numpy</code> with the prefix <code>np</code>, then use it to call a common mathematical functions.</p>
 
 </div>
 </div>
@@ -13368,18 +13380,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.1.2-Working-with-Lists">1.1.1.2 Working with Lists<a class="anchor-link" href="#1.1.1.2-Working-with-Lists">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-
-
-    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Lists are a versatile way of organizing your data in Python. Here are some examples, more can be found on <a href="http://youtu.be/zEyEC34MY1A">this Khan Academy video</a>.</p>
+<h3 id="1.1.4.3-Working-with-Lists">1.1.4.3 Working with Lists<a class="anchor-link" href="#1.1.4.3-Working-with-Lists">&#182;</a></h3><p>Lists are a versatile way of organizing your data in Python. Here are some examples, more can be found on <a href="http://youtu.be/zEyEC34MY1A">this Khan Academy video</a>.</p>
 
 </div>
 </div>
@@ -13631,7 +13632,7 @@ sin(4) = -0.75680
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.1.3-Working-with-Dictionaries">1.1.1.3 Working with Dictionaries<a class="anchor-link" href="#1.1.1.3-Working-with-Dictionaries">&#182;</a></h3><p>Dictionaries are useful for storing and retrieving data as key-value pairs.  For example, here is a short dictionary of molar masses. The keys are molecular formulas, and the values are the corresponding molar masses.</p>
+<h3 id="1.1.4.4-Working-with-Dictionaries">1.1.4.4 Working with Dictionaries<a class="anchor-link" href="#1.1.4.4-Working-with-Dictionaries">&#182;</a></h3><p>Dictionaries are useful for storing and retrieving data as key-value pairs.  For example, here is a short dictionary of molar masses. The keys are molecular formulas, and the values are the corresponding molar masses.</p>
 
 </div>
 </div>
@@ -13924,7 +13925,7 @@ The molar mass of CO2 is 44.01
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.1.4-Plotting-with-Matplotlib">1.1.1.4 Plotting with Matplotlib<a class="anchor-link" href="#1.1.1.4-Plotting-with-Matplotlib">&#182;</a></h3><p>Importing the <code>matplotlib.pyplot</code> library gives IPython notebooks plotting functionality very similar to Matlab's. Here are some examples using functions from the</p>
+<h3 id="1.1.4.5-Plotting-with-Matplotlib">1.1.4.5 Plotting with Matplotlib<a class="anchor-link" href="#1.1.4.5-Plotting-with-Matplotlib">&#182;</a></h3><p>Importing the <code>matplotlib.pyplot</code> library gives IPython notebooks plotting functionality very similar to Matlab's. Here are some examples using functions from the</p>
 
 </div>
 </div>
@@ -14988,7 +14989,7 @@ YCTYhRDCwUiwCyGEg5FgF0IIByPBLoQQDub/AL/gF//sLfCJAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.1.5-Solve-Equations-using-Sympy-Library">1.1.1.5 Solve Equations using Sympy Library<a class="anchor-link" href="#1.1.1.5-Solve-Equations-using-Sympy-Library">&#182;</a></h3><p>One of the best features of Python is the ability to extend it's functionality by importing special purpose libraries of functions. Here we demonstrate the use of a symbolic algebra package <a href="http://sympy.org/en/index.html"><code>Sympy</code></a> for routine problem solving.</p>
+<h3 id="1.1.4.6-Solve-Equations-using-Sympy-Library">1.1.4.6 Solve Equations using Sympy Library<a class="anchor-link" href="#1.1.4.6-Solve-Equations-using-Sympy-Library">&#182;</a></h3><p>One of the best features of Python is the ability to extend it's functionality by importing special purpose libraries of functions. Here we demonstrate the use of a symbolic algebra package <a href="http://sympy.org/en/index.html"><code>Sympy</code></a> for routine problem solving.</p>
 
 </div>
 </div>
@@ -15350,15 +15351,34 @@ cRIEQgjh4v4/MpmIgiYyXDsAAAAASUVORK5CYII=
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="step3"></a></p>
-<h2 id="Step-3:-Where-to-Learn-More">Step 3: Where to Learn More<a class="anchor-link" href="#Step-3:-Where-to-Learn-More">&#182;</a></h2><p>Python offers a full range of programming language features, and there is a seemingly endless range of packages for scientific and engineering computations. Here are some suggestions on places you can go for more information on programming for engineering applications in Python.</p>
-<p><strong>Introduction to Python for Science</strong></p>
-<p>This excellent introduction to python is aimed at undergraduates in science with no programming experience. It is free and available at the following link.</p>
+<h2 id="1.1.5-Step-3:-Where-to-Learn-More">1.1.5 Step 3: Where to Learn More<a class="anchor-link" href="#1.1.5-Step-3:-Where-to-Learn-More">&#182;</a></h2><p>Python offers a full range of programming language features, and there is a seemingly endless range of packages for scientific and engineering computations. Here are some suggestions on places you can go for more information on programming for engineering applications in Python.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.1-Introduction-to-Python-for-Science">1.1.5.1 Introduction to Python for Science<a class="anchor-link" href="#1.1.5.1-Introduction-to-Python-for-Science">&#182;</a></h3><p>This excellent introduction to python is aimed at undergraduates in science with no programming experience. It is free and available at the following link.</p>
 <ul>
 <li><a href="https://github.com/djpine/pyman">Introduction to Python for Science</a></li>
 </ul>
-<p><strong>Tutorial Introduction to Python for Science and Engineering.</strong></p>
-<p>The following text is licensed by the Hesburgh Library for use by Notre Dame students and faculty only. Please refer to the library's <a href="http://library.nd.edu/eresources/access/acceptable_use.shtml">acceptable use policy</a>. Others can find it at <a href="http://www.springer.com/us/book/9783642549588">Springer</a> or <a href="http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering/dp/3642549586/ref=dp_ob_title_bk">Amazon</a>. Resources for this book are available on <a href="http://hplgit.github.io/scipro-primer/">github</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.2-Tutorial-Introduction-to-Python-for-Science-and-Engineering">1.1.5.2 Tutorial Introduction to Python for Science and Engineering<a class="anchor-link" href="#1.1.5.2-Tutorial-Introduction-to-Python-for-Science-and-Engineering">&#182;</a></h3><p>The following text is licensed by the Hesburgh Library for use by Notre Dame students and faculty only. Please refer to the library's <a href="http://library.nd.edu/eresources/access/acceptable_use.shtml">acceptable use policy</a>. Others can find it at <a href="http://www.springer.com/us/book/9783642549588">Springer</a> or <a href="http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering/dp/3642549586/ref=dp_ob_title_bk">Amazon</a>. Resources for this book are available on <a href="http://hplgit.github.io/scipro-primer/">github</a>.</p>
 <ul>
 <li><a href="http://link.springer.com.proxy.library.nd.edu/book/10.1007/978-3-642-54959-5">A Primer on Scientific Programming with Python (Fourth Edition)</a> by Hans Petter Langtangen. Resources for this book are available on <a href="http://hplgit.github.io/scipro-primer/">github</a>.</li>
 </ul>
@@ -15366,16 +15386,36 @@ cRIEQgjh4v4/MpmIgiYyXDsAAAAASUVORK5CYII=
 <ul>
 <li><a href="https://github.com/jkitchin/pycse/blob/master/pycse.pdf">pycse - Python Computations in Science and Engineering</a> by John Kitchin at Carnegie Mellon. This is a link into the the <a href="https://github.com/jkitchin/pycse">github repository for pycse</a>, click on the <code>Raw</code> button to download the <code>.pdf</code> file.</li>
 </ul>
-<p><strong>Interative learning and on-line tutorials</strong></p>
-<ul>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.3-Interative-learning-and-on-line-tutorials">1.1.5.3 Interative learning and on-line tutorials<a class="anchor-link" href="#1.1.5.3-Interative-learning-and-on-line-tutorials">&#182;</a></h3><ul>
 <li><a href="http://www.codecademy.com/tracks/python">Code Academy on Python</a></li>
 <li><a href="https://www.khanacademy.org/science/computer-science-subject/computer-science">Khan Academy Videos on Python Programming</a></li>
 <li><a href="http://docs.python.org/2/tutorial/">Python Tutorial</a></li>
 <li><a href="http://www.greenteapress.com/thinkpython/html/index.html">Think Python: How to Think Like a Computer Scientist</a></li>
 <li><a href="http://www.engineeringwithpython.com/">Engineering with Python</a></li>
 </ul>
-<p><strong>Official documentation, examples, and galleries.</strong></p>
-<ul>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.1.5.4-Official-documentation,-examples,-and-galleries">1.1.5.4 Official documentation, examples, and galleries<a class="anchor-link" href="#1.1.5.4-Official-documentation,-examples,-and-galleries">&#182;</a></h3><ul>
 <li><a href="https://github.com/ipython/ipython/tree/master/examples/notebooks">Notebook Examples</a></li>
 <li><a href="https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks">Notebook Gallery</a></li>
 <li><a href="http://ipython.org/ipython-doc/stable/interactive/notebook.html">Official Notebook Documentation</a></li>

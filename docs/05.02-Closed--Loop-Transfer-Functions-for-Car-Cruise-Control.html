@@ -13133,14 +13133,14 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.2.2-Block-Diagram-for-Car-Cruise-Control">5.2.2 Block Diagram for Car Cruise Control<a class="anchor-link" href="#5.2.2-Block-Diagram-for-Car-Cruise-Control">&#182;</a></h2><p>Let's imagine you own a car with a mass of 1,500 kg (including passengers) that is traveling down a level stretch of highway at a desired speed of 100 kilometers per hour. You wish to design a cruise controller that will adjust the throttle position $u$ within the limits 0 to 1 in order to maintain constant speed.</p>
 <p>A block diagram for this system is shown in the following sketch:</p>
-<p><img src="../images/CruiseControl.png" alt="Cruise Control Block Diagram"></p>
+<p><img src="figures/CruiseControl.png" alt="Cruise Control Block Diagram"></p>
 <p>The disturbance to the system is a change in road grade measured in percent.  (A one percent grade corresponds to 1 foot of rise in 100 feet of horizontal travel, or a tangent of 0.01).  The dynamics are represented by three transfer functions denoting the response of the engine torque to throttle position,</p>
 $$G_e = \frac{600}{s + 1}$$<p>the response of the vehicle to engine and external forces,</p>
 $$G_v = \frac{0.5}{5s + 1}$$<p>and the dynamics of the speed measurement,</p>
 $$G_m = \frac{1}{0.2s + 1}$$<p>We assume that a one percent increase in grade introduces 150 Newtons of force in opposing the car acceleration, that is</p>
 $$G_d = 150$$<p>The controller is assumed to be a proportional-integral control written as</p>
 $$G_c = K_c\left(1 + \frac{1}{\tau_I s}\right)$$<p>This can be summarized in the following block diagram</p>
-<p><img src="../images/CruiseControl2.png" alt="Cruise Control Block Diagram"></p>
+<p><img src="figures/CruiseControl2.png" alt="Cruise Control Block Diagram"></p>
 
 </div>
 </div>
@@ -14160,7 +14160,7 @@ IhIBfwFivqGkZsZOzQAAAABJRU5ErkJggg==
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.2.5.2-SEMD-Figure-11-14">5.2.5.2 SEMD Figure 11-14<a class="anchor-link" href="#5.2.5.2-SEMD-Figure-11-14">&#182;</a></h3><p><img src="../images/E11-10.png" alt="Internal Model Control"></p>
+<h3 id="5.2.5.2-SEMD-Figure-11-14">5.2.5.2 SEMD Figure 11-14<a class="anchor-link" href="#5.2.5.2-SEMD-Figure-11-14">&#182;</a></h3><p><img src="figures/E11-10.png" alt="Internal Model Control"></p>
 $$H_{yd} = \frac{G_3}{1+(G_2 + G_3G_1)K_cK_m}$$$$H_{yr} = \frac{(G_2+G_3G_1)K_cK_m}{1+(G_2 + G_3G_1)K_cK_m}$$
 </div>
 </div>
