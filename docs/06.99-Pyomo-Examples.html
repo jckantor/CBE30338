@@ -13128,7 +13128,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="o">*</span>
@@ -13182,7 +13182,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 1 Objective Declarations
     objective : Size=1, Index=None, Active=True
         Key  : Active : Sense    : Expression
-        None :   True : maximize : 40.0 * q / ( ( 4.0 + q ) * ( 20.0 + q ) )
+        None :   True : maximize : 40.0*q/(q + 4.0)/(q + 20.0)
 
 2 Declarations: q objective
 
@@ -13216,7 +13216,7 @@ Productivity =  8.541019662483748 moles per minute.
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13285,7 +13285,7 @@ Residual     0.05     0.10
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="p">{}</span>
@@ -13304,7 +13304,7 @@ Residual     0.05     0.10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[64]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13325,7 +13325,7 @@ Residual     0.05     0.10
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">products</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Gasoline&#39;</span><span class="p">,</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span>
@@ -13341,7 +13341,7 @@ Residual     0.05     0.10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13362,7 +13362,7 @@ Residual     0.05     0.10
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># model formulation</span>
@@ -13391,13 +13391,21 @@ Residual     0.05     0.10
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/jeff/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:10: DeprecationWarning: 
+<pre>/Users/jeff/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:9: FutureWarning: 
 .ix is deprecated. Please use
 .loc for label based indexing or
 .iloc for positional indexing
 
 See the documentation here:
-http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated
+http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated
+  if __name__ == &#39;__main__&#39;:
+/Users/jeff/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:10: FutureWarning: 
+.ix is deprecated. Please use
+.loc for label based indexing or
+.iloc for positional indexing
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated
   # Remove the CWD from sys.path while we load stuff.
 </pre>
 </div>
@@ -13413,7 +13421,7 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecat
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">processing_cost</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">processing_costs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">*</span> <span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">FEEDS</span><span class="p">)</span>
@@ -13448,83 +13456,22 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecat
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2441</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2442</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2443</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-54aa9b28c7ab&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>processing_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>processing_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> profit <span class="ansi-blue-fg">=</span> income <span class="ansi-blue-fg">-</span> raw_materials_cost <span class="ansi-blue-fg">-</span> processing_cost
+<span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>objective <span class="ansi-blue-fg">=</span> Objective<span class="ansi-blue-fg">(</span>expr <span class="ansi-blue-fg">=</span> profit<span class="ansi-blue-fg">,</span> sense<span class="ansi-blue-fg">=</span>maximize<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># constraints</span>
 
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-6-54aa9b28c7ab&gt;</span> in <span class="ansi-cyan-fg">&lt;genexpr&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>processing_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>processing_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> profit <span class="ansi-blue-fg">=</span> income <span class="ansi-blue-fg">-</span> raw_materials_cost <span class="ansi-blue-fg">-</span> processing_cost
+<span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>objective <span class="ansi-blue-fg">=</span> Objective<span class="ansi-blue-fg">(</span>expr <span class="ansi-blue-fg">=</span> profit<span class="ansi-blue-fg">,</span> sense<span class="ansi-blue-fg">=</span>maximize<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-red-fg"># constraints</span>
 
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-red-fg">KeyError</span>: (&#39;Gasoline&#39;, &#39;Price&#39;)
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-49-472329535d57&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-red-fg"># objective</span>
-<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>income <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>products<span class="ansi-blue-fg">[</span>p<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Price&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>y<span class="ansi-blue-fg">[</span>p<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> p <span class="ansi-green-fg">in</span> PRODUCTS<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> raw_materials_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>feed_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> processing_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>processing_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-49-472329535d57&gt;</span> in <span class="ansi-cyan-fg">&lt;genexpr&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-red-fg"># objective</span>
-<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>income <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>products<span class="ansi-blue-fg">[</span>p<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Price&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>y<span class="ansi-blue-fg">[</span>p<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> p <span class="ansi-green-fg">in</span> PRODUCTS<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> raw_materials_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>feed_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> processing_cost <span class="ansi-blue-fg">=</span> sum<span class="ansi-blue-fg">(</span>processing_costs<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> model<span class="ansi-blue-fg">.</span>x<span class="ansi-blue-fg">[</span>f<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> f <span class="ansi-green-fg">in</span> FEEDS<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1962</span>             <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_getitem_multilevel<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1963</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1964</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_getitem_column<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1965</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1966</span>     <span class="ansi-green-fg">def</span> _getitem_column<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">_getitem_column</span><span class="ansi-blue-fg">(self, key)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1969</span>         <span class="ansi-red-fg"># get column</span>
-<span class="ansi-green-intense-fg ansi-bold">   1970</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">.</span>is_unique<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1971</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_get_item_cache<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1972</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1973</span>         <span class="ansi-red-fg"># duplicate columns &amp; possible reduce dimensionality</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/generic.py</span> in <span class="ansi-cyan-fg">_get_item_cache</span><span class="ansi-blue-fg">(self, item)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1643</span>         res <span class="ansi-blue-fg">=</span> cache<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>item<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1644</span>         <span class="ansi-green-fg">if</span> res <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1645</span><span class="ansi-red-fg">             </span>values <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_data<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>item<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1646</span>             res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_box_item_values<span class="ansi-blue-fg">(</span>item<span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1647</span>             cache<span class="ansi-blue-fg">[</span>item<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> res
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/internals.py</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-fg">(self, item, fastpath)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3588</span> 
-<span class="ansi-green-intense-fg ansi-bold">   3589</span>             <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isnull<span class="ansi-blue-fg">(</span>item<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 3590</span><span class="ansi-red-fg">                 </span>loc <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>item<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3591</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   3592</span>                 indexer <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>arange<span class="ansi-blue-fg">(</span>len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span>isnull<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2442</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2443</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2444</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_maybe_cast_indexer<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2445</span> 
-<span class="ansi-green-intense-fg ansi-bold">   2446</span>         indexer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_indexer<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>key<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> tolerance<span class="ansi-blue-fg">=</span>tolerance<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-red-fg">KeyError</span>: (&#39;Gasoline&#39;, &#39;Price&#39;)</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;processing_costs&#39; is not defined</pre>
 </div>
 </div>
 
@@ -13538,7 +13485,7 @@ During handling of the above exception, another exception occurred:
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="o">*</span>
@@ -13619,45 +13566,12 @@ During handling of the above exception, another exception occurred:
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3 Set Declarations
-    constraints_index : Dim=0, Dimen=1, Size=8, Domain=None, Ordered=False, Bounds=None
-        [1, 2, 3, 4, 5, 6, 7, 8]
-    x_index : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=None
-        [&#39;Crude #1&#39;, &#39;Crude #2&#39;]
-    y_index : Dim=0, Dimen=1, Size=4, Domain=None, Ordered=False, Bounds=None
-        [&#39;Fuel Oil&#39;, &#39;Gasoline&#39;, &#39;Kerosine&#39;, &#39;Residual&#39;]
-
-2 Var Declarations
-    x : Size=2, Index=x_index
-        Key      : Lower : Value            : Upper : Fixed : Stale : Domain
-        Crude #1 :     0 : 26206.8965517241 :  None : False : False : NonNegativeReals
-        Crude #2 :     0 : 6896.55172413793 :  None : False : False : NonNegativeReals
-    y : Size=4, Index=y_index
-        Key      : Lower : Value            : Upper : Fixed : Stale : Domain
-        Fuel Oil :     0 : 5103.44827586207 :  None : False : False : NonNegativeReals
-        Gasoline :     0 :          24000.0 :  None : False : False : NonNegativeReals
-        Kerosine :     0 :           2000.0 :  None : False : False : NonNegativeReals
-        Residual :     0 :           2000.0 :  None : False : False : NonNegativeReals
-
-1 Objective Declarations
-    objective : Size=1, Index=None, Active=True
-        Key  : Active : Sense    : Expression
-        None :   True : maximize : 72*y[Gasoline] + 48*y[Kerosine] + 42*y[Fuel Oil] + 20*y[Residual] - 48*x[Crude #1] - 30*x[Crude #2] - x[Crude #1] - 2.0*x[Crude #2]
-
-1 Constraint Declarations
-    constraints : Size=8, Index=constraints_index, Active=True
-        Key : Lower : Body                                             : Upper    : Active
-          1 :   0.0 :                                      y[Gasoline] :  24000.0 :   True
-          2 :   0.0 :                                      y[Kerosine] :   2000.0 :   True
-          3 :   0.0 :                                      y[Fuel Oil] :   6000.0 :   True
-          4 :   0.0 :                                      y[Residual] : 100000.0 :   True
-          5 :   0.0 : y[Gasoline] - 0.8*x[Crude #1] - 0.44*x[Crude #2] :      0.0 :   True
-          6 :   0.0 : y[Kerosine] - 0.05*x[Crude #1] - 0.1*x[Crude #2] :      0.0 :   True
-          7 :   0.0 : y[Fuel Oil] - 0.1*x[Crude #1] - 0.36*x[Crude #2] :      0.0 :   True
-          8 :   0.0 : y[Residual] - 0.05*x[Crude #1] - 0.1*x[Crude #2] :      0.0 :   True
-
-7 Declarations: x_index x y_index y objective constraints_index constraints
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-7-9d0bbdfd689e&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">17</span>
+<span class="ansi-red-fg">    product_yield =</span>
+                    ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>

@@ -13121,7 +13121,18 @@ K_P = K_c &amp; &amp; K_c = K_P\\
 K_I = \frac{K_c}{\tau_I} &amp; &amp; \tau_I = \frac{K_P}{K_I}\\
 K_D = K_c\tau_D &amp; &amp; \tau_D = \frac{K_D}{K_P}
 \end{array}
-\end{align}<h3 id="Empirical-Methods">Empirical Methods<a class="anchor-link" href="#Empirical-Methods">&#182;</a></h3><p>Determining PID control parameters is complicated by the general absence of process models for most applications. Typically the control implementation takes place in three steps:</p>
+\end{align}
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.6.1-Empirical-Methods">4.6.1 Empirical Methods<a class="anchor-link" href="#4.6.1-Empirical-Methods">&#182;</a></h3><p>Determining PID control parameters is complicated by the general absence of process models for most applications. Typically the control implementation takes place in three steps:</p>
 <ol>
 <li><strong>Idenfication.</strong> A prescribed experiment is performed to create an empirical model for the response of the process to the manipulated input.</li>
 <li><strong>Control Design.</strong> Given an empirical model, find PID control parameters that provide setpoint response, disturbance rejection, and robustness to modeling errors.</li>
@@ -13282,7 +13293,18 @@ K_D = K_c\tau_D &amp; &amp; \tau_D = \frac{K_D}{K_P}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.6.2-AMIGO-Tuning">4.6.2 AMIGO Tuning<a class="anchor-link" href="#4.6.2-AMIGO-Tuning">&#182;</a></h2><h3 id="KLT-Model---First-Order-with-Dead-Time">KLT Model - First Order with Dead Time<a class="anchor-link" href="#KLT-Model---First-Order-with-Dead-Time">&#182;</a></h3><p>AMIGO tuning assumes a so-called KLT process model with three parameters</p>
+<h2 id="4.6.2-AMIGO-Tuning">4.6.2 AMIGO Tuning<a class="anchor-link" href="#4.6.2-AMIGO-Tuning">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.6.2.1-KLT-Model---First-Order-with-Dead-Time">4.6.2.1 KLT Model - First Order with Dead Time<a class="anchor-link" href="#4.6.2.1-KLT-Model---First-Order-with-Dead-Time">&#182;</a></h3><p>AMIGO tuning assumes a so-called KLT process model with three parameters</p>
 \begin{align}
 \tau \frac{d y}{dt} + y = K u(t-\theta)
 \end{align}<p>where $y$ is the deviation of the process variable from a nominal steady-state value ($PV - \overline{PV}$), $u$ is a deviation in the manipulated manipulated variable from a nominal value ($MV - \overline{MV}$), and the parameters have the following descriptions.</p>
@@ -13308,7 +13330,18 @@ K_D = K_c\tau_D &amp; &amp; \tau_D = \frac{K_D}{K_P}
 </tbody>
 </table>
 <p>These parameters can be determined from step testing.</p>
-<h3 id="Tuning-Rules">Tuning Rules<a class="anchor-link" href="#Tuning-Rules">&#182;</a></h3><p>The AMIGO tuning rules provide values for the PID parameters $K_c$, $\tau_I$, $\tau_D$ in addition to setpoint weights $\beta$ and $\gamma$.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.6.2.2-Tuning-Rules">4.6.2.2 Tuning Rules<a class="anchor-link" href="#4.6.2.2-Tuning-Rules">&#182;</a></h3><p>The AMIGO tuning rules provide values for the PID parameters $K_c$, $\tau_I$, $\tau_D$ in addition to setpoint weights $\beta$ and $\gamma$.</p>
 \begin{align}
 K_c &amp; = \frac{1}{K}\left(0.2 + 0.45\frac{\tau}{\theta}\right) \\
 \\

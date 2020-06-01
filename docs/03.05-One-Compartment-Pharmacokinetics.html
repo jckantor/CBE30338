@@ -13107,7 +13107,18 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.5-One-Compartment-Pharmacokinetics">3.5 One Compartment Pharmacokinetics<a class="anchor-link" href="#3.5-One-Compartment-Pharmacokinetics">&#182;</a></h1><h3 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h3><p>Pharmacokinetics is a branch of pharmacology that studies the fate of chemical species in living organisms. The diverse range of applications includes the administration of drugs and anesthesia in humans. This notebook introduces a one compartment model for pharmacokinetics, and shows how it can be used to determine strategies for the intravenous administration of an antibiotic.</p>
+<h1 id="3.5-One-Compartment-Pharmacokinetics">3.5 One Compartment Pharmacokinetics<a class="anchor-link" href="#3.5-One-Compartment-Pharmacokinetics">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.5.1-Summary">3.5.1 Summary<a class="anchor-link" href="#3.5.1-Summary">&#182;</a></h2><p>Pharmacokinetics is a branch of pharmacology that studies the fate of chemical species in living organisms. The diverse range of applications includes the administration of drugs and anesthesia in humans. This notebook introduces a one compartment model for pharmacokinetics, and shows how it can be used to determine strategies for the intravenous administration of an antibiotic.</p>
 <p>The notebook demonstrates the simulation and analysis of systems modeled by a single first-order linear differential equation.</p>
 
 </div>
@@ -13120,7 +13131,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.1-Antibiotics">3.5.1 Antibiotics<a class="anchor-link" href="#3.5.1-Antibiotics">&#182;</a></h2><p>Let's consider the administration of an antibiotic to a patient. Concentration $C$ refers to the concentration of the antibiotic in blood plasma with units [mg/liter].</p>
+<h2 id="3.5.2-Antibiotics">3.5.2 Antibiotics<a class="anchor-link" href="#3.5.2-Antibiotics">&#182;</a></h2><p>Let's consider the administration of an antibiotic to a patient. Concentration $C$ refers to the concentration of the antibiotic in blood plasma with units [mg/liter].</p>
 <p><strong>Minimum Inhibitory Concentration (MIC)</strong> The minimum concentration of the antibiotic that prevents growth of a particular bacterium.</p>
 <p><strong>Minimum Bactricidal Concentration (MBC)</strong> The lowest concentration of the antibiotic that kills a particular bacterium.</p>
 <p>Extended exposure to an antibiotic at levels below MBC leads to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4378521/">antibiotic resistance</a>.</p>
@@ -13135,7 +13146,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.2-Model-Description">3.5.2 Model Description<a class="anchor-link" href="#3.5.2-Model-Description">&#182;</a></h2><p>A simple pharmacokinetic model has the same form as a model for the dilution of a chemical species in a constant volume stirred-tank mixer.  For a stirred-tank reactor with constant volume $V$, volumetric outlet flowrate $Q$, and inlet mass flow $u(t)$,</p>
+<h2 id="3.5.3-Model-Description">3.5.3 Model Description<a class="anchor-link" href="#3.5.3-Model-Description">&#182;</a></h2><p>A simple pharmacokinetic model has the same form as a model for the dilution of a chemical species in a constant volume stirred-tank mixer.  For a stirred-tank reactor with constant volume $V$, volumetric outlet flowrate $Q$, and inlet mass flow $u(t)$,</p>
 $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mass per unit volume. In this pharacokinetics application, $V$ refers to blood plasma volume, and $Q$ to the clearance rate.</p>
 
 </div>
@@ -13148,7 +13159,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.3-Problem-Statement-1">3.5.3 Problem Statement 1<a class="anchor-link" href="#3.5.3-Problem-Statement-1">&#182;</a></h2><p>The minimum inhibitory concentration (MIC) of a particular organism to a particular antibiotic is 5 mg/liter, the minimum bactricidal concentration (MBC) is 8 mg/liter. Assume the plasma volume $V$ is 4 liters with a clearance rate $Q$ of 0.5 liters/hour.</p>
+<h2 id="3.5.4-Problem-Statement-1">3.5.4 Problem Statement 1<a class="anchor-link" href="#3.5.4-Problem-Statement-1">&#182;</a></h2><p>The minimum inhibitory concentration (MIC) of a particular organism to a particular antibiotic is 5 mg/liter, the minimum bactricidal concentration (MBC) is 8 mg/liter. Assume the plasma volume $V$ is 4 liters with a clearance rate $Q$ of 0.5 liters/hour.</p>
 <p>An initial intravenous antibiotic dose of 64 mg results in an initial plasma concentration $C_{initial}$ of 64mg/4 liters = 16 mg/liter.  How long will the concentration stay above MBC?  Above MIC?</p>
 
 </div>
@@ -13161,7 +13172,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.4-Solution-Strategy-1:-Simulation-from-a-Known-Initial-Condition">3.5.4 Solution Strategy 1: Simulation from a Known Initial Condition<a class="anchor-link" href="#3.5.4-Solution-Strategy-1:-Simulation-from-a-Known-Initial-Condition">&#182;</a></h2><p>For this first simulation we compute the response of the one compartment model due starting with an initial condition $C_{initial}$, and assuming input $u(t) = 0$.</p>
+<h2 id="3.5.5-Solution-Strategy-1:-Simulation-from-a-Known-Initial-Condition">3.5.5 Solution Strategy 1: Simulation from a Known Initial Condition<a class="anchor-link" href="#3.5.5-Solution-Strategy-1:-Simulation-from-a-Known-Initial-Condition">&#182;</a></h2><p>For this first simulation we compute the response of the one compartment model due starting with an initial condition $C_{initial}$, and assuming input $u(t) = 0$.</p>
 
 </div>
 </div>
@@ -13173,7 +13184,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.4.1-Step-1.-Initialization">3.5.4.1 Step 1. Initialization<a class="anchor-link" href="#3.5.4.1-Step-1.-Initialization">&#182;</a></h3><p>Generally the first steps in any Jupyter notebook are to</p>
+<h3 id="3.5.5.1-Step-1.-Initialization">3.5.5.1 Step 1. Initialization<a class="anchor-link" href="#3.5.5.1-Step-1.-Initialization">&#182;</a></h3><p>Generally the first steps in any Jupyter notebook are to</p>
 <ol>
 <li>Initialize the plotting system.</li>
 <li>Import the <code>numpy</code> library for basic mathematical functions.</li>
@@ -13211,7 +13222,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.4.2-Step-2.-Enter-Parameter-Values">3.5.4.2 Step 2. Enter Parameter Values<a class="anchor-link" href="#3.5.4.2-Step-2.-Enter-Parameter-Values">&#182;</a></h3>
+<h3 id="3.5.5.2-Step-2.-Enter-Parameter-Values">3.5.5.2 Step 2. Enter Parameter Values<a class="anchor-link" href="#3.5.5.2-Step-2.-Enter-Parameter-Values">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13244,7 +13255,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.4.3-Step-3.-A-Function-the-RHS-of-the-Differential-equation">3.5.4.3 Step 3. A Function the RHS of the Differential equation<a class="anchor-link" href="#3.5.4.3-Step-3.-A-Function-the-RHS-of-the-Differential-equation">&#182;</a></h3>$$\frac{dC}{dt} = \frac{1}{V}u(t) - \frac{Q}{V}C$$<p>where $u(t) = 0$.</p>
+<h3 id="3.5.5.3-Step-3.-A-Function-the-RHS-of-the-Differential-equation">3.5.5.3 Step 3. A Function the RHS of the Differential equation<a class="anchor-link" href="#3.5.5.3-Step-3.-A-Function-the-RHS-of-the-Differential-equation">&#182;</a></h3>$$\frac{dC}{dt} = \frac{1}{V}u(t) - \frac{Q}{V}C$$<p>where $u(t) = 0$.</p>
 
 </div>
 </div>
@@ -13277,7 +13288,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.4.4-Step-4.-Solution-and-Visualization">3.5.4.4 Step 4. Solution and Visualization<a class="anchor-link" href="#3.5.4.4-Step-4.-Solution-and-Visualization">&#182;</a></h3>
+<h3 id="3.5.5.4-Step-4.-Solution-and-Visualization">3.5.5.4 Step 4. Solution and Visualization<a class="anchor-link" href="#3.5.5.4-Step-4.-Solution-and-Visualization">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13340,7 +13351,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.4.5-Step-5.-Analysis-of-the-Results">3.5.4.5 Step 5. Analysis of the Results<a class="anchor-link" href="#3.5.4.5-Step-5.-Analysis-of-the-Results">&#182;</a></h3><p>Let's compare our results to a typical experimental result.</p>
+<h3 id="3.5.5.5-Step-5.-Analysis-of-the-Results">3.5.5.5 Step 5. Analysis of the Results<a class="anchor-link" href="#3.5.5.5-Step-5.-Analysis-of-the-Results">&#182;</a></h3><p>Let's compare our results to a typical experimental result.</p>
 <table>
 <thead><tr>
 <th style="text-align:center"></th>
@@ -13367,7 +13378,7 @@ $$V \frac{dC}{dt} = u(t) - Q C(t)$$<p>where $C$ is concentration in units of mas
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.5-Solution-Strategy-2:-Time-Dependent-Input">3.5.5 Solution Strategy 2: Time-Dependent Input<a class="anchor-link" href="#3.5.5-Solution-Strategy-2:-Time-Dependent-Input">&#182;</a></h2><p>For the next simulation we will assume the dosing takes place over a short period of time $\delta t$. To obtain a total dose $U_{dose}$ in a time period $\delta t$, the mass flow rate rate must be</p>
+<h2 id="3.5.6-Solution-Strategy-2:-Time-Dependent-Input">3.5.6 Solution Strategy 2: Time-Dependent Input<a class="anchor-link" href="#3.5.6-Solution-Strategy-2:-Time-Dependent-Input">&#182;</a></h2><p>For the next simulation we will assume the dosing takes place over a short period of time $\delta t$. To obtain a total dose $U_{dose}$ in a time period $\delta t$, the mass flow rate rate must be</p>
 $$u(t) = 
 \begin{cases}
 U/ \delta t \qquad \mbox{for } 0 \leq t \leq \delta t \\
@@ -13537,7 +13548,7 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.5.5.1-Analysis-of-the-Results">3.5.5.1 Analysis of the Results<a class="anchor-link" href="#3.5.5.1-Analysis-of-the-Results">&#182;</a></h3><p>Let's compare our results to a typical experimental result.</p>
+<h3 id="3.5.6.1-Analysis-of-the-Results">3.5.6.1 Analysis of the Results<a class="anchor-link" href="#3.5.6.1-Analysis-of-the-Results">&#182;</a></h3><p>Let's compare our results to a typical experimental result.</p>
 <table>
 <thead><tr>
 <th style="text-align:center"></th>
@@ -13564,7 +13575,7 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.6-Problem-Statement-2">3.5.6 Problem Statement 2<a class="anchor-link" href="#3.5.6-Problem-Statement-2">&#182;</a></h2><p>The minimum inhibitory concentration (MIC) of a particular organism to a particular antibiotic is 5 mg/liter, the minimum bactricidal concentration (MBC) is 8 mg/liter. Assume the plasma volume $V$ is 4 liters with a clearance rate $Q$ of 0.5 liters/hour.</p>
+<h2 id="3.5.7-Problem-Statement-2">3.5.7 Problem Statement 2<a class="anchor-link" href="#3.5.7-Problem-Statement-2">&#182;</a></h2><p>The minimum inhibitory concentration (MIC) of a particular organism to a particular antibiotic is 5 mg/liter, the minimum bactricidal concentration (MBC) is 8 mg/liter. Assume the plasma volume $V$ is 4 liters with a clearance rate $Q$ of 0.5 liters/hour.</p>
 <p>Design an antibiotic therapy to keep the plasma concentration above the MIC level for a period of 96 hours.</p>
 
 </div>
@@ -13577,7 +13588,7 @@ $$<p>Before doing a simulation, we will write a Python function for $u(t)$.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.5.7-Solution-Strategy-3:-Periodic-Dosing">3.5.7 Solution Strategy 3: Periodic Dosing<a class="anchor-link" href="#3.5.7-Solution-Strategy-3:-Periodic-Dosing">&#182;</a></h2><p>Finally, we'll consider the case of repetitive dosing where a new dose is administered every $t_{dose}$ hours. The trick to this calculation is the Python <code>%</code> operator which returns the remainder following division. This is a very useful tool for creating complex repetitive functions.</p>
+<h2 id="3.5.8-Solution-Strategy-3:-Periodic-Dosing">3.5.8 Solution Strategy 3: Periodic Dosing<a class="anchor-link" href="#3.5.8-Solution-Strategy-3:-Periodic-Dosing">&#182;</a></h2><p>Finally, we'll consider the case of repetitive dosing where a new dose is administered every $t_{dose}$ hours. The trick to this calculation is the Python <code>%</code> operator which returns the remainder following division. This is a very useful tool for creating complex repetitive functions.</p>
 
 </div>
 </div>

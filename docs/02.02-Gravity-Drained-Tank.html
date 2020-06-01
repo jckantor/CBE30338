@@ -13107,7 +13107,18 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.2-Gravity-Drained-Tank">2.2 Gravity Drained Tank<a class="anchor-link" href="#2.2-Gravity-Drained-Tank">&#182;</a></h1><h3 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h3><p>In the example we study the problem of constructing nonlinear process model for the liquid level in a gravity drained tank.</p>
+<h1 id="2.2-Gravity-Drained-Tank">2.2 Gravity Drained Tank<a class="anchor-link" href="#2.2-Gravity-Drained-Tank">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.2.1-Summary">2.2.1 Summary<a class="anchor-link" href="#2.2.1-Summary">&#182;</a></h2><p>In the example we study the problem of constructing nonlinear process model for the liquid level in a gravity drained tank.</p>
 
 </div>
 </div>
@@ -13119,7 +13130,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.2.1-Torricelli's-law">2.2.1 Torricelli's law<a class="anchor-link" href="#2.2.1-Torricelli's-law">&#182;</a></h2><p>Torricelli's law states the velocity of an incompressible liquid stream exiting a liquid tank at level $h$ below the surface is</p>
+<h2 id="2.2.2-Torricelli's-law">2.2.2 Torricelli's law<a class="anchor-link" href="#2.2.2-Torricelli's-law">&#182;</a></h2><p>Torricelli's law states the velocity of an incompressible liquid stream exiting a liquid tank at level $h$ below the surface is</p>
 $$v = \sqrt{2gh}$$<p></p>
 <p>This is the same velocity as an object dropped from a height $h$. The derivation is straightforward. From Bernoulli's principle,</p>
 $$\frac{v^2}{2} + gh + \frac{P}{\rho} = \text{constant}$$
@@ -13146,7 +13157,7 @@ $$gh + \frac{P_{atm}}{\rho} = \frac{v^2}{2} + \frac{P_{atm}}{\rho}$$$$\implies v
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.2.2-Mass-Balance-for-Tank-with-Constant-Cross-Sectional-Area">2.2.2 Mass Balance for Tank with Constant Cross-Sectional Area<a class="anchor-link" href="#2.2.2-Mass-Balance-for-Tank-with-Constant-Cross-Sectional-Area">&#182;</a></h2><p>For a tank with constant cross-sectional area, such as a cylindrical or rectangular tank, the liquid height is described by a differential equation</p>
+<h2 id="2.2.3-Mass-Balance-for-Tank-with-Constant-Cross-Sectional-Area">2.2.3 Mass Balance for Tank with Constant Cross-Sectional Area<a class="anchor-link" href="#2.2.3-Mass-Balance-for-Tank-with-Constant-Cross-Sectional-Area">&#182;</a></h2><p>For a tank with constant cross-sectional area, such as a cylindrical or rectangular tank, the liquid height is described by a differential equation</p>
 $$A\frac{dh}{dt} = q_{in}(t) - q_{out}(t)$$<p>where $q_{out}$ is a function of liquid height. Torricelli's law tells the outlet flow from the tank is proportional to square root of the liquid height</p>
 $$ q_{out}(h) = C_v\sqrt{h} $$
 </div>
@@ -13172,7 +13183,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.2.3-Step-by-Step-Approach-to-Nonlinear-Simulation">2.2.3 Step-by-Step Approach to Nonlinear Simulation<a class="anchor-link" href="#2.2.3-Step-by-Step-Approach-to-Nonlinear-Simulation">&#182;</a></h2>
+<h2 id="2.2.4-Step-by-Step-Approach-to-Nonlinear-Simulation">2.2.4 Step-by-Step Approach to Nonlinear Simulation<a class="anchor-link" href="#2.2.4-Step-by-Step-Approach-to-Nonlinear-Simulation">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13183,7 +13194,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.1-Step-1.-Initialize-Jupyter-and-Python">2.2.3.1 Step 1. Initialize Jupyter and Python<a class="anchor-link" href="#2.2.3.1-Step-1.-Initialize-Jupyter-and-Python">&#182;</a></h3><p>The first step in any Python application is to initialize graphics display (if you will be creating graphic output), and import any needed libraries.</p>
+<h3 id="2.2.4.1-Step-1.-Initialize-Jupyter-and-Python">2.2.4.1 Step 1. Initialize Jupyter and Python<a class="anchor-link" href="#2.2.4.1-Step-1.-Initialize-Jupyter-and-Python">&#182;</a></h3><p>The first step in any Python application is to initialize graphics display (if you will be creating graphic output), and import any needed libraries.</p>
 <p>The <code>%matplotlib inline</code> is a command telling the Jupyter notebook to display any graphics inside this notebook.</p>
 <p>We then import a standard graphics library (<code>matplotlib.pyplot</code>) that will be referred to with the prefix <code>plt</code>, a standard numerical library <code>numpy</code> that will be referred to with the prefix <code>np</code>, and the function <code>odeint</code> from the <code>scipy.integrate</code> library.</p>
 
@@ -13217,7 +13228,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.2-Step-2.-Define-parameters">2.2.3.2 Step 2. Define parameters<a class="anchor-link" href="#2.2.3.2-Step-2.-Define-parameters">&#182;</a></h3><p>Provide values for all relevant parameters.  Use comments to describe the parameters and units.</p>
+<h3 id="2.2.4.2-Step-2.-Define-parameters">2.2.4.2 Step 2. Define parameters<a class="anchor-link" href="#2.2.4.2-Step-2.-Define-parameters">&#182;</a></h3><p>Provide values for all relevant parameters.  Use comments to describe the parameters and units.</p>
 
 </div>
 </div>
@@ -13247,7 +13258,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.3-Step-3.-Write-Functions-for-the-RHS-of-the-Differential-Equations">2.2.3.3 Step 3. Write Functions for the RHS of the Differential Equations<a class="anchor-link" href="#2.2.3.3-Step-3.-Write-Functions-for-the-RHS-of-the-Differential-Equations">&#182;</a></h3>
+<h3 id="2.2.4.3-Step-3.-Write-Functions-for-the-RHS-of-the-Differential-Equations">2.2.4.3 Step 3. Write Functions for the RHS of the Differential Equations<a class="anchor-link" href="#2.2.4.3-Step-3.-Write-Functions-for-the-RHS-of-the-Differential-Equations">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13280,7 +13291,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.4-Step-4.-Choose-an-Initial-Condition,-a-Time-Grid,-and-Integrate-the-Differential-Equation">2.2.3.4 Step 4. Choose an Initial Condition, a Time Grid, and Integrate the Differential Equation<a class="anchor-link" href="#2.2.3.4-Step-4.-Choose-an-Initial-Condition,-a-Time-Grid,-and-Integrate-the-Differential-Equation">&#182;</a></h3>
+<h3 id="2.2.4.4-Step-4.-Choose-an-Initial-Condition,-a-Time-Grid,-and-Integrate-the-Differential-Equation">2.2.4.4 Step 4. Choose an Initial Condition, a Time Grid, and Integrate the Differential Equation<a class="anchor-link" href="#2.2.4.4-Step-4.-Choose-an-Initial-Condition,-a-Time-Grid,-and-Integrate-the-Differential-Equation">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13310,7 +13321,7 @@ $$ \frac{dh}{dt} = - \frac{C_V}{A}\sqrt{h} + \frac{1}{A}q_{in}(t) $$<p>in our st
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.5-Step-5.-Visualize-and-Analyze-Results">2.2.3.5 Step 5. Visualize and Analyze Results<a class="anchor-link" href="#2.2.3.5-Step-5.-Visualize-and-Analyze-Results">&#182;</a></h3>
+<h3 id="2.2.4.5-Step-5.-Visualize-and-Analyze-Results">2.2.4.5 Step 5. Visualize and Analyze Results<a class="anchor-link" href="#2.2.4.5-Step-5.-Visualize-and-Analyze-Results">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13563,7 +13574,7 @@ kYhSARARiSgVABGRiPr/YZwA5Y19DxcAAAAASUVORK5CYII=
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2.3.6-Step-6.--Adjust-and-Repeat-as-Needed">2.2.3.6 Step 6.  Adjust and Repeat as Needed<a class="anchor-link" href="#2.2.3.6-Step-6.--Adjust-and-Repeat-as-Needed">&#182;</a></h3><p>Rarely does a simulation provide you with the information you seek on the first try.  You will almost certainly need to revise parameter values, choose different time grids, and add visualization features to obtain the most informative results.</p>
+<h3 id="2.2.4.6-Step-6.--Adjust-and-Repeat-as-Needed">2.2.4.6 Step 6.  Adjust and Repeat as Needed<a class="anchor-link" href="#2.2.4.6-Step-6.--Adjust-and-Repeat-as-Needed">&#182;</a></h3><p>Rarely does a simulation provide you with the information you seek on the first try.  You will almost certainly need to revise parameter values, choose different time grids, and add visualization features to obtain the most informative results.</p>
 
 </div>
 </div>

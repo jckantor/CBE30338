@@ -13126,7 +13126,18 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <p>One test that you can use to classify a process variable as extensive or intensive is to ask what is the value of the variable when combining two identical subsystems. For example, given indentical subsystems $A$ and $B$ with masses $m_A$ and $m_B$, the mass of the combined system $m_{A+B}$ is</p>
 $$m_{A+B} = m_A + m_B$$<p>which demonstrates that mass is an extensive variable. The temperature of the combined systems is</p>
 $$T_{A+B} = T_A  = T_B$$<p>which is the case for any intensive variable.</p>
-<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h3><ol>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.1.1.1-Exercises">2.1.1.1 Exercises<a class="anchor-link" href="#2.1.1.1-Exercises">&#182;</a></h3><ol>
 <li><p>Why is heat capacity an extensive variable, whereas specific heat capacity is an intensive variable?</p>
 </li>
 <li><p>A common version of the ideal gas law reads $$P V = n R T$$ Which variables are intensive? Which variables are extensive? How could you rewrite the ideal gas law in terms using only intensive variables? When would you prefer one version over the other?</p>
@@ -13153,20 +13164,75 @@ $$T_{A+B} = T_A  = T_B$$<p>which is the case for any intensive variable.</p>
 <p>The second law of thermodynamics specifies that every state also has another well-formulated extensive variable called entropy, $S$. Collectively $U$, $S$, $V$, and $n_1$, $n_2$, $\ldots$, $n_K$ form a redundant set of extensive variables where we can write one variable as a function of the others.</p>
 <p>Suppose we write $U$ as a function of $S$, $V$, and $n_1$, $n_2$, $\ldots$, $n_K$. Then</p>
 $$U = U(S, V, n_1, n_2, \ldots, n_K)$$<p>The fact that $U$, $S$, $V$, and $n_1$, $n_2$, $\ldots$, $n_K$ are extensive variables has profound consequences.</p>
-<h3 id="Conjugate-Variables">Conjugate Variables<a class="anchor-link" href="#Conjugate-Variables">&#182;</a></h3><p>The total derivative of internal energy is constructed by taking the partial derivatives with respect to each of the independent extensive variables on which it depends.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.1.2.1-Conjugate-Variables">2.1.2.1 Conjugate Variables<a class="anchor-link" href="#2.1.2.1-Conjugate-Variables">&#182;</a></h3><p>The total derivative of internal energy is constructed by taking the partial derivatives with respect to each of the independent extensive variables on which it depends.</p>
 $$dU = 
 \left(\frac{\partial U}{\partial S}\right)_{V,\bf n} dS + 
 \left(\frac{\partial U}{\partial V}\right)_{S,\bf n} dV + 
 \sum_{k=1}^{K} \left(\frac{\partial U}{\partial n_k}\right)_{S,V,n_{j\ne k}} dn_k$$<p>Each of the terms is an extensive quantity contributing to a change in the internal energy.</p>
-<h4 id="Pressure/Volume">Pressure/Volume<a class="anchor-link" href="#Pressure/Volume">&#182;</a></h4><p>The second term in the total derivative $dU$</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.2.1.1-Pressure/Volume">2.1.2.1.1 Pressure/Volume<a class="anchor-link" href="#2.1.2.1.1-Pressure/Volume">&#182;</a></h4><p>The second term in the total derivative $dU$</p>
 $$\left(\frac{\partial U}{\partial V}\right)_{S,\bf n} dV$$<p>describes the change in internal energy due to a change in system volume. If the system is expanding, it is experiencing a loss of internal energy by doing mechanical work dW on the surroundings. The amount of work is the product of system pressure times the change in volume, therefore</p>
 $$\left(\frac{\partial U}{\partial V}\right)_{S,\bf n} dV = -P dV$$<p>where pressure must correspond to term</p>
 $$ P = \left(\frac{\partial U}{\partial V}\right)_{S,\bf n} $$<p>What we see here is that pressure $P$ is an intensive conjugate variable corresponding to the extensive volume $V$.</p>
-<h4 id="Temperature/Entropy">Temperature/Entropy<a class="anchor-link" href="#Temperature/Entropy">&#182;</a></h4><p>The term</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.2.1.2-Temperature/Entropy">2.1.2.1.2 Temperature/Entropy<a class="anchor-link" href="#2.1.2.1.2-Temperature/Entropy">&#182;</a></h4><p>The term</p>
 $$\left(\frac{\partial U}{\partial S}\right)_{V,\bf n} dS$$<p>describes the change in internal energy due to thermal energy from the surroundings. In the case the "displacement" is the change in system entropy. The corresponding conjugate "force" is temperature.</p>
 $$ T = \left(\frac{\partial U}{\partial S}\right)_{V,\bf n} $$<p>This formula actually serves as a thermodynamic definition of temperature.</p>
-<h4 id="Chemical-Potential/Molar-Amount">Chemical Potential/Molar Amount<a class="anchor-link" href="#Chemical-Potential/Molar-Amount">&#182;</a></h4><p>The terms in $dU$ come from an increase in the amount of species $k$ in the system. The change may be due to exchange of material with the surroundings or to chemical reaction. The corresponding conjugate variable is chemical potential defined as</p>
-$$ \mu_k = \left(\frac{\partial U}{\partial n_k}\right)_{S,V,n_{j\ne k}}$$<h4 id="Conjugate-Variables">Conjugate Variables<a class="anchor-link" href="#Conjugate-Variables">&#182;</a></h4><p>The pairing of an extensive "displacement" variable with an intensive "force" variable appears throughout thermodynamics and chemical processes. Variables which share this relationship are called <strong>conjugate variables</strong>. In this case, the total derivative of internal energy can be expressed as</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.2.1.3-Chemical-Potential/Molar-Amount">2.1.2.1.3 Chemical Potential/Molar Amount<a class="anchor-link" href="#2.1.2.1.3-Chemical-Potential/Molar-Amount">&#182;</a></h4><p>The terms in $dU$ come from an increase in the amount of species $k$ in the system. The change may be due to exchange of material with the surroundings or to chemical reaction. The corresponding conjugate variable is chemical potential defined as</p>
+$$ \mu_k = \left(\frac{\partial U}{\partial n_k}\right)_{S,V,n_{j\ne k}}$$
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.2.1.4-Conjugate-Variables">2.1.2.1.4 Conjugate Variables<a class="anchor-link" href="#2.1.2.1.4-Conjugate-Variables">&#182;</a></h4><p>The pairing of an extensive "displacement" variable with an intensive "force" variable appears throughout thermodynamics and chemical processes. Variables which share this relationship are called <strong>conjugate variables</strong>. In this case, the total derivative of internal energy can be expressed as</p>
 $$dU = 
 \underbrace{\left(\frac{\partial U}{\partial S}\right)_{V,\bf n}}_{T} dS +
 \underbrace{\left(\frac{\partial U}{\partial V}\right)_{S,\bf n}}_{-P} dV +
@@ -13174,7 +13240,18 @@ $$dU =
 $$<p>or</p>
 $$dU = T dS - P dV + \sum_{k=1}^{K} \mu_k dn_k$$<p></p>
 <p>which is comprised of contributions due to the exchange of mechanical work and thermal energy with the surroundings, and with a change in amount of each species.</p>
-<h2 id="Homogeneous-Equations">Homogeneous Equations<a class="anchor-link" href="#Homogeneous-Equations">&#182;</a></h2><p>Computing the total derivative of internal energy $U$ using partial derivatives revealed the existence of intensive/extensive conjugate variable pairs. We can gain additional insights by more carefully investigating the behavior of extensive variables.</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.1.3-Homogeneous-Equations">2.1.3 Homogeneous Equations<a class="anchor-link" href="#2.1.3-Homogeneous-Equations">&#182;</a></h2><p>Computing the total derivative of internal energy $U$ using partial derivatives revealed the existence of intensive/extensive conjugate variable pairs. We can gain additional insights by more carefully investigating the behavior of extensive variables.</p>
 <p>We start with a given system with specified values for all of the extensive variable. Then we look at a system where the only difference is that it is factor $\lambda$ times larger. By definition, each of the extensive variables will also a positive factor $\lambda$ times larger.</p>
 $$U, S, V, n_1, n_2, \ldots, n_K \stackrel{\lambda}{\longrightarrow} \lambda U, \lambda S, \lambda V, \lambda n_1, \lambda n_2, \ldots, \lambda n_K$$<p>Because $U$ is a function of the other variables, we can write a relationship between the two systems that is a function of the positive scaling parameter $\lambda$.</p>
 $$ U(\lambda S, \lambda V, \lambda n_1, \lambda n_2, \ldots, \lambda n_K) = \lambda U(S, V, n_1, n_2, \ldots, n_K)$$<p>Taking the partial derivative of both sides of this equation with respect to $\lambda$,</p>

@@ -13126,7 +13126,18 @@ MV &amp; = \overline{MV} + K_P (SP - PV) + K_I\int_0^t (SP - PV)\ dt' + K_D\frac
 K_D\frac{d(SP - PV)}{dt} &amp; \longrightarrow \infty
 \end{align}<p>for a step change in setpoint. The issue is also evident in the proportional term $K_P (SP - PV)$ which undergoes a step change in value. In process control applications, a step change in the manipulated variable may require sudden and abrupt changes in valve position, process flows, or pressures, all of which can cause significant strain on very large devices.</p>
 <p>This phenomenon is called <strong>setpoint kick</strong> (or sometimes <strong>derivative kick</strong>) which is generally to be avoided.</p>
-<h2 id="Setpoint-Weighting">Setpoint Weighting<a class="anchor-link" href="#Setpoint-Weighting">&#182;</a></h2><p>The most common remedy is to introduce setpoint weighting. To this end, the PID control formula is written</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.2.2-Setpoint-Weighting">4.2.2 Setpoint Weighting<a class="anchor-link" href="#4.2.2-Setpoint-Weighting">&#182;</a></h2><p>The most common remedy is to introduce setpoint weighting. To this end, the PID control formula is written</p>
 \begin{align}
 MV &amp; = \overline{MV} + K_P e_P + K_I\int_0^t e_I\ dt' + K_D\frac{de_D}{dt}
 \end{align}<p>where the error terms are given by</p>
@@ -13148,7 +13159,7 @@ e_D(t) &amp; = \gamma\ SP - PV
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.2.2-Implementation-of-Setpoint-Weighting">4.2.2 Implementation of Setpoint Weighting<a class="anchor-link" href="#4.2.2-Implementation-of-Setpoint-Weighting">&#182;</a></h2><p>The implementation of setpoint weighting is straightforward. The object definition is modified to include additional parameters <code>beta</code> and <code>gamma</code> with typical default values. Error terms for the proportional and derivative terms are computed explicitly, and in the case of the derivative also saved for the next time step.</p>
+<h2 id="4.2.3-Implementation-of-Setpoint-Weighting">4.2.3 Implementation of Setpoint Weighting<a class="anchor-link" href="#4.2.3-Implementation-of-Setpoint-Weighting">&#182;</a></h2><p>The implementation of setpoint weighting is straightforward. The object definition is modified to include additional parameters <code>beta</code> and <code>gamma</code> with typical default values. Error terms for the proportional and derivative terms are computed explicitly, and in the case of the derivative also saved for the next time step.</p>
 
 </div>
 </div>
@@ -13199,7 +13210,7 @@ e_D(t) &amp; = \gamma\ SP - PV
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.2.3-Simulation">4.2.3 Simulation<a class="anchor-link" href="#4.2.3-Simulation">&#182;</a></h2><p>Let's see how well this PID implementation works. We'll perform the simulation with a setpoint that starts at room temperature, then rises to 50°C at $t = 50$ seconds. The data historian will record values of the setpoint, process variable, computed manipulated variable, and the actual value of the manipulated variable.</p>
+<h2 id="4.2.4-Simulation">4.2.4 Simulation<a class="anchor-link" href="#4.2.4-Simulation">&#182;</a></h2><p>Let's see how well this PID implementation works. We'll perform the simulation with a setpoint that starts at room temperature, then rises to 50°C at $t = 50$ seconds. The data historian will record values of the setpoint, process variable, computed manipulated variable, and the actual value of the manipulated variable.</p>
 
 </div>
 </div>

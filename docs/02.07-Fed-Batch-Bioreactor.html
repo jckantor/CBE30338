@@ -13130,7 +13130,18 @@ $$\mu(S) = \mu_{max}\frac{S}{K_S + S}$$<p>where $\mu_{max}$ is the maximum speci
 <p>For this model, the product is assumed to be a by-product of cell growth</p>
 $$r_P(X,S) = Y_{P/X}r_g(X,S)$$<p>where $Y_{P/X}$ is the product yield coefficient defined as</p>
 $$Y_{P/X} = \frac{\mbox{mass of product formed}}{\mbox{mass of new cells formed}}$$<p>The model further assumes that substrate is consumed is proportion to the mass of new cells formed where $Y_{X/S}$ is the yield coefficient for new cells</p>
-$$Y_{P/X} = \frac{\mbox{mass of new cells formed}}{\mbox{mass of substrate consumed}}$$<h3 id="Dilution-Effect">Dilution Effect<a class="anchor-link" href="#Dilution-Effect">&#182;</a></h3><p>One aspect of the fed-batch model is that volume is not constant, therefore the cell, product, and substrate concentrations are subject to a dilution effect.  Mathematically, the chain rule of differential calculus provides a means to recast the state of model in terms of the intensive concentration variables $X$, $P$, and $S$, and extensive volume $V$.</p>
+$$Y_{P/X} = \frac{\mbox{mass of new cells formed}}{\mbox{mass of substrate consumed}}$$
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.1.1-Dilution-Effect">2.7.1.1 Dilution Effect<a class="anchor-link" href="#2.7.1.1-Dilution-Effect">&#182;</a></h3><p>One aspect of the fed-batch model is that volume is not constant, therefore the cell, product, and substrate concentrations are subject to a dilution effect.  Mathematically, the chain rule of differential calculus provides a means to recast the state of model in terms of the intensive concentration variables $X$, $P$, and $S$, and extensive volume $V$.</p>
 $$\begin{align*}
 \frac{d(XV)}{dt} &amp; = V\frac{dX}{dt} + X\frac{dV}{dt} = V\frac{dX}{dt} + F(t)X \\
 \frac{d(PV)}{dt} &amp; = V\frac{dP}{dt} + P\frac{dV}{dt} = V\frac{dP}{dt} + F(t)P \\

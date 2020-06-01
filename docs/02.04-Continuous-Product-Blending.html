@@ -13127,7 +13127,18 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.4.1-Preliminary-Control-Analysis">2.4.1 Preliminary Control Analysis<a class="anchor-link" href="#2.4.1-Preliminary-Control-Analysis">&#182;</a></h2><h3 id="Parameters">Parameters<a class="anchor-link" href="#Parameters">&#182;</a></h3><table>
+<h2 id="2.4.1-Preliminary-Control-Analysis">2.4.1 Preliminary Control Analysis<a class="anchor-link" href="#2.4.1-Preliminary-Control-Analysis">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.4.1.1-Parameters">2.4.1.1 Parameters<a class="anchor-link" href="#2.4.1.1-Parameters">&#182;</a></h3><table>
 <thead><tr>
 <th style="text-align:center">Quantity</th>
 <th style="text-align:center">Symbol</th>
@@ -13156,12 +13167,34 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 </tr>
 </tbody>
 </table>
-<h3 id="Control-Objectives">Control Objectives<a class="anchor-link" href="#Control-Objectives">&#182;</a></h3><ul>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.4.1.2-Control-Objectives">2.4.1.2 Control Objectives<a class="anchor-link" href="#2.4.1.2-Control-Objectives">&#182;</a></h3><ul>
 <li>Maintain outlet concentration of $A$ at $8.0 \pm 0.2$ grams/liter.</li>
 <li>Maintain an average residence time (i.e., ratio $V/q_{out}$) of $96 \pm 12$ hours.</li>
 <li>Past operation has shown a liquid volume of 12,000 liters generally meets nominal demand. Demand, however, fluctuates and is determined by the downstream packaging line.</li>
 </ul>
-<h3 id="Classification-of-Variables">Classification of Variables<a class="anchor-link" href="#Classification-of-Variables">&#182;</a></h3><p>What are the disturbances variables (DV), manipulated variables (MV), and controlled variables (CV)?</p>
+
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.4.1.3-Classification-of-Variables">2.4.1.3 Classification of Variables<a class="anchor-link" href="#2.4.1.3-Classification-of-Variables">&#182;</a></h3><p>What are the disturbances variables (DV), manipulated variables (MV), and controlled variables (CV)?</p>
 <table>
 <thead><tr>
 <th style="text-align:center">Variable</th>
@@ -13209,7 +13242,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.1.1-Degrees-of-Freedom-Analysis">2.4.1.1 Degrees of Freedom Analysis<a class="anchor-link" href="#2.4.1.1-Degrees-of-Freedom-Analysis">&#182;</a></h3><p>At steady-state the balance equations become algebraic equations</p>
+<h3 id="2.4.1.4-Degrees-of-Freedom-Analysis">2.4.1.4 Degrees of Freedom Analysis<a class="anchor-link" href="#2.4.1.4-Degrees-of-Freedom-Analysis">&#182;</a></h3><p>At steady-state the balance equations become algebraic equations</p>
 \begin{align}
 0 &amp; = \bar{q}_A + \bar{q}_S - \bar{q}_{out} \\
 &amp; \\
@@ -13233,7 +13266,7 @@ c_{A,f} &amp; = 200 \mbox{ g/liter} \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.1.2-Steady-State">2.4.1.2 Steady State<a class="anchor-link" href="#2.4.1.2-Steady-State">&#182;</a></h3><p>Let's assume a constant output demand $\bar{q}_{out}$ = 125 liters/hr.  The equations may then be solved in order:</p>
+<h3 id="2.4.1.5-Steady-State">2.4.1.5 Steady State<a class="anchor-link" href="#2.4.1.5-Steady-State">&#182;</a></h3><p>Let's assume a constant output demand $\bar{q}_{out}$ = 125 liters/hr.  The equations may then be solved in order:</p>
 \begin{align}
 c_{A,f} &amp; = 200 \mbox{ g/liter} \\
 \bar{c}_A &amp; = 8 \mbox{ g/liter} \\
@@ -13256,7 +13289,7 @@ c_{A,f} &amp; = 200 \mbox{ g/liter} \\
 <div class="cell border-box-sizing text_cell rendered celltag_exercise"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.1.3-Exercise-1.-Determine-Operating-Range">2.4.1.3 Exercise 1. Determine Operating Range<a class="anchor-link" href="#2.4.1.3-Exercise-1.-Determine-Operating-Range">&#182;</a></h3><p>Solve the steady-state equations for other values of $\bar{q}_{out}$. Given a maximum tank operating capacity of 15,000 liters, what is the largest possible value of $\bar{q}_{out}$ which still meets process specifications?  If the minimum tank operating capacity is 8,000 liters, what is the minimum value of $\bar{q}_{out}$?</p>
+<h3 id="2.4.1.6-Exercise-1.-Determine-Operating-Range">2.4.1.6 Exercise 1. Determine Operating Range<a class="anchor-link" href="#2.4.1.6-Exercise-1.-Determine-Operating-Range">&#182;</a></h3><p>Solve the steady-state equations for other values of $\bar{q}_{out}$. Given a maximum tank operating capacity of 15,000 liters, what is the largest possible value of $\bar{q}_{out}$ which still meets process specifications?  If the minimum tank operating capacity is 8,000 liters, what is the minimum value of $\bar{q}_{out}$?</p>
 
 </div>
 </div>
@@ -13296,7 +13329,18 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.4.3-Simulation">2.4.3 Simulation<a class="anchor-link" href="#2.4.3-Simulation">&#182;</a></h2><h3 id="Step-1.-Imports">Step 1. Imports<a class="anchor-link" href="#Step-1.-Imports">&#182;</a></h3><p>We start the simulation by importing necessary Python libraries.</p>
+<h2 id="2.4.3-Simulation">2.4.3 Simulation<a class="anchor-link" href="#2.4.3-Simulation">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.4.3.1-Step-1.-Imports">2.4.3.1 Step 1. Imports<a class="anchor-link" href="#2.4.3.1-Step-1.-Imports">&#182;</a></h3><p>We start the simulation by importing necessary Python libraries.</p>
 
 </div>
 </div>
@@ -13328,7 +13372,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.1-Step-2.-Parameter-Values">2.4.3.1 Step 2. Parameter Values<a class="anchor-link" href="#2.4.3.1-Step-2.-Parameter-Values">&#182;</a></h3><p>It is good coding practice to include all relevant parameter values in single block of code. This makes it easier for users of your code to understand what values are relevant to the problem, and to adjust and maintain your code. No 'magic' numbers should appear later in your code.</p>
+<h3 id="2.4.3.2-Step-2.-Parameter-Values">2.4.3.2 Step 2. Parameter Values<a class="anchor-link" href="#2.4.3.2-Step-2.-Parameter-Values">&#182;</a></h3><p>It is good coding practice to include all relevant parameter values in single block of code. This makes it easier for users of your code to understand what values are relevant to the problem, and to adjust and maintain your code. No 'magic' numbers should appear later in your code.</p>
 
 </div>
 </div>
@@ -13367,7 +13411,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.2-Step-3.-Computing-Steady-State">2.4.3.2 Step 3. Computing Steady State<a class="anchor-link" href="#2.4.3.2-Step-3.-Computing-Steady-State">&#182;</a></h3><p>A good modeling practice is to begin with the determination of a nominal steady state. By nominal we mean operating conditions representative of typical, desired behavior of the process in question, and should be computed based on the parameter values given above.</p>
+<h3 id="2.4.3.3-Step-3.-Computing-Steady-State">2.4.3.3 Step 3. Computing Steady State<a class="anchor-link" href="#2.4.3.3-Step-3.-Computing-Steady-State">&#182;</a></h3><p>A good modeling practice is to begin with the determination of a nominal steady state. By nominal we mean operating conditions representative of typical, desired behavior of the process in question, and should be computed based on the parameter values given above.</p>
 
 </div>
 </div>
@@ -13428,7 +13472,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.3-Step-4.-Process-Model-Equations">2.4.3.3 Step 4. Process Model Equations<a class="anchor-link" href="#2.4.3.3-Step-4.-Process-Model-Equations">&#182;</a></h3><p>In our case the model consists of a system of two differential equations. For simulation with the Python function <code>odeint</code>, the model is encapsulated into a Python function that accepts two arguments.</p>
+<h3 id="2.4.3.4-Step-4.-Process-Model-Equations">2.4.3.4 Step 4. Process Model Equations<a class="anchor-link" href="#2.4.3.4-Step-4.-Process-Model-Equations">&#182;</a></h3><p>In our case the model consists of a system of two differential equations. For simulation with the Python function <code>odeint</code>, the model is encapsulated into a Python function that accepts two arguments.</p>
 <ul>
 <li><code>X</code> is a list of values for the model state, in this case <code>V</code> and <code>ca</code>.</li>
 <li><code>t</code> a variable containing value corresponding to the current time.</li>
@@ -13465,7 +13509,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.4-Step-5.-Numerical-Solution-of-the-Process-Model">2.4.3.4 Step 5. Numerical Solution of the Process Model<a class="anchor-link" href="#2.4.3.4-Step-5.-Numerical-Solution-of-the-Process-Model">&#182;</a></h3><p>This block does the numerically intensive portion of the simulation. Here we establish values for all degrees of freedeom, specify initial conditions, and thne proceed to compute a history of the process behavior. The history is broken into discrete time step which is a bit more work now, but will later provide a means to test implementations of control algorithms.</p>
+<h3 id="2.4.3.5-Step-5.-Numerical-Solution-of-the-Process-Model">2.4.3.5 Step 5. Numerical Solution of the Process Model<a class="anchor-link" href="#2.4.3.5-Step-5.-Numerical-Solution-of-the-Process-Model">&#182;</a></h3><p>This block does the numerically intensive portion of the simulation. Here we establish values for all degrees of freedeom, specify initial conditions, and thne proceed to compute a history of the process behavior. The history is broken into discrete time step which is a bit more work now, but will later provide a means to test implementations of control algorithms.</p>
 <p>For the first simulation, it usually a good idea to pick an initial condition that will yield a known result. In this case we start a simulation at steady state.</p>
 
 </div>
@@ -13543,7 +13587,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.5-Step-6.-Visualization-and-Analysis">2.4.3.5 Step 6. Visualization and Analysis<a class="anchor-link" href="#2.4.3.5-Step-6.-Visualization-and-Analysis">&#182;</a></h3><p>To simplify future simulations, here we define a function to plot the results stored in the simulation record. The function <code>plot_history(history, labels)</code> takes two arguments. The first argument is the data history recorded during the course of the simulation, where the first element is assumed to be time. The second argument is a list of labels corresponding to each of the recorded variables.</p>
+<h3 id="2.4.3.6-Step-6.-Visualization-and-Analysis">2.4.3.6 Step 6. Visualization and Analysis<a class="anchor-link" href="#2.4.3.6-Step-6.-Visualization-and-Analysis">&#182;</a></h3><p>To simplify future simulations, here we define a function to plot the results stored in the simulation record. The function <code>plot_history(history, labels)</code> takes two arguments. The first argument is the data history recorded during the course of the simulation, where the first element is assumed to be time. The second argument is a list of labels corresponding to each of the recorded variables.</p>
 
 </div>
 </div>
@@ -13613,7 +13657,7 @@ V\frac{dc_A}{dt} + c_A\left(q_A + q_S - q_{out}\right) &amp; = q_A c_{A,f} - q_{
 <div class="cell border-box-sizing text_cell rendered celltag_exercise"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.3.6-Exercise-2.-Explore-Dynamical-Behavior">2.4.3.6 Exercise 2. Explore Dynamical Behavior<a class="anchor-link" href="#2.4.3.6-Exercise-2.-Explore-Dynamical-Behavior">&#182;</a></h3><p>Let's explore the behavior of this mixing tank under different assumptions.  We'll explore the following cases:</p>
+<h3 id="2.4.3.7-Exercise-2.-Explore-Dynamical-Behavior">2.4.3.7 Exercise 2. Explore Dynamical Behavior<a class="anchor-link" href="#2.4.3.7-Exercise-2.-Explore-Dynamical-Behavior">&#182;</a></h3><p>Let's explore the behavior of this mixing tank under different assumptions.  We'll explore the following cases:</p>
 <ol>
 <li>The startup concentration of $A$ is $c_A = 0$. How long before the mixer is producing an acceptable product?</li>
 <li>The outlet flow increases by 10%.  How long before the product is out of spec?</li>

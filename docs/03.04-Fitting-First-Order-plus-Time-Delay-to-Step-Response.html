@@ -13162,7 +13162,18 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.4.3-First-Order-plus-Time-Delay-Models">3.4.3 First Order plus Time Delay Models<a class="anchor-link" href="#3.4.3-First-Order-plus-Time-Delay-Models">&#182;</a></h2><h3 id="First-Order-Models">First Order Models<a class="anchor-link" href="#First-Order-Models">&#182;</a></h3><p>A linear first-order plus time-delay model is a good approximation for many process control applications. Assume the manipulated process input, $u$, and measured process output, $y$, are initially at steady-state $u_0, y_0$.</p>
+<h2 id="3.4.3-First-Order-plus-Time-Delay-Models">3.4.3 First Order plus Time Delay Models<a class="anchor-link" href="#3.4.3-First-Order-plus-Time-Delay-Models">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.4.3.1-First-Order-Models">3.4.3.1 First Order Models<a class="anchor-link" href="#3.4.3.1-First-Order-Models">&#182;</a></h3><p>A linear first-order plus time-delay model is a good approximation for many process control applications. Assume the manipulated process input, $u$, and measured process output, $y$, are initially at steady-state $u_0, y_0$.</p>
 <p>Without loss of generality, the response of a linear first-order system without time-delay can be written as a differential equation</p>
 $$\tau\frac{d(y-y_0)}{dt} + (y-y_0) = K(u-u_0)$$<p>or</p>
 $$\tau\frac{dy}{dt} + (y-y_0) = K(u-u_0)$$
@@ -13195,8 +13206,19 @@ y(t) &amp; = y_0 + K(u_\infty - u_0) (1 - e^{-(t-t_0)/\tau)}) \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.3.1-Time-Delay">3.4.3.1 Time Delay<a class="anchor-link" href="#3.4.3.1-Time-Delay">&#182;</a></h3><p>Chemical processes are frequently encumbered with time delays associated with the transport of materials, chemical measurement, or simply sluggish response to control inputs. A pure time delay is modeled by a single parameter, $\tau_d$, such that</p>
-$$y(t) = u(t-\tau_d)$$<h3 id="First-Order-plus-Time-Delay-(FOPTD)">First Order plus Time Delay (FOPTD)<a class="anchor-link" href="#First-Order-plus-Time-Delay-(FOPTD)">&#182;</a></h3><p>If we add the time delay feature to the first order process described above, then</p>
+<h3 id="3.4.3.2-Time-Delay">3.4.3.2 Time Delay<a class="anchor-link" href="#3.4.3.2-Time-Delay">&#182;</a></h3><p>Chemical processes are frequently encumbered with time delays associated with the transport of materials, chemical measurement, or simply sluggish response to control inputs. A pure time delay is modeled by a single parameter, $\tau_d$, such that</p>
+$$y(t) = u(t-\tau_d)$$
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.4.3.3-First-Order-plus-Time-Delay-(FOPTD)">3.4.3.3 First Order plus Time Delay (FOPTD)<a class="anchor-link" href="#3.4.3.3-First-Order-plus-Time-Delay-(FOPTD)">&#182;</a></h3><p>If we add the time delay feature to the first order process described above, then</p>
 \begin{align*}
 y(t) &amp; = y_0 + K(u_\infty - u_0) (1 - e^{-(t-\tau_d - t_0)/\tau)}) \\
 \\
@@ -13214,7 +13236,7 @@ y(t) &amp; = y_0 + K(u_\infty - u_0) (1 - e^{-(t-\tau_d - t_0)/\tau)}) \\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.3.2-Visualization">3.4.3.2 Visualization<a class="anchor-link" href="#3.4.3.2-Visualization">&#182;</a></h3><p>First we write a function to compute the response of a first order system with time delay to a unit step input where $u_0 = 0$ and $u_\infty = 1$.</p>
+<h3 id="3.4.3.4-Visualization">3.4.3.4 Visualization<a class="anchor-link" href="#3.4.3.4-Visualization">&#182;</a></h3><p>First we write a function to compute the response of a first order system with time delay to a unit step input where $u_0 = 0$ and $u_\infty = 1$.</p>
 
 </div>
 </div>
@@ -13514,7 +13536,18 @@ AABJRU5ErkJggg==
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.4.4-Fitting-an-FOPTD-model">3.4.4 Fitting an FOPTD model<a class="anchor-link" href="#3.4.4-Fitting-an-FOPTD-model">&#182;</a></h2><h3 id="Sample-Problem-Statement">Sample Problem Statement<a class="anchor-link" href="#Sample-Problem-Statement">&#182;</a></h3><p>A distillation column is initially at steady state where the cooling water flow to the condensor is 110 kg/hr and the vapor phase mole fraction of the volatile compound is 0.87.  At t = 60 min, the steam flow is raised to 120 kg/hr. The vapor phase mole fraction increases as shown in the following chart.</p>
+<h2 id="3.4.4-Fitting-an-FOPTD-model">3.4.4 Fitting an FOPTD model<a class="anchor-link" href="#3.4.4-Fitting-an-FOPTD-model">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+
+
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.4.4.1-Sample-Problem-Statement">3.4.4.1 Sample Problem Statement<a class="anchor-link" href="#3.4.4.1-Sample-Problem-Statement">&#182;</a></h3><p>A distillation column is initially at steady state where the cooling water flow to the condensor is 110 kg/hr and the vapor phase mole fraction of the volatile compound is 0.87.  At t = 60 min, the steam flow is raised to 120 kg/hr. The vapor phase mole fraction increases as shown in the following chart.</p>
 <p>The problem task to fit a FOPTD model to this experimental result.</p>
 
 </div>
@@ -13836,7 +13869,7 @@ AABJRU5ErkJggg==
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.4.1-Step-1.-Shift-and-scale-the-experimental-data-to-correspond-to-a-unit-step-input-at-time-t-=--0.">3.4.4.1 Step 1. Shift and scale the experimental data to correspond to a unit step input at time t =  0.<a class="anchor-link" href="#3.4.4.1-Step-1.-Shift-and-scale-the-experimental-data-to-correspond-to-a-unit-step-input-at-time-t-=--0.">&#182;</a></h3><p>The first step is to scale the experimental data to fit the framework of an FOPTD model. This generally involves three steps:</p>
+<h3 id="3.4.4.2-Step-1.-Shift-and-scale-the-experimental-data-to-correspond-to-a-unit-step-input-at-time-t-=--0.">3.4.4.2 Step 1. Shift and scale the experimental data to correspond to a unit step input at time t =  0.<a class="anchor-link" href="#3.4.4.2-Step-1.-Shift-and-scale-the-experimental-data-to-correspond-to-a-unit-step-input-at-time-t-=--0.">&#182;</a></h3><p>The first step is to scale the experimental data to fit the framework of an FOPTD model. This generally involves three steps:</p>
 <ul>
 <li>Shift the time scale to t = 0 corresponds to the start of the experiment.</li>
 </ul>
@@ -14096,7 +14129,7 @@ goiIBJQQREQEUEIQEZGAEoKIiABKCCIiEvh/oJVto3UaMrIAAAAASUVORK5CYII=
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.4.2-Step-2.-Create-a-function-to-compute-the-response-of-an-FOPTD-model.">3.4.4.2 Step 2. Create a function to compute the response of an FOPTD model.<a class="anchor-link" href="#3.4.4.2-Step-2.-Create-a-function-to-compute-the-response-of-an-FOPTD-model.">&#182;</a></h3>
+<h3 id="3.4.4.3-Step-2.-Create-a-function-to-compute-the-response-of-an-FOPTD-model.">3.4.4.3 Step 2. Create a function to compute the response of an FOPTD model.<a class="anchor-link" href="#3.4.4.3-Step-2.-Create-a-function-to-compute-the-response-of-an-FOPTD-model.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14416,7 +14449,7 @@ gCQEIYQQFpIQhBBCAPD/t3AprjLsQRIAAAAASUVORK5CYII=
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.4.3-Step-3.-Create-a-function-to-measure-the-error-between-an-FOPTD-model-and-the-experimental-data.">3.4.4.3 Step 3. Create a function to measure the error between an FOPTD model and the experimental data.<a class="anchor-link" href="#3.4.4.3-Step-3.-Create-a-function-to-measure-the-error-between-an-FOPTD-model-and-the-experimental-data.">&#182;</a></h3><p>Let's called the step response of the fitted model to be $\hat{y}_s$. We seek to minimize</p>
+<h3 id="3.4.4.4-Step-3.-Create-a-function-to-measure-the-error-between-an-FOPTD-model-and-the-experimental-data.">3.4.4.4 Step 3. Create a function to measure the error between an FOPTD model and the experimental data.<a class="anchor-link" href="#3.4.4.4-Step-3.-Create-a-function-to-measure-the-error-between-an-FOPTD-model-and-the-experimental-data.">&#182;</a></h3><p>Let's called the step response of the fitted model to be $\hat{y}_s$. We seek to minimize</p>
 $$\min_{K,\tau,\tau_d} \int_0^T \|\hat{y}_s - y_s\|\,dt$$<p>for some suitable norm $\|\cdot\|$.  A common choice of norm for process control is the absolute value of the difference called Integral Absolute Error (IAE)</p>
 $$\text{IAE} = \min_{K,\tau,\tau_d} \int_0^T |\hat{y}_s - y_s|\,dt$$<p>The advantage of IAE over other choices of norms is that it tends to be more robust with respect to larger errors.</p>
 
@@ -14474,7 +14507,7 @@ $$\text{IAE} = \min_{K,\tau,\tau_d} \int_0^T |\hat{y}_s - y_s|\,dt$$<p>The advan
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.4.4-Step-4.-Use-scipy.optimize.minimize()-to-find-the-best-fitting-FOPTD-model.">3.4.4.4 Step 4. Use scipy.optimize.minimize() to find the best fitting FOPTD model.<a class="anchor-link" href="#3.4.4.4-Step-4.-Use-scipy.optimize.minimize()-to-find-the-best-fitting-FOPTD-model.">&#182;</a></h3>
+<h3 id="3.4.4.5-Step-4.-Use-scipy.optimize.minimize()-to-find-the-best-fitting-FOPTD-model.">3.4.4.5 Step 4. Use scipy.optimize.minimize() to find the best fitting FOPTD model.<a class="anchor-link" href="#3.4.4.5-Step-4.-Use-scipy.optimize.minimize()-to-find-the-best-fitting-FOPTD-model.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14526,7 +14559,7 @@ tau_d = 4.61
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.4.4.5-Step-5.-Rescale-FOPTD-output-and-compare-to-experimental-data.">3.4.4.5 Step 5. Rescale FOPTD output and compare to experimental data.<a class="anchor-link" href="#3.4.4.5-Step-5.-Rescale-FOPTD-output-and-compare-to-experimental-data.">&#182;</a></h3>
+<h3 id="3.4.4.6-Step-5.-Rescale-FOPTD-output-and-compare-to-experimental-data.">3.4.4.6 Step 5. Rescale FOPTD output and compare to experimental data.<a class="anchor-link" href="#3.4.4.6-Step-5.-Rescale-FOPTD-output-and-compare-to-experimental-data.">&#182;</a></h3>
 </div>
 </div>
 </div>
