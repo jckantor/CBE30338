@@ -3,7 +3,6 @@
 # CBE30338
 
 ### [Table of Contents](https://jckantor.github.io/CBE30338/toc.html)
-### [Data Index](https://jckantor.github.io/CBE30338/data_index.html)
 ### [Figure Index](https://jckantor.github.io/CBE30338/figure_index.html)
 ### [Python Module Index](https://jckantor.github.io/CBE30338/python_index.html)
 ### [Tag Index](https://jckantor.github.io/CBE30338/tag_index.html)
