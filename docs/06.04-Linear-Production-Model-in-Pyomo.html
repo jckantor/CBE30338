@@ -13095,7 +13095,7 @@ content is available <a href="https://github.com/jckantor/CBE30338.git">on Githu
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.04-Linear-Programming-in-Pyomo.html">6.4 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://jckantor.github.io/CBE30338/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
+&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.05-Linear-Programming-in-Pyomo.html">6.5 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://jckantor.github.io/CBE30338/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
 
 </div>
 </div>
@@ -13358,7 +13358,7 @@ print('Labor B = ', model.laborB())</code></pre>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="o">*</span>
@@ -13519,15 +13519,16 @@ Labor B =  100.0
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># enter data as numpy arrays</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">26</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
 
 <span class="c1"># set of row indices</span>
 <span class="n">I</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
@@ -13544,10 +13545,10 @@ Labor B =  100.0
 <span class="c1"># add model constraints</span>
 <span class="n">model</span><span class="o">.</span><span class="n">constraints</span> <span class="o">=</span> <span class="n">ConstraintList</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">I</span><span class="p">:</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">J</span><span class="p">)</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">J</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="c1"># add a model objective</span>
-<span class="n">model</span><span class="o">.</span><span class="n">objective</span> <span class="o">=</span> <span class="n">Objective</span><span class="p">(</span><span class="n">expr</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">J</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">objective</span> <span class="o">=</span> <span class="n">Objective</span><span class="p">(</span><span class="n">expr</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">J</span><span class="p">),</span> <span class="n">sense</span><span class="o">=</span><span class="n">maximize</span><span class="p">)</span>
 
 <span class="c1"># create a solver</span>
 <span class="n">solver</span> <span class="o">=</span> <span class="n">SolverFactory</span><span class="p">(</span><span class="s1">&#39;glpk&#39;</span><span class="p">)</span>
@@ -13558,6 +13559,8 @@ Labor B =  100.0
 <span class="c1"># print solutions</span>
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">J</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x[&quot;</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s2">&quot;] =&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13574,8 +13577,13 @@ Labor B =  100.0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>x[ 0 ] = 2.0
-x[ 1 ] = 5.0
+<pre>x[ 0 ] = 20.0
+x[ 1 ] = 60.0
+constraints : Size=3
+    Key : Lower : Body  : Upper
+      1 :  None :  20.0 :  40.0
+      2 :  None :  80.0 :  80.0
+      3 :  None : 100.0 : 100.0
 </pre>
 </div>
 </div>
@@ -13609,7 +13617,7 @@ x[ 1 ] = 5.0
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><!--NAVIGATION-->
-&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.04-Linear-Programming-in-Pyomo.html">6.4 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://jckantor.github.io/CBE30338/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
+&lt; <a href="https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html">6.3 Linear Programming</a> | <a href="toc.html">Contents</a> | <a href="tag_index.html">Tag Index</a> | <a href="https://jckantor.github.io/CBE30338/06.05-Linear-Programming-in-Pyomo.html">6.5 Linear Programming in Pyomo</a><p><a href="https://colab.research.google.com/github/jckantor/CBE30338/blob/master/docs/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open in Google Colaboratory"></a><p><a href="https://jckantor.github.io/CBE30338/06.04-Linear-Production-Model-in-Pyomo.ipynb"> <img align="left" src="https://img.shields.io/badge/Github-Download-blue.svg" alt="Download" title="Download Notebook"></a></p>
 
 </div>
 </div>

@@ -58,7 +58,7 @@
 - [6.2 Linear Production Model](https://jckantor.github.io/CBE30338/06.02-Linear-Production-Model.html)
 - [6.3 Linear Programming](https://jckantor.github.io/CBE30338/06.03-Linear-Programming.html)
 - [6.4 Linear Production Model in Pyomo](https://jckantor.github.io/CBE30338/06.04-Linear-Production-Model-in-Pyomo.html)
-- [6.4 Linear Programming in Pyomo](https://jckantor.github.io/CBE30338/06.04-Linear-Programming-in-Pyomo.html)
+- [6.5 Linear Programming in Pyomo](https://jckantor.github.io/CBE30338/06.05-Linear-Programming-in-Pyomo.html)
 - [6.6 Linear Blending Problem](https://jckantor.github.io/CBE30338/06.06-Linear-Blending-Problem.html)
 - [6.7 Design of a Cold Weather Fuel](https://jckantor.github.io/CBE30338/06.07-Design-of-a-Cold-Weather-Fuel.html)
 - [6.8 Gasoline Blending](https://jckantor.github.io/CBE30338/06.08-Gasoline-Blending.html)
