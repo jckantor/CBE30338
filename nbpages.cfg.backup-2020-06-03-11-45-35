@@ -1,0 +1,11 @@
+[nbpages]
+github_repo_url = https://github.com/jckantor/CBE30338.git
+github_user_name = jckantor
+github_repo_name = CBE30338
+github_pages_url = https://jckantor.github.io/CBE30338
+templates_dir = templates
+src_dir = notebooks
+dst_dir = docs
+figures_subdir = figures
+data_subdir = data
+
