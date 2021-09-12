@@ -96,7 +96,6 @@ teaching and learning the principles of Chemical Process Control.
 - [A.1 Python Library for CBE 30338](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.01-Python-Library-for-CBE30338.ipynb)
 - [A.2 Modular Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.02-Modular-Approach-to-Simulation-using-Python-Generators.ipynb)
 - [A.3 Animation in Jupyter Notebooks](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.03-Animation-in-Jupyter-Notebooks.ipynb)
-- [A.4 A Modular Approach to Simulation using Python Generators](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/A.04-Modular-Simulation-using-Python-Generators.ipynb)
 
 ### [Appendix B. Student Projects](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.00-Student-Projects.ipynb)
 - [B.1 Diabetes: Controlling Blood Glucose Concentrations](http://nbviewer.jupyter.org/github/jckantor/CBE30338/blob/master/notebooks/B.01-Diabetes-Controlling-Blood-Glucose-Concentrations.ipynb)
